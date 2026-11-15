@@ -1,0 +1,168 @@
+# What happens in each scene, and what each speaking character wants in it.
+# Shown at the top of the scene page. Edit freely, then run:  npm run script
+#
+# Keys are "act.scene" ("0.0" is the Prologue). Names under `wants` must match
+# the role names in roles.yml.
+# Put quotes around a name that contains "#", like "Servant #1".
+
+"0.0":
+  summary: The Chorus tells the audience the whole story before it starts. Two feuding families, two young lovers, and a sad ending.
+  wants:
+    Chorus: To make the audience lean in and listen to the story you are about to tell.
+
+"1.1":
+  summary: Servants from the two families start a street fight. The Prince stops it and threatens death for the next one. Then Benvolio finds Romeo sad over a girl who does not love him.
+  wants:
+    Gregory: To look tough in front of the Montagues and stir up trouble.
+    Sampson: To insult the Montagues without getting blamed for starting the fight.
+    Abraham: To stand up for the Montagues and not let an insult pass.
+    Benvolio: To stop the fighting, then to find out what is wrong with Romeo and cheer him up.
+    Tybalt: To fight a Montague. Any Montague.
+    Prince: To end the brawling in your city for good.
+    Lady Montague: To find out where your son is and what is troubling him.
+    Romeo: To be left alone with your heartbreak. Rosaline does not love you back.
+
+"1.2":
+  summary: Paris asks Lord Capulet for permission to marry Juliet. Capulet sends Peter out with a party guest list, but Peter cannot read. He asks Romeo for help, and Romeo learns about the party.
+  wants:
+    Paris: To get Lord Capulet to say yes to marrying Juliet.
+    Lord Capulet: To be a good host and a careful father. Paris should win Juliet's heart first.
+    Peter: To find someone who can read the list before you get in trouble.
+    Romeo: To see Rosaline, who will be at the party.
+    Benvolio: To get Romeo to the party so he will notice other girls.
+
+"1.3":
+  summary: Lady Capulet tells Juliet that Paris wants to marry her. The Nurse cannot stop talking. Juliet agrees to look at Paris at the party tonight.
+  wants:
+    Lady Capulet: To get Juliet to agree to consider Paris.
+    Nurse: To be part of the big news and see your girl happily married.
+    Juliet: To be a good daughter without promising anything.
+    "Servant #1": To get the ladies to the party right now. Everything is chaos.
+
+"1.4":
+  summary: Romeo, Benvolio and Mercutio are on their way to sneak into the Capulet party. Romeo is gloomy and has had a bad dream. Mercutio teases him with a wild speech about Queen Mab, the dream fairy.
+  wants:
+    Romeo: To hang back. You have a bad feeling about tonight.
+    Mercutio: To shake Romeo out of his mood and get him dancing.
+    Benvolio: To get everyone inside before the party is over.
+
+"1.5":
+  summary: At the party, Romeo sees Juliet and forgets Rosaline at once. Tybalt spots him and wants a fight, but Lord Capulet forbids it. Romeo and Juliet meet, kiss, and then each learns the other is from the enemy family.
+  wants:
+    Lord Capulet: To throw a wonderful party with no trouble in your house.
+    Romeo: To meet the girl you cannot stop looking at.
+    "Servant #2": To do your job. You do not know who the girl is.
+    Tybalt: To throw the Montague out, or worse.
+    Juliet: To find out who this boy is and keep talking to him.
+    Nurse: To fetch Juliet for her mother and keep an eye on her.
+    Benvolio: To get Romeo out safely while things are still fun.
+
+"2.1":
+  summary: Romeo slips away from his friends and hides in the Capulet orchard. Juliet comes to her window and, thinking she is alone, says she loves him. They talk, swear their love, and plan to marry tomorrow.
+  wants:
+    Romeo: To be near Juliet, to hear that she loves you, and to promise yourself to her.
+    Benvolio: To find Romeo and take him home.
+    Mercutio: To tease Romeo out of hiding, then give up and go to bed.
+    Juliet: To know that Romeo's love is real, and to turn it into a plan to marry.
+    Nurse: To get Juliet back inside and into bed.
+
+"2.2":
+  summary: At dawn Romeo runs to Friar Lawrence and asks him to marry him to Juliet today. The Friar is shocked at how fast Romeo has changed, but agrees, hoping the marriage will end the feud.
+  wants:
+    Friar Lawrence: To understand what Romeo is up to, then to use this marriage to make peace between the families.
+    Romeo: To get the Friar to marry you to Juliet today.
+
+"2.3":
+  summary: Mercutio and Benvolio tease Romeo about disappearing last night. The Nurse arrives looking for him. Romeo gives her the plan. Juliet should come to Friar Lawrence's cell this afternoon to be married.
+  wants:
+    Mercutio: To joke with Romeo, and to make fun of the Nurse.
+    Benvolio: To tell Romeo that Tybalt has sent a challenge.
+    Romeo: To get the wedding plan to Juliet through the Nurse.
+    Nurse: To make sure Romeo is serious about Juliet before you pass on any message.
+    "Servant #2": To do whatever the Nurse tells you.
+
+"2.4":
+  summary: Juliet waits impatiently for the Nurse to return. The Nurse teases her by complaining about her aches before finally giving the news. Romeo is waiting at the Friar's cell to marry her.
+  wants:
+    Juliet: To get the news out of the Nurse right now.
+    Nurse: To catch your breath, and to enjoy making Juliet wait a little.
+
+"2.5":
+  summary: Romeo and Juliet are married in secret by Friar Lawrence. There are no spoken lines in this scene.
+
+"3.1":
+  summary: On a hot afternoon Tybalt comes looking for Romeo. Romeo, now secretly married to Tybalt's cousin, refuses to fight. Mercutio fights instead and is killed. Romeo kills Tybalt in revenge, and the Prince banishes him.
+  wants:
+    Benvolio: To keep the peace, and afterwards to tell the Prince the truth.
+    Mercutio: To stand up to Tybalt when Romeo will not.
+    Tybalt: To punish Romeo for coming to the party.
+    Romeo: To keep the peace with your new cousin, until Mercutio dies. Then you want revenge.
+    Prince: To find out who is to blame and stop the killing.
+    Lady Montague: To save your son's life.
+
+"3.2":
+  summary: Juliet waits happily for her wedding night. The Nurse brings terrible news, but tells it so badly that Juliet first thinks Romeo is dead. The truth is that Romeo has killed Tybalt and been banished.
+  wants:
+    Juliet: To find out exactly what has happened, and then to stand by your husband.
+    Nurse: To share your grief for Tybalt, and then to comfort Juliet.
+
+"3.3":
+  summary: Romeo hides at Friar Lawrence's cell and falls apart when he hears he is banished. The Nurse arrives. The Friar pulls Romeo together and sends him to say goodbye to Juliet before leaving for Mantua.
+  wants:
+    Friar Lawrence: To calm Romeo down and get him safely out of Verona.
+    Romeo: To be with Juliet. Being sent away from her feels worse than death.
+    Nurse: To find Romeo and bring him to Juliet.
+
+"3.4":
+  summary: Late at night, Lord Capulet suddenly decides that Juliet will marry Paris on Thursday. He is sure she will obey.
+  wants:
+    Lord Capulet: To cheer up your grieving daughter with a wedding, and to settle it now.
+    Paris: To marry Juliet as soon as possible.
+    Lady Capulet: To carry out your husband's plan and tell Juliet in the morning.
+
+"3.5":
+  summary: Lady Capulet tells Juliet she is to marry Paris on Thursday. Juliet refuses. Her father is furious and threatens to throw her out. Her mother and even the Nurse will not help, so Juliet decides to go to the Friar.
+  wants:
+    Lady Capulet: To deliver the wedding news and have Juliet be grateful.
+    Juliet: To get out of marrying Paris without giving away your secret.
+    Lord Capulet: To be obeyed. You have arranged a fine match and expect thanks.
+    Nurse: To keep Juliet safe by giving her practical advice. Marry Paris.
+
+"4.1":
+  summary: Juliet meets Paris at the Friar's cell and avoids his questions. Once he leaves, she begs the Friar for help. He gives her a potion that will make her seem dead for forty-two hours, so that Romeo can come and take her away.
+  wants:
+    Friar Lawrence: To stop this second wedding and save Juliet from despair.
+    Paris: To be kind to your bride and confirm Thursday's wedding.
+    Juliet: To get rid of Paris politely, then to find any way out, however dangerous.
+
+"4.2":
+  summary: Alone in her room, Juliet is frightened of what might go wrong, but she drinks the potion. In the morning her family finds her and believes she is dead.
+  wants:
+    Juliet: To find the courage to drink the potion.
+
+"5.1":
+  summary: In Mantua, Balthasar tells Romeo that Juliet is dead. The Friar's letter explaining the plan has not arrived. Romeo buys poison and sets off for her tomb.
+  wants:
+    Romeo: To get back to Juliet tonight, and to die beside her.
+    Balthasar: To give your master the news, and to stop him doing something rash.
+    Apothecary: To stay out of trouble. But you are too poor to refuse the gold.
+
+"5.2":
+  summary: Friar John returns and explains that he was shut in a house because of the plague and never delivered the letter to Romeo. Friar Lawrence rushes to the tomb.
+  wants:
+    Friar John: To explain why you could not deliver the letter.
+    Friar Lawrence: To find out if Romeo got the letter, and then to reach Juliet before she wakes alone.
+
+"5.3":
+  summary: At the tomb, Paris tries to arrest Romeo and is killed. Romeo drinks the poison beside Juliet. She wakes, finds him dead, and kills herself. The Friar tells the whole story, and the two families finally make peace.
+  wants:
+    Paris: To mourn Juliet, and to stop the man you blame for her death.
+    Romeo: To see Juliet one last time and die beside her.
+    Friar Lawrence: To get Juliet out, and afterwards to tell the truth.
+    Juliet: To find Romeo. When you see he is dead, to follow him.
+    "Servant #1": To show the Prince what you found.
+    Prince: To learn the truth and make the families see what their hate has done.
+    Lord Capulet: To make peace with the Montagues.
+    Lady Capulet: To grieve for your daughter.
+    Lady Montague: To grieve for your son, and to honour Juliet.
+    Chorus: To close the story and send the audience home thinking about it.

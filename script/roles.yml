@@ -1,0 +1,66 @@
+# Who is who. This is the one place for casting judgment calls.
+# After editing, run:  npm run script
+#
+# Each role: the name kids see, the speaker labels in the script that belong
+# to it, and a house (montague / capulet / neutral) used for colour.
+
+roles:
+  - { name: Romeo,          labels: [ROMEO],          house: montague }
+  - { name: Juliet,         labels: [JULIET],         house: capulet }
+  - { name: Mercutio,       labels: [MERCUTIO],       house: neutral }
+  - { name: Benvolio,       labels: [BENVOLIO],       house: montague }
+  - { name: Nurse,          labels: [NURSE],          house: capulet }
+  - { name: Tybalt,         labels: [TYBALT],         house: capulet }
+  - { name: Friar Lawrence, labels: [FRIAR LAWRENCE], house: neutral }
+  - { name: Paris,          labels: [PARIS],          house: neutral }
+  - { name: Prince,         labels: [PRINCE],         house: neutral }
+  - { name: Lord Capulet,   labels: [CAPULET, LORD CAPULET], house: capulet }
+  - { name: Lady Capulet,   labels: [LADY CAPULET],   house: capulet }
+  # REVIEW: the script has one speech labelled "MONTAGUE" (Act 5 Scene 3,
+  # "O thou untaught!"). There is no Lord Montague in the cast, so it is given
+  # to Lady Montague here.
+  - { name: Lady Montague,  labels: [LADY MONTAGUE, MONTAGUE], house: montague }
+  - { name: Peter,          labels: [PETER],          house: capulet }
+  - { name: Friar John,     labels: [FRIAR JOHN],     house: neutral }
+  - { name: Apothecary,     labels: [APOTHECARY],     house: neutral }
+  - { name: Sampson,        labels: [SAMPSON],        house: capulet }
+  - { name: Gregory,        labels: [GREGORY],        house: capulet }
+  - { name: Abraham,        labels: [ABRAHAM],        house: montague }
+  - { name: Balthasar,      labels: [BALTHASAR],      house: montague }
+  - { name: "Servant #1",   labels: ["SERVANT #1"],   house: capulet }
+  - { name: "Servant #2",   labels: ["SERVANT #2"],   house: capulet }
+  # REVIEW: six children share the Chorus. For now they all practise every
+  # Chorus line (the Prologue and the closing speech).
+  - { name: Chorus,         labels: [CHORUS],         house: neutral }
+
+# The plain label "SERVANT" means a different person in each scene.
+# scene is "act.scene"; label is what the script says; role is who says it.
+overrides:
+  - { scene: "1.3", label: SERVANT, role: "Servant #1" }   # stage direction says SERVANT #1 enters
+  - { scene: "2.3", label: SERVANT, role: "Servant #2" }   # stage direction says SERVANT #2 enters
+  # REVIEW: Paris's servant in the tomb scene is not in the cast list.
+  - { scene: "5.3", label: SERVANT, role: "Servant #1" }
+
+# Friendly scene names shown on the path. Change freely.
+scene_titles:
+  "0.0": Prologue
+  "1.1": The Street Fight
+  "1.2": The Invitation
+  "1.3": Juliet and Her Mother
+  "1.4": Queen Mab
+  "1.5": The Capulet Party
+  "2.1": The Balcony
+  "2.2": Friar Lawrence's Cell
+  "2.3": The Nurse's Errand
+  "2.4": Juliet Waits
+  "2.5": The Wedding
+  "3.1": Mercutio and Tybalt
+  "3.2": Terrible News
+  "3.3": Banished
+  "3.4": A Wedding Is Planned
+  "3.5": Juliet Refuses
+  "4.1": The Friar's Plan
+  "4.2": The Potion
+  "5.1": News in Mantua
+  "5.2": The Letter
+  "5.3": The Tomb

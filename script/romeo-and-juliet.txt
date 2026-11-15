@@ -1,0 +1,2502 @@
+TITLE: ROMEO AND JULIET
+CREDIT: Written by William Shakespeare Adapted from The Folger Edition edited by Barbara A. Mowat and Paul Werstine
+
+=== PROLOGUE ===
+[Enter CHORUS.]
+
+CHORUS:
+Two households, both alike in dignity
+(In fair Verona, where we lay our scene),
+From ancient grudge break to new mutiny,
+Where civil blood makes civil hands unclean.
+From forth the fatal loins of these two foes
+A pair of star-crossed lovers take their life;
+Whose misadventured piteous overthrows
+Doth with their death bury their parents’ strife.
+[Exeunt CHORUS.]
+> The play is about to begin. You tell the audience what story they are going to see.
+= In the city of Verona, two important families have an old feud that keeps breaking into new fights. A boy and a girl from these enemy families fall in love and die, and only their deaths end their parents' fighting.
+
+=== ACT 1, SCENE 1 ===
+[Enter SAMPSON, GREGORY, ABRAHAM and another MONTAGUE.]
+
+GREGORY:
+Draw thy tool. Here comes of the house of Montagues. I will frown as I pass by, and let them take it as they list.
+> You spot Montague servants coming. You want to look tough and stir up trouble.
+= Get your sword out. Here come some Montagues. I'll scowl at them as I walk by, and they can take it however they like.
+
+SAMPSON:
+Nay, as they dare. I will bite my thumb at them, which is disgrace to them if they bear it.
+[Bites thumb.]
+> Gregory wants to stare them down. You want to go one better and insult them.
+= Or however they dare. I'll bite my thumb at them. That's a big insult if they put up with it.
+
+ABRAHAM:
+Do you bite your thumb at us, sir?
+> You see a Capulet biting his thumb. You demand to know if it's aimed at you.
+= Are you biting your thumb at us?
+
+SAMPSON:
+I do bite my thumb, sir.
+> Abraham challenges you. You admit to the thumb but dodge the question.
+= I am biting my thumb.
+
+ABRAHAM:
+Do you bite your thumb at us, sir?
+> He dodged your question. You ask again, harder.
+= Are you biting your thumb at us?
+
+SAMPSON:
+No, sir, I do not bite my thumb at you, sir, but I bite my thumb, sir.
+> He asks again. You back off just enough to stay out of trouble, but keep the insult.
+= No, I'm not biting my thumb at you. But I am biting my thumb.
+
+GREGORY:
+Do you quarrel, sir?
+> The insult is hanging in the air. You push them to say they want a fight.
+= Are you trying to start a fight?
+
+ABRAHAM:
+Quarrel, sir? No, sir.
+> They ask if you want a fight. You deny it, but you don't back away.
+= A fight? No.
+
+SAMPSON:
+But if you do, sir, I am for you. I serve as good a man as you.
+> He says no. You make sure he knows you're ready anyway, and brag about your master.
+= Because if you are, I'm ready. My master is just as good as yours.
+
+ABRAHAM:
+No better.
+[Enter BENVOLIO.]
+> He brags his master is as good as yours. You won't let him claim more.
+= But not better.
+
+BENVOLIO:
+Part, fools!
+Put up your swords. You know not what you do.
+[Enter TYBALT.]
+> You walk in on servants fighting. You want to stop it before someone gets hurt.
+= Break it up, you fools! Put your swords away. You don't know what you're doing.
+
+TYBALT:
+What, are thou drawn among these heartless hinds?
+Turn thee, Benvolio; look up thy death.
+> You see Benvolio with his sword out. You want a real fight with a real Montague.
+= What, you've drawn your sword against these cowardly servants? Turn around, Benvolio, and face your death.
+
+BENVOLIO:
+I do but keep the peace. Put up thy sword!
+> Tybalt threatens you. You try to calm him and get his help stopping the fight.
+= I'm only trying to keep the peace. Put your sword away!
+
+TYBALT:
+What, drawn and talk of peace? I hate the word
+As I hate hell, all Montague’s, and thee.
+Have at thee, coward!
+[They all fight. Enter PRINCE, LORD & LADY CAPULET, LADY MONTAGUE.]
+> Benvolio says "peace." That word disgusts you, so you attack.
+= Your sword is out and you talk about peace? I hate that word, the way I hate hell, every Montague, and you. Fight me, coward!
+
+PRINCE:
+Rebellious subjects, enemies to peace,
+Throw your mistempered weapons to the ground
+And hear the sentence of your mov`ed prince.
+Three civil brawls bred of an airy word
+By thee, old Capulet, and Montague,
+Have thrice disturbed the quiet of our streets.
+If you ever you disturb our streets again,
+Your lives shall pay the forfeit of the peace.
+Once more, on pain of death, all men depart.
+[Exeunt all EXCEPT LADY MONTAGUE and BENVOLIO.]
+> Your city is brawling again. You stop it and warn that the next fight means death.
+= You troublemakers, enemies of peace, throw down your weapons and listen to your angry prince. Three times now, fights between the Capulets and Montagues have disturbed our streets. If you ever do it again, you will pay with your lives. Now everyone leave, or you'll be put to death.
+
+LADY MONTAGUE:
+O, where is Romeo? Saw you him today?
+Right glad I am he was not at this fray.
+> The fight is over. You're worried about your son and relieved he wasn't in it.
+= Where is Romeo? Have you seen him today? I'm so glad he wasn't in this fight.
+
+BENVOLIO:
+See where he comes. So please you, step aside.
+I’ll know his grievance or be much denied.
+> She asks about Romeo, and you see him coming. You offer to find out what's wrong.
+= Look, here he comes. Please step aside. I'll find out what's bothering him, or at least try hard.
+
+LADY MONTAGUE:
+I would thou wert so happy by thy stay
+To hear the true shrift.—Let’s away.
+[Enter ROMEO.]
+> Benvolio offers to talk to Romeo. You wish him luck and leave them alone.
+= I hope you're lucky enough to hear the truth from him. Let's go.
+
+BENVOLIO:
+Good morrow, cousin.
+> Romeo walks up looking miserable. You greet him cheerfully.
+= Good morning, cousin.
+
+ROMEO:
+Is the day so young?
+> Benvolio says good morning. You can't believe the day is still so young.
+= Is it still that early?
+
+BENVOLIO:
+But new struck nine.
+> Romeo thinks it's later. You tell him the time.
+= It's only just nine o'clock.
+
+ROMEO:
+Ay me, sad hours seem long.
+> It's only nine. Time drags because you're sad.
+= Oh dear. Sad hours feel so long.
+
+BENVOLIO:
+What sadness lengthens Romeo’s hours?
+> He says sad hours are long. You want to know what the sadness is.
+= What sadness is making your hours feel long?
+
+ROMEO:
+Not having that which, having, makes them short.
+> He asks what's making you sad. You answer with a riddle.
+= Not having the thing that would make them feel short.
+
+BENVOLIO:
+In love?
+> His riddle sounds like love. You guess.
+= Are you in love?
+
+ROMEO:
+Out—
+> He guesses "in love." You start to correct him.
+= Out.
+
+BENVOLIO:
+Of love?
+> He says "out." You try to finish his thought.
+= Out of love?
+
+ROMEO:
+Out of her favor where I am in love.
+> He's almost right. You explain: she doesn't love you back.
+= The girl I love doesn't love me back.
+
+BENVOLIO:
+Tell me in sadness, who is it that you love?
+> So it is a girl. You want her name.
+= Tell me seriously, who is it you love?
+
+ROMEO:
+What, shall I groan and tell thee?
+> He asks who. You tease instead of telling.
+= What, should I groan and tell you?
+
+BENVOLIO:
+Groan? Why, no. But sadly tell me who.
+> He's being dramatic. You ask again, seriously.
+= Groan? No. But tell me seriously who it is.
+
+ROMEO:
+In sadness, cousin, I do love a woman.
+> He wants a serious answer. You give a silly, obvious one.
+= Seriously, cousin, I love a woman.
+
+BENVOLIO:
+I aimed so near when I supposed you loved.
+> "A woman." You already knew that much, and say so.
+= I guessed that much when I figured you were in love.
+
+ROMEO:
+A right good marksman! And she’s fair I love.
+She hath forsworn to love, and in that vow
+Do I live dead, that live to tell it now.
+> He says he guessed it. You praise his aim and explain she has sworn off love.
+= Good guess! And she's beautiful. But she has sworn never to fall in love, and that promise makes me feel like the living dead.
+
+BENVOLIO:
+Be ruled by me. Forget to think of her.
+> He's stuck on a girl who won't love him. You give him advice.
+= Take my advice. Stop thinking about her.
+
+ROMEO:
+O, teach me how I should forget to think!
+> He says forget her. You don't know how.
+= Then teach me how to stop thinking!
+
+BENVOLIO:
+By giving liberty unto thine eyes.
+Examine other beauties.
+> He asks how to forget. You have the answer: look at other girls.
+= Let your eyes wander. Look at other pretty girls.
+
+ROMEO:
+Show me a mistress that is passing fair;
+Farewell. Thou canst not teach me to forget.
+> He says look at others. You're sure that would only remind you of her, so you give up and leave.
+= Show me any beautiful girl and she'll only remind me of the one I love. Goodbye. You can't teach me to forget.
+
+BENVOLIO:
+I’ll pay that doctrine or else die in debt.
+[Exeunt All.]
+> Romeo says you can't teach him to forget. You promise you will.
+= I'll teach you that lesson, or die trying.
+
+=== ACT 1, SCENE 2 ===
+[Enter LORD CAPULET, PARIS, SERVANT #1.]
+
+PARIS:
+Now, my lord, what say you to my suit?
+> You've asked Lord Capulet to let you marry Juliet. You want his answer.
+= So, my lord, what do you say to my request to marry Juliet?
+
+CAPULET:
+Woo her, gentle Paris, get her heart;
+My will to her consent is but a part.
+And, she agreed, within her scope of choice
+Lies my consent and fair according voice.
+This night I hold an old accustomed feast,
+Whereto I have invited many a guest.
+Come go with me.
+[to Peter] Go, sirrah, trudge about
+Through fair Verona, find those persons out
+Whose names are written there, and to them say
+My house and welcome on their pleasure stay.
+[Exeunt LORD CAPULET and PARIS.]
+> Paris wants your daughter. You tell him to win her heart first, invite him to your party, then send Peter off with the guest list.
+= Win her heart, Paris. My permission is only part of it. If she chooses you, I'll agree. Tonight I'm throwing my yearly party with lots of guests. Come with me. [to Peter] You, go all over Verona, find the people on this list, and tell them they're welcome at my house.
+
+PETER:
+Find them out whose names are written here! I am sent to find those persons whose names are here writ, and can never find what names the writing person hath here writ. I must to the learned. In good time!
+[Enter BENVOLIO and ROMEO.]
+> Your master hands you a list and leaves. You panic, because you can't read.
+= Find the people whose names are written here! But I can't read what's written here. I'll have to find someone who can read. Ah, just in time!
+
+PETER:
+God gi’ good e’en. I pray sir, can you read?
+> Two gentlemen walk up. You need someone who can read.
+= Good evening. Excuse me, sir, can you read?
+
+ROMEO:
+Ay, if I know the letters and the language.
+> The servant asks if you can read. You joke with him.
+= Yes, if I know the letters and the language.
+
+PETER:
+You say honestly. Rest you merry.
+> His answer sounds like "no." You give up politely and start to go.
+= That's an honest answer. Have a nice day.
+
+ROMEO:
+Stay, fellow. I can read.
+Signior Martino and his wife and daughters,
+Mercutio and his brother Valentine
+My fair niece Rosaline,
+Signior Valentino and his cousin, Tybalt.
+A fair assembly. Whither should they come?
+> He's leaving. You stop him and read the list. You wonder where all these guests are going.
+= Wait, I can read. [He reads the guest list.] That's a fine group of people. Where are they supposed to go?
+
+PETER:
+Up.
+> He asks where the guests should come. You point.
+= Up.
+
+ROMEO:
+Whither? To supper?
+> "Up" tells you nothing. You ask again.
+= Where? To dinner?
+
+PETER:
+To our house.
+> He asks if it's for supper. You say where.
+= To our house.
+
+ROMEO:
+Whose house?
+> "Our house." You still don't know whose.
+= Whose house?
+
+PETER:
+My master’s.
+> He asks whose house. You answer exactly that and no more.
+= My master's.
+
+ROMEO:
+Indeed, I should have asked thee that before.
+> He's no help. You realise you asked the wrong question.
+= Right, I should have asked you that first.
+
+PETER:
+Now I’ll tell you without asking. My master is the great rich Capulet, and if you be not of the house of Montagues, I pray come and crush a cup of wine. Rest you merry.
+[Exeunt PETER.]
+> He's stopped asking, so now you tell him everything and invite him, as long as he's no Montague.
+= I'll tell you without your asking. My master is the great, rich Capulet. As long as you're not Montagues, come and have a drink with us. Have a nice day.
+
+BENVOLIO:
+At this same ancient feast of Capulet’s
+Sups the fair Rosaline who thou so loves,
+With all the admire`d beauties of Verona.
+Go thither, and with unattainted eye
+Compare her face to one that I shall show,
+And I will make thee think thy swan a crow.
+> Rosaline is on that guest list. You see your chance to show Romeo prettier girls.
+= Rosaline, the girl you love, will be at this Capulet party, along with every beauty in Verona. Go there, look with fresh eyes, and compare her with a girl I'll show you. I'll make you think your swan is a crow.
+
+ROMEO:
+I’ll go along, no such sight to be shown
+But to rejoice in splendor of mine own.
+[Exeunt BENVOLIO and ROMEO.]
+> Benvolio says another girl will outshine her. You'll go, but only to look at Rosaline.
+= I'll go, but not to look at other girls. I'll go to enjoy seeing my own love.
+
+=== ACT 1, SCENE 3 ===
+[Enter LADY CAPULET and NURSE.]
+
+LADY CAPULET:
+Nurse, where’s my daughter? Call her forth to me.
+> You have important news for your daughter. You tell the Nurse to fetch her.
+= Nurse, where is my daughter? Call her for me.
+
+NURSE:
+What, lamb? What, ladybird? God forbid. Where’s this girl? What, Juliet!
+[Enter JULIET.]
+> Lady Capulet wants Juliet. You call for her.
+= Lamb! Ladybird! Goodness, where is that girl? Juliet!
+
+JULIET:
+Madam, I am here. What is your will?
+> You hear your name called. You come and ask what your mother wants.
+= I'm here, Mother. What do you want?
+
+LADY CAPULET:
+This is the matter—Nurse, give leave awhile.
+We must talk in secret.—Nurse, come back again.
+Thou knowest my daughter’s of a pretty age.
+> Juliet is here. You want privacy, then change your mind and keep the Nurse.
+= Here's the thing. Nurse, leave us alone a moment. We need to talk in private. No, Nurse, come back. You know my daughter is at a good age.
+
+NURSE:
+Faith, I can tell her age unto an hour.
+Thou wast the prettiest babe that e’er I nursed
+An I might live to see thee married once,
+I have my wish.
+> Lady Capulet mentions Juliet's age. You know it better than anyone and can't help chatting.
+= I can tell you her age to the hour. You were the prettiest baby I ever cared for. If I live to see you married, I'll have my wish.
+
+LADY CAPULET:
+Marry, that “marry” is the very theme
+I came to talk of.— Tell me, daughter Juliet
+How stands your disposition to be married?
+> The Nurse said "married." That's exactly your subject, so you ask Juliet.
+= Marriage is exactly what I came to talk about. Tell me, Juliet, how do you feel about getting married?
+
+JULIET:
+It is an honor that I dream not of.
+> Your mother asks how you feel about marriage. You've never thought about it.
+= It's an honor I haven't even dreamed about.
+
+LADY CAPULET:
+The valiant Paris seeks you for his love. Verona’s summer hath not such a flower.
+> Juliet hasn't thought about it. You tell her who wants her.
+= The brave Paris wants to marry you. He's the finest young man in all Verona.
+
+NURSE:
+Nay, he’s a flower, in faith, a very flower.
+> She praises Paris as a flower. You eagerly agree.
+= Yes, he's a flower, a real flower.
+
+LADY CAPULET:
+What say you? Can you love the gentleman?
+This night you shall behold him at our feast.
+Read o’er the volume of young Paris’ face,
+And find delight writ there with beauty’s pen.
+Speak briefly. Can you like of Paris’ love?
+> You want Juliet's answer. You push her to look Paris over tonight and decide.
+= What do you say? Could you love him? You'll see him at our party tonight. Study his face like a book and enjoy the beauty written there. Answer quickly: could you accept Paris's love?
+
+JULIET:
+I’ll look to like, if looking liking move.
+But no more deep will I endart mine eye
+Than your consent gives strength to make it fly.
+[Enter SERVANT #1.]
+> Your mother wants a yes. You promise to look, but only as far as she allows.
+= I'll look at him and see if I like him. But I won't let myself fall any further than you give me permission to.
+
+SERVANT:
+Madam, the guests are come, supper served up, you called, my young lady asked for, the Nurse cursed in the pantry, and everything in extremity. I must hence to wait. I beseech you, follow straight.
+> The party is starting and the kitchen is in chaos. You rush in to fetch the ladies.
+= Madam, the guests are here, dinner is served, people are asking for you and for Juliet, they're cursing the Nurse in the kitchen, and everything is crazy. I have to go serve. Please come right away.
+
+LADY CAPULET:
+We follow thee.
+Juliet, the County stays.
+> The servant says the guests are here. You hurry Juliet along.
+= We're coming. Juliet, Count Paris is waiting.
+
+NURSE:
+Go, girl, seek happy nights to happy days.
+[Exeunt ALL.]
+> Juliet is off to meet Paris. You send her with a happy wish.
+= Go, girl, and find happy nights to go with your happy days.
+
+=== ACT 1, SCENE 4 ===
+[Enter ROMEO, BENVOLIO, and MERCUTIO.]
+
+ROMEO:
+Give me a torch. I am not for this ambling.
+Being but heavy I will bear the light.
+> You're outside the party with your friends. You're too sad to dance.
+= Give me a torch to carry. I'm not in the mood for dancing. Since I'm feeling heavy and sad, I'll carry the light.
+
+MERCUTIO:
+Nay, gentle Romeo, we must have you dance.
+> Romeo wants to stand and hold a torch. You won't allow it.
+= No, Romeo, we have to get you dancing.
+
+ROMEO:
+Not I, believe me. You have dancing shoes
+With nimble soles. I have a soul of lead
+So stakes me to the ground, I cannot move.
+> Mercutio insists you dance. You explain how heavy you feel.
+= Not me. You have dancing shoes with light soles. My soul feels like lead. It pins me to the ground so I can't move.
+
+MERCUTIO:
+You are a lover. Borrow Cupid’s wings
+And soar them above a common bound.
+> He says his soul is lead. You tell the lover to borrow Cupid's wings.
+= You're in love. Borrow Cupid's wings and fly high.
+
+BENVOLIO:
+Come, knock and enter, and no sooner in
+But every man betake him to his legs.
+> They're wasting time arguing. You want to get inside.
+= Come on, let's knock and go in. As soon as we're inside, everybody start dancing.
+
+MERCUTIO:
+Come, we burn daylight, ho!
+> Benvolio says go in. You agree: hurry up.
+= Come on, we're wasting time!
+
+ROMEO:
+Nay, that’s not so.
+> Mercutio says you're wasting daylight. You disagree.
+= No, we're not.
+
+MERCUTIO:
+Why may one ask?
+> Romeo contradicts you. You ask why.
+= Why do you say that?
+
+ROMEO:
+I dreamt a dream tonight.
+> He asks why. You bring up your dream.
+= I had a dream last night.
+
+MERCUTIO:
+And so did I.
+> He had a dream. You say you had one too.
+= So did I.
+
+ROMEO:
+Well, what was yours?
+> Mercutio dreamed too. You ask what about.
+= Well, what was yours?
+
+MERCUTIO:
+That dreamers often lie.
+> He asks about your dream. You turn it into a joke.
+= That dreamers often lie.
+
+ROMEO:
+In bed asleep while they do dream things true.
+> He says dreamers lie. You twist it: they lie in bed, dreaming true things.
+= They lie in bed asleep, while they dream things that are true.
+
+MERCUTIO:
+O, then I see Queen Mab hath been with you.
+She is the fairies’ midwife, and she comes
+In shape no bigger than an agate stone
+On the forefinger of an alderman,
+Drawn with a team of little atomies
+Over men’s noses as they lie asleep.
+And in this state she gallops night by night
+Through lovers’ brains, and then they dream of love;
+On courtiers’ knees, that dream on cur’sies straight;
+O’er lawyers’ fingers, who straight dream on fees;
+O’er ladies’ lips, who straight on kisses dream,
+Which oft the angry Mab with blisters plagues
+Because their breaths with sweetmeats tainted are.
+This is she—
+> Romeo believes in dreams. You launch into a wild story about the dream fairy, Queen Mab.
+= Oh, then Queen Mab has visited you. She's the fairies' midwife, no bigger than a tiny stone on a ring. Her little team pulls her across people's noses as they sleep. She rides through lovers' brains and they dream of love, over lawyers' fingers and they dream of money, over ladies' lips and they dream of kisses. This is the fairy who...
+
+ROMEO:
+Peace, peace, Mercutio, peace.
+Thou talk’st of nothing.
+> Mercutio is getting carried away. You stop him.
+= Quiet, Mercutio, quiet. You're talking about nothing.
+
+MERCUTIO:
+True, I talk of dreams,
+Which are the children of an idle brain,
+Begot of nothing but vain fantasy,
+Which is as thin of substance of the air
+And more inconstant than the wind.
+> Romeo says you talk of nothing. You agree: dreams are nothing.
+= True. I'm talking about dreams. They come from a lazy brain and from silly imagination, which is as thin as air and changes faster than the wind.
+
+BENVOLIO:
+This wind you talk of blows us from ourselves.
+Supper is done, and we shall come too late.
+> All this talk is making you late. You pull them back to the party.
+= All this talk of wind is blowing us off course. Dinner is over and we're going to be too late.
+
+ROMEO:
+He that hath the steerage of my course
+Direct my sail. On, lusty gentleman.
+> You have a bad feeling about tonight. You decide to trust fate and go anyway.
+= Whoever is steering my life, guide me. Let's go, friends.
+
+BENVOLIO:
+Strike, drum!
+[Exeunt ALL.]
+> Romeo says "On." You give the signal to march in.
+= Beat the drum!
+
+=== ACT 1, SCENE 5 ===
+[Enter LORD CAPULET, LADY CAPULET, ROMEO, MERCUTIO, PARIS, JULIET, TYBALT, NURSE, MUSICIANS, AND SERVANTS.]
+
+CAPULET:
+Welcome, gentleman. Ladies that have their toes
+Unplagued with corns will walk about with you.
+You are welcome!—Come, musicians, play.
+A hall, a hall, give room!—And foot it, girls.—
+> Your guests are arriving. You welcome them and get the dancing started.
+= Welcome, gentlemen! Any lady without sore feet will dance with you. You're welcome here! Musicians, play! Make room, everyone! Dance, girls!
+
+ROMEO:
+What lady’s that which doth enrich the hand
+Of yonder knight?
+> You see a girl across the room and can't look away. You ask who she is.
+= Who is that girl holding that knight's hand?
+
+SERVANT #2:
+I know not, sir.
+> A masked guest asks about a girl. You don't know her.
+= I don't know, sir.
+
+ROMEO:
+O, she doth teach the torches to burn bright!
+Did my heart love till now? Forswear it, sight,
+For I ne’er saw true beauty till this night.
+> No one can name her. You're stunned by her beauty.
+= Oh, she shines brighter than the torches! Did my heart ever love before now? My eyes say no. I never saw real beauty until tonight.
+
+TYBALT:
+This, by his voice, should be a Montague.
+What, dares the man
+Come hither covered with an antic face
+To fleer and scorn at our solemnity?
+Now, by the stock and honor of my kin,
+To strike him dead I hold it not a sin.
+> You hear a voice you know. A Montague is at your family's party, and you want to kill him.
+= By his voice, this must be a Montague. How dare he come here wearing a mask to make fun of our party? By the honor of my family, I wouldn't call it a sin to strike him dead.
+
+CAPULET:
+Why, how now, kinsman? Wherefore storm you so?
+> Your nephew is fuming. You ask why.
+= What's the matter, nephew? Why are you so angry?
+
+TYBALT:
+Uncle, this is a Montague, our foe,
+A villain that is hither come in spite
+To scorn at our solemnity this night.
+> Your uncle asks what's wrong. You point out the enemy.
+= Uncle, that's a Montague, our enemy. He's a villain who came here out of spite to mock our party.
+
+CAPULET:
+Young Romeo is it? Take no note of him.
+It is my will, the which if thou respect,
+Show a fair presence and put off these frowns,
+An ill-beseeming semblance for a feast.
+> It's only young Romeo. You order Tybalt to leave him alone.
+= It's young Romeo, is it? Leave him alone. That's what I want. If you respect me, look friendly and stop frowning. A scowl doesn't belong at a party.
+
+TYBALT:
+I’ll not endure him.
+> Your uncle says ignore him. You refuse.
+= I won't put up with him.
+
+CAPULET:
+He shall be endured.
+What, goodman boy? I say he shall. Go to.
+You are a saucy boy.
+Be quiet, or for shame I’ll make you quiet!
+> Tybalt defies you in your own house. You put him in his place.
+= You will put up with him. What, boy? I say you will. You are a rude boy. Be quiet, or I'll make you be quiet!
+
+TYBALT:
+I will withdraw, but this intrusion shall
+Now seeming sweet, convert to bitt’rest gall.
+> You're forced to back down. You leave, promising this isn't over.
+= I'll leave. But his barging in here may seem sweet now, and it will turn bitter later.
+
+ROMEO:
+If I profrane with my unworthiest hand
+This holy shrine, the gentle sin is this:
+My lips, two blushing pilgrims, ready stand
+To smooth that rough touch with a tender kiss.
+> You reach her and take her hand. You ask for a kiss by calling her a saint.
+= If my rough hand is not good enough to touch your holy hand, then my lips are ready, like two blushing pilgrims, to smooth that touch with a gentle kiss.
+
+JULIET:
+Good pilgrim, you do wrong your hand too much,
+Which mannerly devotion shows in this;
+For saints have hands that pilgrims’ hands do much,
+And palm to palm is holy palmers’ kiss.
+> A stranger takes your hand and asks for a kiss. You play along, but say hands are enough.
+= Good pilgrim, you're too hard on your hand. Holding hands shows respect. Pilgrims touch saints' hands, and putting palm to palm is how pilgrims kiss.
+
+ROMEO:
+Have not saints lips, and holy palmers too?
+> She says hands are a pilgrim's kiss. You point out saints have lips too.
+= Don't saints and pilgrims have lips, too?
+
+JULIET:
+Ay, pilgrim, lips that they must use in prayer.
+> He mentions lips. You say lips are for praying.
+= Yes, pilgrim, lips they're supposed to use for praying.
+
+ROMEO:
+O then, dear saint, let lips do what hands do.
+They pray: grant thou, lest faith turn to despair.
+> She says lips pray. Then your prayer is a kiss.
+= Then, dear saint, let lips do what hands do. My lips are praying. Please say yes, or my faith will turn to despair.
+
+JULIET:
+Saints do not move, though grant for prayers’ sake.
+> He begs for the kiss. You hold still and let him.
+= Saints don't move, even when they grant a prayer.
+
+ROMEO:
+Then move not while my prayer’s effect I take.
+[They kiss.]
+Thus from my lips, by thine, my sin is purged
+> She says she won't move. You kiss her.
+= Then don't move while I take what I prayed for. [They kiss.] Now your lips have taken my sin away.
+
+JULIET:
+Then have my lips the sin that they have took.
+> He says the kiss took his sin. You tease that now you have it.
+= Then my lips have the sin they took from you.
+
+ROMEO:
+Sin from thy lips? O trespass sweetly urged!
+Give me thy sin.
+> She has your sin. You want it back, with another kiss.
+= Sin from your lips? What a sweet thing to accuse me of! Give me my sin back.
+
+NURSE:
+Madam, your mother craves a word with you!
+> Juliet's mother is asking for her. You interrupt.
+= Miss, your mother wants a word with you!
+
+ROMEO:
+What is her mother?
+> The Nurse calls her away. You ask who her mother is.
+= Who is her mother?
+
+NURSE:
+Marry bachelor,
+Her mother is the lady of the house.
+> The young man asks about her mother. You tell him.
+= Well, young man, her mother is the lady of the house.
+
+ROMEO:
+Is she a Capulet?
+O dear account! My life is my foe’s debt.
+> The lady of the house. You realise she is a Capulet.
+= She's a Capulet? What a terrible price! My life now belongs to my enemy.
+
+BENVOLIO:
+Away, begone. The sport is at the best.
+> The party is at its peak. You want to leave before there's trouble.
+= Come on, let's go. The fun is at its best right now.
+
+ROMEO:
+Ay, so I fear. The more is my unrest.
+> Benvolio says go. You're afraid your trouble has just begun.
+= Yes, I'm afraid so. That makes me even more troubled.
+
+JULIET:
+Come hither, nurse. What is yond gentleman?
+> He's leaving. You have to know who he is.
+= Come here, Nurse. Who is that gentleman?
+
+NURSE:
+His name is Romeo, and a Montague,
+The only son of your great enemy.
+> Juliet asks his name. You tell her the bad news.
+= His name is Romeo, and he's a Montague. He's the only son of your great enemy.
+
+JULIET:
+My only love sprung from my only hate!
+Too early seen unknown, and known too late.
+Prodigious birth of love it is to me
+That I must love a loath`ed enemy.
+> He's a Montague. You're shocked that you love your enemy.
+= The only boy I love is the son of the only family I hate! I saw him too early without knowing who he was, and found out too late. What a monstrous beginning for love, that I have to love my hated enemy.
+
+NURSE:
+Come, let’s away. The strangers all are gone.
+> The guests have gone. You take Juliet off to bed.
+= Come, let's go. The guests have all left.
+
+=== ACT 2, SCENE 1 ===
+[Enter ROMEO.]
+
+ROMEO:
+Can I go forward when my heart is here?
+> The party is over, but you can't leave the place where Juliet is.
+= How can I walk away when my heart is here?
+
+BENVOLIO:
+[offstage] Romeo, my cousin Romeo, Romeo!
+[Enter BENVOLIO and MERCUTIO.]
+He ran this way and leapt this orchard wall,
+Call, good Mercutio.
+> Romeo has vanished over the wall. You call for him and ask Mercutio to help.
+= Romeo! Cousin Romeo! He ran this way and jumped over this orchard wall. Call him, Mercutio.
+
+MERCUTIO:
+Romeo! Humors! Madman! Passion! Lover!
+> Benvolio asks you to call. You do it by making fun of Romeo.
+= Romeo! Moody! Madman! Lovesick fool!
+
+BENVOLIO:
+Come, he hath hid himself among these tree.
+> No answer. You decide he's hiding.
+= Come on, he's hidden himself in these trees.
+
+MERCUTIO:
+Shall we go?
+[Exit BENVOLIO and MERCUTIO.]
+> Romeo won't come out. You've had enough.
+= Shall we go?
+
+ROMEO:
+He jests at scars that never felt a wound.
+But soft, what light through yonder window breaks?
+It is the East, and Juliet is the sun.
+Arise, fair sun, and kill the envious moon,
+Who is already sick and pale with grief
+That thou, her maid, art far more fair than she.
+It is my lady. O, it is my love!
+O, that she knew she were.
+> Your friends leave, laughing at love. Then a light appears at a window: Juliet.
+= It's easy to joke about scars if you've never been hurt. But wait, what light is that in the window? It is the east, and Juliet is the sun. Rise, beautiful sun, and outshine the jealous moon, which is pale with envy because you are far lovelier than she is. It's my lady. It's my love! If only she knew it.
+
+JULIET:
+Ay me.
+> You think you're alone, thinking about him. You sigh.
+= Oh, me.
+
+ROMEO:
+She speaks.
+> She sighs. You're thrilled just to hear her voice.
+= She's talking.
+
+JULIET:
+O Romeo, Romeo, wherefore art thou Romeo?
+Deny thy father and refuse thy name,
+Or if thou wilt not, be but sworn my love,
+And I’ll no longer be a Capulet.
+> You wish he weren't a Montague. You wish the names away.
+= Oh Romeo, Romeo, why do you have to be Romeo? Give up your father and your name. Or if you won't, just swear you love me, and I'll stop being a Capulet.
+
+ROMEO [aside]:
+Shall I hear more, or shall I speak at this?
+> She has just said she loves you. You don't know whether to speak.
+= Should I keep listening, or should I speak now?
+
+JULIET:
+’Tis but thy name that is my enemy.
+Thou art thyself, though not a Montague.
+What’s Montague? It is nor hand, nor foot,
+Nor arm, nor face.
+What’s in a name? That which we call a rose
+By any other word would smell as sweet.
+And, for thy name, which is no part of thee,
+Take all myself.
+> You keep thinking it through. It's only his name that's the problem.
+= Only your name is my enemy. You'd still be yourself even if you weren't a Montague. What is a Montague? It isn't a hand or a foot or an arm or a face. What's in a name? A rose would smell just as sweet if we called it something else. Romeo, give up your name, which isn't part of you, and take all of me in exchange.
+
+ROMEO:
+I take thee at thy word.
+Call me but love, and I’ll be new baptized.
+Henceforth I never will be Romeo.
+> She says "take all myself." You can't stay hidden any longer.
+= I'll take you at your word. Just call me your love and I'll take a new name. From now on I'll never be Romeo.
+
+JULIET:
+What man art thou that, thus bescreened in night,
+So stumblest on my counsel?
+> A voice comes out of the dark. You're startled and want to know who heard you.
+= Who are you, hiding in the dark and listening to my private thoughts?
+
+ROMEO:
+By a name
+I know not how to tell thee who I am.
+> She asks who you are. Your name is the one thing you can't say.
+= I don't know how to tell you who I am by using a name.
+
+JULIET:
+Art thou not Romeo, and a Montague?
+> You know that voice. You ask if it's him.
+= Aren't you Romeo, and a Montague?
+
+ROMEO:
+Neither, fair maid, if either thee dislike.
+> She asks if you're Romeo and a Montague. You'll be neither if she dislikes them.
+= Neither one, lovely girl, if you dislike either.
+
+JULIET:
+How camest thou hither?
+This place is death, considering who thou art,
+If any of my kinsmen find thee here.
+> It is him. You're afraid for him: your family would kill him here.
+= How did you get here? This place means death for you if any of my family find you here.
+
+ROMEO:
+With love’s light wings did I o’erperch these walls.
+> She asks how you got in. Love got you over the wall.
+= I flew over these walls on the light wings of love.
+
+JULIET:
+Dost thou love me? I know wilt say “Ay,”
+And I will take thy word. Yet, if thou swear’st,
+Thou mayst prove false. O gentle Romeo,
+If thou dost love, pronounce it faithfully.
+> He has heard everything. You need to know if he truly loves you.
+= Do you love me? I know you'll say yes, and I'll believe you. But if you swear it, you might turn out to be lying. Oh, gentle Romeo, if you do love me, say it truthfully.
+
+ROMEO:
+Lady, by yonder blesse`d moon I swear…
+> She asks you to say it truly. You start to swear by the moon.
+= Lady, I swear by the holy moon up there...
+
+JULIET:
+O, swear not by the moon, th’ inconstant moon,
+That monthly changes in her circled org,
+Lest that thy love prove likewise variable.
+> He swears by the moon. You stop him, because the moon changes.
+= Oh, don't swear by the moon. The moon changes every month. Your love might turn out to change just as much.
+
+ROMEO:
+What shall I swear by?
+> She won't accept the moon. You ask what you should swear by.
+= What should I swear by?
+
+JULIET:
+Well, do not swear. Although I joy in thee,
+I have no joy in this contract tonight.
+It is too rash, too unadvised, too sudden.
+Sweet, good night,
+This bud of love, by summer’s ripening breath,
+May prove a beauteous flower when next we meet.
+> This is all happening too fast. You try to slow down and say good night.
+= Don't swear at all. I'm so happy with you, but I'm not happy about these promises tonight. It's too fast, too reckless, too sudden. Good night, my sweet. This bud of love may grow into a beautiful flower by the next time we meet.
+
+ROMEO:
+O, wilt thou leave me so unsatisfied?
+> She's saying good night already. You don't want it to end.
+= Oh, will you leave me so unsatisfied?
+
+JULIET:
+What satisfaction canst thou have tonight?
+I hear some noise within. Dear love, adieu.—
+Anon good nurse—Sweet Montague, be true.
+Stay but a little; I will come again.
+> He wants more. The Nurse is calling, and you have to go for a moment.
+= What satisfaction could you have tonight? I hear a noise inside. Goodbye, dear love. Coming, Nurse! Sweet Montague, be true. Wait just a moment. I'll come back.
+
+ROMEO:
+O blessed, blessed night! I am afeard,
+Being in night, all this is but a dream
+Too flattering sweet to be substantial.
+> She has gone inside. You can hardly believe this is real.
+= Oh, blessed night! I'm afraid that, since it's night, this is all just a dream, too sweet to be real.
+
+JULIET:
+Three words, dear Romeo, and good night indeed.
+If that thy bent of love be honorable,
+Thy purpose marriage, send me word tomorrow,
+By one that I’ll procure to come to thee,
+Where and what time thou wilt perform the rite,
+And all my fortunes at thy foot I’ll lay
+And follow thee my lord throughout the world.
+> You come back with a plan. If he means marriage, he should send word tomorrow.
+= Three more words, dear Romeo, and then good night for real. If your love is honorable and you mean to marry me, send me word tomorrow by a messenger I'll send to you. Tell me where and when we'll be married. Then I'll give you everything I have and follow you anywhere in the world.
+
+NURSE [offstage]:
+Madam.
+> Juliet should be in bed. You call for her.
+= Miss!
+
+JULIET:
+By and by, I come—
+> The Nurse calls. You stall.
+= I'm coming, in a moment.
+
+ROMEO:
+So thrive my soul—
+> She has to go. You try to promise.
+= I swear on my soul...
+
+JULIET:
+A thousand times good night.
+[Pause.]
+> There's no time. You say good night.
+= A thousand times good night.
+
+JULIET:
+Romeo.
+> You can't leave it there. You call him back.
+= Romeo.
+
+ROMEO:
+My dear.
+> She calls your name. You answer.
+= My dear.
+
+JULIET:
+What o’clock tomorrow
+Shall I send to thee?
+> You forgot to ask the time for tomorrow.
+= What time tomorrow should I send my messenger to you?
+
+ROMEO:
+By the hour of nine.
+> She asks what time. You tell her.
+= At nine o'clock.
+
+JULIET:
+I will not fail. ’Tis twenty year till then.
+Goodnight, goodnight. Parting is such sweet sorrow
+That I shall say “Good night” till it be morrow.
+[Exit ROMEO and JULIET.]
+> Nine o'clock. You promise, and you can hardly bear to say goodbye.
+= I won't fail. It will feel like twenty years until then. Good night, good night. Saying goodbye is such sweet sadness that I'll keep saying good night until it's morning.
+
+=== ACT 2, SCENE 2 ===
+[Enter FRIAR LAWRENCE.]
+
+FRIAR LAWRENCE:
+The gray-eyed morn smiles on the frowning night,
+Check’ring the eastern clouds with streaks of light,
+And flecked darkness like a drunkard reels
+From forth day’s path and Titan’s fiery wheels.
+[Enter ROMEO.]
+> It's dawn and you're alone outside your cell. You enjoy the sunrise.
+= The gray morning smiles as the frowning night leaves. Streaks of light spread across the eastern clouds, and the darkness stumbles out of the sun's path like a drunk man.
+
+ROMEO:
+Good morrow, father.
+> You've come straight from Juliet to ask a favour. You greet the Friar.
+= Good morning, Father.
+
+FRIAR LAWRENCE:
+Benedicite.
+What early tongue so sweet saluteth me?
+Young son, thy earliness doth me assure
+Thou art uproused with some distemp’rature,
+Or, if not so, then here I hit it right:
+Our Romeo hath not been in bed tonight.
+> Romeo is up very early. You guess something is wrong, or that he never went to bed.
+= Bless you. Who greets me so sweetly and so early? Young man, being up this early tells me something is troubling you. Or if not, then I've guessed it: our Romeo hasn't been to bed tonight.
+
+ROMEO:
+That last is true. The sweeter rest was mine.
+> He guesses you didn't sleep. You admit it, happily.
+= That last part is true. But I had a sweeter kind of rest.
+
+FRIAR LAWRENCE:
+God pardon sin! Wast thou with Rosaline?
+> No sleep, and so happy. You fear he was with Rosaline.
+= God forgive you! Were you with Rosaline?
+
+ROMEO:
+With Rosaline, my ghostly father? No.
+I have forgot that name and that name’s woe.
+> He thinks it was Rosaline. You've forgotten her completely.
+= With Rosaline, Father? No. I've forgotten that name and all the sadness that came with it.
+
+FRIAR LAWRENCE:
+That’s my good son. But where has thou been then?
+> Good, he's over Rosaline. So where was he?
+= Good boy. But then where have you been?
+
+ROMEO:
+I have been feasting with mine enemy,
+Where on a sudden one hath wounded me
+That’s by me wounded.
+Plainly know my heart’s dear love is set
+On the fair daughter of rich Capulet
+But this I pray,
+That thou consent to marry us today.
+> He asks where you were. You tell him about Juliet and ask him to marry you today.
+= I was at a party with my enemy, where someone suddenly wounded me with love, and I wounded her back. To put it plainly, my heart is set on rich Capulet's beautiful daughter. I'm asking you to agree to marry us today.
+
+FRIAR LAWRENCE:
+Holy Saint Francis, what a change is here!
+Is Rosaline, that thou didst love so dear
+So soon forsaken? Young men’s love then lies
+Not truly in their hearts, but in their eyes.
+> Yesterday it was Rosaline, today Juliet. You're amazed at how fast he changed.
+= Holy Saint Francis, what a change! Have you given up Rosaline, whom you loved so much, this quickly? Then young men love with their eyes, and not truly with their hearts.
+
+ROMEO:
+I pray thee, chide me not. Her I love now
+Doth grace for grace and love for love allow.
+The other did not so.
+> He's scolding you. You defend yourself: this girl loves you back.
+= Please don't scold me. The girl I love now loves me back just as much. The other one didn't.
+
+FRIAR LAWRENCE:
+Come, young waverer, come, go with me.
+In one respect I’ll thy assistant be,
+For this alliance may so happy prove
+To turn your household’s rancor to pure love.
+> You see a chance: this marriage could end the feud. You agree to help.
+= Come with me, you changeable young man. I'll help you for one reason: this marriage might just turn your families' hatred into pure love.
+
+ROMEO:
+O, let us hence. I stand on sudden haste. [Exit ROMEO.]
+> He said yes. You want to go right now.
+= Oh, let's go. I'm in a great hurry.
+
+FRIAR LAWRENCE:
+Wisely and slow. They stumble that run fast.
+[Exit FRIAR LAWRENCE.]
+> Romeo is rushing. You warn him to slow down.
+= Go wisely and slowly. People who run fast trip and fall.
+
+=== ACT 2, SCENE 3 ===
+[Enter MERCUTIO and BENVOLIO.]
+
+MERCUTIO:
+Where the devil should this Romeo be?
+Came he not home tonight?
+> Romeo never came home last night. You ask Benvolio where he is.
+= Where the devil can Romeo be? Didn't he come home last night?
+
+BENVOLIO:
+Not to his mother’s. I spoke with her man.
+Tybalt, the kinsman to old Capulet,
+Hath sent a letter to his mother’s house.
+> Mercutio asks about Romeo. You share the news: Tybalt has sent a letter.
+= Not to his mother's house. I talked to her servant. Tybalt, old Capulet's nephew, has sent a letter to Romeo's house.
+
+MERCUTIO:
+A challenge, on my life.
+> A letter from Tybalt. You know what that means.
+= It's a challenge to fight, I'd bet my life on it.
+
+BENVOLIO:
+Romeo will answer it.
+[Enter ROMEO.]
+Here comes Romeo, here comes Romeo.
+> Mercutio says it's a challenge. You're sure Romeo will answer, and then you spot him.
+= Romeo will answer it. Look, here comes Romeo.
+
+MERCUTIO:
+Signior Romeo, bonjour. There’s a French salutation for your French slop. You gave us the counterfeit fairly last night.
+> Romeo arrives at last. You tease him for sneaking off last night.
+= Sir Romeo, bonjour! There's a French hello to go with your fancy French pants. You tricked us nicely last night.
+
+ROMEO:
+Good morrow to you both. What counterfeit did I give you?
+> Mercutio accuses you of a trick. You ask what he means.
+= Good morning to you both. What trick did I play on you?
+
+MERCUTIO:
+The slip, sir, the slip. Can you not conceive?
+> He pretends not to know. You spell it out: he gave you the slip.
+= You gave us the slip, sir. Don't you get it?
+
+ROMEO:
+Pardon, good Mercutio, my business was great, and in such a case as mine a man may strain courtesy.
+[Enter NURSE and SERVANT #2.]
+> He's right, you ran off. You apologise and hint you had good reason.
+= I'm sorry, Mercutio. I had important business. In a situation like mine, a man can be forgiven for skipping good manners.
+
+NURSE:
+Boy.
+> You arrive with your servant to find Romeo. You call for your boy.
+= Boy.
+
+SERVANT:
+Anon.
+> The Nurse calls. You answer.
+= Coming.
+
+NURSE:
+My fan, boy. God you, good morrow gentlemen. Gentleman, can any of you tell me where I may find the young Romeo?
+> You want your fan to look proper. Then you ask the young men for Romeo.
+= My fan, boy. Good morning, gentlemen. Can any of you tell me where I can find young Romeo?
+
+ROMEO:
+I am the youngest of that name.
+> She's asking for Romeo. That's you.
+= I'm the youngest person with that name.
+
+NURSE:
+If you be he, sir, I desire some confidence with you.
+> You've found him. You want to talk in private.
+= If you're him, sir, I'd like a private word with you.
+
+MERCUTIO:
+Romeo, will you come to your mother’s? We’ll to dinner thither.
+> The Nurse wants Romeo alone. You're leaving for lunch and ask if he's coming.
+= Romeo, are you coming to your mother's house? We're going there for lunch.
+
+ROMEO:
+I will follow you.
+> Mercutio asks if you're coming. You need to stay and hear from Juliet.
+= I'll catch up with you.
+
+MERCUTIO:
+Farewell, ancient lady. Farewell, lady, lady, lady.
+[Exit MERCUTIO and BENVOLIO.]
+> You're off. You can't resist mocking the Nurse on the way out.
+= Goodbye, old lady. Goodbye, lady, lady, lady.
+
+NURSE:
+My young lady bid me inquire you out. What she bid me say, I will keep to myself. But first let me tell you, if you should deal double with her, truly it were an ill thing to be offered to any gentlewoman, and very weak dealing.
+> His friends have gone. You warn Romeo not to play games with Juliet.
+= My young lady asked me to find you. What she told me to say, I'll keep to myself. But first let me tell you this: if you trick her, it would be a terrible way to treat a young lady, a very low thing to do.
+
+ROMEO:
+Nurse, commend me to thy lady and mistress.
+Bid her devise
+Some means to go to shrift this afternoon,
+And there she shall at Friar Lawrence’ cell
+Be shrived and married.
+> She has come from Juliet. You give her the plan: confession this afternoon, then the wedding.
+= Nurse, give my greetings to your lady. Tell her to find a way to go to confession this afternoon. There, at Friar Lawrence's cell, she'll be forgiven her sins and married.
+
+NURSE:
+This afternoon, sir? Well, she shall be there.
+> The wedding is this afternoon. You promise Juliet will come.
+= This afternoon, sir? She'll be there.
+
+ROMEO:
+Farewell. Commend me to thy lady.
+> It's settled. You say goodbye.
+= Goodbye. Give my greetings to your lady.
+
+NURSE:
+Ay, a thousand times.— Boy.
+> He sends greetings to Juliet. You promise to pass them on and call your servant.
+= Yes, a thousand times. Boy!
+
+SERVANT #2:
+Anon.
+> The Nurse calls again. You answer.
+= Coming.
+
+NURSE:
+Before and apace.
+[Exeunt All.]
+> Time to go. You send your servant ahead.
+= Go ahead of me, and quickly.
+
+=== ACT 2, SCENE 4 ===
+[Enter JULIET.]
+
+JULIET:
+The clock struck nine when I did send the Nurse.
+In half an hour she promised to return.
+Perchance she cannot meet him. That’s not so.
+Had she affections and warm youthful blood,
+She would be as swift in motion as a ball;
+But old folks, many feign as they were dead,
+Unwieldy, slow, heavy, and pale as lead.
+[Enter NURSE and SERVANT #2.]
+O, honey nurse, what news?
+Hast thou met with him? Send thy man away.
+> The Nurse has been gone three hours. You're desperate for news, and then she arrives.
+= The clock struck nine when I sent the Nurse. She promised to be back in half an hour. Maybe she can't find him. No, that can't be it. If she had young, warm blood, she'd move as fast as a ball. But old people act as if they were dead: clumsy, slow, heavy, and pale as lead. Oh, sweet Nurse, what's the news? Did you meet him? Send your servant away.
+
+NURSE:
+You, stay at the gate.
+> Juliet wants privacy. You send your servant to the gate.
+= You, wait at the gate.
+
+JULIET:
+Now, good sweet nurse—
+> You're alone at last. You beg for the news.
+= Now, good sweet Nurse...
+
+NURSE:
+I am aweary. Give me leave awhile.
+Fie, how my bones ache! What a jaunt have I!
+> She's begging, but you're worn out, and you enjoy making her wait.
+= I'm tired. Leave me alone for a minute. Oh, how my bones ache! What a trip I've had!
+
+JULIET:
+Come, I pray thee, speak. Good, good nurse, speak.
+> She's stalling. You plead.
+= Come on, please, speak. Good, good Nurse, speak.
+
+NURSE:
+Do you not see that I am out of breath?
+> She keeps pushing. You say you're out of breath.
+= Can't you see I'm out of breath?
+
+JULIET:
+How art thou out of breath, when thou hast breath
+To say to me that thou art out of breath?
+Is thy news good or bad? Answer to that.
+> She says she's out of breath, while talking. You point that out.
+= How can you be out of breath when you have enough breath to tell me you're out of breath? Is the news good or bad? Answer that.
+
+NURSE:
+Lord, how my head aches! What a head have I!
+It beats as it would fall in twenty pieces.
+My back o’t’ other side! Ah, my back, my back!
+Beshrew your heart for sending me about
+To catch my death with jaunting up and down.
+> You still won't tell. You complain about your head and your back.
+= Lord, how my head hurts! It's pounding as if it would break into twenty pieces. And my back! Oh, my back, my back! Shame on you for sending me out to catch my death running up and down.
+
+JULIET:
+I’ faith, I am sorry that thou art not well.
+Sweet, sweet, sweet nurse, tell me, what says my love?
+> She's in pain, and you feel bad, but you have to know.
+= Truly, I'm sorry you don't feel well. Sweet, sweet, sweet Nurse, tell me, what does my love say?
+
+NURSE:
+Have you got leave to go to shrift today?
+> She's suffered enough. You start: does she have permission to go to confession?
+= Do you have permission to go to confession today?
+
+JULIET:
+I have.
+> She asks if you can go to confession. You can.
+= I do.
+
+NURSE:
+Then hie you hence to Friar Lawrence’ cell.
+There stays a husband to make you a wife.
+Go. I’ll to dinner. Hie you to the cell.
+> She can go. You finally tell her: Romeo is waiting to marry her.
+= Then hurry to Friar Lawrence's cell. A husband is waiting there to make you a wife. Go. I'm going to lunch. Hurry to the cell.
+
+JULIET:
+Hie to high fortune! Honest nurse, farewell.
+[Exeunt All.]
+> It's happening. You run off to be married.
+= I'm hurrying to my good fortune! Honest Nurse, goodbye.
+
+=== ACT 2, SCENE 5 ===
+[Wedding with ROMEO, JULIET, FRIAR LAWRENCE, and NURSE.]
+
+=== ACT 3, SCENE 1 ===
+[Enter BENVOLIO and MERCUTIO.]
+
+BENVOLIO:
+I pray thee, good Mercutio, let’s retire.
+The day is hot, the Capulets are abroad,
+And if we meet we shall not ‘scape a brawl.
+> It's hot and the Capulets are out. You want to get Mercutio home before a fight starts.
+= Please, Mercutio, let's go home. It's a hot day and the Capulets are out. If we meet them, we won't be able to avoid a fight.
+
+MERCUTIO:
+Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword on the table and says “God send me to no need of thee”, and by the operation of the second cup, draws him on the drawer when indeed there is no need.
+[Enter TYBALT and others.]
+> Benvolio wants to leave. You tease him for being the real hothead.
+= You're like one of those men who walks into a tavern, slaps his sword on the table and says "I hope I never need you," and then after his second drink pulls his sword on the waiter for no reason at all.
+
+BENVOLIO:
+By my head, here comes the Capulets.
+> Too late. You see the Capulets coming.
+= I swear, here come the Capulets.
+
+MERCUTIO:
+By my heel, I care not.
+> Benvolio warns you. You couldn't care less.
+= I swear, I don't care.
+
+TYBALT:
+Gentleman, good e’en. A word with one of you.
+> You're hunting for Romeo. You ask his friends for a word.
+= Good afternoon, gentlemen. I'd like a word with one of you.
+
+MERCUTIO:
+And but one word with one of us? Couple it with something. Make it a word and a blow.
+> Tybalt wants "a word." You dare him to make it a fight.
+= Just one word with one of us? Add something to it. Make it a word and a punch.
+
+TYBALT:
+Mercutio, thou consortest with Romeo.
+> Mercutio is baiting you. You accuse him of being Romeo's companion.
+= Mercutio, you hang around with Romeo.
+
+MERCUTIO:
+Consort? Zounds, consort!
+> He says you "consort" with Romeo. You take it as an insult.
+= "Hang around"? Good grief, hang around!
+
+BENVOLIO:
+We talk here in the public haunt of men.
+Either withdraw unto some private place,
+Or reason coldly of your grievances,
+Or else depart. Here all eyes gaze on us.
+> This is about to explode in public. You try to move them or calm them.
+= We're talking out here in public. Either go somewhere private, or talk about your complaints calmly, or else leave. Everyone is staring at us.
+
+MERCUTIO:
+Men’s eyes were made to look, and let them gaze.
+I will not budge for no man’s pleasure, I.
+[Enter ROMEO.]
+> Benvolio wants you to move. You refuse to budge for anyone.
+= People's eyes were made for looking, so let them stare. I won't move to please anyone.
+
+TYBALT:
+Well, peace be with you, sir. Here comes my man.
+Romeo, the love I bear thee can afford
+No better term than this: thou art a villain.
+> Romeo walks in. He's the one you want, so you insult him.
+= Well, peace to you, sir. Here comes the man I want. Romeo, the kindest thing I can say to you is this: you are a villain.
+
+ROMEO:
+Tybalt, the reason that I have to love thee
+Doth much excuse the appertaining rage
+To such a greeting. Villain am I none.
+Therefore farewell. I see thou knows me not.
+> Tybalt calls you a villain. You've just married his cousin, so you refuse to fight.
+= Tybalt, I have a reason to love you, and it lets me excuse the anger in that greeting. I'm no villain. So goodbye. I can see you don't know me.
+
+TYBALT:
+This shall not excuse the injuries
+That thou hast done me. Therefore turn and draw.
+> Romeo won't fight. You won't let him off, and order him to draw.
+= That doesn't excuse the insults you've done to me. So turn around and draw your sword.
+
+ROMEO:
+I do protest I never injured thee
+But love thee better than thou canst devise.
+And so, good Capulet, which name I tender
+As dearly as mine own, be satisfied.
+> He demands a fight. You tell him, mysteriously, that you love him.
+= I swear I never insulted you. I love you more than you can understand. So, good Capulet, a name I care about as much as my own, be satisfied.
+
+MERCUTIO:
+O calm, dishonorable, vile submission!
+Alla stoccato carries it away.
+Tybalt, you ratcatcher will you walk?
+> Romeo is backing down. You're disgusted, and challenge Tybalt yourself.
+= What a calm, dishonorable, disgusting way to give in! The sword fighter wins the day. Tybalt, you rat-catcher, will you fight?
+
+TYBALT:
+What wouldst thou have with me?
+> Mercutio draws on you. You ask what he wants.
+= What do you want with me?
+
+MERCUTIO:
+Good king of cats, nothing but one of your nine lives.
+> He asks what you want. One of his nine lives.
+= Good King of Cats, I only want one of your nine lives.
+
+TYBALT:
+I am for you.
+> Mercutio insults you. You accept the fight.
+= I'm ready for you.
+
+ROMEO:
+Gentle Mercutio, put thy weapon up.
+Draw, Benvolio, beat down their weapons.
+Tybalt! Mercutio! The Prince expressly hath
+Forbid this bandying in Verona streets.
+Hold, Tybalt! Good Mercutio!
+[They fight. TYBALT stabs MERCUTIO through ROMEO’S arms. TYBALT Exits.]
+> Your friend and your new cousin are fighting. You try to stop them.
+= Gentle Mercutio, put your sword away. Benvolio, draw and knock their swords down. Tybalt! Mercutio! The Prince has forbidden this fighting in Verona's streets. Stop, Tybalt! Good Mercutio!
+
+MERCUTIO:
+I am hurt.
+A plague o’ both houses! I am sped.
+Is he gone and hath nothing?
+> Tybalt's sword got you under Romeo's arm. You realise it's serious.
+= I'm hurt. A curse on both your families! I'm finished. Did he get away without a scratch?
+
+BENVOLIO:
+What, art thou hurt?
+> Mercutio says he's hurt. You can't believe it.
+= What, are you hurt?
+
+MERCUTIO:
+Ay, ay, a scratch, a scratch. Marry, ’tis enough.
+> Benvolio asks if you're hurt. You joke that it's only a scratch, but you know better.
+= Yes, yes, a scratch, a scratch. But it's enough.
+
+ROMEO:
+Courage, man, the hurt cannot be much.
+> He says it's a scratch. You try to encourage him.
+= Be brave, man. The wound can't be that bad.
+
+MERCUTIO:
+Ask for me tomorrow and you shall find me a grave man. A plague o’ both your houses! Why the devil came you between us? I was hurt under your arm.
+A plague o’ both your houses!
+They have made worms’ meat of me.
+Your houses!
+[Exit MERCUTIO, BENVOLIO and OTHERS.]
+> You're dying. You blame both families, and Romeo for getting in the way.
+= Ask for me tomorrow and you'll find me a grave man. A curse on both your families! Why the devil did you come between us? I was stabbed under your arm. A curse on both your families! They've made worm food of me. Your families!
+
+ROMEO:
+This gentleman, the Prince’s near ally,
+My very friend hath got this mortal hurt
+In my behalf. My reputation stained
+With Tybalt’s slander—Tybalt, that an hour
+Hath been my cousin!
+[Enter BENVOLIO.]
+> Mercutio is carried off. You realise he was hurt because of you.
+= This gentleman, the Prince's relative and my true friend, got this deadly wound defending me. And my good name was ruined by Tybalt's insult. Tybalt, who has been my cousin for one hour!
+
+BENVOLIO:
+O Romeo, Romeo, brave Mercutio is dead. [Enter TYBALT.]
+Here comes the furious Tybalt back again.
+> You come back with terrible news, and see Tybalt returning.
+= Oh Romeo, Romeo, brave Mercutio is dead. And here comes the furious Tybalt back again.
+
+ROMEO:
+Now, Tybalt, take the “villain” back again
+That late thou gavest me, for Mercutio’s soul
+Is but a little way above our heads,
+Staying for thine to keep him company.
+Either thou or I, or both must go with him.
+> Mercutio is dead and Tybalt is back. Now you want revenge.
+= Now, Tybalt, take back the "villain" you called me. Mercutio's soul is only a little way above our heads, waiting for yours to keep him company. Either you or I, or both of us, must go with him.
+
+TYBALT:
+Thou, wretched boy, that didst consort him here
+Shalt with him hence.
+> Romeo threatens you. You threaten him right back.
+= You wretched boy, you were his friend here, and you'll go with him.
+
+ROMEO:
+This shall determine that.
+[They fight. ROMEO stabs TYBALT. TYBALT dies.]
+> No more talk. You fight.
+= This sword will decide that.
+
+BENVOLIO:
+Romeo, away, begone!
+The citizens are up, and Tybalt slain.
+Hence, be gone, away.
+> Tybalt is dead and people are coming. You tell Romeo to run.
+= Romeo, run, get away! The people are coming, and Tybalt is dead. Go, get out of here.
+
+ROMEO:
+O, I am Fortune’s fool!
+[Exit ROMEO.]
+[Enter PRINCE, LADY MONTAGUE, LORD CAPULET and LADY CAPULET.]
+> You've just killed your wife's cousin. You see how fate has played you.
+= Oh, I am fortune's fool!
+
+PRINCE:
+Where are the vile beginners of this fray?
+> You arrive to find bodies in the street. You demand to know who started it.
+= Where are the wicked people who started this fight?
+
+BENVOLIO:
+O noble prince, I can discover all
+The unlucky manage of this fatal brawl.
+There lies the man, slain by young Romeo,
+That slew thy kinsman, brave Mercutio.
+> The Prince asks what happened. You tell him.
+= Noble Prince, I can tell you everything about this deadly fight. There lies the man, killed by young Romeo, who killed your relative, brave Mercutio.
+
+PRINCE:
+Romeo slew him; he slew Mercutio.
+Who now the price of his dear blood doth owe?
+> Two men are dead. You ask who must pay.
+= Romeo killed him, and he killed Mercutio. Who should pay now for Mercutio's precious blood?
+
+LADY MONTAGUE:
+Not Romeo, Prince; he was Mercutio’s friend.
+His fault concludes but what the law should end,
+The life of Tybalt.
+> Your son's life is at stake. You plead for him.
+= Not Romeo, Prince. He was Mercutio's friend. He only did what the law would have done: he took Tybalt's life.
+
+PRINCE:
+And for that offense
+Immediately we do exile him hence.
+Let Romeo hence in haste,
+Else, when he is found, that hour is his last.
+Bear hence this body and attend our will.
+Mercy but murders, pardoning those that kill.
+[Exeunt All.]
+> You've heard both sides. You give your sentence: Romeo is banished.
+= And for that crime, we banish him at once. Romeo must leave quickly. If he is found here, that hour will be his last. Carry this body away and do as I say. Showing mercy to killers only leads to more killing.
+
+=== ACT 3, SCENE 2 ===
+[Enter JULIET.]
+
+JULIET:
+Gallop apace, you fiery-footed steeds,
+Towards Phoebus’ lodging. Such a wagoner
+As Phaeton would whip you to the west
+And bring in cloudy night immediately.
+Come, night. Come, Romeo. Come, gentle night,
+Give me my Romeo, and when I shall die,
+Take him and cut him out in little stars,
+And he will make the face of heaven so fine
+That all the world will be in love with night
+And pay no worship to the garish sun.
+[Enter NURSE.]
+O, here comes my nurse.
+Ay me, what news? Why dost thou wring thy hands?
+> You're waiting for your wedding night. You beg the sun to set, and then the Nurse comes in upset.
+= Gallop fast, you fiery horses pulling the sun, and take it home so cloudy night comes right away. Come, night. Come, Romeo. Come, gentle night, and give me my Romeo. When I die, take him and cut him into little stars. He'll make the sky so beautiful that the whole world will fall in love with night and stop caring about the bright sun. Oh, here comes my Nurse. What's the news? Why are you wringing your hands?
+
+NURSE:
+He’s dead, he’s dead, he’s dead!
+We are undone, lady, we are undone.
+Alack the day, he’s gone, he’s killed, he’s dead.
+> You've just seen Tybalt killed. You can hardly get the words out.
+= He's dead, he's dead, he's dead! We're ruined, lady, we're ruined. What an awful day. He's gone, he's killed, he's dead.
+
+JULIET:
+Can heaven be so envious?
+> She says "he's dead." You think she means Romeo.
+= Can heaven be so cruel?
+
+NURSE:
+O Romeo, Romeo,
+Whoever would have thought it? Romeo!
+> You're in shock. You cry out Romeo's name.
+= Oh, Romeo, Romeo. Who would ever have thought it? Romeo!
+
+JULIET:
+What devil art thou that dost torment me thus?
+If he be slain, say “Ay” or if not, “No.”
+Brief sounds determine my weal or woe.
+> She won't say it plainly. You demand a yes or no.
+= What kind of devil are you, to torture me like this? If he's been killed, say yes. If not, say no. Those short words decide my joy or my sorrow.
+
+NURSE:
+O Tybalt, Tybalt, the best friend I had!
+O honest gentleman
+That ever I should live to see thee dead!
+> You're grieving for Tybalt. You wail about him.
+= Oh Tybalt, Tybalt, the best friend I had! Oh, honest gentleman! I never thought I'd live to see you dead.
+
+JULIET:
+What storm is this that blows so contrary?
+Is Romeo slaughtered and is Tybalt dead?
+My dearest cousin, and my dearer lord?
+> Now it's Tybalt. You're confused: are both dead?
+= What storm is this, blowing from both directions? Is Romeo killed, and is Tybalt dead? My dear cousin and my even dearer husband?
+
+NURSE:
+Tybalt is gone and Romeo banish’ed.
+Romeo that killed him—he is banish’ed.
+Shame come to Romeo!
+> You finally tell her straight: Tybalt is dead, Romeo did it, and he's banished.
+= Tybalt is dead and Romeo is banished. Romeo killed him, and he's banished. Shame on Romeo!
+
+JULIET:
+Blistered be thy tongue
+For such a wish! He was not born to shame.
+Upon his brow shame is ashamed to sit.
+> The Nurse curses Romeo. You turn on her.
+= May your tongue get blisters for wishing that! He wasn't born for shame. Shame would be ashamed to sit on his face.
+
+NURSE:
+Will you speak well of him that killed your cousin?
+> She defends him. You can't believe it.
+= Will you say good things about the man who killed your cousin?
+
+JULIET:
+Shall I speak ill of him that is my husband?
+Ah, poor my lord, what tongue shall smooth thy name
+When I, thy three-hours wife, have mangled it?
+My husband lives, that Tybalt would have slain.
+And Tybalt’s dead, that would have slain my husband.
+All this is comfort. Wherefore weep I then?
+> She asks how you can defend him. He's your husband. You work out that his being alive is good news.
+= Should I say bad things about my own husband? Oh, my poor husband, who will speak kindly of you when I, your wife of three hours, have spoken badly? My husband is alive, and Tybalt wanted to kill him. Tybalt is dead, and he would have killed my husband. All of that is good news. So why am I crying?
+
+NURSE:
+Hie to your chamber. I’ll find Romeo
+To comfort you.
+He is hid at Lawrence’ cell.
+[Exeunt All.]
+> She's heartbroken. You offer to find Romeo for her.
+= Go to your room. I'll find Romeo to comfort you. He's hiding at Friar Lawrence's cell.
+
+=== ACT 3, SCENE 3 ===
+[Enter FRIAR LAWRENCE and ROMEO.]
+
+FRIAR LAWRENCE:
+Romeo, come forth; come forth thou fearful man.
+> You've come back from the Prince with news. You call Romeo out of hiding.
+= Romeo, come out. Come out, you frightened man.
+
+ROMEO:
+Father, what news? What is the Prince’s doom?
+> The Friar is back. You're afraid to hear your punishment.
+= Father, what's the news? What is the Prince's punishment?
+
+FRIAR LAWRENCE:
+Not body’s death, but body’s banishment.
+> He asks his sentence. You think it's good news.
+= Not death. You are banished.
+
+ROMEO:
+Ha, banishment?
+> "Banishment." To you that's worse than death.
+= Ha, banished?
+
+FRIAR LAWRENCE:
+Here from Verona art thou banish’ed.
+Be patient, for the world is broad and wide.
+> He's horrified. You tell him to be patient.
+= You are banished from Verona. Be patient. The world is big and wide.
+
+ROMEO:
+There is no world without Verona walls
+But purgatory, torture, hell itself.
+> He says the world is wide. For you there's no world without Juliet.
+= There is no world outside Verona's walls, only suffering, torture, and hell itself.
+
+FRIAR LAWRENCE:
+O deadly sin, O rude thankfulness!
+This is dear mercy, and thou seest it not.
+> He's ungrateful. You scold him.
+= Oh, what a terrible sin! How ungrateful! This is mercy, and you can't even see it.
+
+ROMEO:
+’Tis torture and not mercy. Heaven is here
+Where Juliet lives, and every cat and dog
+And little mouse, every unworthy thing,
+Live here in heaven and may look on her,
+But Romeo may not; he is banish’ed.
+O friar, the damn’ed use that word in hell.
+Howling attends it. How hast thou the heart
+Being a divine, a ghostly confessor,
+A sin absolver, and my friend professed,
+To mangle me with that word “banish’ed”.
+> He calls it mercy. You explain why being banished from Juliet is torture.
+= It's torture, not mercy. Heaven is here, where Juliet lives. Every cat and dog and little mouse, every worthless thing, lives here in heaven and can look at her. But Romeo can't. He is banished. Friar, people in hell use that word, and they howl when they say it. How do you, a holy man, my confessor and my friend, have the heart to crush me with that word "banished"?
+
+FRIAR LAWRENCE:
+[NURSE knocks.] Arise. One knocks. Good Romeo, hide thyself.
+Who knocks so hard? Whence came you? What’s your will?
+[Enter NURSE.]
+> Someone is knocking. You tell Romeo to hide, and ask who's there.
+= Get up. Someone's knocking. Romeo, hide yourself. Who is knocking so hard? Where are you from? What do you want?
+
+NURSE:
+I come from Lady Juliet.
+> The Friar asks who you are. You say who sent you.
+= I come from Lady Juliet.
+
+FRIAR LAWRENCE:
+Welcome, then.
+> It's Juliet's Nurse. You let her in.
+= Welcome, then.
+
+NURSE:
+O holy friar,
+Where’s my lady’s lord? Where’s Romeo?
+> You've come for Romeo. You ask where he is.
+= Oh, holy Friar, where is my lady's husband? Where is Romeo?
+
+FRIAR LAWRENCE:
+There on the ground, with his own tears made drunk.
+> She asks for Romeo. You point at him, crying on the floor.
+= There on the ground, drunk on his own tears.
+
+NURSE:
+Stand up, stand up. Stand up an you be a man.
+For Juliet’s sake, for her sake, rise and stand.
+> You see him on the ground. You tell him to get up, for Juliet's sake.
+= Stand up, stand up. Stand up if you're a man. For Juliet's sake, get up and stand.
+
+ROMEO:
+Spakest thou of Juliet? How is it with her?
+> She said "Juliet." You need to know how she is.
+= Did you say Juliet? How is she?
+
+NURSE:
+O, she says nothing, sir, but weeps and weeps.
+> He asks about Juliet. You tell him she only cries.
+= Oh, she doesn't say anything, sir. She only cries and cries.
+
+FRIAR LAWRENCE:
+What, rouse thee, man! Thy Juliet is alive.
+Go, get thee to thy love, as was decreed.
+Hence and comfort her.
+But look thou stay not till the watch be set.
+Go before, nurse. Commend me to thy lady.
+Romeo is coming.
+> They're both falling apart. You take charge and send him to Juliet, with a warning to leave early.
+= Pull yourself together, man! Your Juliet is alive. Go to your love, as we planned, and comfort her. But don't stay until the guards come on duty. Nurse, go ahead and give my greetings to your lady. Romeo is coming.
+
+NURSE:
+My lord, I’ll tell my lady you will come.
+[Exit NURSE.]
+> The plan is set. You go to tell Juliet.
+= My lord, I'll tell my lady you're coming.
+
+FRIAR LAWRENCE:
+Go hence, good night—
+Either be gone before the watch be set
+Or by the break of day disguised from hence.
+Farewell. Goodnight.
+> The Nurse has gone. You repeat the most important part: be gone before the guards.
+= Go, good night. Either leave before the guards come on duty, or leave in disguise at dawn. Goodbye. Good night.
+
+ROMEO:
+But that a joy past joy calls out on me,
+It were a grief so brief to part with thee.
+Farewell.
+[Exeunt All.]
+> You have to leave the Friar. Only Juliet could pull you away so fast.
+= If a joy greater than joy weren't calling me, it would be sad to leave you so quickly. Goodbye.
+
+=== ACT 3, SCENE 4 ===
+[Enter CAPULET, LADY CAPULET, and PARIS.]
+
+CAPULET:
+Things have fallen out, sir, so unluckily,
+That we have had no time to move our daughter.
+Look you, she loved her kinsman Tybalt dearly.
+’Tis very late. She’ll not come down tonight.
+> Paris has come about Juliet at a bad time. You explain why you haven't asked her.
+= Things have turned out so badly, sir, that we haven't had time to talk to our daughter. You see, she loved her cousin Tybalt very much. It's very late. She won't come down tonight.
+
+PARIS:
+These times of woe afford no times to woo.—
+Madam, good night. Commend me to your daughter.
+> He says it's a bad time. You accept that politely and get ready to go.
+= Sad times like these leave no time for romance. Madam, good night. Give my greetings to your daughter.
+
+LADY CAPULET:
+I will, and know her mind early tomorrow.
+Tonight she’s mewed up to her heaviness.
+> Paris sends his greetings. You promise to find out what Juliet thinks.
+= I will, and I'll find out what she thinks early tomorrow. Tonight she's shut away with her sadness.
+
+CAPULET:
+Sir Paris, I will make a desperate tender
+Of my child’s love. I think she will be ruled
+In all respects by me.
+Wife, go you to her ere you go to bed.
+Acquaint her here of my son Paris’ love.
+O’ Thursday, tell her,
+She shall be married to this noble earl.—
+What say you to Thursday?
+> Paris is about to leave. You suddenly decide to promise him Juliet, and set the day.
+= Sir Paris, I'll make a bold offer of my child's love. I think she'll do as I say in everything. Wife, go to her before you go to bed. Tell her about Paris's love, and tell her she will be married to this noble count on Thursday. What do you say to Thursday?
+
+PARIS:
+My lord, I wish that Thursday were tomorrow.
+> He offers Thursday. You wish it were sooner.
+= My lord, I wish Thursday were tomorrow.
+
+CAPULET:
+Well, get you gone. O’ Thursday be it then.
+[To Lady Capulet] Go you to Juliet ere you go to bed.
+Prepare her, wife, against this wedding day.—
+Farewell my lord.
+[Exeunt All.]
+> Paris agrees. You send your wife to tell Juliet.
+= Well, off you go. Thursday it is. Go to Juliet before you go to bed, wife, and get her ready for this wedding day. Goodbye, my lord.
+
+=== ACT 3, SCENE 5 ===
+[Enter LADY CAPULET, NURSE, and JULIET.]
+
+LADY CAPULET:
+Ho, daughter, are you up?
+> It's early. You've come to Juliet's room with news.
+= Daughter, are you up?
+
+JULIET:
+Who is’t that calls?
+> Someone is calling. Romeo has only just left, and you're nervous.
+= Who's calling?
+
+LADY CAPULET:
+Why, how now, Juliet?
+> She looks terrible. You ask what's wrong.
+= What's the matter, Juliet?
+
+JULIET:
+Madam, I am not well.
+> Your mother asks what's wrong. You can't tell the truth.
+= Mother, I don't feel well.
+
+LADY CAPULET:
+Evermore weeping for your cousin’s death?
+What, wilt thou wash him from his grave with tears?
+> You assume she's crying for Tybalt. You think it's too much.
+= Still crying over your cousin's death? Are you trying to wash him out of his grave with tears?
+
+JULIET:
+Yet let me weep for such a feeling loss.
+> She thinks it's about Tybalt. You let her think so.
+= Let me cry for a loss that hurts this much.
+
+LADY CAPULET:
+Well, girl, thou weep’st not so much for his death
+As that the villain lives which slaughtered him.
+> You think her real grief is that the killer is alive.
+= Well, girl, you're not crying so much because he died as because the villain who killed him is still alive.
+
+JULIET:
+What villain, madam.
+> She says "the villain." You play innocent.
+= What villain, Mother?
+
+LADY CAPULET:
+That same villain, Romeo.
+We will have vengeance for it, fear thou not.
+But, thou hast a careful father, child,
+One who, to put thee from thy heaviness,
+Hath sorted out a sudden day of joy.
+> You name Romeo, promise revenge, then move to your good news.
+= That villain, Romeo. We'll get revenge for it, don't worry. But you have a caring father, child. To take you out of your sadness, he has arranged a sudden day of joy.
+
+JULIET:
+Madam, in happy time! What day is that?
+> She says a day of joy. You're curious, and hopeful.
+= Mother, that's good timing! What day is that?
+
+LADY CAPULET:
+Marry, my child, early next Thursday morn
+The gallant, young, and noble gentleman,
+The County Paris, at Saint Peter’s Church
+Shall happily make thee there a joyful bride.
+> She asks what day. You announce the wedding to Paris.
+= Well, my child, early next Thursday morning, the brave, young, noble Count Paris will make you a happy bride at Saint Peter's Church.
+
+JULIET:
+Now, by Saint Peter’s Church, and Peter too,
+He shall not make me there a joyful bride!
+I pray you, tell my lord and father, madam,
+I will not marry yet. These are news indeed!
+[Enter CAPULET.]
+> Marry Paris? You're already married. You refuse.
+= By Saint Peter's Church, and by Saint Peter too, he will not make me a happy bride there! Please tell my father, Mother, that I won't marry yet. This is quite some news!
+
+LADY CAPULET:
+Here comes your father. Tell him so yourself,
+And see how he will take it at your hands.
+> She has refused, and her father is coming. Let her tell him.
+= Here comes your father. Tell him yourself, and see how he takes it from you.
+
+CAPULET:
+How now, wife?
+Have you delivered to her our decree?
+> You come in expecting a grateful daughter. You ask your wife if she's told her.
+= Well, wife? Have you told her our decision?
+
+LADY CAPULET:
+Ay, sir, but she will none, she gives you thanks.
+I would the fool were married to her grave.
+> He asks if you've told her. You report that she said no.
+= Yes, sir, but she says no, thank you. I wish the fool were married to her grave.
+
+CAPULET:
+Soft, take me with you, take me with you, wife.
+Is she not proud? Doth she not count her blessed,
+Unworthy as she is, that we have wrought
+So worthy a gentleman to be her bride?
+> She said no? You can't understand it.
+= Wait, help me understand, wife. Isn't she proud? Doesn't she feel lucky, unworthy as she is, that we've found such a worthy gentleman to marry her?
+
+JULIET:
+Not proud you have, but thankful that you have.
+> Your father is getting angry. You try to be thankful without saying yes.
+= I'm not proud of it, but I'm thankful that you tried.
+
+CAPULET:
+Thank me no thankings, nor proud me no prouds,
+But fettle your fine joints ‘against Thursday next
+To go with Paris to Saint Peter’s Church,
+Or I will drag thee on a hurdle thither.
+> She's playing with words. You lose your temper and give an order.
+= Don't give me "thankful" and don't give me "proud." Just get yourself ready for next Thursday to go with Paris to Saint Peter's Church, or I will drag you there.
+
+JULIET:
+Good father, I beseech you on my knees,
+Hear me with patience but to speak a word.
+> He's furious. You kneel and beg him to listen.
+= Good father, I'm begging you on my knees. Please be patient and let me say just one word.
+
+CAPULET:
+Get thee to church o’ Thursday,
+Or never after look me in the face.
+Speak not; reply not; do not answer me.
+[Exit CAPULET.]
+> She's still arguing. You give your final threat and storm out.
+= Get to church on Thursday, or never look me in the face again. Don't speak. Don't reply. Don't answer me.
+
+JULIET:
+O sweet mother, cast me not away.
+Delay this marriage for a month, a week.
+> Your father is gone. You turn to your mother for help.
+= Oh, sweet mother, don't throw me away. Put off this wedding for a month, or a week.
+
+LADY CAPULET:
+Talk not to me, for I’ll not speak a word.
+Do as thou wilt, for I have done with thee.
+[Exit LADY CAPULET.]
+> She begs you. You refuse and walk out.
+= Don't talk to me. I won't say a word. Do what you want. I'm finished with you.
+
+JULIET:
+O God! Comfort me; counsel me.—
+What says thou? Hast thou not a word of joy?
+Some comfort, nurse.
+> Both parents have left you. You turn to the Nurse, your last hope.
+= Oh, God! Comfort me, give me advice. What do you say? Don't you have one word of joy? Some comfort, Nurse.
+
+NURSE:
+I think you are happy in this second match,
+For it excels your first, or, if it did not,
+Your first is dead, or ‘twere as good he were
+As living here and you no use of him.
+> She begs for comfort. You give practical advice: marry Paris.
+= I think you'll be happy in this second marriage. It's better than your first. And even if it weren't, your first husband is dead, or as good as dead, living far away where he's no use to you.
+
+JULIET:
+Speak’st thou from thy heart?
+Well, thou hast comforted me marvelous much.
+Go in and tell my lady, I am gone,
+Having displeased my father, to Lawrence’ cell
+To make confession and to be absolved.
+[Exit NURSE.]
+I’ll to the Friar to know his remedy.
+If all else fail, myself have power to die.
+[Exit Juliet.]
+> Even the Nurse has betrayed you. You hide it, send her away, and decide to go to the Friar.
+= Do you mean that from your heart? Well, you've comforted me wonderfully. Go in and tell my mother that, since I've upset my father, I've gone to Friar Lawrence's cell to confess and be forgiven. I'll go to the Friar to find out his solution. If everything else fails, I still have the power to die.
+
+=== ACT 4, SCENE 1 ===
+[Enter FRIAR LAWRENCE and PARIS.]
+
+FRIAR LAWRENCE:
+On Thursday, sir? The time is very short.
+> Paris has just told you the wedding is Thursday. You're alarmed.
+= On Thursday, sir? That's very soon.
+
+PARIS:
+My father Capulet will have it so,
+And I am nothing slow to slack his haste.
+> The Friar says it's rushed. You explain it's her father's wish.
+= My father-in-law Capulet wants it that way, and I'm not going to slow him down.
+
+FRIAR LAWRENCE:
+Uneven in the course. I like it not. [Enter JULIET.]
+Look, sir, here comes the lady toward my cell.
+> You don't like this, and then you see Juliet coming.
+= This isn't the right way to do things. I don't like it. Look, sir, here comes the lady, walking to my cell.
+
+PARIS:
+Happily met, my lady and my wife.
+> Juliet arrives. You greet her as your wife.
+= I'm glad to meet you, my lady and my wife.
+
+JULIET:
+That may be, sir, when I may be a wife.
+> Paris calls you his wife. You answer carefully.
+= That may be true, sir, when I'm allowed to be a wife.
+
+PARIS:
+That “may be” must be , love, on Thursday next.
+> She says "may be." You insist it will be.
+= That "may be" must be, my love, next Thursday.
+
+JULIET:
+What must be shall be.
+Are you at leisure, holy father, now,
+Or shall I come to you at evening Mass?
+> You dodge him and turn to the Friar. You need to talk alone.
+= What must be will be. Are you free now, holy Father, or should I come back at evening Mass?
+
+FRIAR LAWRENCE:
+My leisure serves me, pensive daughter, now—
+My lord, we must entreat the time alone.
+> Juliet needs you. You politely ask Paris to leave.
+= I'm free now, my sad daughter. My lord, we need some time alone.
+
+PARIS:
+God shield I should disturb devotion!—
+Juliet, on Thursday early will I rouse you.
+Till then, adieu, and keep this holy kiss.
+[Exit PARIS.]
+> The Friar wants privacy. You leave, with a kiss and a promise for Thursday.
+= God forbid I should get in the way of prayer! Juliet, I'll wake you early on Thursday. Until then, goodbye, and keep this holy kiss.
+
+JULIET:
+O, shut the door, and when thou hast done so,
+Come weep with me, past hope, past care, past help.
+> Paris has gone. You can finally fall apart.
+= Oh, shut the door, and when you've done that, come cry with me. I'm past hope, past cure, past help.
+
+FRIAR LAWRENCE:
+O Juliet, I already know thy grief.
+It strains me pass the compass of my wits.
+> She's in despair. You already know why, and you're stuck too.
+= Oh, Juliet, I already know your trouble. It pushes me past the limits of my wisdom.
+
+JULIET:
+Give me some present counsel, or, behold,
+‘Twixt my extremes and me this bloody knife
+Shall play the umpire. I long to die
+If what thou speak’st speak not of remedy.
+> He has no answer yet. You show him the knife: help me or I die.
+= Give me some advice right now, or look: this knife will settle things between me and my troubles. I want to die if what you say doesn't offer a solution.
+
+FRIAR LAWRENCE:
+Hold, daughter, I do spy a kind of hope.
+Go home; be merry; give consent
+To marry Paris.
+Tomorrow night look that thou lie alone;
+Take thou this vial, being then in bed,
+And this distilling liquor drink thou off;
+When presently through all thy veins shall run
+A cold and drowsy humor; for no pulse
+Shall keep his native progress, but surcease
+No warmth, no breath shall testify thou livest.
+And in this borrowed likeness of shrunk death
+Thou shalt continue two and four hours
+And then awake as from a pleasant sleep.
+Now, when the bridegroom in the morning comes
+To rouse thee from thy bed, there art thou dead.
+Thou shalt be borne to that same ancient vault
+Where all kindred of the Capulets lie.
+In the meantime, against thou shalt awake,
+Shall Romeo by my letters know our drift
+And hither shall he come.
+Get you gone. Be strong and prosperous.
+In this resolve, I’ll send a friar with speed
+To Mantua with my letters to thy lord.
+> She would rather die than marry Paris. That gives you a desperate idea: the sleeping potion.
+= Wait, daughter. I see a kind of hope. Go home, be cheerful, and agree to marry Paris. Tomorrow night, make sure you sleep alone. In bed, drink this potion. A cold, sleepy feeling will run through your veins. Your pulse will stop, and no warmth or breath will show you're alive. You'll look dead for forty-two hours, and then wake as if from a pleasant sleep. When the bridegroom comes in the morning to wake you, there you'll be, dead. You'll be carried to the old tomb where all the Capulets lie. Meanwhile, I'll write to Romeo and tell him our plan, and he will come here. Go now. Be strong. I'll send a friar quickly to Mantua with my letters to your husband.
+
+JULIET:
+Farewell, dear father.
+[Exeunt All.]
+> You have the potion and the plan. You say goodbye.
+= Goodbye, dear Father.
+
+=== ACT 4, SCENE 2 ===
+[Enter NURSE and JULIET. NURSE prepares JULIET for bed. JULIET sends NURSE away. Exit. NURSE]
+
+JULIET:
+Farewell.—God knows when we shall meet again.
+I have a faint cold fear thrills through my veins
+That almost freezes up the heat of life.
+Come, vial.
+What if this mixture do not work at all?
+Shall I be married then tomorrow morning?
+How, if when I am laid into the tomb,
+I wake before the time that Romeo
+Come to redeem me? That’s a fearful point.
+Romeo, Romeo, Romeo! Here’s drink. I drink to thee.
+[Enter NURSE to wake JULIET. She does not wake up. The NURSE, believing JULIET is dead, calls CAPULET, LADY CAPULET, and PARIS to her room. A moment of sadness.]
+> You're alone with the potion. You're terrified, but you drink it for Romeo.
+= Goodbye. God knows when we'll meet again. A cold fear runs through my veins and almost freezes my blood. Come here, little bottle. What if this potion doesn't work at all? Will I be married tomorrow morning? What if I wake up in the tomb before Romeo comes to rescue me? That's a scary thought. Romeo, Romeo, Romeo! Here's the drink. I drink to you.
+
+=== ACT 5, SCENE 1 ===
+[Enter ROMEO, alone; a beat. Enter BALTHASAR.]
+
+ROMEO:
+News from Verona!—How now, Balthasar?
+Dost thou not bring me letters from the Friar?
+How doth my lady? Is my mother well?
+How doth my Juliet? That I ask again,
+For nothing can be ill if she be well.
+> You're in Mantua, waiting for news. Your servant arrives from Verona.
+= News from Verona! How are you, Balthasar? Don't you bring me letters from the Friar? How is my lady? Is my mother well? How is my Juliet? I ask that again, because nothing can be wrong if she is well.
+
+BALTHASAR:
+Then she is well and nothing can be ill.
+Her body sleeps in Capulets’ monument.
+I saw her laid low in her kindred’s vault
+And presently took post to tell it you.
+> He asks about Juliet. You have to tell him she's dead.
+= Then she is well and nothing is wrong. Her body sleeps in the Capulet tomb. I saw her laid in her family's vault, and I rode at once to tell you.
+
+ROMEO:
+Is it e’en so?—Then I deny you, stars!—
+Get me ink and paper,
+And hire post-horses. I will hence tonight.
+> Juliet is dead. You decide at once to go back tonight.
+= Is that really true? Then I defy you, stars! Get me ink and paper, and hire horses. I'm leaving tonight.
+
+BALTHASAR:
+I do beseech you, sir, have patience.
+Your looks are pale and wild and do import
+Some misadventure.
+> He looks wild. You're worried and beg him to wait.
+= Please, sir, be patient. You look pale and wild, as if something terrible is about to happen.
+
+ROMEO:
+Hast thou not letters to me from the Friar?
+> You brush off his worry. You ask once more for a letter from the Friar.
+= Don't you have any letters for me from the Friar?
+
+BALTHASAR:
+No, my good lord.
+> He asks for letters. You have none.
+= No, my good lord.
+
+ROMEO:
+No matter. Get thee gone.
+I’ll be with thee straight. [Exit BALTHASAR.]
+Well, Juliet, I will lie with thee tonight.
+O mischief, thou art swift
+To enter in the thoughts of desperate men.
+I do remember an apothecary:
+“An if a man did need a poison now,
+Whose sale is present death in Mantua,
+Here lives a caitiff wretch would sell it him.”
+O, this same thought did but forerun my need,
+And this same needy man must sell it me.
+What ho, Apothecary!
+[Enter APOTHECARY.]
+> No letter. You send him away and work out how to die beside Juliet: the poor apothecary.
+= It doesn't matter. Go. I'll be with you soon. Well, Juliet, I will lie beside you tonight. Oh, how fast evil ideas come into the minds of desperate men. I remember an apothecary, and I thought, "If a man needed poison, which is against the law to sell in Mantua, here is a poor wretch who would sell it." That thought came before my need, and this poor man must sell it to me. Hello, Apothecary!
+
+APOTHECARY:
+Who calls so loud?
+> Someone is shouting for you. You come out.
+= Who's calling so loudly?
+
+ROMEO:
+Come hither, man. I see that thou art poor.
+Hold, there is forty ducats. Let me have
+A dram of poison
+That the life-weary taker may fall dead.
+> He's as poor as you remembered. You offer gold for poison.
+= Come here, man. I see that you're poor. Here are forty gold coins. Give me a dose of poison that will make someone tired of life fall dead.
+
+APOTHECARY:
+Such mortal drugs I have, but Mantua’s law
+Is death to any he that utters them.
+> He wants poison. You have it, but selling it means death.
+= I have deadly drugs like that. But Mantua's law puts to death anyone who sells them.
+
+ROMEO:
+Be not poor and take this.
+> He's afraid of the law. You push the gold on him.
+= Don't stay poor. Take this.
+
+APOTHECARY:
+Put this in any liquid thing you will
+And drink it off, and if you had the strength
+Of twenty men, it would dispatch you straight.
+> You need the money. You hand over the poison and explain how to use it.
+= Put this in any liquid you like and drink it. Even if you had the strength of twenty men, it would kill you right away.
+
+ROMEO:
+There is thy gold.
+Farewell, buy food, and get thyself in flesh.
+Come, cordial and not poison, go with me
+To Juliet’s grave, for there must I use thee.
+> You have the poison. You pay him and set off for Juliet's tomb.
+= There's your gold. Goodbye. Buy food and put some meat on your bones. Come with me to Juliet's grave, you medicine, not poison. That's where I must use you.
+
+=== ACT 5, SCENE 2 ===
+[Enter FRIAR LAWRENCE followed by FRIAR JOHN.]
+
+FRIAR JOHN:
+Holy Franciscan friar, brother, ho!
+> You've just got back and need to see Friar Lawrence. You call for him.
+= Holy Franciscan friar! Brother, hello!
+
+FRIAR LAWRENCE:
+This same should be the voice of Friar John.—
+Welcome from Mantua. What says Romeo?
+Or, if his mind be writ, give me his letter.
+> You hear Friar John. You expect Romeo's reply.
+= That sounds like the voice of Friar John. Welcome back from Mantua. What does Romeo say? Or if he wrote his thoughts down, give me his letter.
+
+FRIAR JOHN:
+Going to find a barefoot brother out,
+One of our order, to associate me,
+Here in this city visiting the sick,
+And finding him, the searchers of the town,
+Suspecting that we both were in a house
+Where the infectious pestilence did reign,
+Sealed up the doors and would not let us forth,
+So that my speed to Mantua there was stayed.
+> He asks for Romeo's answer. You have to explain why you never got to Mantua.
+= I went to find another friar from our order, who was visiting the sick here in the city, to travel with me. When I found him, the town's health officers suspected we had both been in a house with the plague. They locked the doors and wouldn't let us out. So I never got to Mantua.
+
+FRIAR LAWRENCE:
+Who bare my letter, then, to Romeo?
+> He never got there. You ask who delivered the letter.
+= Then who took my letter to Romeo?
+
+FRIAR JOHN:
+I could not send it—here it is again—.
+> He asks about the letter. You hand it back.
+= I couldn't send it. Here it is, back again.
+
+FRIAR LAWRENCE:
+Now must I to the monument alone.
+Within this three hours will fair Juliet wake.
+Poor living corse, closed in a dead man’s tomb.
+> Romeo doesn't know the plan. You must get to the tomb before Juliet wakes.
+= Now I must go to the tomb alone. Within three hours, beautiful Juliet will wake up. Poor living body, shut inside a dead man's tomb.
+
+=== ACT 5, SCENE 3 ===
+[Enter PARIS with a SERVANT.]
+
+PARIS:
+Give me thy torch, boy. Hence and stand aloof.
+Yet put it out, for I would not be seen.
+Give me those flowers. Do as I bid thee. Go.
+[Exit SERVANT.]
+Sweet flower, with flowers thy bridal bed I strew.
+Which with sweet water nightly I will dew,
+Or, wanting that, with tears distilled by moans.
+The obsequies that I for thee will keep
+Nightly shall be to strew thy grave and weep.
+[SERVANT whistles.]
+The boy gives warning something doth approach.
+Muffle me, night, awhile.
+[Enter ROMEO.]
+> You've come to Juliet's tomb at night to mourn her. You send your servant to keep watch.
+= Give me your torch, boy. Go and stand far off. No, put it out. I don't want to be seen. Give me those flowers. Do as I say. Go. Sweet flower, I scatter flowers on your wedding bed. Every night I'll water them with sweet water, or else with my tears. Every night I'll come to scatter flowers on your grave and weep. The boy is warning me that someone is coming. Night, hide me for a while.
+
+ROMEO:
+Thou detestable maw, thou womb of death,
+Gorged with the dearest morsel of the earth,
+Thus I enforce thy rotten jaws to open,
+And in despite I’ll cram thee with more food.
+> You've reached the tomb. You force it open.
+= You horrible mouth, you belly of death, stuffed with the dearest thing on earth. I force your rotten jaws open, and out of spite I'll cram you with more food.
+
+PARIS:
+This is that banished haughty Montague
+That murdered my love’s cousin, with which grief
+It is suppose’d the fair creature died.
+Stop thy unhallowed toil, vile Montague.
+Condemne’d villain, I do apprehend thee.
+Obey and go with me, for thou must die.
+> You recognise Romeo, the man you blame for Juliet's death. You try to arrest him.
+= This is that banished, proud Montague who murdered my love's cousin. People think she died from grief over it. Stop your unholy work, evil Montague. Condemned villain, I arrest you. Obey and come with me, for you must die.
+
+ROMEO:
+Good gentle youth, tempt not a desp’rate man.
+Fly hence and leave me. I beseech thee, youth.
+Put not another sin upon my head
+By urging me to fury. O, begone!
+> A stranger blocks your way. You beg him to leave.
+= Good, gentle young man, don't provoke a desperate man. Run from here and leave me alone, I beg you. Don't put another sin on my head by making me angry. Oh, go!
+
+PARIS:
+I do defy thy commination
+And apprehend thee for a felon here.
+> He tells you to go. You refuse.
+= I refuse your warnings, and I arrest you here as a criminal.
+
+ROMEO:
+Wilt thou provoke me? Then have at thee!
+[They fight. ROMEO stabs PARIS.]
+> He won't back down. You fight.
+= Will you provoke me? Then fight!
+
+PARIS:
+O, I am slain! If thou be merciful,
+Open the tomb; lay me with Juliet. [He dies.]
+> You're dying. You ask one last favour.
+= Oh, I'm killed! If you have any mercy, open the tomb and lay me beside Juliet.
+
+ROMEO:
+In faith, I will.—Let me peruse this face.
+Mercutio’s kinsman, noble County Paris!
+O, give me thy hand,
+One writ with me in sour misfortune’s book!
+I’ll bury thee in a triumphant grave.
+[ROMEO sees JULIET.]
+O my love, my wife,
+Death, that hath sucked the honey of thy breath,
+Hath had no power yet upon thy beauty.
+Ah, dear Juliet,
+Why art thou yet so fair? Here, here will I remain
+With worms that are thy chambermaids. O, here
+Will I set up my everlasting rest
+And shake the yoke of inauspicious stars
+From this world-wearied flesh! Eyes, look your last,
+Arms, take your last embrace. And, lips, O, you
+The doors of breath, seal with a righteous kiss
+A dateless bargain to engrossing death.
+Here’s to my love. [ROMEO drinks poison.]
+O true apothecary,
+Thy drugs are quick. Thus with a kiss I die. [He dies.]
+[Enter FRIAR LAWRENCE.]
+> He asks to lie beside Juliet. You agree, see who he is, and then you see her.
+= I promise I will. Let me look at this face. It's Mercutio's relative, noble Count Paris! Give me your hand. Your name is written with mine in the book of bad luck. I'll bury you in a glorious grave. Oh, my love, my wife. Death has taken the sweetness of your breath, but it has had no power over your beauty. Ah, dear Juliet, why are you still so lovely? I will stay here with the worms that are your servants. Here I'll set up my rest forever, and shake off the burden of unlucky stars from this tired body. Eyes, take your last look. Arms, take your last hug. And lips, seal with a kiss my endless bargain with death. Here's to my love. Oh, honest apothecary, your drugs are quick. With a kiss, I die.
+
+FRIAR LAWRENCE:
+Romeo!—
+Alack, alack, what blood is this which stains
+The stony entrance of this sepulcher?
+Romeo! O, pale! Who else? What, Paris too?
+And steeped in blood? Ah, what an unkind hour
+Is guilty of this lamentable chance! [JULIET begins to wake.]
+The lady stirs.
+> You arrive too late and find blood, then bodies. Then Juliet moves.
+= Romeo! Oh no, whose blood is this, staining the stone doorway of this tomb? Romeo! So pale! Who else? What, Paris too? And covered in blood? What a cruel hour, to cause such a sad thing! The lady is moving.
+
+JULIET:
+O comfortable friar, where is my lord?
+I do remember well where I should be,
+And there I am. Where is my Romeo? [noise.]
+> You wake up in the tomb as planned. You look for Romeo.
+= Oh, comforting Friar, where is my husband? I remember clearly where I'm supposed to be, and here I am. Where is my Romeo?
+
+FRIAR LAWRENCE:
+I hear some noise—Lady, come from that nest
+Of death, contagion, and unnatural sleep.
+A greater power than we can contradict
+Hath thwarted our intents. Come, come away.
+Thy husband in thy bosom there lies dead.
+And Paris too.
+Come, go, good Juliet. I dare no longer stay.
+> She asks for Romeo. You hear people coming and must tell her fast.
+= I hear a noise. Lady, come away from this nest of death, sickness, and unnatural sleep. A power greater than we can fight has ruined our plans. Come, come away. Your husband lies there dead beside you, and Paris too. Come on, good Juliet. I don't dare stay any longer.
+
+JULIET:
+Go, get thee hence, for I will not away.
+[Exit FRIAR LAWRENCE.]
+What’s here?
+Poison, I see, hath been his timeless end.—
+O churl, drunk all, and left no friendly drop
+To help me after! I will kiss thee.
+Haply some poison yet doth hang on thee,
+To make me die with a restorative.
+Thy body is warm. [noise.]
+Yea, noise? Then I’ll be brief. O, happy dagger,
+This is thy sheath. There rust, and let me die.
+[JULIET stabs herself with ROMEO’S knife. She dies.]
+[A pause.]
+[Enter SERVANT, PRINCE, LADY CAPULET, LORD CAPULET, LADY MONTAGUE, BENVOLIO, FRIAR LAWRENCE, and OTHERS.]
+> Romeo is dead beside you. You refuse to leave, and choose to follow him.
+= Go, get out of here. I'm not leaving. What's this? Poison, I see, has been his early end. Oh, selfish! You drank it all and left no friendly drop to help me follow you. I'll kiss you. Maybe some poison is still on your lips, to make me die with a kiss that heals. Your body is warm. A noise? Then I'll be quick. Oh, lucky dagger, this is your home. Rust here, and let me die.
+
+SERVANT:
+Sovereign, here lies the County Paris slain,
+And Romeo dead, and Juliet, dead before,
+Warm and new killed.
+> You've brought the Prince to the tomb. You show him what you found.
+= My Prince, here lies Count Paris, killed. And Romeo dead. And Juliet, who was dead before, warm and newly killed.
+
+PRINCE:
+Search, seek, and know how this foul murder comes.
+> Three bodies. You order a search for the truth.
+= Search, look, and find out how this awful murder happened.
+
+CAPULET:
+O heavens! O wife, look how our daughter bleed!
+> You see your daughter bleeding. You cry out to your wife.
+= Oh, heavens! Wife, look how our daughter bleeds!
+
+LADY CAPULET:
+O me, this sight of death is as a bell
+That warms my old age to a sepulcher.
+> You see Juliet dead. It feels like your own death bell.
+= Oh, me. This sight of death is like a bell calling my old age to the grave.
+
+PRINCE:
+Come, Montague, for thou art early up
+To see thy son and heir now early down.
+Look, and thou shalt see.
+> The Montagues arrive. You show them their son.
+= Come, Montague. You're up early to see your son and heir gone down early. Look, and you'll see.
+
+MONTAGUE:
+O thou untaught! What manners is in this,
+To press before thy mother to a grave?
+> You see your son dead. You grieve that a child should die before a parent.
+= Oh, you rude boy! What kind of manners is this, to push ahead of your own mother to the grave?
+
+PRINCE:
+Bring forth the parties of suspicion.
+> You need answers. You call for the suspects.
+= Bring out the people we suspect.
+
+FRIAR LAWRENCE:
+I will be brief, for my short date of breath
+Is not so long as is a tedious tale.
+Romeo, there dead, was husband to that Juliet.
+And she, there dead, that Romeo’s faithful wife.
+I married them, and their stol’n marriage day
+Was Tybalt’s doomsday, whose untimely death
+Banished the new-made bridgegroom from this city.
+For whom, and not for Tybalt, Juliet pined.
+You, to remove that siege of grief from her,
+Betrothed and would have married her perforce
+To County Paris. Then comes she to me,
+And with wild looks bid me devise some mean
+To rid her from this second marriage.
+Then gave I her (so tutored by my art)
+A sleeping potion, which so took effect
+As I intended. Meantime I writ to Romeo,
+But he which bore my letter, Friar John,
+Was stayed by accident, and yesternight
+Returned my letter back.
+When I came, some minute ere the time
+Of her awakening, here untimely lay
+The noble Paris and true Romeo dead.
+She wakes and as it seems, did violence on herself.
+All this I know.
+> Everyone looks to you. You tell the whole story.
+= I'll be brief, because I don't have long to live. Romeo, lying there dead, was Juliet's husband, and she, lying there dead, was Romeo's faithful wife. I married them. Their secret wedding day was the day Tybalt died, and his death got the new bridegroom banished. Juliet was grieving for Romeo, not for Tybalt. To end her sadness, you promised her to Count Paris and would have forced her to marry him. Then she came to me, wild with worry, and asked me to find a way out of this second marriage. I gave her a sleeping potion, which worked as I planned. I wrote to Romeo, but Friar John, who carried my letter, was held up by accident and brought it back last night. When I came here, a minute before she was due to wake, noble Paris and true Romeo already lay dead. She woke, and it seems she took her own life. That is all I know.
+
+PRINCE:
+Where be these enemies?—Capulet, Montague,
+See what a scourge is laid upon your hate,
+That heaven finds mean to kill your joys with love,
+And I, for winking at your discords too,
+Have lost a brace of kinsmen. All are punished.
+> Now you know the truth. You show the families what their hate has cost.
+= Where are these enemies? Capulet, Montague, see what a punishment has fallen on your hatred. Heaven has found a way to kill your joys with love. And I, for looking the other way at your fighting, have lost two relatives. Everyone is punished.
+
+CAPULET:
+O sister Montague, give me thy hand.
+This is my daughter’s jointure, for no more
+Can I demand.
+> Your daughter is dead because of the feud. You offer peace.
+= Oh, sister Montague, give me your hand. This is my daughter's wedding gift. I can ask for nothing more.
+
+LADY MONTAGUE:
+But I can give thee more,
+For I will ray her statue in pure gold,
+That whiles Verona by that name is known,
+There shall no figure at such rate be set
+As that of true and faithful Juliet.
+> Capulet offers his hand. You offer more: a gold statue of Juliet.
+= But I can give you more. I will have a statue of her made in pure gold. As long as Verona is called Verona, no statue will be valued as highly as the one of true and faithful Juliet.
+
+CHORUS:
+A glooming peace this morning with it brings.
+The sun for sorrow will not show his head.
+Go hence to have more talk of these sad things.
+Some shall be pardoned, and some punishe’d.
+For never was a story of more woe
+Than this of Juliet and her Romeo.
+> The families have made peace. You close the story for the audience.
+= This morning brings a gloomy kind of peace. The sun is too sad to show its face. Go, and talk more about these sad things. Some people will be pardoned and some punished. There was never a sadder story than this one of Juliet and her Romeo.
