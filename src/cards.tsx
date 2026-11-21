@@ -41,6 +41,12 @@ export function UnderstandCard({ step, onOutcome, done }: CardProps) {
 // --- Thought cue: which line does this thought set off? ------------------------------
 export function WhyCard({ step, onOutcome, done }: CardProps) {
   const [picked, setPicked] = useState<string | null>(null);
+  const response = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!done) return;
+    const frame = requestAnimationFrame(() => response.current?.scrollIntoView({ block: 'start', behavior: 'auto' }));
+    return () => cancelAnimationFrame(frame);
+  }, [done]);
   const pick = (id: string) => {
     if (done) return;
     setPicked(id);
@@ -50,19 +56,23 @@ export function WhyCard({ step, onOutcome, done }: CardProps) {
     <div className="rise" style={{ display: 'grid', gap: 14 }}>
       <h2>What do you say when this happens?</h2>
       <div className="thought-big"><span aria-hidden="true">💭 </span>{step.item.why}</div>
-      {step.options!.map((o) => {
+      {(step.options?.length ?? 0) > 1 ? step.options!.map((o) => {
         const right = done && o.id === step.item.id;
         const wrong = done && picked === o.id && !right;
         return (
-          <button key={o.id} className={`tile ${wrong ? 'shake' : ''}`} onClick={() => pick(o.id)}
+          <button key={o.id} className={`tile ${wrong ? 'shake' : ''}`} disabled={done} aria-pressed={picked === o.id} onClick={() => pick(o.id)}
             style={{ borderColor: right ? 'var(--good)' : wrong ? 'var(--bad)' : undefined, background: right ? 'var(--good-soft)' : wrong ? 'var(--bad-soft)' : undefined }}>
             <span className="verse" style={{ fontSize: 18 }}>{o.lines.slice(0, 2).join(' ')}{o.lines.length > 2 ? '…' : ''}</span>
           </button>
         );
-      })}
-      {done && step.item.cue && !step.item.cue.self && step.item.cue.who !== 'Stage' && (
-        <div className="muted" style={{ fontSize: 14 }}>The words you will hear first: “…{step.item.cue.text}”</div>
-      )}
+      }) : !done && <button className="btn btn-wide" onClick={() => onOutcome('good')}>Reveal my response</button>}
+      {done && <section ref={response} className="scene-response" aria-label="Your response in context">
+        <h3>Your response</h3>
+        <Verse lines={step.item.lines} />
+        <h3>What makes you speak</h3>
+        <p>{step.item.why}</p>
+        {step.item.plain && <><h3>In plain English</h3><p>{step.item.plain}</p></>}
+      </section>}
     </div>
   );
 }

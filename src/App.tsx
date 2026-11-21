@@ -8,6 +8,7 @@ import {
 } from './lib/progress';
 import { GAMES, buildSteps, dueItems, gameById, todaySteps, troubleItems, troubleSteps, type GameId } from './lib/games';
 import { Lesson } from './lesson';
+import { LearningIntroduction } from './scene-context';
 import { initializeWhisper, subscribeWhisper, whisperState } from './lib/local-whisper';
 import { SpeechPlayback } from './speech-playback';
 import { CueCatch, ScenePartner, SpeedRun } from './runs';
@@ -298,6 +299,8 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
 
 // --- Play -----------------------------------------------------------------------------------------
 function Play({ role, game, sceneId }: { role: Role; game: string; sceneId?: string }) {
+  const [sceneInOrder, setSceneInOrder] = useState<boolean | null>(null);
+  const isContextGame = game === 'understand' || game === 'why';
   const [practiceSize, setPracticeSize] = useState<'parts' | 'whole' | null>(null);
   const hasSizeChoice = ['sayit', 'letters', 'vanish', 'scramble'].includes(game);
   // Steps are fixed when the lesson opens, so they do not reshuffle as progress changes underneath.
@@ -306,13 +309,18 @@ function Play({ role, game, sceneId }: { role: Role; game: string; sceneId?: str
     if (game === 'today') return todaySteps(s, role.id);
     if (game === 'trouble') return troubleSteps(s, role.id);
     if (!sceneId || !gameById.has(game as GameId) || ['cue', 'partner', 'speed'].includes(game)) return [];
-    return buildSteps(s, game as GameId, role.id, sceneId, practiceSize ?? 'parts');
-  }, [game, role.id, sceneId, practiceSize]);
+    const planned = buildSteps(s, game as GameId, role.id, sceneId, practiceSize ?? 'parts');
+    return sceneInOrder && game === 'understand' ? planned.filter(step => step.kind === 'understand') : planned;
+  }, [game, role.id, sceneId, practiceSize, sceneInOrder]);
 
   if (game === 'today') return <Lesson steps={steps} exit="/" title="Today’s practice" />;
   if (game === 'trouble') return <Lesson steps={steps} exit="/progress" title="Trouble lines" />;
   if (!sceneId || !sceneById.has(sceneId) || !gameById.has(game as GameId)) return <NotFound />;
   const exit = `/scene/${sceneId}`;
+  if (isContextGame && sceneInOrder === null) return <div className="page">
+    <TopBar back={exit} title={gameById.get(game as GameId)!.name} />
+    <LearningIntroduction scene={sceneById.get(sceneId)!} roleId={role.id} onChoose={inOrder => { setSceneInOrder(inOrder); window.scrollTo(0, 0); }} />
+  </div>;
   if (hasSizeChoice && practiceSize === null) return <div className="page">
     <TopBar back={exit} title={gameById.get(game as GameId)!.name} />
     <h1>How much at once?</h1>
@@ -326,7 +334,7 @@ function Play({ role, game, sceneId }: { role: Role; game: string; sceneId?: str
   if (game === 'cue') return <CueCatch roleId={role.id} sceneId={sceneId} exit={exit} />;
   if (game === 'partner') return <ScenePartner roleId={role.id} sceneId={sceneId} exit={exit} />;
   if (game === 'speed') return <SpeedRun roleId={role.id} sceneId={sceneId} exit={exit} />;
-  return <Lesson key={practiceSize} steps={steps} exit={exit} controls={hasSizeChoice ? <button className="btn-plain" onClick={() => setPracticeSize(null)}>{practiceSize === 'whole' ? 'Whole speeches' : 'Short parts'} · Change</button> : undefined} title={gameById.get(game as GameId)!.name} onFinish={() => finishGame(gameKey(role.id, sceneId, game))} />;
+  return <Lesson key={`${practiceSize}-${sceneInOrder}`} learningContext={isContextGame ? {scene:sceneById.get(sceneId)!,roleId:role.id,inOrder:sceneInOrder === true} : undefined} steps={steps} exit={exit} controls={isContextGame ? <button className="btn-plain" onClick={() => { setSceneInOrder(null); window.scrollTo(0, 0); }}>{sceneInOrder ? 'Scene in order' : 'Focus on my speeches'} · Change</button> : hasSizeChoice ? <button className="btn-plain" onClick={() => setPracticeSize(null)}>{practiceSize === 'whole' ? 'Whole speeches' : 'Short parts'} · Change</button> : undefined} title={gameById.get(game as GameId)!.name} onFinish={() => finishGame(gameKey(role.id, sceneId, game))} />;
 }
 
 

@@ -1,9 +1,10 @@
 // Runs a list of practice cards one at a time, Brilliant-style: one task per
 // screen, a progress bar on top, one big button at the bottom.
-import { useState, type ReactNode } from 'react';
+import { useId, useState, type ReactNode } from 'react';
 import { record, type Outcome } from './lib/progress';
 import type { Step } from './lib/games';
 import { StepCard } from './cards';
+import { CompleteScene, SceneContext, type LearningContext } from './scene-context';
 import { Bottom, go } from './ui';
 
 const VERDICT: Record<Outcome, string[]> = {
@@ -40,9 +41,11 @@ export function Summary({ title, lines, exit, again, extra }: { title: string; l
   );
 }
 
-export function Lesson({ steps, exit, title, onFinish, controls }: { steps: Step[]; exit: string; title: string; onFinish?: () => void; controls?: ReactNode }) {
+export function Lesson({ steps, exit, title, onFinish, controls, learningContext }: { steps: Step[]; exit: string; title: string; onFinish?: () => void; controls?: ReactNode; learningContext?: LearningContext }) {
   // Lines that are missed come back once more at the end of the lesson.
   const [queue, setQueue] = useState(steps);
+  const [contextFrom, setContextFrom] = useState(0);
+  const currentId = useId();
   const [i, setI] = useState(0);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [tally, setTally] = useState({ good: 0, ok: 0, miss: 0 });
@@ -61,7 +64,7 @@ export function Lesson({ steps, exit, title, onFinish, controls }: { steps: Step
   if (finished) {
     const total = tally.good + tally.ok + tally.miss;
     return (
-      <Summary title={skipped ? `${title} practice finished` : `${title} done!`} exit={exit}
+      <Summary extra={learningContext?.inOrder ? <CompleteScene context={learningContext} /> : undefined} title={skipped ? `${title} practice finished` : `${title} done!`} exit={exit}
         lines={[total ? `${tally.good} of ${total} tries went well.` : 'No questions answered this time.', ...(skipped ? [`${skipped} skipped. Their progress has not changed.`] : []), tally.miss ? 'The lines you missed will come back in Today’s practice.' : skipped ? 'Come back to the skipped questions whenever you need them.' : 'Nothing to redo. Lovely work.']} />
     );
   }
@@ -73,15 +76,19 @@ export function Lesson({ steps, exit, title, onFinish, controls }: { steps: Step
     record(step.ids, o, step.cap);
     setOutcome(o);
     setTally((t) => ({ ...t, [o]: t[o] + 1 }));
-    if (o === 'miss' && !step.again && step.kind !== 'understand' && step.kind !== 'match') {
+    if (o === 'miss' && !learningContext?.inOrder && !step.again && step.kind !== 'understand' && step.kind !== 'match') {
       setQueue((q) => [...q, { ...step, again: true }]);
     }
   };
+  const revealFromHere = () => {
+    if (learningContext?.inOrder) setContextFrom(Math.max(0, learningContext.scene.items.findIndex(turn => turn.k === 's' && turn.id === step.item.speechId)));
+  };
   const next = (skipping = false) => {
-    if (i + 1 >= queue.length) { if (!skipped && !skipping) onFinish?.(); setFinished(true); return; }
+    revealFromHere();
+    if (i + 1 >= queue.length) { if (!skipped && !skipping) onFinish?.(); setFinished(true); window.scrollTo(0, 0); return; }
     setI(i + 1);
     setOutcome(null);
-    window.scrollTo(0, 0);
+    if (!learningContext?.inOrder) window.scrollTo(0, 0);
   };
 
   return (
@@ -95,7 +102,7 @@ export function Lesson({ steps, exit, title, onFinish, controls }: { steps: Step
             <select value="" aria-label="Jump to a later question" onChange={e => {
               const target = Number(e.target.value);
               if (target <= i || target >= queue.length) return;
-              setSkipped(n => n + target - i); setI(target); setOutcome(null); window.scrollTo(0, 0);
+              revealFromHere(); setSkipped(n => n + target - i); setI(target); setOutcome(null); window.scrollTo(0, 0);
             }}>
               <option value="" disabled>Choose a question…</option>
               {queue.slice(i + 1).map((candidate, offset) => <option key={i + offset + 1} value={i + offset + 1}>
@@ -106,7 +113,10 @@ export function Lesson({ steps, exit, title, onFinish, controls }: { steps: Step
         </details>
       )}
       {step.again && <div className="chip chip-accent" style={{ marginBottom: 10 }}>Back again: you missed this one earlier</div>}
-      <StepCard key={i} step={step} onOutcome={onOutcome} done={outcome != null} />
+      {learningContext && <SceneContext key={i} context={learningContext} item={step.item} fromIndex={contextFrom} currentId={currentId} />}
+      <div id={currentId} tabIndex={-1} className="current-learning-speech">
+        <StepCard key={i} step={step} onOutcome={onOutcome} done={outcome != null} />
+      </div>
       {outcome && (
         <Bottom tone={quiet ? undefined : outcome}>
           {!quiet && <div className="verdict rise">{VERDICT[outcome][i % VERDICT[outcome].length]}</div>}

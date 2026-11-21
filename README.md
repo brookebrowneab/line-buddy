@@ -125,3 +125,24 @@ The development-only #/local-audio-test route exercises real local inference on
 a selected generated clip. It is unreachable and tree-shaken in production.
 
 See [local speech testing](docs/LOCAL_SPEECH_TESTING.md) for successful and expected-failure checks, actual results and device limitations.
+
+## Learning a scene with context
+
+Understand and Thought Cues open with the scene summary, speaking characters and
+selected character's goal from the existing script metadata. Focused practice
+shows two complete preceding speeches and intervening stage directions; Show
+more before this expands backward without revealing the current answer or future
+speech. A scene reminder stays available during questions.
+
+Learn this scene in order follows the character's speeches chronologically,
+revealing every intervening turn as the actor advances. Earlier dialogue stays
+in an expandable history, with a return-to-current control. Understand's shuffled
+meaning quiz and delayed wrong-answer retries are omitted in this mode to retain
+script order; Thought Cues still reveals and explains a mistaken response right
+away. The completion screen includes the entire scene, including the ending after
+the actor's final speech. Skipping continues to leave those questions' progress
+unchanged. No additional data collection, microphone or network service is used.
+
+`tests/scene-learning.test.ts` covers these learning UI behaviors, including
+single-speech roles, hidden future dialogue, chronological progression, expanded
+history, final-scene reading and incorrect-answer handling.

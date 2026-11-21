@@ -209,3 +209,41 @@ button:disabled { opacity: .55; cursor: not-allowed; }
   .privacy-page h2 { break-after:avoid; }
   .privacy-page a { color:#000; }
 }
+
+/* Reading context stays distinct from the current practice question. */
+.scene-orientation { margin: 22px 0 26px; }
+.scene-orientation h2 { font-size: 19px; }
+.scene-orientation dl { display: grid; gap: 14px; margin: 16px 0 0; }
+.scene-orientation dt { font-weight: 800; font-size: 15px; margin-bottom: 4px; }
+.scene-orientation dd { margin: 0; line-height: 1.6; }
+.scene-mode-options { display: grid; gap: 12px; margin: 16px 0; }
+.scene-mode-options .tile { line-height: 1.55; }
+.scene-context { margin: 16px 0 22px; }
+.scene-context-heading { position: sticky; top: 0; z-index: 2; background: var(--bg); padding: 8px 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin: 20px 0 12px; }
+.scene-context-heading h2 { font-size: 20px; }
+.scene-context-heading .btn-plain { font-size: 14px; padding: 8px 0; text-align: left; }
+.scene-reminder summary, .earlier-scene summary, .complete-scene summary { cursor: pointer; padding: 12px 0; font-weight: 700; }
+.scene-reminder { border-bottom: 1px solid var(--line); }
+.earlier-scene { margin-bottom: 18px; }
+.scene-script { display: grid; gap: 20px; text-align: left; }
+.scene-turn h3 { font-family: inherit; font-size: 15px; line-height: 1.4; margin-bottom: 5px; }
+.scene-turn-mine h3 { color: var(--accent-deep); }
+.scene-turn .verse { font-size: 18px; line-height: 1.65; overflow-wrap: anywhere; }
+.scene-direction { color: var(--muted); font-style: italic; font-size: 15px; line-height: 1.6; margin: 0; }
+.new-exchange { scroll-margin-top: 84px; }
+.new-exchange > button { margin-top: 16px; }
+.scene-your-turn { font-weight: 800; margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
+.current-learning-speech { scroll-margin-top: 20px; }
+.current-learning-speech:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 4px; }
+.scene-response { display: grid; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
+.scene-response h3 { font-size: 17px; margin-top: 8px; }
+.scene-response p { margin: 0; line-height: 1.6; }
+.complete-scene { text-align: left; margin: 16px 0 30px; }
+.complete-scene > p { line-height: 1.6; }
+@media (prefers-color-scheme: dark) {
+  .scene-turn-mine h3 { color: var(--accent); }
+}
+
+@media (max-width: 440px) {
+  .new-exchange { scroll-margin-top: 112px; }
+}

@@ -56,12 +56,11 @@ export function buildSteps(state: State, game: GameId, roleId: string, sceneId: 
     return steps;
   }
   if (game === 'why') {
-    // Match the thought to the line it sets off. With only one or two speeches there is nothing to choose between, so say the line instead.
+    // Keep this a reading/context game, even when a role has only one speech.
     const all = speechItems(roleId, sceneId).filter((s) => s.why);
     const batch = speechItems(roleId, sceneId).filter((s) => s.why);
     const rand = seeded(sceneId + roleId + 'why' + dayNumber());
     return batch.map((item): Step => {
-      if (all.length < 3) return { kind: 'sayit', item, ids: partIds(item), cap, thoughtOnly: true };
       const others = shuffle(all.filter((o) => o.id !== item.id && o.lines[0] !== item.lines[0]), rand).slice(0, 2);
       return { kind: 'why', item, ids: partIds(item), cap, options: shuffle([item, ...others], rand) };
     });
