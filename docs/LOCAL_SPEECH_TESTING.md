@@ -30,7 +30,7 @@ Do not switch back to a cloud service automatically on any failure.
 
 ## What was actually verified
 
-- All 52 automated tests passed, including the three user-approved boundaries:
+- All 53 automated tests passed, including the three user-approved boundaries:
   transcription API, compareSpeech and rehearsal UI. Typecheck and build passed.
 - Real browser inference, not an API mock: the existing synthetic Queen Mab
   performance returned the complete speech, matched 103/106 target words (97.17%)
@@ -62,7 +62,7 @@ check as a pass. Timing and recognized words can vary by browser/device.
    expected: the corrected word in the correct order can count.
 5. Try “Oh” for printed “O”, “over”/“or” for printed “o'er”, and “it is” for “'tis”.
    Those spelling variants should match. An unrelated substitution such as
-   “hate” for “love” should still fail. Extra false starts are deliberately unscored.
+   “hate” for “love”, “these” for “those”, or “living” for “loving” should still fail. Extra false starts are deliberately unscored.
 6. Use It misheard. Let me type to recover from a recognition error. Type the first
    letter of each word. Leave microphone features off for normal typed practice.
 

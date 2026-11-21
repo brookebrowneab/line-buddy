@@ -11,7 +11,8 @@ describe('on-device transcription', () => {
     expect(result.text).toBe('Wherefore art thou Romeo?');
     expect(result.accuracy).toBe(1); expect(result.hit).toEqual([true,true,true,true]);
     expect(result.wordMatches).toHaveLength(4);
-    expect(browser.contexts).toEqual([[1,1,16000],[1,16000,16000]]);
+    expect(browser.jobs.at(-1).audio).toBeInstanceOf(Float32Array);
+    expect(browser.jobs.at(-1).audio.length).toBe(16000);
     expect(browser.jobs.at(-1)).toMatchObject({type:'transcribe',audio:browser.pcm,targetLine:'Wherefore art thou Romeo?',previousContextLines:['O Romeo']});
     expect(browser.network).not.toHaveBeenCalled();
   });

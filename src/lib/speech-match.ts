@@ -1,3 +1,5 @@
+import { SHAKESPEARE_VOCABULARY } from './whisper-core';
+
 /** Equivalent printed/spoken spellings, not substitutions for different words. */
 const equivalents: Record<string, string> = {
   o: 'oh', oer: 'over', eer: 'ever', neer: 'never', een: 'even',
@@ -29,10 +31,19 @@ export function soundex(word: string): string {
   for(const c of text.slice(1)){const code=groups[c]||'';if(code&&code!==previous)result+=code;previous=code;}
   return result.padEnd(4,'0').slice(0,4);
 }
-const close = (want: string, heard: string) => want === heard ||
-  (Math.min(want.length,heard.length)>=5 && soundex(want.replace(/s$/,''))===soundex(heard.replace(/s$/,'')) &&
-   editDistance(want,heard)<= (Math.max(want.length,heard.length)>=8?2:1) &&
-   1-editDistance(want,heard)/Math.max(want.length,heard.length)>=.75);
+const phoneticVocabulary = new Set(SHAKESPEARE_VOCABULARY.map(normalizeSpeechWord));
+function close(want: string, heard: string): boolean {
+  if (want === heard) return true;
+  // ASR spelling variation is useful for names/archaic vocabulary, but broad
+  // fuzzy matching also accepts real substitutions such as living/loving.
+  // Preserve the existing long-word plural tolerance (window/windows).
+  const pluralVariant = want + 's' === heard || heard + 's' === want;
+  if (!pluralVariant && (!phoneticVocabulary.has(want) || phoneticVocabulary.has(heard))) return false;
+  if (Math.min(want.length, heard.length) < 5) return false;
+  if (soundex(want.replace(/s$/, '')) !== soundex(heard.replace(/s$/, ''))) return false;
+  const distance = editDistance(want, heard), length = Math.max(want.length, heard.length);
+  return distance <= (length >= 8 ? 2 : 1) && 1 - distance / length >= .75;
+}
 export function normalizeSpeechText(text:string):string {
  return text.toLowerCase().replace(/[’‘]/g,"'")
   .replace(/\b'?tis\b/g,'it is').replace(/\b'?twas\b/g,'it was').replace(/\b'?twere\b/g,'it were')

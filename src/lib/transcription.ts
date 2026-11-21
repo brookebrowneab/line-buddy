@@ -44,5 +44,5 @@ export async function transcribeRecording(audio: Blob, signal: AbortSignal, targ
   const samples = await asFloat32Pcm(audio);
   if(signal.aborted)throw new Error('Recording was cancelled.');
   const result = await transcribePcm(samples,signal,targetLine,previousContextLines);
-  return {text:result.text as string,model:result.model as string,...compareSpeech(targetLine,result.text)};
+  return {text:result.text,model:result.model,...compareSpeech(targetLine,result.text)};
 }

@@ -11,6 +11,10 @@ describe('spoken rehearsal feedback',()=>{
   expect(compareSpeech('I love thee','I hate thee').hit).toEqual([true,false,true]);
   expect(compareSpeech('hath been with you','hate been with you').hit).toEqual([false,true,true,true]);
  });
+ it('rejects real words that sound similar but have different meanings',()=>{
+  expect(compareSpeech('these words','those words').hit).toEqual([false,true]);
+  expect(compareSpeech('living soul','loving soul').hit).toEqual([false,true]);
+ });
  it('counts a missing repeated script word and produces zero for no spoken words',()=>{
   expect(compareSpeech('Romeo Romeo wherefore art thou Romeo','Romeo wherefore art thou Romeo').accuracy).toBeCloseTo(5/6);
   expect(compareSpeech('Queen Mab hath been with you','').accuracy).toBe(0);
