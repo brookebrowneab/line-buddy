@@ -1,11 +1,13 @@
-import { useMemo, useRef, useState } from 'react';
-import { allItems, items, roleById, roleName, sceneById, sceneLabel, script, type Role, type Scene } from './lib/script';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { allItems, items, roleById, roleName, sceneById, sceneLabel, script, spokenLines, type Role, type Scene } from './lib/script';
 import {
   chooseRole, dayKey, dayNumber, exportData, finishGame, gameKey, getState, importData, levelOf, mastery, removeRole, resetAll, streak, useProgress,
-  type State,
+  setSettings, type State,
 } from './lib/progress';
 import { GAMES, buildSteps, dueItems, gameById, todaySteps, troubleItems, troubleSteps, type GameId } from './lib/games';
 import { Lesson } from './lesson';
+import { ClassAccess } from './class-access';
+import { SpeechPlayback } from './speech-playback';
 import { CueCatch, ScenePartner, SpeedRun } from './runs';
 import { Bottom, Ring, TopBar, go, pct, useRoute } from './ui';
 
@@ -70,6 +72,7 @@ function Home({ state, role }: { state: State; role: Role }) {
           <div className="eyebrow">Romeo and Juliet</div>
           <h1 style={{ fontSize: 30 }}>{role.name}</h1>
         </div>
+        <button className="btn btn-small" onClick={() => go('/settings')}>Settings</button>
         <button className="btn btn-small" onClick={() => go('/roles')}>Switch</button>
       </div>
 
@@ -141,7 +144,7 @@ function SceneScreen({ state, role, scene }: { state: State; role: Role; scene: 
   const nextGame = GAMES.find((g) => !state.games[gameKey(role.id, scene.id, g.id)]?.done)?.id;
   return (
     <div className="page">
-      <TopBar back="/" />
+      <TopBar back="/" right={<button className="btn btn-small" onClick={() => go('/settings')}>Settings</button>} />
       <div style={{ display: 'flex', gap: 16, alignItems: 'center', marginBottom: 16 }}>
         <Ring value={m} size={92} stroke={9}><b style={{ fontSize: 20 }}>{pct(m)}</b></Ring>
         <div>
@@ -187,7 +190,10 @@ function ReadScene({ role, scene }: { role: Role; scene: Scene }) {
           const me = it.role === role.id;
           return (
             <div key={it.id} className={me ? 'mine' : ''}>
-              <div className="eyebrow">{roleName(it.role)}{it.note ? ` (${it.note})` : ''}{me ? ' · you' : ''}</div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 6 }}>
+                <div className="eyebrow">{roleName(it.role)}{it.note ? ` (${it.note})` : ''}{me ? ' · you' : ''}</div>
+                <SpeechPlayback id={it.id} role={it.role} text={spokenLines(it.lines).join(' ')} />
+              </div>
               <div className="verse" style={{ fontSize: 18 }}>
                 {it.lines.map((l, n) => /^\[[^\]]*\]$/.test(l)
                   ? <div key={n} className="muted" style={{ fontStyle: 'italic', fontSize: 15 }}>{l}</div>
@@ -288,23 +294,64 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
 
 // --- Play -----------------------------------------------------------------------------------------
 function Play({ role, game, sceneId }: { role: Role; game: string; sceneId?: string }) {
+  const [practiceSize, setPracticeSize] = useState<'parts' | 'whole' | null>(null);
+  const hasSizeChoice = ['sayit', 'letters', 'vanish', 'scramble'].includes(game);
   // Steps are fixed when the lesson opens, so they do not reshuffle as progress changes underneath.
   const steps = useMemo(() => {
     const s = getState();
     if (game === 'today') return todaySteps(s, role.id);
     if (game === 'trouble') return troubleSteps(s, role.id);
     if (!sceneId || !gameById.has(game as GameId) || ['cue', 'partner', 'speed'].includes(game)) return [];
-    return buildSteps(s, game as GameId, role.id, sceneId);
-  }, [game, role.id, sceneId]);
+    return buildSteps(s, game as GameId, role.id, sceneId, practiceSize ?? 'parts');
+  }, [game, role.id, sceneId, practiceSize]);
 
   if (game === 'today') return <Lesson steps={steps} exit="/" title="Today’s practice" />;
   if (game === 'trouble') return <Lesson steps={steps} exit="/progress" title="Trouble lines" />;
   if (!sceneId || !sceneById.has(sceneId) || !gameById.has(game as GameId)) return <NotFound />;
   const exit = `/scene/${sceneId}`;
+  if (hasSizeChoice && practiceSize === null) return <div className="page">
+    <TopBar back={exit} title={gameById.get(game as GameId)!.name} />
+    <h1>How much at once?</h1>
+    <p className="muted">Practise a complete speech, or work on smaller parts. Both count toward the same progress.</p>
+    <div style={{ display: 'grid', gap: 12, marginTop: 20 }}>
+      <button className="tile" onClick={() => setPracticeSize('whole')}><span><b>Whole speeches</b><br /><span className="muted">One turn from your character, from beginning to end.</span></span></button>
+      <button className="tile" onClick={() => setPracticeSize('parts')}><span><b>Short parts</b><br /><span className="muted">Learn long speeches a few lines at a time.</span></span></button>
+    </div>
+    <p className="muted">Use Skip for now or Choose a later question to reach the speech you want.</p>
+  </div>;
   if (game === 'cue') return <CueCatch roleId={role.id} sceneId={sceneId} exit={exit} />;
   if (game === 'partner') return <ScenePartner roleId={role.id} sceneId={sceneId} exit={exit} />;
   if (game === 'speed') return <SpeedRun roleId={role.id} sceneId={sceneId} exit={exit} />;
-  return <Lesson steps={steps} exit={exit} title={gameById.get(game as GameId)!.name} onFinish={() => finishGame(gameKey(role.id, sceneId, game))} />;
+  return <Lesson key={practiceSize} steps={steps} exit={exit} controls={hasSizeChoice ? <button className="btn-plain" onClick={() => setPracticeSize(null)}>{practiceSize === 'whole' ? 'Whole speeches' : 'Short parts'} · Change</button> : undefined} title={gameById.get(game as GameId)!.name} onFinish={() => finishGame(gameKey(role.id, sceneId, game))} />;
+}
+
+
+function SettingsScreen({ state }: { state: State }) {
+  const [connection, setConnection] = useState('Checking listening connection…');
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch('/api/transcription/status', { signal: controller.signal }).then(r => {
+      if (!r.ok) throw new Error(); return r.json();
+    }).then(result => setConnection(result.configured ? `Connected: ${result.model}.` : 'Server is running, but its ElevenLabs API key is not configured.'))
+      .catch(() => { if (!controller.signal.aborted) setConnection('ElevenLabs server is unavailable. Typing remains available.'); });
+    return () => controller.abort();
+  }, []);
+  return <div className="page">
+    <TopBar back="/" title="App settings" />
+    <h1>Listening</h1>
+    <p className="muted">Set this once for all practice games on this device. Progress and settings stay in this browser.</p>
+    <fieldset className="listening-choice">
+      <legend>Speech recognition service</legend>
+      <label><input type="radio" name="speech-provider" checked={state.settings.speechProvider === 'elevenlabs'} onChange={() => setSettings({ speechProvider: 'elevenlabs' })} /> ElevenLabs Scribe v3</label>
+      <label><input type="radio" name="speech-provider" checked={state.settings.speechProvider === 'browser'} onChange={() => setSettings({ speechProvider: 'browser' })} /> Browser Web Speech API</label>
+    </fieldset>
+    <p role="status" className="muted">{connection}</p>
+    <p className="muted">ElevenLabs uploads recorded speech when Done is tapped. Browser recognition may send speech to the browser’s provider. The service will not switch automatically.</p>
+    <h2 style={{ marginTop: 28 }}>Comparison tools</h2>
+    <label className="settings-toggle"><input type="checkbox" checked={state.settings.showTranscripts} onChange={e => setSettings({ showTranscripts: e.target.checked })} /> Show transcription details during practice</label>
+    <p className="muted">For testing: show the raw transcript and service name. Leave this off for everyday practice. Transcripts are not saved after leaving a question.</p>
+    <p className="muted">Changes are saved automatically.</p>
+  </div>;
 }
 
 function NotFound() {
@@ -322,7 +369,8 @@ export default function App() {
   const role = state.active ? roleById.get(state.active) : undefined;
 
   let screen;
-  if (!role || page === 'roles') screen = <RolePicker state={state} />;
+  if (page === 'settings') screen = <SettingsScreen state={state} />;
+  else if (!role || page === 'roles') screen = <RolePicker state={state} />;
   else if (!page) screen = <Home state={state} role={role} />;
   else if (page === 'scene' && sceneById.has(a)) screen = <SceneScreen state={state} role={role} scene={sceneById.get(a)!} />;
   else if (page === 'read' && sceneById.has(a)) screen = <ReadScene role={role} scene={sceneById.get(a)!} />;
@@ -330,6 +378,6 @@ export default function App() {
   else if (page === 'play' && a) screen = <Play key={`${a}-${b}`} role={role} game={a} sceneId={b} />;
   else screen = <NotFound />;
 
-  return <div data-house={role?.house ?? 'neutral'} style={{ minHeight: '100%' }}>{screen}</div>;
+  return <ClassAccess><div data-house={role?.house ?? 'neutral'} style={{ minHeight: '100%' }}>{screen}</div></ClassAccess>;
 }
 

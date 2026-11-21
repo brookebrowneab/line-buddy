@@ -1,0 +1,91 @@
+{
+  "romeo": {
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "name": "Will - Relaxed Optimist"
+  },
+  "juliet": {
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "name": "Lily - Velvety Actress"
+  },
+  "mercutio": {
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George - Warm, Captivating Storyteller"
+  },
+  "benvolio": {
+    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+    "name": "Liam - Energetic, Social Media Creator"
+  },
+  "nurse": {
+    "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+    "name": "Alice - Clear, Engaging Educator"
+  },
+  "tybalt": {
+    "voice_id": "SOYHLrjzK2X1ezoPC6cr",
+    "name": "Harry - Fierce Warrior"
+  },
+  "friar-lawrence": {
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "name": "Bill - Wise, Mature, Balanced"
+  },
+  "paris": {
+    "voice_id": "iP95p4xoKVk53GoZ742B",
+    "name": "Chris - Charming, Down-to-Earth"
+  },
+  "prince": {
+    "voice_id": "onwK4e9ZLuTAKqWW03F9",
+    "name": "Daniel - Steady Broadcaster"
+  },
+  "lord-capulet": {
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "name": "Adam - Dominant, Firm"
+  },
+  "lady-capulet": {
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "name": "Matilda - Knowledgable, Professional"
+  },
+  "lady-montague": {
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "name": "Sarah - Mature, Reassuring, Confident"
+  },
+  "peter": {
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "name": "Charlie - Deep, Confident, Energetic"
+  },
+  "friar-john": {
+    "voice_id": "cjVigY5qzO86Huf0OWal",
+    "name": "Eric - Smooth, Trustworthy"
+  },
+  "apothecary": {
+    "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+    "name": "Callum - Husky Trickster"
+  },
+  "sampson": {
+    "voice_id": "nPczCjzI2devNBz1zQrb",
+    "name": "Brian - Deep, Resonant and Comforting"
+  },
+  "gregory": {
+    "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+    "name": "Roger - Laid-Back, Casual, Resonant"
+  },
+  "balthasar": {
+    "voice_id": "SAz9YHcvj6GT2YYXdXww",
+    "name": "River - Relaxed, Neutral, Informative"
+  },
+  "servant-1": {
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "name": "Laura - Enthusiast, Quirky Attitude"
+  },
+  "servant-2": {
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "name": "Jessica - Playful, Bright, Warm"
+  },
+  "chorus": {
+    "voice_id": "hpp4J3VqNfWAUOO0d1Us",
+    "name": "Bella - Professional, Bright, Warm"
+  },
+  "abraham": {
+    "voice_id": "cjVigY5qzO86Huf0OWal",
+    "name": "Eric - Smooth, Trustworthy",
+    "note": "Shared supporting performer with Friar John, as approved; the roles appear in different scenes."
+  }
+}

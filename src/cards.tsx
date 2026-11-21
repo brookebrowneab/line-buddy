@@ -122,7 +122,7 @@ export function LettersCard({ step, onOutcome, done }: CardProps) {
   typeRef.current = type;
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
-      if (e.metaKey || e.ctrlKey || e.altKey || (e.target as HTMLElement)?.tagName === 'INPUT') return;
+      if (e.metaKey || e.ctrlKey || e.altKey || (e.target as HTMLElement)?.closest?.('input, select, textarea, button, summary, [contenteditable="true"]')) return;
       typeRef.current(e.key);
     };
     window.addEventListener('keydown', on);
@@ -304,11 +304,22 @@ export function SayItCard({ step, onOutcome, done }: CardProps) {
   const [rec, setRec] = useState<Recording | null>(null);
   const [clip, setClip] = useState<string | null>(null);
   const [micError, setMicError] = useState(false);
+  const recordingRef = useRef<Recording | null>(null);
+  const alive = useRef(true);
+  useEffect(() => { alive.current = true; return () => { alive.current = false; recordingRef.current?.cancel(); }; }, []);
   useEffect(() => () => { if (clip) URL.revokeObjectURL(clip); }, [clip]);
 
   const toggleRecord = async () => {
-    if (rec) { setClip(await rec.stop()); setRec(null); return; }
-    try { setRec(await startRecording()); setMicError(false); } catch { setMicError(true); }
+    if (rec) {
+      const url = await rec.stop(); recordingRef.current = null;
+      if (!alive.current) { URL.revokeObjectURL(url); return; }
+      setClip(url); setRec(null); return;
+    }
+    try {
+      const recording = await startRecording();
+      if (!alive.current) { recording.cancel(); return; }
+      recordingRef.current = recording; setRec(recording); setMicError(false);
+    } catch { if (alive.current) setMicError(true); }
   };
 
   return (
@@ -317,7 +328,7 @@ export function SayItCard({ step, onOutcome, done }: CardProps) {
         ? <div className="thought-big"><span aria-hidden="true">💭 </span>{item.why}</div>
         : <CueBox cue={item.cue} why={item.part === 0 ? item.why : undefined} />}
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}><h2 style={{ flex: 1 }}>{step.thoughtOnly ? 'Say the line this sets off' : 'Say your line out loud'}</h2><PartLabel item={item} /></div>
-      <LineCheck lines={item.lines} onDone={onOutcome} />
+      <LineCheck lines={item.lines} maxRecordingSeconds={step.wholeSpeech ? 300 : 90} onDone={onOutcome} />
       {!done && canRecord() && (
         <button className="btn btn-small" onClick={toggleRecord}>{rec ? '⏹ Stop recording' : clip ? '🎙 Record again' : '🎙 Record myself to hear it back (optional)'}</button>
       )}

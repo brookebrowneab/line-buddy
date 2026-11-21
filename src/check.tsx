@@ -3,62 +3,15 @@
 // browser listen (where it can), with typing as the fallback when it mishears.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { tokens } from './lib/script';
-import type { Outcome } from './lib/progress';
+import { useProgress, type Outcome } from './lib/progress';
+import { canRecord, recordSpeech, transcribeRecording } from './lib/transcription';
+import type { Recording } from './lib/transcription';
+import { startBrowserRecognition } from './lib/browser-recognition';
 
 type Mark = 'ok' | 'missed';
 
-const norm = (w: string) => w.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-function editDistance(a: string, b: string): number {
-  const row = Array.from({ length: b.length + 1 }, (_, j) => j);
-  for (let i = 1; i <= a.length; i++) {
-    let prev = row[0];
-    row[0] = i;
-    for (let j = 1; j <= b.length; j++) {
-      const tmp = row[j];
-      row[j] = Math.min(row[j] + 1, row[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
-      prev = tmp;
-    }
-  }
-  return row[b.length];
-}
-/** Speech recognition is rough with old words: accept near matches. */
-const close = (want: string, heard: string) =>
-  want === heard || (want.length >= 4 && editDistance(want, heard) <= (want.length >= 7 ? 2 : 1));
-
-/**
- * Line up what was wanted with what was heard (longest common subsequence).
- * `hit[i]` says whether wanted word i was heard. `said[i]` is the word heard in
- * its place, when a missed word lines up one-for-one with an extra heard word.
- */
-export function alignHeard(want: string[], heard: string[]): { hit: boolean[]; said: (string | null)[] } {
-  const n = want.length, m = heard.length;
-  const t = Array.from({ length: n + 1 }, () => new Array<number>(m + 1).fill(0));
-  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) {
-    t[i][j] = close(want[i], heard[j]) ? t[i + 1][j + 1] + 1 : Math.max(t[i + 1][j], t[i][j + 1]);
-  }
-  const hit = new Array<boolean>(n).fill(false);
-  const said = new Array<string | null>(n).fill(null);
-  const pairs: [number, number][] = [];
-  let i = 0, j = 0;
-  while (i < n && j < m) {
-    if (close(want[i], heard[j]) && t[i][j] === t[i + 1][j + 1] + 1) { hit[i] = true; pairs.push([i, j]); i++; j++; }
-    else if (t[i + 1][j] >= t[i][j + 1]) i++;
-    else j++;
-  }
-  // Between matched words: if the same number of words were missed and heard, treat them as swaps.
-  const bounds: [number, number][] = [[-1, -1], ...pairs, [n, m]];
-  for (let k = 0; k + 1 < bounds.length; k++) {
-    const [wi, hj] = bounds[k];
-    const [wn, hn] = bounds[k + 1];
-    const missedCount = wn - wi - 1;
-    if (missedCount > 0 && missedCount === hn - hj - 1) {
-      for (let d = 1; d <= missedCount; d++) said[wi + d] = heard[hj + d];
-    }
-  }
-  return { hit, said };
-}
-export const heardWords = (want: string[], heard: string[]) => alignHeard(want, heard).hit;
+import { alignHeard } from './lib/speech-match';
+export { alignHeard, heardWords } from './lib/speech-match';
 
 export function outcomeFor(missed: number, total: number, strikes = 0): Outcome {
   const share = total ? missed / total : 0;
@@ -90,7 +43,7 @@ export const listenNotice = () =>
     ? 'Using Chrome? Listening sends your voice to Google to be turned into text. That is how Chrome\u2019s speech recognition works.'
     : 'Listening may send your voice to your browser\u2019s maker to be turned into text.') + ' It can also mishear old words. Typing stays on this device.';
 
-export function LineCheck({ lines, onDone, partial, retry = true }: { lines: string[]; onDone: (o: Outcome) => void; partial?: boolean; retry?: boolean }) {
+export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSeconds = 90 }: { lines: string[]; onDone: (o: Outcome) => void; partial?: boolean; retry?: boolean; maxRecordingSeconds?: number }) {
   const rows = useMemo(() => lines.map(tokens), [lines]);
   const flat = useMemo(() => rows.flatMap((r, li) => r.map((t, ti) => ({ key: `${li}-${ti}`, t }))).filter((x) => x.t.core), [rows]);
   const [marks, setMarks] = useState<Record<string, Mark>>({});
@@ -103,6 +56,27 @@ export function LineCheck({ lines, onDone, partial, retry = true }: { lines: str
   const [note, setNote] = useState('');
   const first = useRef<Outcome | null>(null);
   const recRef = useRef<any>(null);
+  const recordingRef = useRef<Recording | null>(null);
+  const uploadRef = useRef<AbortController | null>(null);
+  const sessionRef = useRef(0);
+  const { speechProvider: provider, showTranscripts } = useProgress().settings;
+  const [phase, setPhase] = useState<'starting' | 'recording' | 'transcribing'>('recording');
+  const [elevenReady, setElevenReady] = useState(false);
+  const [requiresPcm,setRequiresPcm]=useState(false);
+  const [elevenStatus, setElevenStatus] = useState('Checking ElevenLabs connection…');
+  const [comparisons, setComparisons] = useState<Partial<Record<'browser' | 'elevenlabs', { text: string; label: string }>>>({});
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch('/api/transcription/status', { signal: controller.signal }).then(r => {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(result => {
+      setElevenReady(result.configured === true && (!result.requiresClassCode || result.authorized));
+      setRequiresPcm(result.requiresPcm === true);
+      setElevenStatus(result.configured ? `ElevenLabs ready (${result.model}).` : 'ElevenLabs needs a server API key. Browser is still available.');
+    }).catch(() => { if (!controller.signal.aborted) setElevenStatus('ElevenLabs server is unavailable. Browser is still available.'); });
+    return () => { controller.abort(); sessionRef.current++; recordingRef.current?.cancel(); uploadRef.current?.abort(); };
+  }, []);
   const next = flat.find((x) => !marks[x.key]);
   const missed = flat.filter((x) => marks[x.key] === 'missed').length;
 
@@ -136,40 +110,77 @@ export function LineCheck({ lines, onDone, partial, retry = true }: { lines: str
   typeRef.current = type;
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
-      if (e.metaKey || e.ctrlKey || e.altKey || (e.target as HTMLElement)?.tagName === 'INPUT') return;
+      if (e.metaKey || e.ctrlKey || e.altKey || (e.target as HTMLElement)?.closest?.('input, select, textarea, button, summary, [contenteditable="true"]')) return;
       typeRef.current(e.key);
     };
     window.addEventListener('keydown', on);
-    return () => { window.removeEventListener('keydown', on); try { recRef.current?.abort(); } catch { /* already stopped */ } };
+    return () => { window.removeEventListener('keydown', on); try { recRef.current?.cancel(); } catch { /* already stopped */ } };
   }, []);
 
   const listen = () => {
+    if (provider === 'elevenlabs') { void listenEleven(); return; }
     const R = Recognition();
     if (!R) return;
+    recRef.current?.cancel();
+    const session = ++sessionRef.current;
+    setPhase('starting'); setNote(''); setMarks({}); setSaid({}); setMode('listening');
     const rec = new R();
-    recRef.current = rec;
-    rec.lang = navigator.language?.startsWith('en') ? navigator.language : 'en-US';
-    rec.continuous = true;
-    rec.interimResults = false;
-    let transcript = '';
-    rec.onresult = (e: any) => { for (let i = e.resultIndex; i < e.results.length; i++) if (e.results[i].isFinal) transcript += ' ' + e.results[i][0].transcript; };
-    rec.onerror = (e: any) => { setNote(e.error === 'not-allowed' ? 'The microphone is blocked. Type the first letters instead.' : 'Listening did not work this time. Type the first letters instead.'); setMode('type'); };
-    rec.onend = () => {
-      setMode((cur) => {
-        if (cur !== 'listening') return cur;
-        const result = alignHeard(flat.map((x) => norm(x.t.core)), transcript.split(/\s+/).map(norm).filter(Boolean));
-        setMarks(Object.fromEntries(flat.map((x, i) => [x.key, result.hit[i] ? 'ok' : 'missed'] as const)));
-        setSaid(Object.fromEntries(flat.flatMap((x, i) => (result.said[i] ? [[x.key, result.said[i]!] as const] : []))));
-        return 'heard';
+    recRef.current = startBrowserRecognition(rec,
+      navigator.language?.startsWith('en') ? navigator.language : 'en-US', {
+        ready: () => { if (session === sessionRef.current) setPhase('recording'); },
+        complete: transcript => {
+          if (session === sessionRef.current) showTranscript(transcript, 'browser', 'Browser');
+        },
+        error: message => {
+          if (session !== sessionRef.current) return;
+          sessionRef.current++; setNote(message); setMode('type');
+        },
       });
-    };
-    setNote('');
-    setMarks({});
-    setSaid({});
-    setMode('listening');
-    try { rec.start(); } catch { setMode('type'); }
   };
-  const stopListening = () => { try { recRef.current?.stop(); } catch { /* already stopped */ } };
+  const showTranscript = (transcript: string, source: 'browser' | 'elevenlabs', label: string) => {
+    setComparisons(previous => ({ ...previous, [source]: { text: transcript.trim(), label } }));
+    if (!transcript.trim()) { setNote('No words were heard. Try again or type the first letters.'); setMode('type'); return; }
+    const result = alignHeard(flat.map(x => x.t.core), transcript.split(/\s+/).filter(Boolean));
+    setMarks(Object.fromEntries(flat.map((x, i) => [x.key, result.hit[i] ? 'ok' : 'missed'] as const)));
+    setSaid(Object.fromEntries(flat.flatMap((x, i) => result.said[i] ? [[x.key, result.said[i]!] as const] : [])));
+    setMode('heard');
+  };
+  const listenEleven = async () => {
+    const session = ++sessionRef.current;
+    setPhase('starting'); setMode('listening'); setNote(''); setMarks({}); setSaid({});
+    try {
+      const recording = await recordSpeech(async audio => {
+        if (session !== sessionRef.current) return;
+        setPhase('transcribing');
+        const controller = new AbortController(); uploadRef.current = controller;
+        const timeout = setTimeout(() => controller.abort(), 65_000);
+        try {
+          const result = await transcribeRecording(audio, controller.signal, requiresPcm);
+          if (session === sessionRef.current) showTranscript(result.text, 'elevenlabs', `ElevenLabs (${result.model})`);
+        } catch (error) {
+          if (session === sessionRef.current) {
+            setNote(controller.signal.aborted ? 'Transcription timed out. Try again or use Browser.' : (error instanceof Error ? error.message : 'Transcription failed. Try Browser.'));
+            setMode('type');
+          }
+        } finally { clearTimeout(timeout); }
+      }, message => {
+        if (session === sessionRef.current) { setNote(message); setMode('type'); }
+      }, maxRecordingSeconds);
+      if (session !== sessionRef.current) { recording.cancel(); return; }
+      recordingRef.current = recording; setPhase('recording');
+    } catch {
+      if (session === sessionRef.current) { setNote('Could not access the microphone. Check permission or type the first letters.'); setMode('type'); }
+    }
+  };
+  const stopListening = () => {
+    if (provider === 'elevenlabs') recordingRef.current?.stop();
+    else { try { recRef.current?.stop(); } catch { /* already stopped */ } }
+  };
+  const cancelListening = () => {
+    sessionRef.current++; recordingRef.current?.cancel(); uploadRef.current?.abort();
+    try { recRef.current?.cancel(); } catch { /* already stopped */ }
+    setMode('type'); setNote('');
+  };
   const retype = () => { setMarks({}); setSaid({}); setStrikes(0); setTries(0); setMode('type'); };
 
   const reveal = mode === 'done' || mode === 'heard' || mode === 'review';
@@ -205,29 +216,43 @@ export function LineCheck({ lines, onDone, partial, retry = true }: { lines: str
           <div className="muted" style={{ fontSize: 14 }}>
             Say the line out loud, then type the first letter of each word{partial ? ' for the start of your speech' : ''}. Two wrong tries and the word shows in red.
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: canListen() ? '1fr 1fr' : '1fr', gap: 10 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10 }}>
             <button className="btn btn-small" onClick={() => next && mark(next.key, 'missed')}>I’m stuck on this word</button>
-            {canListen() && <button className="btn btn-small" onClick={listen}>🎙 Listen to me instead</button>}
+            <button className="btn btn-small" disabled={provider === 'browser' ? !canListen() : !canRecord() || !elevenReady} onClick={listen}>Listen to me</button>
           </div>
-          {canListen() && <div className="muted" style={{ fontSize: 13 }}>{listenNotice()}</div>}
+          {provider === 'browser' && !canListen() && <p className="muted">Listening is unavailable in this browser. You can type the first letters instead.</p>}
+          {provider === 'elevenlabs' && !elevenReady && <p className="muted" role="status">Listening is unavailable right now. You can type the first letters instead.</p>}
           {note && <div className="muted" style={{ fontSize: 14 }} role="status">{note}</div>}
         </>
       )}
       {mode === 'listening' && (
         <>
-          <div className="card-soft" style={{ textAlign: 'center' }}>● Listening… say your line, then tap Done.</div>
-          <button className="btn btn-primary btn-wide" onClick={stopListening}>Done</button>
-          <div className="muted" style={{ fontSize: 13 }}>{listenNotice()}</div>
+          <div className="card-soft" role="status" style={{ textAlign: 'center' }}>{phase === 'starting' ? (provider === 'browser' ? 'Starting browser speech recognition…' : 'Waiting for microphone permission…') : phase === 'transcribing' ? 'Transcribing with ElevenLabs…' : `Listening… say your line, then tap Done.`}</div>
+          <button className="btn btn-primary btn-wide" disabled={phase !== 'recording'} onClick={stopListening}>Done</button>
+          <button className="btn btn-small" onClick={cancelListening}>Cancel</button>
+          <div className="muted" style={{ fontSize: 13 }}>{provider === 'browser' ? listenNotice() : 'This recording is sent to ElevenLabs for transcription when you finish.'}</div>
         </>
       )}
       {mode === 'heard' && (
         <>
+          <button className="btn btn-small" disabled={provider === 'browser' ? !canListen() : !canRecord() || !elevenReady} onClick={listen}>Record again</button>
           <div style={{ fontWeight: 800 }}>{missed === 0 ? 'I heard every word.' : `I did not hear ${missed} of ${flat.length} words (in red).`}</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
             <button className="btn btn-small" onClick={retype}>It misheard. Let me type</button>
             <button className="btn btn-small btn-primary" onClick={() => finish(marks, 0)}>That’s right</button>
           </div>
         </>
+      )}
+      {showTranscripts && (mode === 'type' || mode === 'heard') && Object.keys(comparisons).length > 0 && (
+        <details className="transcript-comparison" open>
+          <summary>Transcription details</summary>
+          <p className="muted">{elevenStatus}</p>
+          <p className="muted">Latest recording per service for this speech. Say the same words for each test; these are separate takes. Nothing here is saved after leaving this check.</p>
+          {(['browser', 'elevenlabs'] as const).map(source => comparisons[source] && <div key={source}>
+            <strong>{comparisons[source]!.label}</strong>
+            <p>{comparisons[source]!.text || 'No words heard.'}</p>
+          </div>)}
+        </details>
       )}
       {mode === 'review' && (
         <>

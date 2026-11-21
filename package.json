@@ -8,7 +8,11 @@
     "script": "node scripts/build-script.mjs",
     "build": "node scripts/build-script.mjs && tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run && node --test server/*.test.mjs",
+    "transcription": "node --env-file=.env server/transcribe.mjs",
+    "audio:plan": "node scripts/build-script.mjs && node scripts/generate-audio.mjs",
+    "audio:generate": "node --env-file=.env scripts/generate-audio.mjs --generate",
+    "build:cloud": "npm run build && node scripts/build-cloud.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

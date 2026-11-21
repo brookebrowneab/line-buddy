@@ -1,0 +1,3616 @@
+{
+  "version": 1,
+  "model": "eleven_v3",
+  "clips": {
+    "24673506": {
+      "role": "friar-lawrence",
+      "text": "What, rouse thee, man! Thy Juliet is alive. Go, get thee to thy love, as was decreed. Hence and comfort her. But look thou stay not till the watch be set. Go before, nurse. Commend me to thy lady. Romeo is coming.",
+      "src": "audio/speeches/a03_s03_017_friar-lawrence_24673506_40e5763ea4.mp3",
+      "fingerprint": "40e5763ea41206d9f8a9d8b4978bdba3974ff25206929ba152e9c5223a131f1e",
+      "cue": {
+        "text": "Go before, nurse. Commend me to thy lady. Romeo is coming.",
+        "start": 14.333
+      }
+    },
+    "48766619": {
+      "role": "romeo",
+      "text": "I do protest I never injured thee But love thee better than thou canst devise. And so, good Capulet, which name I tender As dearly as mine own, be satisfied.",
+      "src": "audio/speeches/a03_s01_014_romeo_48766619_c365a15997.mp3",
+      "fingerprint": "c365a15997b3ca7773ed31ad06d8e0fb16c6c36b760b0e61a860692fc90fa122",
+      "cue": {
+        "text": "And so, good Capulet, which name I tender As dearly as mine own, be satisfied.",
+        "start": 5.4799999999999995
+      }
+    },
+    "61282957": {
+      "role": "romeo",
+      "text": "Ha, banishment?",
+      "src": "audio/speeches/a03_s03_004_romeo_61282957_aabc1a93e5.mp3",
+      "fingerprint": "aabc1a93e5b905a72dd4f8fe5d72f66136ec383fda4f01280695334c81757fcf",
+      "cue": {
+        "text": "Ha, banishment?",
+        "start": 0
+      }
+    },
+    "65994509": {
+      "role": "servant-1",
+      "text": "Madam, the guests are come, supper served up, you called, my young lady asked for, the Nurse cursed in the pantry, and everything in extremity. I must hence to wait. I beseech you, follow straight.",
+      "src": "audio/speeches/a01_s03_012_servant-1_65994509_370745efef.mp3",
+      "fingerprint": "370745efef875ed0422ef475727bb4ec77682a154de9c1fbef835a4a82f78057",
+      "cue": {
+        "text": "Madam, the guests are come, supper served up, you called, my young lady asked for, the Nurse cursed in the pantry, and everything in extremity. I must hence to wait. I beseech you, follow straight.",
+        "start": 0
+      }
+    },
+    "68912767": {
+      "role": "friar-lawrence",
+      "text": "Wisely and slow. They stumble that run fast.",
+      "src": "audio/speeches/a02_s02_013_friar-lawrence_68912767_cd8500e298.mp3",
+      "fingerprint": "cd8500e298b95916aebac0b92b02295aff60b8b30742eb92a069e3cf9c72f8e6",
+      "cue": {
+        "text": "Wisely and slow. They stumble that run fast.",
+        "start": 0
+      }
+    },
+    "99371842": {
+      "role": "romeo",
+      "text": "My dear.",
+      "src": "audio/speeches/a02_s01_033_romeo_99371842_8e5428b099.mp3",
+      "fingerprint": "8e5428b0994da242aab1b925a8a445ae8b340fdf46e20b44f2059a21e73bc7b8",
+      "cue": {
+        "text": "My dear.",
+        "start": 0
+      }
+    },
+    "69861b16": {
+      "role": "gregory",
+      "text": "Draw thy tool. Here comes of the house of Montagues. I will frown as I pass by, and let them take it as they list.",
+      "src": "audio/speeches/a01_s01_001_gregory_69861b16_ada42488a1.mp3",
+      "fingerprint": "ada42488a1ea58cbbc0db43bcba3ad3faabd1b2f7a12ee0002ae711ef3e1d910",
+      "cue": {
+        "text": "Draw thy tool. Here comes of the house of Montagues. I will frown as I pass by, and let them take it as they list.",
+        "start": 0
+      }
+    },
+    "cd6e0b22": {
+      "role": "sampson",
+      "text": "Nay, as they dare. I will bite my thumb at them, which is disgrace to them if they bear it.",
+      "src": "audio/speeches/a01_s01_002_sampson_cd6e0b22_9c02963325.mp3",
+      "fingerprint": "9c02963325ffb6a2544bc9659c3c91bdef1eadb5b7835c7553201c2afabb7470",
+      "cue": {
+        "text": "Nay, as they dare. I will bite my thumb at them, which is disgrace to them if they bear it.",
+        "start": 0
+      }
+    },
+    "dd1fce88": {
+      "role": "sampson",
+      "text": "I do bite my thumb, sir.",
+      "src": "audio/speeches/a01_s01_004_sampson_dd1fce88_af15f2ed5d.mp3",
+      "fingerprint": "af15f2ed5d9d43149cda283c9dd5c7c68f1d7e3a8ad26507cf59ac4aef30819e",
+      "cue": {
+        "text": "I do bite my thumb, sir.",
+        "start": 0
+      }
+    },
+    "c7c9dd50": {
+      "role": "sampson",
+      "text": "No, sir, I do not bite my thumb at you, sir, but I bite my thumb, sir.",
+      "src": "audio/speeches/a01_s01_006_sampson_c7c9dd50_d1f1e69594.mp3",
+      "fingerprint": "d1f1e6959449699946746f4fc83157f217555f9ec95ef67f0025485c7f2eb1eb",
+      "cue": {
+        "text": "No, sir, I do not bite my thumb at you, sir, but I bite my thumb, sir.",
+        "start": 0
+      }
+    },
+    "0d1ce2a1": {
+      "role": "gregory",
+      "text": "Do you quarrel, sir?",
+      "src": "audio/speeches/a01_s01_007_gregory_0d1ce2a1_77264d2653.mp3",
+      "fingerprint": "77264d265343db26f45cb628fad15404497b0616cf32bcd02ea066e1d7487942",
+      "cue": {
+        "text": "Do you quarrel, sir?",
+        "start": 0
+      }
+    },
+    "ceec8d23": {
+      "role": "chorus",
+      "text": "Two households, both alike in dignity (In fair Verona, where we lay our scene), From ancient grudge break to new mutiny, Where civil blood makes civil hands unclean. From forth the fatal loins of these two foes A pair of star-crossed lovers take their life; Whose misadventured piteous overthrows Doth with their death bury their parents’ strife.",
+      "src": "audio/speeches/a00_s00_001_chorus_ceec8d23_a1ce0265a5.mp3",
+      "fingerprint": "a1ce0265a5a600f78dcf17bce25fdfedae19fbecd8f2db8e060b72dcc067dbea",
+      "cue": {
+        "text": "Whose misadventured piteous overthrows Doth with their death bury their parents’ strife.",
+        "start": 19
+      }
+    },
+    "86f55a4a": {
+      "role": "sampson",
+      "text": "But if you do, sir, I am for you. I serve as good a man as you.",
+      "src": "audio/speeches/a01_s01_009_sampson_86f55a4a_7bbdf0901c.mp3",
+      "fingerprint": "7bbdf0901c1ce619a04ad4449294e1bd8932a3c5e497bd3fbab4d3555a4c1dc8",
+      "cue": {
+        "text": "But if you do, sir, I am for you. I serve as good a man as you.",
+        "start": 0
+      }
+    },
+    "08323a2f": {
+      "role": "benvolio",
+      "text": "Part, fools! Put up your swords. You know not what you do.",
+      "src": "audio/speeches/a01_s01_011_benvolio_08323a2f_bf29760dfa.mp3",
+      "fingerprint": "bf29760dfaa0c5909f9cbcc29f4433192b36e917920393f3751edb317c363ede",
+      "cue": {
+        "text": "Part, fools! Put up your swords. You know not what you do.",
+        "start": 0
+      }
+    },
+    "1ea7e4ae": {
+      "role": "benvolio",
+      "text": "I do but keep the peace. Put up thy sword!",
+      "src": "audio/speeches/a01_s01_013_benvolio_1ea7e4ae_ea0acbc216.mp3",
+      "fingerprint": "ea0acbc21649883faebcf93a8a6767b9630f4d007331d737942ef556e515085a",
+      "cue": {
+        "text": "I do but keep the peace. Put up thy sword!",
+        "start": 0
+      }
+    },
+    "9dc05336": {
+      "role": "tybalt",
+      "text": "What, are thou drawn among these heartless hinds? Turn thee, Benvolio; look up thy death.",
+      "src": "audio/speeches/a01_s01_012_tybalt_9dc05336_51ad448067.mp3",
+      "fingerprint": "51ad448067774780237680bc4538b4cc9c71130236599b8a0bf43606657c91b2",
+      "cue": {
+        "text": "What, are thou drawn among these heartless hinds? Turn thee, Benvolio; look up thy death.",
+        "start": 0
+      }
+    },
+    "82d88c76": {
+      "role": "tybalt",
+      "text": "What, drawn and talk of peace? I hate the word As I hate hell, all Montague’s, and thee. Have at thee, coward!",
+      "src": "audio/speeches/a01_s01_014_tybalt_82d88c76_1519fbae82.mp3",
+      "fingerprint": "1519fbae829d510f97652e2fb67c5084f0f81eaeb7d76129f1b30707cd3c7c38",
+      "cue": {
+        "text": "As I hate hell, all Montague’s, and thee. Have at thee, coward!",
+        "start": 3.8529999999999998
+      }
+    },
+    "c017bb03": {
+      "role": "lady-montague",
+      "text": "O, where is Romeo? Saw you him today? Right glad I am he was not at this fray.",
+      "src": "audio/speeches/a01_s01_016_lady-montague_c017bb03_079ca3ad34.mp3",
+      "fingerprint": "079ca3ad34232ad6cad8864b06ebe695ed8ada803bb16537083366f87525581f",
+      "cue": {
+        "text": "O, where is Romeo? Saw you him today? Right glad I am he was not at this fray.",
+        "start": 0
+      }
+    },
+    "83727bb1": {
+      "role": "benvolio",
+      "text": "See where he comes. So please you, step aside. I’ll know his grievance or be much denied.",
+      "src": "audio/speeches/a01_s01_017_benvolio_83727bb1_95bf35abad.mp3",
+      "fingerprint": "95bf35abad03232020b13cc970a8e8cd706b781154bec7af1f90c5eb7d6538d8",
+      "cue": {
+        "text": "See where he comes. So please you, step aside. I’ll know his grievance or be much denied.",
+        "start": 0
+      }
+    },
+    "e99f4dbe": {
+      "role": "lady-montague",
+      "text": "I would thou wert so happy by thy stay To hear the true shrift.—Let’s away.",
+      "src": "audio/speeches/a01_s01_018_lady-montague_e99f4dbe_0534096e94.mp3",
+      "fingerprint": "0534096e9488568dfe686996db844614da450d6f29eede4e06667acf0c3d7f2c",
+      "cue": {
+        "text": "I would thou wert so happy by thy stay To hear the true shrift.—Let’s away.",
+        "start": 0
+      }
+    },
+    "730e6941": {
+      "role": "prince",
+      "text": "Rebellious subjects, enemies to peace, Throw your mistempered weapons to the ground And hear the sentence of your mov`ed prince. Three civil brawls bred of an airy word By thee, old Capulet, and Montague, Have thrice disturbed the quiet of our streets. If you ever you disturb our streets again, Your lives shall pay the forfeit of the peace. Once more, on pain of death, all men depart.",
+      "src": "audio/speeches/a01_s01_015_prince_730e6941_4934dc86c6.mp3",
+      "fingerprint": "4934dc86c64edf4262d5c372f0d58ddd4a5c754766f4815a10760617697bdd6d",
+      "cue": {
+        "text": "Your lives shall pay the forfeit of the peace. Once more, on pain of death, all men depart.",
+        "start": 24.056
+      }
+    },
+    "3181b26d": {
+      "role": "romeo",
+      "text": "Is the day so young?",
+      "src": "audio/speeches/a01_s01_020_romeo_3181b26d_4b747f9a90.mp3",
+      "fingerprint": "4b747f9a90315590308e531ea15dad7e16dca72cf048ad1580809ebea9618340",
+      "cue": {
+        "text": "Is the day so young?",
+        "start": 0
+      }
+    },
+    "987ca675": {
+      "role": "benvolio",
+      "text": "Good morrow, cousin.",
+      "src": "audio/speeches/a01_s01_019_benvolio_987ca675_b5b3f10992.mp3",
+      "fingerprint": "b5b3f10992cf2e4c406aa7630aa7eefcaa04b15317dcb66708eb9655aac6da27",
+      "cue": {
+        "text": "Good morrow, cousin.",
+        "start": 0
+      }
+    },
+    "9faea574": {
+      "role": "benvolio",
+      "text": "But new struck nine.",
+      "src": "audio/speeches/a01_s01_021_benvolio_9faea574_4828edefd5.mp3",
+      "fingerprint": "4828edefd5167eb5c7c882986be206b036f9d2aa81240d1384288d347259f130",
+      "cue": {
+        "text": "But new struck nine.",
+        "start": 0
+      }
+    },
+    "8d19f9d9": {
+      "role": "romeo",
+      "text": "Ay me, sad hours seem long.",
+      "src": "audio/speeches/a01_s01_022_romeo_8d19f9d9_6cbceb01ee.mp3",
+      "fingerprint": "6cbceb01ee230e9a99fa3f7467d263d17b0a5e1f0c61ea3dda98355033b131cd",
+      "cue": {
+        "text": "Ay me, sad hours seem long.",
+        "start": 0
+      }
+    },
+    "d26ffbaf": {
+      "role": "benvolio",
+      "text": "What sadness lengthens Romeo’s hours?",
+      "src": "audio/speeches/a01_s01_023_benvolio_d26ffbaf_8891cd2b5f.mp3",
+      "fingerprint": "8891cd2b5fe210803e5a01f68a17009cbcaaf65045fa80a373b941f7209152ed",
+      "cue": {
+        "text": "What sadness lengthens Romeo’s hours?",
+        "start": 0
+      }
+    },
+    "633b45ee": {
+      "role": "romeo",
+      "text": "Not having that which, having, makes them short.",
+      "src": "audio/speeches/a01_s01_024_romeo_633b45ee_39b8d2540b.mp3",
+      "fingerprint": "39b8d2540b1c399e0691b1a066cd774cd47d230a84e87a3146344f9364e26301",
+      "cue": {
+        "text": "Not having that which, having, makes them short.",
+        "start": 0
+      }
+    },
+    "4f8cf84c": {
+      "role": "benvolio",
+      "text": "In love?",
+      "src": "audio/speeches/a01_s01_025_benvolio_4f8cf84c_63c46cb26a.mp3",
+      "fingerprint": "63c46cb26aea43ae2478cbd6f5b35f6f3cdbfd193f246d918df094aa0c034ac5",
+      "cue": {
+        "text": "In love?",
+        "start": 0
+      }
+    },
+    "e4e63c8f": {
+      "role": "benvolio",
+      "text": "Of love?",
+      "src": "audio/speeches/a01_s01_027_benvolio_e4e63c8f_af6ed60bd2.mp3",
+      "fingerprint": "af6ed60bd2971062beb3a40ccc78d8744ecbbabc20c8ed10bdf683c1f015e4b7",
+      "cue": {
+        "text": "Of love?",
+        "start": 0
+      }
+    },
+    "78eeba89": {
+      "role": "romeo",
+      "text": "Out—",
+      "src": "audio/speeches/a01_s01_026_romeo_78eeba89_4d5900aa94.mp3",
+      "fingerprint": "4d5900aa94b31c5e349973c40d59a1d74c4c4e66a822274d934d552ec990c54d",
+      "cue": {
+        "text": "Out—",
+        "start": 0
+      }
+    },
+    "989e4837": {
+      "role": "romeo",
+      "text": "Out of her favor where I am in love.",
+      "src": "audio/speeches/a01_s01_028_romeo_989e4837_0f65aa5348.mp3",
+      "fingerprint": "0f65aa5348e672659aa37dcf4153356cba18ccfdbcfab18363bdf3521b06ccb3",
+      "cue": {
+        "text": "Out of her favor where I am in love.",
+        "start": 0
+      }
+    },
+    "4ab6be62": {
+      "role": "benvolio",
+      "text": "Tell me in sadness, who is it that you love?",
+      "src": "audio/speeches/a01_s01_029_benvolio_4ab6be62_b680380424.mp3",
+      "fingerprint": "b680380424f9aebbe2711929a6b344a1644c73f8c5befcbd4f81df510f54ebf1",
+      "cue": {
+        "text": "Tell me in sadness, who is it that you love?",
+        "start": 0
+      }
+    },
+    "3e285713": {
+      "role": "romeo",
+      "text": "What, shall I groan and tell thee?",
+      "src": "audio/speeches/a01_s01_030_romeo_3e285713_4589834545.mp3",
+      "fingerprint": "4589834545644ea9e1cfd357eedc667576d203088d8edc27a1b8175df20c0c6d",
+      "cue": {
+        "text": "What, shall I groan and tell thee?",
+        "start": 0
+      }
+    },
+    "16ec9b76": {
+      "role": "benvolio",
+      "text": "Groan? Why, no. But sadly tell me who.",
+      "src": "audio/speeches/a01_s01_031_benvolio_16ec9b76_6a8ea34683.mp3",
+      "fingerprint": "6a8ea346837353be8447c074f7bab2f97b790e91c8d6fa8c7cab1a47f23862a2",
+      "cue": {
+        "text": "Groan? Why, no. But sadly tell me who.",
+        "start": 0
+      }
+    },
+    "c4218c22": {
+      "role": "romeo",
+      "text": "In sadness, cousin, I do love a woman.",
+      "src": "audio/speeches/a01_s01_032_romeo_c4218c22_5041b9fa5e.mp3",
+      "fingerprint": "5041b9fa5ea8741ed2496e2a666086e650eb635e91f09d18b0bade3b5a83c62d",
+      "cue": {
+        "text": "In sadness, cousin, I do love a woman.",
+        "start": 0
+      }
+    },
+    "7f8dd1b3": {
+      "role": "benvolio",
+      "text": "I aimed so near when I supposed you loved.",
+      "src": "audio/speeches/a01_s01_033_benvolio_7f8dd1b3_a5c067bb71.mp3",
+      "fingerprint": "a5c067bb717ac4c5cb7e027f47c5995488d0bfc618de92b76cd25d3c47f443d2",
+      "cue": {
+        "text": "I aimed so near when I supposed you loved.",
+        "start": 0
+      }
+    },
+    "d61dd895": {
+      "role": "benvolio",
+      "text": "Be ruled by me. Forget to think of her.",
+      "src": "audio/speeches/a01_s01_035_benvolio_d61dd895_1bbd2984e2.mp3",
+      "fingerprint": "1bbd2984e2535ca3a12388b90635278960fdf2b27644f4a12bf44dee72c8dc0e",
+      "cue": {
+        "text": "Be ruled by me. Forget to think of her.",
+        "start": 0
+      }
+    },
+    "b8e2fa09": {
+      "role": "romeo",
+      "text": "O, teach me how I should forget to think!",
+      "src": "audio/speeches/a01_s01_036_romeo_b8e2fa09_78ed157010.mp3",
+      "fingerprint": "78ed157010552d088ec47574086217f1f72c7bfef538bcfc210b2c8897d66be7",
+      "cue": {
+        "text": "O, teach me how I should forget to think!",
+        "start": 0
+      }
+    },
+    "0e646102": {
+      "role": "romeo",
+      "text": "A right good marksman! And she’s fair I love. She hath forsworn to love, and in that vow Do I live dead, that live to tell it now.",
+      "src": "audio/speeches/a01_s01_034_romeo_0e646102_9434c2906e.mp3",
+      "fingerprint": "9434c2906ebabb5b3e328f849527869ef72682e700e36bfe4da53e33d3ee1497",
+      "cue": {
+        "text": "She hath forsworn to love, and in that vow Do I live dead, that live to tell it now.",
+        "start": 3.84
+      }
+    },
+    "970ce28b": {
+      "role": "benvolio",
+      "text": "By giving liberty unto thine eyes. Examine other beauties.",
+      "src": "audio/speeches/a01_s01_037_benvolio_970ce28b_b4fb3915c0.mp3",
+      "fingerprint": "b4fb3915c00279bee120753fe44f0a03efcd99831d4906f16fcad1a1404f2ebd",
+      "cue": {
+        "text": "By giving liberty unto thine eyes. Examine other beauties.",
+        "start": 0
+      }
+    },
+    "c85b5af5": {
+      "role": "romeo",
+      "text": "Show me a mistress that is passing fair; Farewell. Thou canst not teach me to forget.",
+      "src": "audio/speeches/a01_s01_038_romeo_c85b5af5_d855d850f3.mp3",
+      "fingerprint": "d855d850f35a58fd26f05c42d6f6b4047cb3fa0c0cc43c0ca75b390f74bae279",
+      "cue": {
+        "text": "Show me a mistress that is passing fair; Farewell. Thou canst not teach me to forget.",
+        "start": 0
+      }
+    },
+    "329641bd": {
+      "role": "benvolio",
+      "text": "I’ll pay that doctrine or else die in debt.",
+      "src": "audio/speeches/a01_s01_039_benvolio_329641bd_9eeb6bc34a.mp3",
+      "fingerprint": "9eeb6bc34a3dca2b65ef177d5bc704c1559e962b2dbdd26cc12b1b259c7c44f7",
+      "cue": {
+        "text": "I’ll pay that doctrine or else die in debt.",
+        "start": 0
+      }
+    },
+    "d12ca80d": {
+      "role": "paris",
+      "text": "Now, my lord, what say you to my suit?",
+      "src": "audio/speeches/a01_s02_001_paris_d12ca80d_7b276998df.mp3",
+      "fingerprint": "7b276998df9595fea95ea07870c427257b7f1cbf0d74824b3522f05d7cde9214",
+      "cue": {
+        "text": "Now, my lord, what say you to my suit?",
+        "start": 0
+      }
+    },
+    "789f803f": {
+      "role": "peter",
+      "text": "Find them out whose names are written here! I am sent to find those persons whose names are here writ, and can never find what names the writing person hath here writ. I must to the learned. In good time!",
+      "src": "audio/speeches/a01_s02_003_peter_789f803f_8ff5b477f0.mp3",
+      "fingerprint": "8ff5b477f023bd0c9e5e13d3344cc72cfebbe33e479bc124c4a2e536e1671a41",
+      "cue": {
+        "text": "Find them out whose names are written here! I am sent to find those persons whose names are here writ, and can never find what names the writing person hath here writ. I must to the learned. In good time!",
+        "start": 0
+      }
+    },
+    "47ac8afa": {
+      "role": "peter",
+      "text": "God gi’ good e’en. I pray sir, can you read?",
+      "src": "audio/speeches/a01_s02_004_peter_47ac8afa_6c31e41502.mp3",
+      "fingerprint": "6c31e415026ad30d8ef72fc5930f4b690fd90bcef68154d25edff1185ac3ded5",
+      "cue": {
+        "text": "God gi’ good e’en. I pray sir, can you read?",
+        "start": 0
+      }
+    },
+    "dc07d742": {
+      "role": "romeo",
+      "text": "Ay, if I know the letters and the language.",
+      "src": "audio/speeches/a01_s02_005_romeo_dc07d742_64c80859ca.mp3",
+      "fingerprint": "64c80859ca185196640978a8aab232054ce78feda64035e2783554cec87d0af5",
+      "cue": {
+        "text": "Ay, if I know the letters and the language.",
+        "start": 0
+      }
+    },
+    "4ea33fe0": {
+      "role": "peter",
+      "text": "You say honestly. Rest you merry.",
+      "src": "audio/speeches/a01_s02_006_peter_4ea33fe0_645382de2c.mp3",
+      "fingerprint": "645382de2c6bca94c828a04f4ea5ee32e0e9fcf1a401b275fd9d08db42b0fdde",
+      "cue": {
+        "text": "You say honestly. Rest you merry.",
+        "start": 0
+      }
+    },
+    "ab7f6b6d": {
+      "role": "lord-capulet",
+      "text": "Woo her, gentle Paris, get her heart; My will to her consent is but a part. And, she agreed, within her scope of choice Lies my consent and fair according voice. This night I hold an old accustomed feast, Whereto I have invited many a guest. Come go with me. Go, sirrah, trudge about Through fair Verona, find those persons out Whose names are written there, and to them say My house and welcome on their pleasure stay.",
+      "src": "audio/speeches/a01_s02_002_lord-capulet_ab7f6b6d_4a74774d32.mp3",
+      "fingerprint": "4a74774d3236f9cc6d3d0d49d93ec07936871045b7f901168879211163838d49",
+      "cue": {
+        "text": "Whose names are written there, and to them say My house and welcome on their pleasure stay.",
+        "start": 25.347
+      }
+    },
+    "a9106513": {
+      "role": "peter",
+      "text": "Up.",
+      "src": "audio/speeches/a01_s02_008_peter_a9106513_3d19daff7f.mp3",
+      "fingerprint": "3d19daff7f330a6f8e08df822e4bc12f7d2a22c9e487acbf7056e494d5056d2e",
+      "cue": {
+        "text": "Up.",
+        "start": 0
+      }
+    },
+    "3db8b566": {
+      "role": "romeo",
+      "text": "Whither? To supper?",
+      "src": "audio/speeches/a01_s02_009_romeo_3db8b566_2b7882ab6c.mp3",
+      "fingerprint": "2b7882ab6ce4aadc094f62dfce09690c8b2d9f48b563de5071d6115dfbb79de6",
+      "cue": {
+        "text": "Whither? To supper?",
+        "start": 0
+      }
+    },
+    "30a06d6f": {
+      "role": "peter",
+      "text": "To our house.",
+      "src": "audio/speeches/a01_s02_010_peter_30a06d6f_5275c7c8fe.mp3",
+      "fingerprint": "5275c7c8fe08de0ad47b2d6ad25e3dc4d0984f0e68a84cf35cc47974d64d711b",
+      "cue": {
+        "text": "To our house.",
+        "start": 0
+      }
+    },
+    "8882f023": {
+      "role": "romeo",
+      "text": "Whose house?",
+      "src": "audio/speeches/a01_s02_011_romeo_8882f023_650073964a.mp3",
+      "fingerprint": "650073964a93ceaf39f2a85d18c7ea1328c7655342eb815a13f50b020bb0fd98",
+      "cue": {
+        "text": "Whose house?",
+        "start": 0
+      }
+    },
+    "476ebfb5": {
+      "role": "romeo",
+      "text": "Stay, fellow. I can read. Signior Martino and his wife and daughters, Mercutio and his brother Valentine My fair niece Rosaline, Signior Valentino and his cousin, Tybalt. A fair assembly. Whither should they come?",
+      "src": "audio/speeches/a01_s02_007_romeo_476ebfb5_5a0b17678f.mp3",
+      "fingerprint": "5a0b17678fdaa91040a3ac0b02e3cfea346c0e69c2c4b44f6de4d19ce9d04b9b",
+      "cue": {
+        "text": "Signior Valentino and his cousin, Tybalt. A fair assembly. Whither should they come?",
+        "start": 10.376000000000001
+      }
+    },
+    "6f1e57ae": {
+      "role": "peter",
+      "text": "My master’s.",
+      "src": "audio/speeches/a01_s02_012_peter_6f1e57ae_380bd34c7c.mp3",
+      "fingerprint": "380bd34c7c765ac2b6cff7de9851261b1d6a0416336dcf4c9c33c764b1146c9b",
+      "cue": {
+        "text": "My master’s.",
+        "start": 0
+      }
+    },
+    "d4b7f9b4": {
+      "role": "romeo",
+      "text": "Indeed, I should have asked thee that before.",
+      "src": "audio/speeches/a01_s02_013_romeo_d4b7f9b4_a7f7082705.mp3",
+      "fingerprint": "a7f70827057aadee18f8112f26bc8d585392e73e013362b02beadb319024c372",
+      "cue": {
+        "text": "Indeed, I should have asked thee that before.",
+        "start": 0
+      }
+    },
+    "a89e8713": {
+      "role": "peter",
+      "text": "Now I’ll tell you without asking. My master is the great rich Capulet, and if you be not of the house of Montagues, I pray come and crush a cup of wine. Rest you merry.",
+      "src": "audio/speeches/a01_s02_014_peter_a89e8713_69cfa02304.mp3",
+      "fingerprint": "69cfa0230490cc21867031a92a3d1b93ca1618f0302d3197ffdff3bea3255734",
+      "cue": {
+        "text": "Now I’ll tell you without asking. My master is the great rich Capulet, and if you be not of the house of Montagues, I pray come and crush a cup of wine. Rest you merry.",
+        "start": 0
+      }
+    },
+    "6aa47876": {
+      "role": "benvolio",
+      "text": "At this same ancient feast of Capulet’s Sups the fair Rosaline who thou so loves, With all the admire`d beauties of Verona. Go thither, and with unattainted eye Compare her face to one that I shall show, And I will make thee think thy swan a crow.",
+      "src": "audio/speeches/a01_s02_015_benvolio_6aa47876_c162f232a8.mp3",
+      "fingerprint": "c162f232a88563d78a5f61288fb6b3b9d740d48be6d6a5cb02be6829afabff7e",
+      "cue": {
+        "text": "Compare her face to one that I shall show, And I will make thee think thy swan a crow.",
+        "start": 11.46
+      }
+    },
+    "6f33b1b0": {
+      "role": "romeo",
+      "text": "I’ll go along, no such sight to be shown But to rejoice in splendor of mine own.",
+      "src": "audio/speeches/a01_s02_016_romeo_6f33b1b0_efb4f26040.mp3",
+      "fingerprint": "efb4f26040ed5463903910192a908471fd1f744b5820bda69fffb34460e0a70a",
+      "cue": {
+        "text": "I’ll go along, no such sight to be shown But to rejoice in splendor of mine own.",
+        "start": 0
+      }
+    },
+    "16f584e7": {
+      "role": "lady-capulet",
+      "text": "Nurse, where’s my daughter? Call her forth to me.",
+      "src": "audio/speeches/a01_s03_001_lady-capulet_16f584e7_3b675a5fd8.mp3",
+      "fingerprint": "3b675a5fd88d8ce4f689ecd7ed503c904b0c87184a478a6e418ac1178c7dc1d0",
+      "cue": {
+        "text": "Nurse, where’s my daughter? Call her forth to me.",
+        "start": 0
+      }
+    },
+    "a030eadb": {
+      "role": "nurse",
+      "text": "What, lamb? What, ladybird? God forbid. Where’s this girl? What, Juliet!",
+      "src": "audio/speeches/a01_s03_002_nurse_a030eadb_d5d2155cce.mp3",
+      "fingerprint": "d5d2155cce3bbfab6f1b1d02466d62e2aa2490d1aedcd1645e2aad35c8290b2f",
+      "cue": {
+        "text": "What, lamb? What, ladybird? God forbid. Where’s this girl? What, Juliet!",
+        "start": 0
+      }
+    },
+    "6185af6c": {
+      "role": "juliet",
+      "text": "Madam, I am here. What is your will?",
+      "src": "audio/speeches/a01_s03_003_juliet_6185af6c_ad9b6b5a62.mp3",
+      "fingerprint": "ad9b6b5a62dbd86e68282844e464f1f329f72ea6fecad793aadda4b64e1335e4",
+      "cue": {
+        "text": "Madam, I am here. What is your will?",
+        "start": 0
+      }
+    },
+    "56b86fc6": {
+      "role": "lady-capulet",
+      "text": "This is the matter—Nurse, give leave awhile. We must talk in secret.—Nurse, come back again. Thou knowest my daughter’s of a pretty age.",
+      "src": "audio/speeches/a01_s03_004_lady-capulet_56b86fc6_7632a4990d.mp3",
+      "fingerprint": "7632a4990da2db14a896eaa7eb418387c506d1a628088a7e577358ce78e6a989",
+      "cue": {
+        "text": "We must talk in secret.—Nurse, come back again. Thou knowest my daughter’s of a pretty age.",
+        "start": 2.84
+      }
+    },
+    "5a1134c4": {
+      "role": "nurse",
+      "text": "Faith, I can tell her age unto an hour. Thou wast the prettiest babe that e’er I nursed An I might live to see thee married once, I have my wish.",
+      "src": "audio/speeches/a01_s03_005_nurse_5a1134c4_b760e825b1.mp3",
+      "fingerprint": "b760e825b1ea79c668463521647ae2154890e649b22edd503a7ab48586c6af36",
+      "cue": {
+        "text": "An I might live to see thee married once, I have my wish.",
+        "start": 5.693
+      }
+    },
+    "a2f712c7": {
+      "role": "juliet",
+      "text": "It is an honor that I dream not of.",
+      "src": "audio/speeches/a01_s03_007_juliet_a2f712c7_39bc5e2ebd.mp3",
+      "fingerprint": "39bc5e2ebda420c2f27b48051d983871a6be40c04972904b0adac34cc2e85557",
+      "cue": {
+        "text": "It is an honor that I dream not of.",
+        "start": 0
+      }
+    },
+    "77c90bf7": {
+      "role": "lady-capulet",
+      "text": "Marry, that “marry” is the very theme I came to talk of.— Tell me, daughter Juliet How stands your disposition to be married?",
+      "src": "audio/speeches/a01_s03_006_lady-capulet_77c90bf7_72c2b6890e.mp3",
+      "fingerprint": "72c2b6890ec75971861411fdf9f3a2298e510ee3fd2e434b9ffc5ac31687f5d9",
+      "cue": {
+        "text": "I came to talk of.— Tell me, daughter Juliet How stands your disposition to be married?",
+        "start": 2.36
+      }
+    },
+    "d17b17c5": {
+      "role": "nurse",
+      "text": "Nay, he’s a flower, in faith, a very flower.",
+      "src": "audio/speeches/a01_s03_009_nurse_d17b17c5_08c0c0e266.mp3",
+      "fingerprint": "08c0c0e26615ab117bc5d8486c0a649936541d7b8280a6e79cafae68f9a45ecd",
+      "cue": {
+        "text": "Nay, he’s a flower, in faith, a very flower.",
+        "start": 0
+      }
+    },
+    "b91acb83": {
+      "role": "lady-capulet",
+      "text": "The valiant Paris seeks you for his love. Verona’s summer hath not such a flower.",
+      "src": "audio/speeches/a01_s03_008_lady-capulet_b91acb83_adb562f86c.mp3",
+      "fingerprint": "adb562f86c42b0a6005ea8419ef6509b097721cf45783fd699cf6cff450bcd33",
+      "cue": {
+        "text": "The valiant Paris seeks you for his love. Verona’s summer hath not such a flower.",
+        "start": 0
+      }
+    },
+    "9da5e63c": {
+      "role": "juliet",
+      "text": "I’ll look to like, if looking liking move. But no more deep will I endart mine eye Than your consent gives strength to make it fly.",
+      "src": "audio/speeches/a01_s03_011_juliet_9da5e63c_287f1b6446.mp3",
+      "fingerprint": "287f1b644672aff62608dbfdabc42b698874d002cf2d009e0e29f05a2d23bfc9",
+      "cue": {
+        "text": "But no more deep will I endart mine eye Than your consent gives strength to make it fly.",
+        "start": 3.18
+      }
+    },
+    "183e59de": {
+      "role": "lady-capulet",
+      "text": "What say you? Can you love the gentleman? This night you shall behold him at our feast. Read o’er the volume of young Paris’ face, And find delight writ there with beauty’s pen. Speak briefly. Can you like of Paris’ love?",
+      "src": "audio/speeches/a01_s03_010_lady-capulet_183e59de_2d863efd6e.mp3",
+      "fingerprint": "2d863efd6e26859e29fcbe7f97b17bf2c93033b1c62f75ccc7780fc30e288400",
+      "cue": {
+        "text": "And find delight writ there with beauty’s pen. Speak briefly. Can you like of Paris’ love?",
+        "start": 7.9799999999999995
+      }
+    },
+    "81360cc8": {
+      "role": "lady-capulet",
+      "text": "We follow thee. Juliet, the County stays.",
+      "src": "audio/speeches/a01_s03_013_lady-capulet_81360cc8_559d071912.mp3",
+      "fingerprint": "559d0719123b353bbcbf6ecff6f5807d5d508e3e8072bfc97300df43f61d7921",
+      "cue": {
+        "text": "We follow thee. Juliet, the County stays.",
+        "start": 0
+      }
+    },
+    "11747d6c": {
+      "role": "nurse",
+      "text": "Go, girl, seek happy nights to happy days.",
+      "src": "audio/speeches/a01_s03_014_nurse_11747d6c_6e0dd599f6.mp3",
+      "fingerprint": "6e0dd599f6301aeb6b8c1c6dda2295cc2a4d93f3055de17823c0aae4f83367a5",
+      "cue": {
+        "text": "Go, girl, seek happy nights to happy days.",
+        "start": 0
+      }
+    },
+    "afdee8b2": {
+      "role": "mercutio",
+      "text": "Nay, gentle Romeo, we must have you dance.",
+      "src": "audio/speeches/a01_s04_002_mercutio_afdee8b2_95506eb788.mp3",
+      "fingerprint": "95506eb78866bb0dc347aa6359c898dd7e8105c023e710b2444848bf634669eb",
+      "cue": {
+        "text": "Nay, gentle Romeo, we must have you dance.",
+        "start": 0
+      }
+    },
+    "67d3abc0": {
+      "role": "romeo",
+      "text": "Give me a torch. I am not for this ambling. Being but heavy I will bear the light.",
+      "src": "audio/speeches/a01_s04_001_romeo_67d3abc0_84637f7d60.mp3",
+      "fingerprint": "84637f7d6033d017a47e5008f2bdc40ac40da09a45f337b2fe9cff61e57d78e1",
+      "cue": {
+        "text": "Give me a torch. I am not for this ambling. Being but heavy I will bear the light.",
+        "start": 0
+      }
+    },
+    "84279f60": {
+      "role": "mercutio",
+      "text": "You are a lover. Borrow Cupid’s wings And soar them above a common bound.",
+      "src": "audio/speeches/a01_s04_004_mercutio_84279f60_87a71fc0cb.mp3",
+      "fingerprint": "87a71fc0cbfc28cc3c6867b8f90755c4f2dfd3b4cb0aa88f2b4d6ee38cc5f469",
+      "cue": {
+        "text": "You are a lover. Borrow Cupid’s wings And soar them above a common bound.",
+        "start": 0
+      }
+    },
+    "2699056d": {
+      "role": "romeo",
+      "text": "Not I, believe me. You have dancing shoes With nimble soles. I have a soul of lead So stakes me to the ground, I cannot move.",
+      "src": "audio/speeches/a01_s04_003_romeo_2699056d_a9746d59d5.mp3",
+      "fingerprint": "a9746d59d5238dc3c91cf9eb16f76ad41c41d683d574651daf7997b03e979329",
+      "cue": {
+        "text": "With nimble soles. I have a soul of lead So stakes me to the ground, I cannot move.",
+        "start": 3.336
+      }
+    },
+    "bf1e6480": {
+      "role": "benvolio",
+      "text": "Come, knock and enter, and no sooner in But every man betake him to his legs.",
+      "src": "audio/speeches/a01_s04_005_benvolio_bf1e6480_fb5ba4aee0.mp3",
+      "fingerprint": "fb5ba4aee0f529ffa6bf57e3dd79674a6f08467d1c66899c0380f92f679d5b37",
+      "cue": {
+        "text": "Come, knock and enter, and no sooner in But every man betake him to his legs.",
+        "start": 0
+      }
+    },
+    "a2261cf7": {
+      "role": "mercutio",
+      "text": "Come, we burn daylight, ho!",
+      "src": "audio/speeches/a01_s04_006_mercutio_a2261cf7_dc6f5957b1.mp3",
+      "fingerprint": "dc6f5957b1ca8b3847f2b6586007bab618625b68527d87ef716aa9df9d261f56",
+      "cue": {
+        "text": "Come, we burn daylight, ho!",
+        "start": 0
+      }
+    },
+    "a4a9c7e7": {
+      "role": "romeo",
+      "text": "Nay, that’s not so.",
+      "src": "audio/speeches/a01_s04_007_romeo_a4a9c7e7_92246b4504.mp3",
+      "fingerprint": "92246b4504c03baa9513948373540dfcae25cdd6a0c480d12ca7bf11bcfcbce2",
+      "cue": {
+        "text": "Nay, that’s not so.",
+        "start": 0
+      }
+    },
+    "558eea9a": {
+      "role": "mercutio",
+      "text": "Why may one ask?",
+      "src": "audio/speeches/a01_s04_008_mercutio_558eea9a_0e69b95513.mp3",
+      "fingerprint": "0e69b95513219aedd78cba45ab24f9bf009b2ae82430bda66baf8b7e74ee94ea",
+      "cue": {
+        "text": "Why may one ask?",
+        "start": 0
+      }
+    },
+    "19b46163": {
+      "role": "romeo",
+      "text": "I dreamt a dream tonight.",
+      "src": "audio/speeches/a01_s04_009_romeo_19b46163_c9939b75ff.mp3",
+      "fingerprint": "c9939b75fff7d2aa1358a57324b116b45d91645631de0a966374e3d35602aaa7",
+      "cue": {
+        "text": "I dreamt a dream tonight.",
+        "start": 0
+      }
+    },
+    "25618d91": {
+      "role": "mercutio",
+      "text": "And so did I.",
+      "src": "audio/speeches/a01_s04_010_mercutio_25618d91_9dd5f43b99.mp3",
+      "fingerprint": "9dd5f43b99a22b192bf844586610377f0c09916db3e3ad0ba88fac5a7a1980c9",
+      "cue": {
+        "text": "And so did I.",
+        "start": 0
+      }
+    },
+    "5718361d": {
+      "role": "romeo",
+      "text": "Well, what was yours?",
+      "src": "audio/speeches/a01_s04_011_romeo_5718361d_8e913e028e.mp3",
+      "fingerprint": "8e913e028e98de2af6f949da4c9c254b54b6437f13e1c600ed9e06205e4ac696",
+      "cue": {
+        "text": "Well, what was yours?",
+        "start": 0
+      }
+    },
+    "7fc74b87": {
+      "role": "mercutio",
+      "text": "That dreamers often lie.",
+      "src": "audio/speeches/a01_s04_012_mercutio_7fc74b87_5001bb1669.mp3",
+      "fingerprint": "5001bb1669ec9149efdf739d959f9fb0e29ef115a04c597e054abf0232d8b0e6",
+      "cue": {
+        "text": "That dreamers often lie.",
+        "start": 0
+      }
+    },
+    "bf1833dc": {
+      "role": "romeo",
+      "text": "In bed asleep while they do dream things true.",
+      "src": "audio/speeches/a01_s04_013_romeo_bf1833dc_f0cf902ba4.mp3",
+      "fingerprint": "f0cf902ba4cfaa8e5d190cfca48ffa2ca6dd0482cf9a7f67ff038ddce5945aed",
+      "cue": {
+        "text": "In bed asleep while they do dream things true.",
+        "start": 0
+      }
+    },
+    "0f5d6bf8": {
+      "role": "romeo",
+      "text": "Peace, peace, Mercutio, peace. Thou talk’st of nothing.",
+      "src": "audio/speeches/a01_s04_015_romeo_0f5d6bf8_c22e6b3896.mp3",
+      "fingerprint": "c22e6b389660ded64a6e876ecf91f6117beb7bdd630e86e7533eae9640cdfdfd",
+      "cue": {
+        "text": "Peace, peace, Mercutio, peace. Thou talk’st of nothing.",
+        "start": 0
+      }
+    },
+    "17994bca": {
+      "role": "mercutio",
+      "text": "True, I talk of dreams, Which are the children of an idle brain, Begot of nothing but vain fantasy, Which is as thin of substance of the air And more inconstant than the wind.",
+      "src": "audio/speeches/a01_s04_016_mercutio_17994bca_41c878648a.mp3",
+      "fingerprint": "41c878648aeac23890044b5f2769f9f77323dd4ff825dfd0edd8720c0f22bc2f",
+      "cue": {
+        "text": "Which is as thin of substance of the air And more inconstant than the wind.",
+        "start": 6.373
+      }
+    },
+    "9d3be61b": {
+      "role": "benvolio",
+      "text": "This wind you talk of blows us from ourselves. Supper is done, and we shall come too late.",
+      "src": "audio/speeches/a01_s04_017_benvolio_9d3be61b_a787a630c7.mp3",
+      "fingerprint": "a787a630c78469e823fc19aed472b71f5cc30ac93cecc91c27247e101ae68f77",
+      "cue": {
+        "text": "This wind you talk of blows us from ourselves. Supper is done, and we shall come too late.",
+        "start": 0
+      }
+    },
+    "43ea8d82": {
+      "role": "romeo",
+      "text": "He that hath the steerage of my course Direct my sail. On, lusty gentleman.",
+      "src": "audio/speeches/a01_s04_018_romeo_43ea8d82_e342f43da2.mp3",
+      "fingerprint": "e342f43da220f263cf17ddff7cb1182ca2204e968ee8cd647362d76b438ae647",
+      "cue": {
+        "text": "He that hath the steerage of my course Direct my sail. On, lusty gentleman.",
+        "start": 0
+      }
+    },
+    "e8c20334": {
+      "role": "benvolio",
+      "text": "Strike, drum!",
+      "src": "audio/speeches/a01_s04_019_benvolio_e8c20334_5020229679.mp3",
+      "fingerprint": "5020229679a0744d6bdbaf87eb0dadcca65f35f6fa6d03b5e5768ad3d7d57aa5",
+      "cue": {
+        "text": "Strike, drum!",
+        "start": 0
+      }
+    },
+    "28641c00": {
+      "role": "mercutio",
+      "text": "O, then I see Queen Mab hath been with you. She is the fairies’ midwife, and she comes In shape no bigger than an agate stone On the forefinger of an alderman, Drawn with a team of little atomies Over men’s noses as they lie asleep. And in this state she gallops night by night Through lovers’ brains, and then they dream of love; On courtiers’ knees, that dream on cur’sies straight; O’er lawyers’ fingers, who straight dream on fees; O’er ladies’ lips, who straight on kisses dream, Which oft the angry Mab with blisters plagues Because their breaths with sweetmeats tainted are. This is she—",
+      "src": "audio/speeches/a01_s04_014_mercutio_28641c00_73edf2e28a.mp3",
+      "fingerprint": "73edf2e28a42f5aadd32546380d2c0b3680a9be3a0dda9ffb6f303fc993b56a5",
+      "cue": {
+        "text": "Because their breaths with sweetmeats tainted are. This is she—",
+        "start": 37.31
+      }
+    },
+    "eff28631": {
+      "role": "romeo",
+      "text": "What lady’s that which doth enrich the hand Of yonder knight?",
+      "src": "audio/speeches/a01_s05_002_romeo_eff28631_b270b15dd7.mp3",
+      "fingerprint": "b270b15dd7cc6863d8e8a3da9f0a13f114d3f5aceaabe9f112b77e7e40e9dcdb",
+      "cue": {
+        "text": "What lady’s that which doth enrich the hand Of yonder knight?",
+        "start": 0
+      }
+    },
+    "ec230c5c": {
+      "role": "servant-2",
+      "text": "I know not, sir.",
+      "src": "audio/speeches/a01_s05_003_servant-2_ec230c5c_f4272e9e22.mp3",
+      "fingerprint": "f4272e9e22727026d1cc659b8ab65f8683407cc645f595a078046bb9244c7f1e",
+      "cue": {
+        "text": "I know not, sir.",
+        "start": 0
+      }
+    },
+    "c0ec5503": {
+      "role": "lord-capulet",
+      "text": "Welcome, gentleman. Ladies that have their toes Unplagued with corns will walk about with you. You are welcome!—Come, musicians, play. A hall, a hall, give room!—And foot it, girls.—",
+      "src": "audio/speeches/a01_s05_001_lord-capulet_c0ec5503_655386a223.mp3",
+      "fingerprint": "655386a22300f4ad66688972b218623b09097e3386f6eb8f6d15b751f732cbe0",
+      "cue": {
+        "text": "You are welcome!—Come, musicians, play. A hall, a hall, give room!—And foot it, girls.—",
+        "start": 5.94
+      }
+    },
+    "3fe57a23": {
+      "role": "romeo",
+      "text": "O, she doth teach the torches to burn bright! Did my heart love till now? Forswear it, sight, For I ne’er saw true beauty till this night.",
+      "src": "audio/speeches/a01_s05_004_romeo_3fe57a23_0b12a22b02.mp3",
+      "fingerprint": "0b12a22b0216f27a1072646703d42994a455795d50a47f6ea6256e1a82321331",
+      "cue": {
+        "text": "Did my heart love till now? Forswear it, sight, For I ne’er saw true beauty till this night.",
+        "start": 3.2
+      }
+    },
+    "1e261cc7": {
+      "role": "tybalt",
+      "text": "This, by his voice, should be a Montague. What, dares the man Come hither covered with an antic face To fleer and scorn at our solemnity? Now, by the stock and honor of my kin, To strike him dead I hold it not a sin.",
+      "src": "audio/speeches/a01_s05_005_tybalt_1e261cc7_e3324481b2.mp3",
+      "fingerprint": "e3324481b2f3f41adae621168423331a42c44fed63623c29825b54daf98964c4",
+      "cue": {
+        "text": "Now, by the stock and honor of my kin, To strike him dead I hold it not a sin.",
+        "start": 8.860000000000001
+      }
+    },
+    "3b998571": {
+      "role": "lord-capulet",
+      "text": "Why, how now, kinsman? Wherefore storm you so?",
+      "src": "audio/speeches/a01_s05_006_lord-capulet_3b998571_3ed2510e11.mp3",
+      "fingerprint": "3ed2510e11052f3df14cf0f28c836b4e56d96d2a935ccc2c27dab20dca0ede8a",
+      "cue": {
+        "text": "Why, how now, kinsman? Wherefore storm you so?",
+        "start": 0
+      }
+    },
+    "9abdc823": {
+      "role": "tybalt",
+      "text": "Uncle, this is a Montague, our foe, A villain that is hither come in spite To scorn at our solemnity this night.",
+      "src": "audio/speeches/a01_s05_007_tybalt_9abdc823_abb0b7f43a.mp3",
+      "fingerprint": "abb0b7f43acc8230972b8d1934fb2fb41476b0ce02d107d70baf4bf73aec149c",
+      "cue": {
+        "text": "A villain that is hither come in spite To scorn at our solemnity this night.",
+        "start": 3.44
+      }
+    },
+    "0e481cc6": {
+      "role": "lord-capulet",
+      "text": "Young Romeo is it? Take no note of him. It is my will, the which if thou respect, Show a fair presence and put off these frowns, An ill-beseeming semblance for a feast.",
+      "src": "audio/speeches/a01_s05_008_lord-capulet_0e481cc6_04f1c16231.mp3",
+      "fingerprint": "04f1c162311fba70685db46d1a30cfade954b88e89b3827942c22101e2b91769",
+      "cue": {
+        "text": "Show a fair presence and put off these frowns, An ill-beseeming semblance for a feast.",
+        "start": 6.4879999999999995
+      }
+    },
+    "a6613784": {
+      "role": "tybalt",
+      "text": "I’ll not endure him.",
+      "src": "audio/speeches/a01_s05_009_tybalt_a6613784_5bac210b23.mp3",
+      "fingerprint": "5bac210b23d9612995cd1f8efc9aa52a8d1f6a2f5ae718b28c36e531741b60c7",
+      "cue": {
+        "text": "I’ll not endure him.",
+        "start": 0
+      }
+    },
+    "f76dd858": {
+      "role": "tybalt",
+      "text": "I will withdraw, but this intrusion shall Now seeming sweet, convert to bitt’rest gall.",
+      "src": "audio/speeches/a01_s05_011_tybalt_f76dd858_9521329445.mp3",
+      "fingerprint": "95213294454b8c266abf6597c08b230cf66790e8415df1eccdfe2ede462f2669",
+      "cue": {
+        "text": "I will withdraw, but this intrusion shall Now seeming sweet, convert to bitt’rest gall.",
+        "start": 0
+      }
+    },
+    "d455a5f1": {
+      "role": "lord-capulet",
+      "text": "He shall be endured. What, goodman boy? I say he shall. Go to. You are a saucy boy. Be quiet, or for shame I’ll make you quiet!",
+      "src": "audio/speeches/a01_s05_010_lord-capulet_d455a5f1_2231ce84e9.mp3",
+      "fingerprint": "2231ce84e909630dabec6fb124d4594c4cb2f55272294cb9cda1bddc50f17092",
+      "cue": {
+        "text": "You are a saucy boy. Be quiet, or for shame I’ll make you quiet!",
+        "start": 5.33
+      }
+    },
+    "4bfed071": {
+      "role": "romeo",
+      "text": "If I profrane with my unworthiest hand This holy shrine, the gentle sin is this: My lips, two blushing pilgrims, ready stand To smooth that rough touch with a tender kiss.",
+      "src": "audio/speeches/a01_s05_012_romeo_4bfed071_71654a251d.mp3",
+      "fingerprint": "71654a251d33da57abc2ce7fe5a3aa89228f7463b058fbd36033857a76c636f0",
+      "cue": {
+        "text": "My lips, two blushing pilgrims, ready stand To smooth that rough touch with a tender kiss.",
+        "start": 6.547
+      }
+    },
+    "e1945372": {
+      "role": "juliet",
+      "text": "Good pilgrim, you do wrong your hand too much, Which mannerly devotion shows in this; For saints have hands that pilgrims’ hands do much, And palm to palm is holy palmers’ kiss.",
+      "src": "audio/speeches/a01_s05_013_juliet_e1945372_7b0d1e79a7.mp3",
+      "fingerprint": "7b0d1e79a716d4056126dc6faf48fd2b59fd66727076c8a082e778f20de55438",
+      "cue": {
+        "text": "For saints have hands that pilgrims’ hands do much, And palm to palm is holy palmers’ kiss.",
+        "start": 7.06
+      }
+    },
+    "6b9953a3": {
+      "role": "romeo",
+      "text": "Have not saints lips, and holy palmers too?",
+      "src": "audio/speeches/a01_s05_014_romeo_6b9953a3_cbf56ab6cc.mp3",
+      "fingerprint": "cbf56ab6ccba006bf09f7b6b7f6aea6a48586f9d959142013b401c56f6897567",
+      "cue": {
+        "text": "Have not saints lips, and holy palmers too?",
+        "start": 0
+      }
+    },
+    "2f36e5f4": {
+      "role": "juliet",
+      "text": "Ay, pilgrim, lips that they must use in prayer.",
+      "src": "audio/speeches/a01_s05_015_juliet_2f36e5f4_d954db3ac8.mp3",
+      "fingerprint": "d954db3ac8dcb6c7d858217c1a955255eed6e255bfb154e7ad06dcc29e0038ed",
+      "cue": {
+        "text": "Ay, pilgrim, lips that they must use in prayer.",
+        "start": 0
+      }
+    },
+    "8a853fd5": {
+      "role": "juliet",
+      "text": "Saints do not move, though grant for prayers’ sake.",
+      "src": "audio/speeches/a01_s05_017_juliet_8a853fd5_7674f33ebd.mp3",
+      "fingerprint": "7674f33ebdc9676d1cc0316cdedcc14c9d4db79be20772cb157aa87ac7e0a35f",
+      "cue": {
+        "text": "Saints do not move, though grant for prayers’ sake.",
+        "start": 0
+      }
+    },
+    "57b30218": {
+      "role": "romeo",
+      "text": "O then, dear saint, let lips do what hands do. They pray: grant thou, lest faith turn to despair.",
+      "src": "audio/speeches/a01_s05_016_romeo_57b30218_8d5c674abb.mp3",
+      "fingerprint": "8d5c674abbf3956ea1391a2a3aa01d8de947769f6b53af51ba711f637bfd819f",
+      "cue": {
+        "text": "O then, dear saint, let lips do what hands do. They pray: grant thou, lest faith turn to despair.",
+        "start": 0
+      }
+    },
+    "8e02733a": {
+      "role": "juliet",
+      "text": "Then have my lips the sin that they have took.",
+      "src": "audio/speeches/a01_s05_019_juliet_8e02733a_5f61e373f3.mp3",
+      "fingerprint": "5f61e373f350c2b55f6ce926ef84949dbb8a7321f67efda78ac1ee0d29dc4c74",
+      "cue": {
+        "text": "Then have my lips the sin that they have took.",
+        "start": 0
+      }
+    },
+    "7c33c006": {
+      "role": "romeo",
+      "text": "Then move not while my prayer’s effect I take. Thus from my lips, by thine, my sin is purged",
+      "src": "audio/speeches/a01_s05_018_romeo_7c33c006_25397a1875.mp3",
+      "fingerprint": "25397a1875fdddc2efd64e1d3e46ee8890fc11bf7f382a0f7930050775a182bc",
+      "cue": {
+        "text": "Then move not while my prayer’s effect I take. Thus from my lips, by thine, my sin is purged",
+        "start": 0
+      }
+    },
+    "effa312e": {
+      "role": "nurse",
+      "text": "Madam, your mother craves a word with you!",
+      "src": "audio/speeches/a01_s05_021_nurse_effa312e_4c61a3af97.mp3",
+      "fingerprint": "4c61a3af9722573a22322d38d3584fefb13e15ba7a64ac5251eeb907f4dcf392",
+      "cue": {
+        "text": "Madam, your mother craves a word with you!",
+        "start": 0
+      }
+    },
+    "aa9945f2": {
+      "role": "romeo",
+      "text": "Sin from thy lips? O trespass sweetly urged! Give me thy sin.",
+      "src": "audio/speeches/a01_s05_020_romeo_aa9945f2_27082c3f9b.mp3",
+      "fingerprint": "27082c3f9b44f072bc06a185ab1d28b88c44edf28a6597f76a975739e069845a",
+      "cue": {
+        "text": "Sin from thy lips? O trespass sweetly urged! Give me thy sin.",
+        "start": 0
+      }
+    },
+    "ad6270a6": {
+      "role": "romeo",
+      "text": "What is her mother?",
+      "src": "audio/speeches/a01_s05_022_romeo_ad6270a6_d372ef61ef.mp3",
+      "fingerprint": "d372ef61ef28d31e8e0934a2a674ad2ae90301e4c7af94828b72b053de5e131c",
+      "cue": {
+        "text": "What is her mother?",
+        "start": 0
+      }
+    },
+    "9aba129a": {
+      "role": "nurse",
+      "text": "Marry bachelor, Her mother is the lady of the house.",
+      "src": "audio/speeches/a01_s05_023_nurse_9aba129a_1d50b189e7.mp3",
+      "fingerprint": "1d50b189e76cee998634e6a8e608079793c6d3a5c2e1d9ac1c096101f4db9e18",
+      "cue": {
+        "text": "Marry bachelor, Her mother is the lady of the house.",
+        "start": 0
+      }
+    },
+    "de66019a": {
+      "role": "benvolio",
+      "text": "Away, begone. The sport is at the best.",
+      "src": "audio/speeches/a01_s05_025_benvolio_de66019a_ca3696f0a3.mp3",
+      "fingerprint": "ca3696f0a3640ecb090722a9d38ebb8c92bd9e5a0f08095c73057d65a21630f2",
+      "cue": {
+        "text": "Away, begone. The sport is at the best.",
+        "start": 0
+      }
+    },
+    "961670be": {
+      "role": "romeo",
+      "text": "Is she a Capulet? O dear account! My life is my foe’s debt.",
+      "src": "audio/speeches/a01_s05_024_romeo_961670be_02afe59531.mp3",
+      "fingerprint": "02afe59531af6b575dd46a75d34c0056bdaf52d6a3c470683e693842fa110b43",
+      "cue": {
+        "text": "Is she a Capulet? O dear account! My life is my foe’s debt.",
+        "start": 0
+      }
+    },
+    "2acdd683": {
+      "role": "romeo",
+      "text": "Ay, so I fear. The more is my unrest.",
+      "src": "audio/speeches/a01_s05_026_romeo_2acdd683_ef3329714c.mp3",
+      "fingerprint": "ef3329714cac2a1fc3e7eedca15da2fa7e59bf6581ce6b189b580bc5ab13be43",
+      "cue": {
+        "text": "Ay, so I fear. The more is my unrest.",
+        "start": 0
+      }
+    },
+    "fd5b5e61": {
+      "role": "juliet",
+      "text": "Come hither, nurse. What is yond gentleman?",
+      "src": "audio/speeches/a01_s05_027_juliet_fd5b5e61_d9d3a3cb33.mp3",
+      "fingerprint": "d9d3a3cb338f094efb7dab7cfe7b02f1227d2dacf36c6a2da8b05250f6a8f4f9",
+      "cue": {
+        "text": "Come hither, nurse. What is yond gentleman?",
+        "start": 0
+      }
+    },
+    "ce23ab40": {
+      "role": "nurse",
+      "text": "His name is Romeo, and a Montague, The only son of your great enemy.",
+      "src": "audio/speeches/a01_s05_028_nurse_ce23ab40_14b3691727.mp3",
+      "fingerprint": "14b3691727ec4b41114954c5fedd08c24ca03d94e5aae38f314f4921bc52d2d0",
+      "cue": {
+        "text": "His name is Romeo, and a Montague, The only son of your great enemy.",
+        "start": 0
+      }
+    },
+    "44dedea5": {
+      "role": "nurse",
+      "text": "Come, let’s away. The strangers all are gone.",
+      "src": "audio/speeches/a01_s05_030_nurse_44dedea5_7ab1ce63bc.mp3",
+      "fingerprint": "7ab1ce63bc745e844db3b523ffd325ddd652bb29f541f8517aa94f218e494dda",
+      "cue": {
+        "text": "Come, let’s away. The strangers all are gone.",
+        "start": 0
+      }
+    },
+    "020bcc64": {
+      "role": "juliet",
+      "text": "My only love sprung from my only hate! Too early seen unknown, and known too late. Prodigious birth of love it is to me That I must love a loath`ed enemy.",
+      "src": "audio/speeches/a01_s05_029_juliet_020bcc64_7ab53ae40b.mp3",
+      "fingerprint": "7ab53ae40b1534c0df4f8f0ec1738134c402c90441c28871b9aa833f44326158",
+      "cue": {
+        "text": "Prodigious birth of love it is to me That I must love a loath`ed enemy.",
+        "start": 7.624
+      }
+    },
+    "9bdbdb1e": {
+      "role": "romeo",
+      "text": "Can I go forward when my heart is here?",
+      "src": "audio/speeches/a02_s01_001_romeo_9bdbdb1e_65e7159c80.mp3",
+      "fingerprint": "65e7159c806afed517149168b7ac8b0b55134a42b5750dd40aad9ed6b85bba93",
+      "cue": {
+        "text": "Can I go forward when my heart is here?",
+        "start": 0
+      }
+    },
+    "48ae5c84": {
+      "role": "mercutio",
+      "text": "Romeo! Humors! Madman! Passion! Lover!",
+      "src": "audio/speeches/a02_s01_003_mercutio_48ae5c84_f6389b2567.mp3",
+      "fingerprint": "f6389b25675e0c6fe2f0b5cf9b3f16254589992b96783017de92b31c5dcce6cd",
+      "cue": {
+        "text": "Romeo! Humors! Madman! Passion! Lover!",
+        "start": 0
+      }
+    },
+    "004a11d0": {
+      "role": "benvolio",
+      "text": "Romeo, my cousin Romeo, Romeo! He ran this way and leapt this orchard wall, Call, good Mercutio.",
+      "src": "audio/speeches/a02_s01_002_benvolio_004a11d0_b924f71670.mp3",
+      "fingerprint": "b924f71670e4098a568052b9e5148ab2313689ea2d6a12b559bc18aa06377fc3",
+      "cue": {
+        "text": "He ran this way and leapt this orchard wall, Call, good Mercutio.",
+        "start": 2.6
+      }
+    },
+    "5b8ce67a": {
+      "role": "benvolio",
+      "text": "Come, he hath hid himself among these tree.",
+      "src": "audio/speeches/a02_s01_004_benvolio_5b8ce67a_b393a036a4.mp3",
+      "fingerprint": "b393a036a447c90ccfea46fec3092ae8408193b6528d0e625079a0ab5dd8cd28",
+      "cue": {
+        "text": "Come, he hath hid himself among these tree.",
+        "start": 0
+      }
+    },
+    "08acece5": {
+      "role": "mercutio",
+      "text": "Shall we go?",
+      "src": "audio/speeches/a02_s01_005_mercutio_08acece5_df2880742e.mp3",
+      "fingerprint": "df2880742ef1d68285cf88ef12df0ff6018cc1cc08713edae6e95bdfd4b5352c",
+      "cue": {
+        "text": "Shall we go?",
+        "start": 0
+      }
+    },
+    "56dafc6a": {
+      "role": "juliet",
+      "text": "Ay me.",
+      "src": "audio/speeches/a02_s01_007_juliet_56dafc6a_362280c3c0.mp3",
+      "fingerprint": "362280c3c09e55c7f8bf14c2ebbebcf4b0cf24eaaa3c7376a1adf51aecbd7f1a",
+      "cue": {
+        "text": "Ay me.",
+        "start": 0
+      }
+    },
+    "5e05cd36": {
+      "role": "romeo",
+      "text": "She speaks.",
+      "src": "audio/speeches/a02_s01_008_romeo_5e05cd36_761d995a32.mp3",
+      "fingerprint": "761d995a32faecfca7ab2acf3d29889561caf7aeefbb74befb20a6d880fd069d",
+      "cue": {
+        "text": "She speaks.",
+        "start": 0
+      }
+    },
+    "a945763e": {
+      "role": "juliet",
+      "text": "O Romeo, Romeo, wherefore art thou Romeo? Deny thy father and refuse thy name, Or if thou wilt not, be but sworn my love, And I’ll no longer be a Capulet.",
+      "src": "audio/speeches/a02_s01_009_juliet_a945763e_c8264ccb33.mp3",
+      "fingerprint": "c8264ccb333f5881e5700a4d8dcbc54ddeeb214abe239bc27d6a093116774f04",
+      "cue": {
+        "text": "Or if thou wilt not, be but sworn my love, And I’ll no longer be a Capulet.",
+        "start": 6.2
+      }
+    },
+    "07d056a9": {
+      "role": "romeo",
+      "text": "Shall I hear more, or shall I speak at this?",
+      "src": "audio/speeches/a02_s01_010_romeo_07d056a9_ce2e90f21b.mp3",
+      "fingerprint": "ce2e90f21b1d342889c70ab4fa1d5b4c3c694fdb0976395eedfd6dfda65b14be",
+      "cue": {
+        "text": "Shall I hear more, or shall I speak at this?",
+        "start": 0
+      }
+    },
+    "d9fd5ea1": {
+      "role": "romeo",
+      "text": "He jests at scars that never felt a wound. But soft, what light through yonder window breaks? It is the East, and Juliet is the sun. Arise, fair sun, and kill the envious moon, Who is already sick and pale with grief That thou, her maid, art far more fair than she. It is my lady. O, it is my love! O, that she knew she were.",
+      "src": "audio/speeches/a02_s01_006_romeo_d9fd5ea1_01108ca3b7.mp3",
+      "fingerprint": "01108ca3b73f05b0fcfca6cb502bf3c491e79c7396cd0128d279f4d75e78ee29",
+      "cue": {
+        "text": "It is my lady. O, it is my love! O, that she knew she were.",
+        "start": 21.880000000000003
+      }
+    },
+    "d2a20b66": {
+      "role": "romeo",
+      "text": "I take thee at thy word. Call me but love, and I’ll be new baptized. Henceforth I never will be Romeo.",
+      "src": "audio/speeches/a02_s01_012_romeo_d2a20b66_aa377826c3.mp3",
+      "fingerprint": "aa377826c39b2f9ef946798fa5a213144a8d5f84d7786365d4b05643b473f13c",
+      "cue": {
+        "text": "Call me but love, and I’ll be new baptized. Henceforth I never will be Romeo.",
+        "start": 1.656
+      }
+    },
+    "89909b01": {
+      "role": "juliet",
+      "text": "What man art thou that, thus bescreened in night, So stumblest on my counsel?",
+      "src": "audio/speeches/a02_s01_013_juliet_89909b01_7ca892fe83.mp3",
+      "fingerprint": "7ca892fe83cd312fddbb4a4cc4ade8a72f045d358c6ae43a76c8251178dcf94d",
+      "cue": {
+        "text": "What man art thou that, thus bescreened in night, So stumblest on my counsel?",
+        "start": 0
+      }
+    },
+    "a55ad565": {
+      "role": "juliet",
+      "text": "’Tis but thy name that is my enemy. Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face. What’s in a name? That which we call a rose By any other word would smell as sweet. And, for thy name, which is no part of thee, Take all myself.",
+      "src": "audio/speeches/a02_s01_011_juliet_a55ad565_4d3f4dfda6.mp3",
+      "fingerprint": "4d3f4dfda679eace25876488475503f03f8766fa638a1f8b7393fa1d739b4c72",
+      "cue": {
+        "text": "And, for thy name, which is no part of thee, Take all myself.",
+        "start": 18.66
+      }
+    },
+    "b7d9df4a": {
+      "role": "romeo",
+      "text": "By a name I know not how to tell thee who I am.",
+      "src": "audio/speeches/a02_s01_014_romeo_b7d9df4a_3d93040c8d.mp3",
+      "fingerprint": "3d93040c8dd408fe37d14d7d0e8f74241cfaa5c92fc93a45fe1fd8a34e9eb17d",
+      "cue": {
+        "text": "By a name I know not how to tell thee who I am.",
+        "start": 0
+      }
+    },
+    "cdd15643": {
+      "role": "juliet",
+      "text": "Art thou not Romeo, and a Montague?",
+      "src": "audio/speeches/a02_s01_015_juliet_cdd15643_7fa9236a78.mp3",
+      "fingerprint": "7fa9236a784e167e7a5209592d79b0c9ae57092c514b07e5c2aa3152e439fb8e",
+      "cue": {
+        "text": "Art thou not Romeo, and a Montague?",
+        "start": 0
+      }
+    },
+    "3cebf449": {
+      "role": "romeo",
+      "text": "Neither, fair maid, if either thee dislike.",
+      "src": "audio/speeches/a02_s01_016_romeo_3cebf449_2bd87e1c85.mp3",
+      "fingerprint": "2bd87e1c850ec0a903626f94a2547a08c603e3780f85e4f668f7dd1f701ea699",
+      "cue": {
+        "text": "Neither, fair maid, if either thee dislike.",
+        "start": 0
+      }
+    },
+    "903543cd": {
+      "role": "romeo",
+      "text": "With love’s light wings did I o’erperch these walls.",
+      "src": "audio/speeches/a02_s01_018_romeo_903543cd_154ecb159c.mp3",
+      "fingerprint": "154ecb159c867b663173e8e16c4cae7f2d918cfb22d184848ed55df978a5c8a0",
+      "cue": {
+        "text": "With love’s light wings did I o’erperch these walls.",
+        "start": 0
+      }
+    },
+    "dcec3440": {
+      "role": "juliet",
+      "text": "How camest thou hither? This place is death, considering who thou art, If any of my kinsmen find thee here.",
+      "src": "audio/speeches/a02_s01_017_juliet_dcec3440_be100664a0.mp3",
+      "fingerprint": "be100664a0f2711000a22ac651d3309648362d82d8553359a91bc77acd70ab86",
+      "cue": {
+        "text": "This place is death, considering who thou art, If any of my kinsmen find thee here.",
+        "start": 1.768
+      }
+    },
+    "2cdc04c9": {
+      "role": "romeo",
+      "text": "Lady, by yonder blesse`d moon I swear…",
+      "src": "audio/speeches/a02_s01_020_romeo_2cdc04c9_b54e5df0dc.mp3",
+      "fingerprint": "b54e5df0dcb0b0ff6d8a608a1626eabde47a7ac4d64d0f82e518ccc5032ed7ad",
+      "cue": {
+        "text": "Lady, by yonder blesse`d moon I swear…",
+        "start": 0
+      }
+    },
+    "50a0f8a6": {
+      "role": "juliet",
+      "text": "Dost thou love me? I know wilt say “Ay,” And I will take thy word. Yet, if thou swear’st, Thou mayst prove false. O gentle Romeo, If thou dost love, pronounce it faithfully.",
+      "src": "audio/speeches/a02_s01_019_juliet_50a0f8a6_b9f1084f0c.mp3",
+      "fingerprint": "b9f1084f0c091dede1bdb588df7ae5d2298f71325182ae0d824c4df69c1bd471",
+      "cue": {
+        "text": "Thou mayst prove false. O gentle Romeo, If thou dost love, pronounce it faithfully.",
+        "start": 8.792000000000002
+      }
+    },
+    "64e40bef": {
+      "role": "juliet",
+      "text": "O, swear not by the moon, th’ inconstant moon, That monthly changes in her circled org, Lest that thy love prove likewise variable.",
+      "src": "audio/speeches/a02_s01_021_juliet_64e40bef_1080e74f56.mp3",
+      "fingerprint": "1080e74f562ada4d2de411003880529862e000c7ba07c978d88c5ec3b95701b6",
+      "cue": {
+        "text": "That monthly changes in her circled org, Lest that thy love prove likewise variable.",
+        "start": 3.32
+      }
+    },
+    "7c1b9cbf": {
+      "role": "romeo",
+      "text": "What shall I swear by?",
+      "src": "audio/speeches/a02_s01_022_romeo_7c1b9cbf_f02c3d2a1a.mp3",
+      "fingerprint": "f02c3d2a1a826a5c8c922112510da291b0d551678c79a47687e35d03c885eadf",
+      "cue": {
+        "text": "What shall I swear by?",
+        "start": 0
+      }
+    },
+    "9802a889": {
+      "role": "romeo",
+      "text": "O, wilt thou leave me so unsatisfied?",
+      "src": "audio/speeches/a02_s01_024_romeo_9802a889_7779e46df4.mp3",
+      "fingerprint": "7779e46df4e2b8de2369368c8324983b84d98749eeccb4952ab91cf16b5ef4a8",
+      "cue": {
+        "text": "O, wilt thou leave me so unsatisfied?",
+        "start": 0
+      }
+    },
+    "f4e4fe6a": {
+      "role": "juliet",
+      "text": "Well, do not swear. Although I joy in thee, I have no joy in this contract tonight. It is too rash, too unadvised, too sudden. Sweet, good night, This bud of love, by summer’s ripening breath, May prove a beauteous flower when next we meet.",
+      "src": "audio/speeches/a02_s01_023_juliet_f4e4fe6a_9a6814edba.mp3",
+      "fingerprint": "9a6814edba641c2cfc82abd0da310ed672d97b679b4d576538c3389d569abf8f",
+      "cue": {
+        "text": "This bud of love, by summer’s ripening breath, May prove a beauteous flower when next we meet.",
+        "start": 12.568000000000001
+      }
+    },
+    "56a9baf2-2": {
+      "role": "abraham",
+      "text": "Do you bite your thumb at us, sir?",
+      "src": "audio/speeches/a01_s01_005_abraham_56a9baf2-2_1152e62cf1.mp3",
+      "fingerprint": "1152e62cf155fc637ef76a4726b894170f6b528c2391101577a3e672ba106b72",
+      "cue": {
+        "text": "Do you bite your thumb at us, sir?",
+        "start": 0
+      }
+    },
+    "56a9baf2": {
+      "role": "abraham",
+      "text": "Do you bite your thumb at us, sir?",
+      "src": "audio/speeches/a01_s01_003_abraham_56a9baf2_1152e62cf1.mp3",
+      "fingerprint": "1152e62cf155fc637ef76a4726b894170f6b528c2391101577a3e672ba106b72",
+      "cue": {
+        "text": "Do you bite your thumb at us, sir?",
+        "start": 0
+      }
+    },
+    "7916e225": {
+      "role": "abraham",
+      "text": "No better.",
+      "src": "audio/speeches/a01_s01_010_abraham_7916e225_571354c159.mp3",
+      "fingerprint": "571354c15954f8571d932c21f77b94f941b0a0cf81bd7c616aedd8997c8127be",
+      "cue": {
+        "text": "No better.",
+        "start": 0
+      }
+    },
+    "260eb34c": {
+      "role": "abraham",
+      "text": "Quarrel, sir? No, sir.",
+      "src": "audio/speeches/a01_s01_008_abraham_260eb34c_a60e9dde75.mp3",
+      "fingerprint": "a60e9dde751e3cbaa71e6cbee6cf99493fedef8f3183c2d51128710128178a32",
+      "cue": {
+        "text": "Quarrel, sir? No, sir.",
+        "start": 0
+      }
+    },
+    "3ab8647f": {
+      "role": "romeo",
+      "text": "O blessed, blessed night! I am afeard, Being in night, all this is but a dream Too flattering sweet to be substantial.",
+      "src": "audio/speeches/a02_s01_026_romeo_3ab8647f_06250e98ac.mp3",
+      "fingerprint": "06250e98ac22cb6820b2db00566159f36aedf78060c7aebb393c682cfebb123f",
+      "cue": {
+        "text": "Being in night, all this is but a dream Too flattering sweet to be substantial.",
+        "start": 3.827
+      }
+    },
+    "1d2466f6": {
+      "role": "juliet",
+      "text": "What satisfaction canst thou have tonight? I hear some noise within. Dear love, adieu.— Anon good nurse—Sweet Montague, be true. Stay but a little; I will come again.",
+      "src": "audio/speeches/a02_s01_025_juliet_1d2466f6_667d9c3500.mp3",
+      "fingerprint": "667d9c3500da7d89c4044855212f7022ec3ccf25371cfca1ef9444e6d5760397",
+      "cue": {
+        "text": "Anon good nurse—Sweet Montague, be true. Stay but a little; I will come again.",
+        "start": 7.32
+      }
+    },
+    "1c7385cf": {
+      "role": "nurse",
+      "text": "Madam.",
+      "src": "audio/speeches/a02_s01_028_nurse_1c7385cf_b085848384.mp3",
+      "fingerprint": "b085848384971e1663822d4f9309359b8ac15d9199fa1ac82ed1753a90e50dd7",
+      "cue": {
+        "text": "Madam.",
+        "start": 0
+      }
+    },
+    "f891844e": {
+      "role": "juliet",
+      "text": "By and by, I come—",
+      "src": "audio/speeches/a02_s01_029_juliet_f891844e_d6ac351862.mp3",
+      "fingerprint": "d6ac3518627f109eebfef962458e59582158778f4c90616b6f149943dfb6568f",
+      "cue": {
+        "text": "By and by, I come—",
+        "start": 0
+      }
+    },
+    "8d5d4f77": {
+      "role": "romeo",
+      "text": "So thrive my soul—",
+      "src": "audio/speeches/a02_s01_030_romeo_8d5d4f77_b03db50723.mp3",
+      "fingerprint": "b03db50723ead313da11d98d129a5b57a5129cf451d1558b7d696a4bd337c197",
+      "cue": {
+        "text": "So thrive my soul—",
+        "start": 0
+      }
+    },
+    "d71e9d5e": {
+      "role": "juliet",
+      "text": "A thousand times good night.",
+      "src": "audio/speeches/a02_s01_031_juliet_d71e9d5e_d4d97cae95.mp3",
+      "fingerprint": "d4d97cae958b45ff273015ca9cd8692c3fe445f310c3c98dc891da819d0a715c",
+      "cue": {
+        "text": "A thousand times good night.",
+        "start": 0
+      }
+    },
+    "9254063e": {
+      "role": "juliet",
+      "text": "Romeo.",
+      "src": "audio/speeches/a02_s01_032_juliet_9254063e_68c4e18f7f.mp3",
+      "fingerprint": "68c4e18f7f86526a500d7370ede597a6a59dab0d325d2f4a06268a312349cfe3",
+      "cue": {
+        "text": "Romeo.",
+        "start": 0
+      }
+    },
+    "848310a0": {
+      "role": "juliet",
+      "text": "Three words, dear Romeo, and good night indeed. If that thy bent of love be honorable, Thy purpose marriage, send me word tomorrow, By one that I’ll procure to come to thee, Where and what time thou wilt perform the rite, And all my fortunes at thy foot I’ll lay And follow thee my lord throughout the world.",
+      "src": "audio/speeches/a02_s01_027_juliet_848310a0_5102515a97.mp3",
+      "fingerprint": "5102515a97f260d214590f7a7e858a4cce4d1724305fb5ebabc0b90a0c712e35",
+      "cue": {
+        "text": "And all my fortunes at thy foot I’ll lay And follow thee my lord throughout the world.",
+        "start": 17.66
+      }
+    },
+    "38908baf": {
+      "role": "romeo",
+      "text": "By the hour of nine.",
+      "src": "audio/speeches/a02_s01_035_romeo_38908baf_7fd754f74f.mp3",
+      "fingerprint": "7fd754f74f9925016e39a600bee80231de655fccdb40de41e6f846df00ab2995",
+      "cue": {
+        "text": "By the hour of nine.",
+        "start": 0
+      }
+    },
+    "a9f1079a": {
+      "role": "juliet",
+      "text": "What o’clock tomorrow Shall I send to thee?",
+      "src": "audio/speeches/a02_s01_034_juliet_a9f1079a_0cdbdfa408.mp3",
+      "fingerprint": "0cdbdfa4089de746853c1b12f06feaa692486b457c4bffdaf93c7ef935c7bc19",
+      "cue": {
+        "text": "What o’clock tomorrow Shall I send to thee?",
+        "start": 0
+      }
+    },
+    "cbe0285c": {
+      "role": "friar-lawrence",
+      "text": "The gray-eyed morn smiles on the frowning night, Check’ring the eastern clouds with streaks of light, And flecked darkness like a drunkard reels From forth day’s path and Titan’s fiery wheels.",
+      "src": "audio/speeches/a02_s02_001_friar-lawrence_cbe0285c_dec5ba8b8d.mp3",
+      "fingerprint": "dec5ba8b8def86ca277245847ba74ec86b3c2ddc6edf3016331406ab2bef837b",
+      "cue": {
+        "text": "And flecked darkness like a drunkard reels From forth day’s path and Titan’s fiery wheels.",
+        "start": 6.62
+      }
+    },
+    "c6e87505": {
+      "role": "juliet",
+      "text": "I will not fail. ’Tis twenty year till then. Goodnight, goodnight. Parting is such sweet sorrow That I shall say “Good night” till it be morrow.",
+      "src": "audio/speeches/a02_s01_036_juliet_c6e87505_6ad02e9de5.mp3",
+      "fingerprint": "6ad02e9de5a57a71bfca438dbaba092f7260e0974868c22436a668835ebfa72a",
+      "cue": {
+        "text": "Goodnight, goodnight. Parting is such sweet sorrow That I shall say “Good night” till it be morrow.",
+        "start": 4.4719999999999995
+      }
+    },
+    "ceffc989": {
+      "role": "romeo",
+      "text": "Good morrow, father.",
+      "src": "audio/speeches/a02_s02_002_romeo_ceffc989_76d7f2a5a6.mp3",
+      "fingerprint": "76d7f2a5a6010b5c231a6fbf311bf3ee9976e9051ad1d83b44b140f48f4fa3ed",
+      "cue": {
+        "text": "Good morrow, father.",
+        "start": 0
+      }
+    },
+    "a981b6c0": {
+      "role": "romeo",
+      "text": "That last is true. The sweeter rest was mine.",
+      "src": "audio/speeches/a02_s02_004_romeo_a981b6c0_31895c4c84.mp3",
+      "fingerprint": "31895c4c84aae5d608488eb4fb3515ea17dea09228d943f11612b95a48723db1",
+      "cue": {
+        "text": "That last is true. The sweeter rest was mine.",
+        "start": 0
+      }
+    },
+    "c56a69ca": {
+      "role": "friar-lawrence",
+      "text": "God pardon sin! Wast thou with Rosaline?",
+      "src": "audio/speeches/a02_s02_005_friar-lawrence_c56a69ca_97dbc95e6c.mp3",
+      "fingerprint": "97dbc95e6c9e3864d15621c46c5c7e786921df218248a4be5c805d923105ad8f",
+      "cue": {
+        "text": "God pardon sin! Wast thou with Rosaline?",
+        "start": 0
+      }
+    },
+    "c86e5e4a": {
+      "role": "friar-lawrence",
+      "text": "Benedicite. What early tongue so sweet saluteth me? Young son, thy earliness doth me assure Thou art uproused with some distemp’rature, Or, if not so, then here I hit it right: Our Romeo hath not been in bed tonight.",
+      "src": "audio/speeches/a02_s02_003_friar-lawrence_c86e5e4a_19e1ecbbdf.mp3",
+      "fingerprint": "19e1ecbbdfcf7c0371bbb9fcd916e2af881ba1dc7323426a3c9c1770d44ffae5",
+      "cue": {
+        "text": "Or, if not so, then here I hit it right: Our Romeo hath not been in bed tonight.",
+        "start": 13.107000000000001
+      }
+    },
+    "5e1ac8ae": {
+      "role": "romeo",
+      "text": "With Rosaline, my ghostly father? No. I have forgot that name and that name’s woe.",
+      "src": "audio/speeches/a02_s02_006_romeo_5e1ac8ae_2d11d43ad9.mp3",
+      "fingerprint": "2d11d43ad9ca2830cc2c5cd7bf09e796d4b18cd26afaad058049fb2a828188e1",
+      "cue": {
+        "text": "With Rosaline, my ghostly father? No. I have forgot that name and that name’s woe.",
+        "start": 0
+      }
+    },
+    "3e0983e3": {
+      "role": "friar-lawrence",
+      "text": "That’s my good son. But where has thou been then?",
+      "src": "audio/speeches/a02_s02_007_friar-lawrence_3e0983e3_e38ec6767b.mp3",
+      "fingerprint": "e38ec6767be410f8b483289ce99cb81e260724b4077688393f3e695522859f42",
+      "cue": {
+        "text": "That’s my good son. But where has thou been then?",
+        "start": 0
+      }
+    },
+    "1409c746": {
+      "role": "friar-lawrence",
+      "text": "Holy Saint Francis, what a change is here! Is Rosaline, that thou didst love so dear So soon forsaken? Young men’s love then lies Not truly in their hearts, but in their eyes.",
+      "src": "audio/speeches/a02_s02_009_friar-lawrence_1409c746_0a83011cc4.mp3",
+      "fingerprint": "0a83011cc40914a34e82ba261defb7371d61fba923dc1042cbb5142d3e8ebf84",
+      "cue": {
+        "text": "So soon forsaken? Young men’s love then lies Not truly in their hearts, but in their eyes.",
+        "start": 7.213
+      }
+    },
+    "481435e1": {
+      "role": "romeo",
+      "text": "I have been feasting with mine enemy, Where on a sudden one hath wounded me That’s by me wounded. Plainly know my heart’s dear love is set On the fair daughter of rich Capulet But this I pray, That thou consent to marry us today.",
+      "src": "audio/speeches/a02_s02_008_romeo_481435e1_8fc8027f4c.mp3",
+      "fingerprint": "8fc8027f4c4b8e5cacd613ad86d755690aec0b54310e8db46e2cea92bcd606c4",
+      "cue": {
+        "text": "But this I pray, That thou consent to marry us today.",
+        "start": 13.32
+      }
+    },
+    "cb18f1b0": {
+      "role": "romeo",
+      "text": "I pray thee, chide me not. Her I love now Doth grace for grace and love for love allow. The other did not so.",
+      "src": "audio/speeches/a02_s02_010_romeo_cb18f1b0_549d23da66.mp3",
+      "fingerprint": "549d23da66f45f230820a8997a30f261363834830038c3338faad9c4cdd12c2b",
+      "cue": {
+        "text": "Doth grace for grace and love for love allow. The other did not so.",
+        "start": 3.3729999999999998
+      }
+    },
+    "8f663a03": {
+      "role": "friar-lawrence",
+      "text": "Come, young waverer, come, go with me. In one respect I’ll thy assistant be, For this alliance may so happy prove To turn your household’s rancor to pure love.",
+      "src": "audio/speeches/a02_s02_011_friar-lawrence_8f663a03_57fd747616.mp3",
+      "fingerprint": "57fd747616d679855bce4b951a7510dc1be5ec0688e41fb6117792d7af8294b6",
+      "cue": {
+        "text": "For this alliance may so happy prove To turn your household’s rancor to pure love.",
+        "start": 6.08
+      }
+    },
+    "94ee667e": {
+      "role": "romeo",
+      "text": "O, let us hence. I stand on sudden haste.",
+      "src": "audio/speeches/a02_s02_012_romeo_94ee667e_fc1f4bc035.mp3",
+      "fingerprint": "fc1f4bc035d7faf22bde8aeabd3cf426962829e0408e44fae3c9097a70db8228",
+      "cue": {
+        "text": "O, let us hence. I stand on sudden haste.",
+        "start": 0
+      }
+    },
+    "b5c69a88": {
+      "role": "mercutio",
+      "text": "Where the devil should this Romeo be? Came he not home tonight?",
+      "src": "audio/speeches/a02_s03_001_mercutio_b5c69a88_a9659c90dd.mp3",
+      "fingerprint": "a9659c90dda1f47664ec7b7b195f5be40e3f42698e8788c1f0c6a48c2961de11",
+      "cue": {
+        "text": "Where the devil should this Romeo be? Came he not home tonight?",
+        "start": 0
+      }
+    },
+    "0115dd50": {
+      "role": "mercutio",
+      "text": "A challenge, on my life.",
+      "src": "audio/speeches/a02_s03_003_mercutio_0115dd50_1985639eb2.mp3",
+      "fingerprint": "1985639eb2d655141c4bb73eb7c4740738ad7664b2ae8b95a05ec2458bc9f16f",
+      "cue": {
+        "text": "A challenge, on my life.",
+        "start": 0
+      }
+    },
+    "22044abd": {
+      "role": "benvolio",
+      "text": "Not to his mother’s. I spoke with her man. Tybalt, the kinsman to old Capulet, Hath sent a letter to his mother’s house.",
+      "src": "audio/speeches/a02_s03_002_benvolio_22044abd_162caeac95.mp3",
+      "fingerprint": "162caeac958498bf717ecfddb1f4faaa2411e76f50877c81edac6fe9e6f3f932",
+      "cue": {
+        "text": "Tybalt, the kinsman to old Capulet, Hath sent a letter to his mother’s house.",
+        "start": 3.133
+      }
+    },
+    "99b2a033": {
+      "role": "benvolio",
+      "text": "Romeo will answer it. Here comes Romeo, here comes Romeo.",
+      "src": "audio/speeches/a02_s03_004_benvolio_99b2a033_663b18d4f7.mp3",
+      "fingerprint": "663b18d4f708bf20634bfd27da712fe42049f8a7ae7b86fdcbe7030e7abb5a6e",
+      "cue": {
+        "text": "Romeo will answer it. Here comes Romeo, here comes Romeo.",
+        "start": 0
+      }
+    },
+    "0aa55b75": {
+      "role": "romeo",
+      "text": "Good morrow to you both. What counterfeit did I give you?",
+      "src": "audio/speeches/a02_s03_006_romeo_0aa55b75_43e3205b06.mp3",
+      "fingerprint": "43e3205b06a39dfe57889878b2f81367e79bcce2407978e8855e0b714c993967",
+      "cue": {
+        "text": "Good morrow to you both. What counterfeit did I give you?",
+        "start": 0
+      }
+    },
+    "3c253aeb": {
+      "role": "mercutio",
+      "text": "Signior Romeo, bonjour. There’s a French salutation for your French slop. You gave us the counterfeit fairly last night.",
+      "src": "audio/speeches/a02_s03_005_mercutio_3c253aeb_fb515d4a1a.mp3",
+      "fingerprint": "fb515d4a1ad6e0521bf9033ab28873b66f31e442523de96f4703c2323a51b624",
+      "cue": {
+        "text": "Signior Romeo, bonjour. There’s a French salutation for your French slop. You gave us the counterfeit fairly last night.",
+        "start": 0
+      }
+    },
+    "ce9adab1": {
+      "role": "mercutio",
+      "text": "The slip, sir, the slip. Can you not conceive?",
+      "src": "audio/speeches/a02_s03_007_mercutio_ce9adab1_3a1acc1744.mp3",
+      "fingerprint": "3a1acc174493e8acaf57527e11b72ca1148bad15e4f9cde44268c3e6b33172b2",
+      "cue": {
+        "text": "The slip, sir, the slip. Can you not conceive?",
+        "start": 0
+      }
+    },
+    "2605e516": {
+      "role": "nurse",
+      "text": "Boy.",
+      "src": "audio/speeches/a02_s03_009_nurse_2605e516_e44f745465.mp3",
+      "fingerprint": "e44f7454658c2e25b9f1fd74543e4191b3557276c5622de5ce5f01657ad5969a",
+      "cue": {
+        "text": "Boy.",
+        "start": 0
+      }
+    },
+    "30c1bad6": {
+      "role": "servant-2",
+      "text": "Anon.",
+      "src": "audio/speeches/a02_s03_010_servant-2_30c1bad6_1d441e6acc.mp3",
+      "fingerprint": "1d441e6acc7686922febfdade42b820114069d94eae066543936a7cbb178e071",
+      "cue": {
+        "text": "Anon.",
+        "start": 0
+      }
+    },
+    "0cbc5683": {
+      "role": "romeo",
+      "text": "Pardon, good Mercutio, my business was great, and in such a case as mine a man may strain courtesy.",
+      "src": "audio/speeches/a02_s03_008_romeo_0cbc5683_5a2ae08d16.mp3",
+      "fingerprint": "5a2ae08d1626adc4a6c6e513a211058c7f34f13a9ef2b02766126bf94a9a50dc",
+      "cue": {
+        "text": "Pardon, good Mercutio, my business was great, and in such a case as mine a man may strain courtesy.",
+        "start": 0
+      }
+    },
+    "61dec19d": {
+      "role": "romeo",
+      "text": "I am the youngest of that name.",
+      "src": "audio/speeches/a02_s03_012_romeo_61dec19d_8a920dc59c.mp3",
+      "fingerprint": "8a920dc59c4b75df4722e40d365e5f0a5f81d36bc3de8f9e074c236ac72e698e",
+      "cue": {
+        "text": "I am the youngest of that name.",
+        "start": 0
+      }
+    },
+    "ff52b4fc": {
+      "role": "nurse",
+      "text": "If you be he, sir, I desire some confidence with you.",
+      "src": "audio/speeches/a02_s03_013_nurse_ff52b4fc_b298b25b3b.mp3",
+      "fingerprint": "b298b25b3b34ed3730b00f6eea34077173965eb68cc0c31d0bd3c5983f8bb222",
+      "cue": {
+        "text": "If you be he, sir, I desire some confidence with you.",
+        "start": 0
+      }
+    },
+    "dff898a1": {
+      "role": "nurse",
+      "text": "My fan, boy. God you, good morrow gentlemen. Gentleman, can any of you tell me where I may find the young Romeo?",
+      "src": "audio/speeches/a02_s03_011_nurse_dff898a1_87c81eb7fc.mp3",
+      "fingerprint": "87c81eb7fc4b316469d08961380c5991856c2ad7c73a9cc729977f8a6c975dd4",
+      "cue": {
+        "text": "My fan, boy. God you, good morrow gentlemen. Gentleman, can any of you tell me where I may find the young Romeo?",
+        "start": 0
+      }
+    },
+    "dc8e55f9": {
+      "role": "romeo",
+      "text": "I will follow you.",
+      "src": "audio/speeches/a02_s03_015_romeo_dc8e55f9_32e36504cc.mp3",
+      "fingerprint": "32e36504cc7687d331ac1ceb54664c5f1a11ddc558f30b65c18a22df80c24ae0",
+      "cue": {
+        "text": "I will follow you.",
+        "start": 0
+      }
+    },
+    "e7ba569f": {
+      "role": "mercutio",
+      "text": "Romeo, will you come to your mother’s? We’ll to dinner thither.",
+      "src": "audio/speeches/a02_s03_014_mercutio_e7ba569f_06282fe850.mp3",
+      "fingerprint": "06282fe850a110752c1ef9c1fcf9920fe60b07f244cf26241f37109e5bbf14d8",
+      "cue": {
+        "text": "Romeo, will you come to your mother’s? We’ll to dinner thither.",
+        "start": 0
+      }
+    },
+    "2b04aecf": {
+      "role": "mercutio",
+      "text": "Farewell, ancient lady. Farewell, lady, lady, lady.",
+      "src": "audio/speeches/a02_s03_016_mercutio_2b04aecf_185a8d68e2.mp3",
+      "fingerprint": "185a8d68e2f8a19c997aafc3e442f3de69710b416a49f1f2e10df964fa12087a",
+      "cue": {
+        "text": "Farewell, ancient lady. Farewell, lady, lady, lady.",
+        "start": 0
+      }
+    },
+    "49f6d975": {
+      "role": "romeo",
+      "text": "Nurse, commend me to thy lady and mistress. Bid her devise Some means to go to shrift this afternoon, And there she shall at Friar Lawrence’ cell Be shrived and married.",
+      "src": "audio/speeches/a02_s03_018_romeo_49f6d975_c3df78d9cb.mp3",
+      "fingerprint": "c3df78d9cbb0e8c4d67d3dffef27be1568189348d0e895c217051c8db20b0753",
+      "cue": {
+        "text": "And there she shall at Friar Lawrence’ cell Be shrived and married.",
+        "start": 6.72
+      }
+    },
+    "588eb4c2": {
+      "role": "nurse",
+      "text": "My young lady bid me inquire you out. What she bid me say, I will keep to myself. But first let me tell you, if you should deal double with her, truly it were an ill thing to be offered to any gentlewoman, and very weak dealing.",
+      "src": "audio/speeches/a02_s03_017_nurse_588eb4c2_64342b59b2.mp3",
+      "fingerprint": "64342b59b22fc7ec2e45f63555850146aed6f0c85a186009f26545eda5b82c5d",
+      "cue": {
+        "text": "My young lady bid me inquire you out. What she bid me say, I will keep to myself. But first let me tell you, if you should deal double with her, truly it were an ill thing to be offered to any gentlewoman, and very weak dealing.",
+        "start": 0
+      }
+    },
+    "98af4cd5": {
+      "role": "romeo",
+      "text": "Farewell. Commend me to thy lady.",
+      "src": "audio/speeches/a02_s03_020_romeo_98af4cd5_6cd70eadde.mp3",
+      "fingerprint": "6cd70eadde7d7032fb6b750f345877ed1676b03f93c3883a9277cc6974abc435",
+      "cue": {
+        "text": "Farewell. Commend me to thy lady.",
+        "start": 0
+      }
+    },
+    "789ba618": {
+      "role": "nurse",
+      "text": "This afternoon, sir? Well, she shall be there.",
+      "src": "audio/speeches/a02_s03_019_nurse_789ba618_fa81bba049.mp3",
+      "fingerprint": "fa81bba0493567752a525ad69b55c3a19d9b6d3902fd5b41c8fdf3b53607493e",
+      "cue": {
+        "text": "This afternoon, sir? Well, she shall be there.",
+        "start": 0
+      }
+    },
+    "30c1bad6-2": {
+      "role": "servant-2",
+      "text": "Anon.",
+      "src": "audio/speeches/a02_s03_022_servant-2_30c1bad6-2_1d441e6acc.mp3",
+      "fingerprint": "1d441e6acc7686922febfdade42b820114069d94eae066543936a7cbb178e071",
+      "cue": {
+        "text": "Anon.",
+        "start": 0
+      }
+    },
+    "dc84442d": {
+      "role": "nurse",
+      "text": "Ay, a thousand times.— Boy.",
+      "src": "audio/speeches/a02_s03_021_nurse_dc84442d_6e1c77894e.mp3",
+      "fingerprint": "6e1c77894e4303034cd770fb03981983e47e75a76054f14b3489984b78213dfc",
+      "cue": {
+        "text": "Ay, a thousand times.— Boy.",
+        "start": 0
+      }
+    },
+    "5c90d9c7": {
+      "role": "nurse",
+      "text": "Before and apace.",
+      "src": "audio/speeches/a02_s03_023_nurse_5c90d9c7_703a4a0177.mp3",
+      "fingerprint": "703a4a01771aca7c6ed14ac918a074e310532d6c89257ea60ae47e65ee6ead25",
+      "cue": {
+        "text": "Before and apace.",
+        "start": 0
+      }
+    },
+    "a5ffadc0": {
+      "role": "nurse",
+      "text": "You, stay at the gate.",
+      "src": "audio/speeches/a02_s04_002_nurse_a5ffadc0_3d22e925e2.mp3",
+      "fingerprint": "3d22e925e2e27ad5a50fc85adca9a3c147738964294521bf0e97c940a7252425",
+      "cue": {
+        "text": "You, stay at the gate.",
+        "start": 0
+      }
+    },
+    "90cd870d": {
+      "role": "juliet",
+      "text": "Now, good sweet nurse—",
+      "src": "audio/speeches/a02_s04_003_juliet_90cd870d_739dccd389.mp3",
+      "fingerprint": "739dccd389e9bc4508eaeb8215f42aea9a09179565c067433f254465392cc9b9",
+      "cue": {
+        "text": "Now, good sweet nurse—",
+        "start": 0
+      }
+    },
+    "8229eb87": {
+      "role": "nurse",
+      "text": "I am aweary. Give me leave awhile. Fie, how my bones ache! What a jaunt have I!",
+      "src": "audio/speeches/a02_s04_004_nurse_8229eb87_d60f718f9c.mp3",
+      "fingerprint": "d60f718f9c61b58268666e91721c5cb9532af76afb446eff52e55fd2f083b2d2",
+      "cue": {
+        "text": "I am aweary. Give me leave awhile. Fie, how my bones ache! What a jaunt have I!",
+        "start": 0
+      }
+    },
+    "a00130a3": {
+      "role": "juliet",
+      "text": "Come, I pray thee, speak. Good, good nurse, speak.",
+      "src": "audio/speeches/a02_s04_005_juliet_a00130a3_378ff8fb99.mp3",
+      "fingerprint": "378ff8fb99c4bb380fe267627a5b06e3f2cfa9a024b06e6646dee4a6aa27fd05",
+      "cue": {
+        "text": "Come, I pray thee, speak. Good, good nurse, speak.",
+        "start": 0
+      }
+    },
+    "be04295d": {
+      "role": "nurse",
+      "text": "Do you not see that I am out of breath?",
+      "src": "audio/speeches/a02_s04_006_nurse_be04295d_a088b5fa07.mp3",
+      "fingerprint": "a088b5fa07bc91ec0f25347deee4d0a11d74638241cd9af39e22f455826639c3",
+      "cue": {
+        "text": "Do you not see that I am out of breath?",
+        "start": 0
+      }
+    },
+    "bc608cde": {
+      "role": "juliet",
+      "text": "The clock struck nine when I did send the Nurse. In half an hour she promised to return. Perchance she cannot meet him. That’s not so. Had she affections and warm youthful blood, She would be as swift in motion as a ball; But old folks, many feign as they were dead, Unwieldy, slow, heavy, and pale as lead. O, honey nurse, what news? Hast thou met with him? Send thy man away.",
+      "src": "audio/speeches/a02_s04_001_juliet_bc608cde_9c8bebfda8.mp3",
+      "fingerprint": "9c8bebfda888a27095cc7be668b3788109cd9028e61b015e79dd1c52d928a483",
+      "cue": {
+        "text": "O, honey nurse, what news? Hast thou met with him? Send thy man away.",
+        "start": 25.36
+      }
+    },
+    "7c5ca6fb": {
+      "role": "juliet",
+      "text": "How art thou out of breath, when thou hast breath To say to me that thou art out of breath? Is thy news good or bad? Answer to that.",
+      "src": "audio/speeches/a02_s04_007_juliet_7c5ca6fb_c830dd55eb.mp3",
+      "fingerprint": "c830dd55ebb27f118141ac9fed35eca54af78dc0c797f24bad8543fc2eb03078",
+      "cue": {
+        "text": "To say to me that thou art out of breath? Is thy news good or bad? Answer to that.",
+        "start": 2.813
+      }
+    },
+    "1ce01221": {
+      "role": "nurse",
+      "text": "Lord, how my head aches! What a head have I! It beats as it would fall in twenty pieces. My back o’t’ other side! Ah, my back, my back! Beshrew your heart for sending me about To catch my death with jaunting up and down.",
+      "src": "audio/speeches/a02_s04_008_nurse_1ce01221_23fca1b42b.mp3",
+      "fingerprint": "23fca1b42b884cc442688310c9165935e125e8ea4aec0424d93a256fc401bf3e",
+      "cue": {
+        "text": "Beshrew your heart for sending me about To catch my death with jaunting up and down.",
+        "start": 9.24
+      }
+    },
+    "90859ff5": {
+      "role": "juliet",
+      "text": "I’ faith, I am sorry that thou art not well. Sweet, sweet, sweet nurse, tell me, what says my love?",
+      "src": "audio/speeches/a02_s04_009_juliet_90859ff5_a538fadb42.mp3",
+      "fingerprint": "a538fadb42c66d29e004aaad372981ab055f04015a67fe39602fc2586678a0a1",
+      "cue": {
+        "text": "I’ faith, I am sorry that thou art not well. Sweet, sweet, sweet nurse, tell me, what says my love?",
+        "start": 0
+      }
+    },
+    "033bf6e4": {
+      "role": "juliet",
+      "text": "I have.",
+      "src": "audio/speeches/a02_s04_011_juliet_033bf6e4_6cd8c32bfc.mp3",
+      "fingerprint": "6cd8c32bfcbf75c38e7c4e09e81b8b53ca90f77a6eb52fb23928c863cd32ad04",
+      "cue": {
+        "text": "I have.",
+        "start": 0
+      }
+    },
+    "14238d6f": {
+      "role": "nurse",
+      "text": "Have you got leave to go to shrift today?",
+      "src": "audio/speeches/a02_s04_010_nurse_14238d6f_17ac403d6c.mp3",
+      "fingerprint": "17ac403d6cf7b4da6a7ca40d4c1043837c2523ec0d010cc81d4f18e11100bdb3",
+      "cue": {
+        "text": "Have you got leave to go to shrift today?",
+        "start": 0
+      }
+    },
+    "9e01b01b": {
+      "role": "juliet",
+      "text": "Hie to high fortune! Honest nurse, farewell.",
+      "src": "audio/speeches/a02_s04_013_juliet_9e01b01b_d8f55f68b3.mp3",
+      "fingerprint": "d8f55f68b39bdee23ccd63bb2c0918c3362ffd75a319e78581947a1307a87b7e",
+      "cue": {
+        "text": "Hie to high fortune! Honest nurse, farewell.",
+        "start": 0
+      }
+    },
+    "1290ec04": {
+      "role": "nurse",
+      "text": "Then hie you hence to Friar Lawrence’ cell. There stays a husband to make you a wife. Go. I’ll to dinner. Hie you to the cell.",
+      "src": "audio/speeches/a02_s04_012_nurse_1290ec04_75cabfa4e5.mp3",
+      "fingerprint": "75cabfa4e5192bf321b22d7ba7355571b85849859c57d7b7fa39244119e96d5f",
+      "cue": {
+        "text": "There stays a husband to make you a wife. Go. I’ll to dinner. Hie you to the cell.",
+        "start": 2.913
+      }
+    },
+    "2aad9f16": {
+      "role": "benvolio",
+      "text": "I pray thee, good Mercutio, let’s retire. The day is hot, the Capulets are abroad, And if we meet we shall not ‘scape a brawl.",
+      "src": "audio/speeches/a03_s01_001_benvolio_2aad9f16_64a0207af5.mp3",
+      "fingerprint": "64a0207af5d4013e79b2988b151a7f0c13a07faf9509b8779bc044139b7bb7ec",
+      "cue": {
+        "text": "The day is hot, the Capulets are abroad, And if we meet we shall not ‘scape a brawl.",
+        "start": 2.32
+      }
+    },
+    "1157067f": {
+      "role": "benvolio",
+      "text": "By my head, here comes the Capulets.",
+      "src": "audio/speeches/a03_s01_003_benvolio_1157067f_57e5ecbb5d.mp3",
+      "fingerprint": "57e5ecbb5d7b356cc9a218a24411d874ef9c93e89b29d91fbc10b255ab9cec7d",
+      "cue": {
+        "text": "By my head, here comes the Capulets.",
+        "start": 0
+      }
+    },
+    "917a49bf": {
+      "role": "mercutio",
+      "text": "By my heel, I care not.",
+      "src": "audio/speeches/a03_s01_004_mercutio_917a49bf_94c7be7630.mp3",
+      "fingerprint": "94c7be7630fc63c6e7475de2da9f5aca37213fe9c75f402397d40f6e7da45293",
+      "cue": {
+        "text": "By my heel, I care not.",
+        "start": 0
+      }
+    },
+    "b3f0712a": {
+      "role": "mercutio",
+      "text": "Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword on the table and says “God send me to no need of thee”, and by the operation of the second cup, draws him on the drawer when indeed there is no need.",
+      "src": "audio/speeches/a03_s01_002_mercutio_b3f0712a_8d6e7d8a54.mp3",
+      "fingerprint": "8d6e7d8a54292eec9787b1a6cfd8b2014ed0aa47f696488b7958f6c3ee803a10",
+      "cue": {
+        "text": "Thou art like one of these fellows that, when he enters the confines of a tavern, claps me his sword on the table and says “God send me to no need of thee”, and by the operation of the second cup, draws him on the drawer when indeed there is no need.",
+        "start": 0
+      }
+    },
+    "b7b0e0e9": {
+      "role": "tybalt",
+      "text": "Gentleman, good e’en. A word with one of you.",
+      "src": "audio/speeches/a03_s01_005_tybalt_b7b0e0e9_caa9e42937.mp3",
+      "fingerprint": "caa9e429375292142ef453d6f9d4dafbdf1d331b8e2a484286975d2a8235e869",
+      "cue": {
+        "text": "Gentleman, good e’en. A word with one of you.",
+        "start": 0
+      }
+    },
+    "742497f0": {
+      "role": "tybalt",
+      "text": "Mercutio, thou consortest with Romeo.",
+      "src": "audio/speeches/a03_s01_007_tybalt_742497f0_95cc0cb65f.mp3",
+      "fingerprint": "95cc0cb65f47e2a476222842449ca463efa7bcf9b48cc05f1cb431a015a51e3a",
+      "cue": {
+        "text": "Mercutio, thou consortest with Romeo.",
+        "start": 0
+      }
+    },
+    "4deab5f1": {
+      "role": "mercutio",
+      "text": "And but one word with one of us? Couple it with something. Make it a word and a blow.",
+      "src": "audio/speeches/a03_s01_006_mercutio_4deab5f1_f52012565b.mp3",
+      "fingerprint": "f52012565b1e1c4b198ffdf7c230c04b0e1b64c0f747e95ba41169cc5c57f382",
+      "cue": {
+        "text": "And but one word with one of us? Couple it with something. Make it a word and a blow.",
+        "start": 0
+      }
+    },
+    "0d96cfb5": {
+      "role": "mercutio",
+      "text": "Consort? Zounds, consort!",
+      "src": "audio/speeches/a03_s01_008_mercutio_0d96cfb5_1e244108e0.mp3",
+      "fingerprint": "1e244108e027f563bcf10cc3bffafa4a3d6017935eb2ee13f24e5a45ed0479f7",
+      "cue": {
+        "text": "Consort? Zounds, consort!",
+        "start": 0
+      }
+    },
+    "2fd7e687": {
+      "role": "mercutio",
+      "text": "Men’s eyes were made to look, and let them gaze. I will not budge for no man’s pleasure, I.",
+      "src": "audio/speeches/a03_s01_010_mercutio_2fd7e687_c96095064d.mp3",
+      "fingerprint": "c96095064d657cff2c943c73a2a9a041166dd1adc7a7c1d30821ce878ba7888f",
+      "cue": {
+        "text": "Men’s eyes were made to look, and let them gaze. I will not budge for no man’s pleasure, I.",
+        "start": 0
+      }
+    },
+    "0a382a38": {
+      "role": "benvolio",
+      "text": "We talk here in the public haunt of men. Either withdraw unto some private place, Or reason coldly of your grievances, Or else depart. Here all eyes gaze on us.",
+      "src": "audio/speeches/a03_s01_009_benvolio_0a382a38_044a26dca3.mp3",
+      "fingerprint": "044a26dca33732aaf1b7e8a431fa364cc741841b3f922082e013013dd047f3a8",
+      "cue": {
+        "text": "Or reason coldly of your grievances, Or else depart. Here all eyes gaze on us.",
+        "start": 4.733
+      }
+    },
+    "424159f4": {
+      "role": "tybalt",
+      "text": "Well, peace be with you, sir. Here comes my man. Romeo, the love I bear thee can afford No better term than this: thou art a villain.",
+      "src": "audio/speeches/a03_s01_011_tybalt_424159f4_e39ea9bec9.mp3",
+      "fingerprint": "e39ea9bec9a43e94cae06505e36a7765c9443b32734145eae1ceea19a8f3b803",
+      "cue": {
+        "text": "Romeo, the love I bear thee can afford No better term than this: thou art a villain.",
+        "start": 4.013
+      }
+    },
+    "36bfe6dc": {
+      "role": "romeo",
+      "text": "Tybalt, the reason that I have to love thee Doth much excuse the appertaining rage To such a greeting. Villain am I none. Therefore farewell. I see thou knows me not.",
+      "src": "audio/speeches/a03_s01_012_romeo_36bfe6dc_47a3e7a52f.mp3",
+      "fingerprint": "47a3e7a52fec4943544e995dfb9f3654024bc814bfc7185b136a139d744ad855",
+      "cue": {
+        "text": "To such a greeting. Villain am I none. Therefore farewell. I see thou knows me not.",
+        "start": 4.973
+      }
+    },
+    "4ea550d9": {
+      "role": "tybalt",
+      "text": "This shall not excuse the injuries That thou hast done me. Therefore turn and draw.",
+      "src": "audio/speeches/a03_s01_013_tybalt_4ea550d9_9bc0af3c38.mp3",
+      "fingerprint": "9bc0af3c38769a0359931ece27abc5d212d628ef85cdfa49c177c85780940021",
+      "cue": {
+        "text": "This shall not excuse the injuries That thou hast done me. Therefore turn and draw.",
+        "start": 0
+      }
+    },
+    "2769247a": {
+      "role": "mercutio",
+      "text": "O calm, dishonorable, vile submission! Alla stoccato carries it away. Tybalt, you ratcatcher will you walk?",
+      "src": "audio/speeches/a03_s01_015_mercutio_2769247a_9a3a3af3bd.mp3",
+      "fingerprint": "9a3a3af3bddae7cac06b8c0bbe4c48dbee5b233d673cad9d006fdf082405d3c8",
+      "cue": {
+        "text": "Alla stoccato carries it away. Tybalt, you ratcatcher will you walk?",
+        "start": 2.552
+      }
+    },
+    "7afc9e27": {
+      "role": "tybalt",
+      "text": "What wouldst thou have with me?",
+      "src": "audio/speeches/a03_s01_016_tybalt_7afc9e27_5d2cf1bd6b.mp3",
+      "fingerprint": "5d2cf1bd6b435cd7715e01b9e9e3bf347abcad696d72345997a47bc1341e4b36",
+      "cue": {
+        "text": "What wouldst thou have with me?",
+        "start": 0
+      }
+    },
+    "b6b78fc4": {
+      "role": "mercutio",
+      "text": "Good king of cats, nothing but one of your nine lives.",
+      "src": "audio/speeches/a03_s01_017_mercutio_b6b78fc4_bd9cf6f66d.mp3",
+      "fingerprint": "bd9cf6f66d57d54adbe98ed112205dbf20a1c4c8a6113bfc1466623d44ad347b",
+      "cue": {
+        "text": "Good king of cats, nothing but one of your nine lives.",
+        "start": 0
+      }
+    },
+    "459a6f20": {
+      "role": "tybalt",
+      "text": "I am for you.",
+      "src": "audio/speeches/a03_s01_018_tybalt_459a6f20_dd8a804aa6.mp3",
+      "fingerprint": "dd8a804aa627f8bbe46eb954f8205917e613a5ca06bc3a58a72f70962be48acc",
+      "cue": {
+        "text": "I am for you.",
+        "start": 0
+      }
+    },
+    "ab55494c": {
+      "role": "mercutio",
+      "text": "I am hurt. A plague o’ both houses! I am sped. Is he gone and hath nothing?",
+      "src": "audio/speeches/a03_s01_020_mercutio_ab55494c_495935bc0d.mp3",
+      "fingerprint": "495935bc0d1b08e3cbcb47d189fb4bbf60cf95d66905b76a75372c2d277be16b",
+      "cue": {
+        "text": "A plague o’ both houses! I am sped. Is he gone and hath nothing?",
+        "start": 1.16
+      }
+    },
+    "41d801c5": {
+      "role": "benvolio",
+      "text": "What, art thou hurt?",
+      "src": "audio/speeches/a03_s01_021_benvolio_41d801c5_d9a28bb734.mp3",
+      "fingerprint": "d9a28bb734080af63e4f960879baa3cfbe19c0121808119f8849d186dbca6ff6",
+      "cue": {
+        "text": "What, art thou hurt?",
+        "start": 0
+      }
+    },
+    "a2c84424": {
+      "role": "mercutio",
+      "text": "Ay, ay, a scratch, a scratch. Marry, ’tis enough.",
+      "src": "audio/speeches/a03_s01_022_mercutio_a2c84424_1d9822ce72.mp3",
+      "fingerprint": "1d9822ce728bc56a899158e36b425938446c71f39bcb4da3931b338a23ad0ac6",
+      "cue": {
+        "text": "Ay, ay, a scratch, a scratch. Marry, ’tis enough.",
+        "start": 0
+      }
+    },
+    "c71c6a20": {
+      "role": "romeo",
+      "text": "Gentle Mercutio, put thy weapon up. Draw, Benvolio, beat down their weapons. Tybalt! Mercutio! The Prince expressly hath Forbid this bandying in Verona streets. Hold, Tybalt! Good Mercutio!",
+      "src": "audio/speeches/a03_s01_019_romeo_c71c6a20_987c69cbd5.mp3",
+      "fingerprint": "987c69cbd5ce4dc2e24ed9bb0d2e86b341753ff0afa3f07f7d13f8dfa46573c7",
+      "cue": {
+        "text": "Forbid this bandying in Verona streets. Hold, Tybalt! Good Mercutio!",
+        "start": 10.020000000000001
+      }
+    },
+    "84aa641f": {
+      "role": "romeo",
+      "text": "Courage, man, the hurt cannot be much.",
+      "src": "audio/speeches/a03_s01_023_romeo_84aa641f_91ec2eaacc.mp3",
+      "fingerprint": "91ec2eaacc75b3389addb93a093b91324639da58ab16d14b6290870359b4d8a1",
+      "cue": {
+        "text": "Courage, man, the hurt cannot be much.",
+        "start": 0
+      }
+    },
+    "2ea5d670": {
+      "role": "romeo",
+      "text": "This gentleman, the Prince’s near ally, My very friend hath got this mortal hurt In my behalf. My reputation stained With Tybalt’s slander—Tybalt, that an hour Hath been my cousin!",
+      "src": "audio/speeches/a03_s01_025_romeo_2ea5d670_761453f620.mp3",
+      "fingerprint": "761453f6204c47e1e3894eb84610310a59c2fee3cadbb57b1bc0aa7754f9d56a",
+      "cue": {
+        "text": "With Tybalt’s slander—Tybalt, that an hour Hath been my cousin!",
+        "start": 8.072000000000001
+      }
+    },
+    "b95738f4": {
+      "role": "mercutio",
+      "text": "Ask for me tomorrow and you shall find me a grave man. A plague o’ both your houses! Why the devil came you between us? I was hurt under your arm. A plague o’ both your houses! They have made worms’ meat of me. Your houses!",
+      "src": "audio/speeches/a03_s01_024_mercutio_b95738f4_1b9d1776ca.mp3",
+      "fingerprint": "1b9d1776cae66b94e30c299824a27e1accb22ea7e07456cd6bc272cd1d514a58",
+      "cue": {
+        "text": "They have made worms’ meat of me. Your houses!",
+        "start": 12.521
+      }
+    },
+    "9a2b0181": {
+      "role": "benvolio",
+      "text": "O Romeo, Romeo, brave Mercutio is dead. Here comes the furious Tybalt back again.",
+      "src": "audio/speeches/a03_s01_026_benvolio_9a2b0181_c3fe651e5c.mp3",
+      "fingerprint": "c3fe651e5c4ab724dfce1cf9596d45db6616d6a867470b5ef0f748a6932b73aa",
+      "cue": {
+        "text": "O Romeo, Romeo, brave Mercutio is dead. Here comes the furious Tybalt back again.",
+        "start": 0
+      }
+    },
+    "3c9a7108": {
+      "role": "tybalt",
+      "text": "Thou, wretched boy, that didst consort him here Shalt with him hence.",
+      "src": "audio/speeches/a03_s01_028_tybalt_3c9a7108_326a672a48.mp3",
+      "fingerprint": "326a672a483c74230169da209aea42aece84eddc2d3942270eba051e7ae51932",
+      "cue": {
+        "text": "Thou, wretched boy, that didst consort him here Shalt with him hence.",
+        "start": 0
+      }
+    },
+    "bff90b69": {
+      "role": "romeo",
+      "text": "Now, Tybalt, take the “villain” back again That late thou gavest me, for Mercutio’s soul Is but a little way above our heads, Staying for thine to keep him company. Either thou or I, or both must go with him.",
+      "src": "audio/speeches/a03_s01_027_romeo_bff90b69_a94ca7dd9d.mp3",
+      "fingerprint": "a94ca7dd9d00c906dcc3943076738b0834ddc8c29946fbff1cca77f60daed99d",
+      "cue": {
+        "text": "Staying for thine to keep him company. Either thou or I, or both must go with him.",
+        "start": 8.227
+      }
+    },
+    "b2814bce": {
+      "role": "romeo",
+      "text": "This shall determine that.",
+      "src": "audio/speeches/a03_s01_029_romeo_b2814bce_5855e4dcf5.mp3",
+      "fingerprint": "5855e4dcf5fe3a610a60c62cab2678449c9fb2a047680a83cb4883d65c5d8c3c",
+      "cue": {
+        "text": "This shall determine that.",
+        "start": 0
+      }
+    },
+    "0cbe7b5b": {
+      "role": "romeo",
+      "text": "O, I am Fortune’s fool!",
+      "src": "audio/speeches/a03_s01_031_romeo_0cbe7b5b_b5ce35b804.mp3",
+      "fingerprint": "b5ce35b804ef2b6b62122a2a0d0e84781988ceddccb0e0e56878312e603588c1",
+      "cue": {
+        "text": "O, I am Fortune’s fool!",
+        "start": 0
+      }
+    },
+    "77f52429": {
+      "role": "benvolio",
+      "text": "Romeo, away, begone! The citizens are up, and Tybalt slain. Hence, be gone, away.",
+      "src": "audio/speeches/a03_s01_030_benvolio_77f52429_50bbfdcab6.mp3",
+      "fingerprint": "50bbfdcab63116191f1ebdcc8ad433db09cdd91c108f4f744e87d1e03cb7bb90",
+      "cue": {
+        "text": "The citizens are up, and Tybalt slain. Hence, be gone, away.",
+        "start": 1.66
+      }
+    },
+    "a75f4ceb": {
+      "role": "prince",
+      "text": "Where are the vile beginners of this fray?",
+      "src": "audio/speeches/a03_s01_032_prince_a75f4ceb_df96cf096c.mp3",
+      "fingerprint": "df96cf096c7116d7a626003f8fcfa3be2a7a016eb9bcd03e319a9e665631c61f",
+      "cue": {
+        "text": "Where are the vile beginners of this fray?",
+        "start": 0
+      }
+    },
+    "996fdab6": {
+      "role": "benvolio",
+      "text": "O noble prince, I can discover all The unlucky manage of this fatal brawl. There lies the man, slain by young Romeo, That slew thy kinsman, brave Mercutio.",
+      "src": "audio/speeches/a03_s01_033_benvolio_996fdab6_5a99c88634.mp3",
+      "fingerprint": "5a99c886343f556920b5df36f274dde48f3ba00eb2a431500dcfcc100f5dd74e",
+      "cue": {
+        "text": "There lies the man, slain by young Romeo, That slew thy kinsman, brave Mercutio.",
+        "start": 4.587
+      }
+    },
+    "01434b65": {
+      "role": "prince",
+      "text": "Romeo slew him; he slew Mercutio. Who now the price of his dear blood doth owe?",
+      "src": "audio/speeches/a03_s01_034_prince_01434b65_a546a599af.mp3",
+      "fingerprint": "a546a599af57b0339e35cb2ee8e7331e422ce974e7f330ac6a00a91225f59d9f",
+      "cue": {
+        "text": "Romeo slew him; he slew Mercutio. Who now the price of his dear blood doth owe?",
+        "start": 0
+      }
+    },
+    "7a1d730f": {
+      "role": "lady-montague",
+      "text": "Not Romeo, Prince; he was Mercutio’s friend. His fault concludes but what the law should end, The life of Tybalt.",
+      "src": "audio/speeches/a03_s01_035_lady-montague_7a1d730f_0f813e7c71.mp3",
+      "fingerprint": "0f813e7c7158aa6d45261800033c83282eab6a91d0759a6266471e704b8e1447",
+      "cue": {
+        "text": "His fault concludes but what the law should end, The life of Tybalt.",
+        "start": 3.42
+      }
+    },
+    "3586c138": {
+      "role": "prince",
+      "text": "And for that offense Immediately we do exile him hence. Let Romeo hence in haste, Else, when he is found, that hour is his last. Bear hence this body and attend our will. Mercy but murders, pardoning those that kill.",
+      "src": "audio/speeches/a03_s01_036_prince_3586c138_5ed7ed0edb.mp3",
+      "fingerprint": "5ed7ed0edbb12da075c26bdd38315356fa87ba554f0b0f9641e300d17166020f",
+      "cue": {
+        "text": "Bear hence this body and attend our will. Mercy but murders, pardoning those that kill.",
+        "start": 11.128
+      }
+    },
+    "8c8ee051": {
+      "role": "nurse",
+      "text": "He’s dead, he’s dead, he’s dead! We are undone, lady, we are undone. Alack the day, he’s gone, he’s killed, he’s dead.",
+      "src": "audio/speeches/a03_s02_002_nurse_8c8ee051_4cf6c20808.mp3",
+      "fingerprint": "4cf6c208085306455ed63f2a337b3c6f54705a88ad6354edb2349c036ad30c18",
+      "cue": {
+        "text": "We are undone, lady, we are undone. Alack the day, he’s gone, he’s killed, he’s dead.",
+        "start": 2.627
+      }
+    },
+    "76e9b046": {
+      "role": "juliet",
+      "text": "Can heaven be so envious?",
+      "src": "audio/speeches/a03_s02_003_juliet_76e9b046_823927f5b9.mp3",
+      "fingerprint": "823927f5b97132a671740fa49a2bf71b90c798992adbd1c77778822eb4b77627",
+      "cue": {
+        "text": "Can heaven be so envious?",
+        "start": 0
+      }
+    },
+    "270931ca": {
+      "role": "nurse",
+      "text": "O Romeo, Romeo, Whoever would have thought it? Romeo!",
+      "src": "audio/speeches/a03_s02_004_nurse_270931ca_2979116bb1.mp3",
+      "fingerprint": "2979116bb10143053c31ddb57f572e4f613130df5726b6751620609e2016032a",
+      "cue": {
+        "text": "O Romeo, Romeo, Whoever would have thought it? Romeo!",
+        "start": 0
+      }
+    },
+    "4ac87e35": {
+      "role": "juliet",
+      "text": "Gallop apace, you fiery-footed steeds, Towards Phoebus’ lodging. Such a wagoner As Phaeton would whip you to the west And bring in cloudy night immediately. Come, night. Come, Romeo. Come, gentle night, Give me my Romeo, and when I shall die, Take him and cut him out in little stars, And he will make the face of heaven so fine That all the world will be in love with night And pay no worship to the garish sun. O, here comes my nurse. Ay me, what news? Why dost thou wring thy hands?",
+      "src": "audio/speeches/a03_s02_001_juliet_4ac87e35_574cedde7b.mp3",
+      "fingerprint": "574cedde7b7aadabec96493657e5988976b95cc157cd60939a84651f38944567",
+      "cue": {
+        "text": "O, here comes my nurse. Ay me, what news? Why dost thou wring thy hands?",
+        "start": 33.52
+      }
+    },
+    "b8859eb0": {
+      "role": "juliet",
+      "text": "What devil art thou that dost torment me thus? If he be slain, say “Ay” or if not, “No.” Brief sounds determine my weal or woe.",
+      "src": "audio/speeches/a03_s02_005_juliet_b8859eb0_55cb303f60.mp3",
+      "fingerprint": "55cb303f604be1cb02f59ff5750b1620f2b4c983315460b45d1b57118d5d4911",
+      "cue": {
+        "text": "If he be slain, say “Ay” or if not, “No.” Brief sounds determine my weal or woe.",
+        "start": 3.453
+      }
+    },
+    "75704f88": {
+      "role": "nurse",
+      "text": "O Tybalt, Tybalt, the best friend I had! O honest gentleman That ever I should live to see thee dead!",
+      "src": "audio/speeches/a03_s02_006_nurse_75704f88_3bc0922a11.mp3",
+      "fingerprint": "3bc0922a112114887dc403154b4262d0d64dc1b64aecc25732b2f95c526cb480",
+      "cue": {
+        "text": "O honest gentleman That ever I should live to see thee dead!",
+        "start": 3.2399999999999998
+      }
+    },
+    "3e08f206": {
+      "role": "juliet",
+      "text": "What storm is this that blows so contrary? Is Romeo slaughtered and is Tybalt dead? My dearest cousin, and my dearer lord?",
+      "src": "audio/speeches/a03_s02_007_juliet_3e08f206_8661f179d7.mp3",
+      "fingerprint": "8661f179d77ca922f84e497c461a13398983a89f54a9d979ac137d7c993cefd7",
+      "cue": {
+        "text": "Is Romeo slaughtered and is Tybalt dead? My dearest cousin, and my dearer lord?",
+        "start": 3.213
+      }
+    },
+    "d98576aa": {
+      "role": "nurse",
+      "text": "Tybalt is gone and Romeo banish’ed. Romeo that killed him—he is banish’ed. Shame come to Romeo!",
+      "src": "audio/speeches/a03_s02_008_nurse_d98576aa_892662f883.mp3",
+      "fingerprint": "892662f88357d7cddac8bd6eed64f2647fb3ab57fe29cbc570cc6c1fa147e05d",
+      "cue": {
+        "text": "Romeo that killed him—he is banish’ed. Shame come to Romeo!",
+        "start": 2.7199999999999998
+      }
+    },
+    "be14d36c": {
+      "role": "nurse",
+      "text": "Will you speak well of him that killed your cousin?",
+      "src": "audio/speeches/a03_s02_010_nurse_be14d36c_db98ae2766.mp3",
+      "fingerprint": "db98ae276658f1b8c39251f372e9cf4da11ed76132578179520d35be8d521b34",
+      "cue": {
+        "text": "Will you speak well of him that killed your cousin?",
+        "start": 0
+      }
+    },
+    "ad0142d1": {
+      "role": "juliet",
+      "text": "Blistered be thy tongue For such a wish! He was not born to shame. Upon his brow shame is ashamed to sit.",
+      "src": "audio/speeches/a03_s02_009_juliet_ad0142d1_d38de24a0b.mp3",
+      "fingerprint": "d38de24a0bc50684feb3eb46066fd43342b77b742dd0d2fc0f937ac3fc69ce3d",
+      "cue": {
+        "text": "For such a wish! He was not born to shame. Upon his brow shame is ashamed to sit.",
+        "start": 1.28
+      }
+    },
+    "ca1f32c4": {
+      "role": "nurse",
+      "text": "Hie to your chamber. I’ll find Romeo To comfort you. He is hid at Lawrence’ cell.",
+      "src": "audio/speeches/a03_s02_012_nurse_ca1f32c4_02a5635f38.mp3",
+      "fingerprint": "02a5635f3830dff7fa842a7ece13693a82187761d5120631335a6695f93e3e4c",
+      "cue": {
+        "text": "To comfort you. He is hid at Lawrence’ cell.",
+        "start": 2.413
+      }
+    },
+    "ba643eb4": {
+      "role": "friar-lawrence",
+      "text": "Romeo, come forth; come forth thou fearful man.",
+      "src": "audio/speeches/a03_s03_001_friar-lawrence_ba643eb4_b0d1e7a8f2.mp3",
+      "fingerprint": "b0d1e7a8f2924525bc0ed8d7994fb371bae8b1b350b8d8fac6160f8e60fe5dc2",
+      "cue": {
+        "text": "Romeo, come forth; come forth thou fearful man.",
+        "start": 0
+      }
+    },
+    "bbd5ee7a": {
+      "role": "juliet",
+      "text": "Shall I speak ill of him that is my husband? Ah, poor my lord, what tongue shall smooth thy name When I, thy three-hours wife, have mangled it? My husband lives, that Tybalt would have slain. And Tybalt’s dead, that would have slain my husband. All this is comfort. Wherefore weep I then?",
+      "src": "audio/speeches/a03_s02_011_juliet_bbd5ee7a_52cd41902f.mp3",
+      "fingerprint": "52cd41902f576ad64f91e6994c70165abb610f2d4741fcd1e92aa43dd5bec861",
+      "cue": {
+        "text": "And Tybalt’s dead, that would have slain my husband. All this is comfort. Wherefore weep I then?",
+        "start": 14.120000000000001
+      }
+    },
+    "aa372d80": {
+      "role": "romeo",
+      "text": "Father, what news? What is the Prince’s doom?",
+      "src": "audio/speeches/a03_s03_002_romeo_aa372d80_889fa2612c.mp3",
+      "fingerprint": "889fa2612c4510888a139b4b165810b76cce1dd2142476c105111b5f6c740054",
+      "cue": {
+        "text": "Father, what news? What is the Prince’s doom?",
+        "start": 0
+      }
+    },
+    "74c2fbae": {
+      "role": "friar-lawrence",
+      "text": "Not body’s death, but body’s banishment.",
+      "src": "audio/speeches/a03_s03_003_friar-lawrence_74c2fbae_cd1c15c4a0.mp3",
+      "fingerprint": "cd1c15c4a08300aa4703e7813d79269b1d720737f99ca2e9fda4d7aeb0f7b1a2",
+      "cue": {
+        "text": "Not body’s death, but body’s banishment.",
+        "start": 0
+      }
+    },
+    "2e0d3ff8": {
+      "role": "romeo",
+      "text": "There is no world without Verona walls But purgatory, torture, hell itself.",
+      "src": "audio/speeches/a03_s03_006_romeo_2e0d3ff8_df400a6bc1.mp3",
+      "fingerprint": "df400a6bc1a1ca5bcd60409976414d7186a5d6b2f9670647ed0080c3362d9f85",
+      "cue": {
+        "text": "There is no world without Verona walls But purgatory, torture, hell itself.",
+        "start": 0
+      }
+    },
+    "78e6373b": {
+      "role": "friar-lawrence",
+      "text": "Here from Verona art thou banish’ed. Be patient, for the world is broad and wide.",
+      "src": "audio/speeches/a03_s03_005_friar-lawrence_78e6373b_a58449d49f.mp3",
+      "fingerprint": "a58449d49f8eed67ea93a4792d812d37f448341408215f1aa98f889ffd820cc9",
+      "cue": {
+        "text": "Here from Verona art thou banish’ed. Be patient, for the world is broad and wide.",
+        "start": 0
+      }
+    },
+    "2b2a3c9c": {
+      "role": "friar-lawrence",
+      "text": "O deadly sin, O rude thankfulness! This is dear mercy, and thou seest it not.",
+      "src": "audio/speeches/a03_s03_007_friar-lawrence_2b2a3c9c_ecedcf95ee.mp3",
+      "fingerprint": "ecedcf95ee9885ca8b3c635bd79627c110aac5e0d6340a7f7476a5fb66810593",
+      "cue": {
+        "text": "O deadly sin, O rude thankfulness! This is dear mercy, and thou seest it not.",
+        "start": 0
+      }
+    },
+    "076b2613": {
+      "role": "friar-lawrence",
+      "text": "Arise. One knocks. Good Romeo, hide thyself. Who knocks so hard? Whence came you? What’s your will?",
+      "src": "audio/speeches/a03_s03_009_friar-lawrence_076b2613_349133874a.mp3",
+      "fingerprint": "349133874a2f230f4e5cd2f4c191a8cb6c35deb57fa1207a031d529794560a4d",
+      "cue": {
+        "text": "Arise. One knocks. Good Romeo, hide thyself. Who knocks so hard? Whence came you? What’s your will?",
+        "start": 0
+      }
+    },
+    "244a5cbb": {
+      "role": "nurse",
+      "text": "I come from Lady Juliet.",
+      "src": "audio/speeches/a03_s03_010_nurse_244a5cbb_6ba58484bc.mp3",
+      "fingerprint": "6ba58484bc63861a29c5b98747d6216f87e6e1e2c3e7e29e421a8d991ba72024",
+      "cue": {
+        "text": "I come from Lady Juliet.",
+        "start": 0
+      }
+    },
+    "fde1f100": {
+      "role": "friar-lawrence",
+      "text": "Welcome, then.",
+      "src": "audio/speeches/a03_s03_011_friar-lawrence_fde1f100_c68931c1c5.mp3",
+      "fingerprint": "c68931c1c5f6556230431004bd591fa4d5b3bc6c3771e432f4e27f49cb95e3c5",
+      "cue": {
+        "text": "Welcome, then.",
+        "start": 0
+      }
+    },
+    "17ec5d11": {
+      "role": "romeo",
+      "text": "’Tis torture and not mercy. Heaven is here Where Juliet lives, and every cat and dog And little mouse, every unworthy thing, Live here in heaven and may look on her, But Romeo may not; he is banish’ed. O friar, the damn’ed use that word in hell. Howling attends it. How hast thou the heart Being a divine, a ghostly confessor, A sin absolver, and my friend professed, To mangle me with that word “banish’ed”.",
+      "src": "audio/speeches/a03_s03_008_romeo_17ec5d11_69e4caf195.mp3",
+      "fingerprint": "69e4caf19518cbb415a9caee9bd3145322a43edf4316eb370848e24807b1f473",
+      "cue": {
+        "text": "A sin absolver, and my friend professed, To mangle me with that word “banish’ed”.",
+        "start": 24.8
+      }
+    },
+    "412d5b35": {
+      "role": "nurse",
+      "text": "O holy friar, Where’s my lady’s lord? Where’s Romeo?",
+      "src": "audio/speeches/a03_s03_012_nurse_412d5b35_f6bd431bfa.mp3",
+      "fingerprint": "f6bd431bfae523d4df84bc6c3962084e3b01d9f1897766cf2a050ca2c5fd943b",
+      "cue": {
+        "text": "O holy friar, Where’s my lady’s lord? Where’s Romeo?",
+        "start": 0
+      }
+    },
+    "8ff43f6e": {
+      "role": "friar-lawrence",
+      "text": "There on the ground, with his own tears made drunk.",
+      "src": "audio/speeches/a03_s03_013_friar-lawrence_8ff43f6e_8fdfdbb5e8.mp3",
+      "fingerprint": "8fdfdbb5e88f8ec7247908c593f4c0dc1b4a5beacca405940fb46275f1252e06",
+      "cue": {
+        "text": "There on the ground, with his own tears made drunk.",
+        "start": 0
+      }
+    },
+    "b807331a": {
+      "role": "romeo",
+      "text": "Spakest thou of Juliet? How is it with her?",
+      "src": "audio/speeches/a03_s03_015_romeo_b807331a_233858218c.mp3",
+      "fingerprint": "233858218ca47391e293a6a8732729774120cc2c766c89cf92945dd245b2f93d",
+      "cue": {
+        "text": "Spakest thou of Juliet? How is it with her?",
+        "start": 0
+      }
+    },
+    "345e7913": {
+      "role": "nurse",
+      "text": "Stand up, stand up. Stand up an you be a man. For Juliet’s sake, for her sake, rise and stand.",
+      "src": "audio/speeches/a03_s03_014_nurse_345e7913_1029018ce8.mp3",
+      "fingerprint": "1029018ce84a70d1575f5e268fc357e4f329594a0cbf762ca88c64e69c9b631e",
+      "cue": {
+        "text": "Stand up, stand up. Stand up an you be a man. For Juliet’s sake, for her sake, rise and stand.",
+        "start": 0
+      }
+    },
+    "c2595eb2": {
+      "role": "nurse",
+      "text": "O, she says nothing, sir, but weeps and weeps.",
+      "src": "audio/speeches/a03_s03_016_nurse_c2595eb2_b444983a8d.mp3",
+      "fingerprint": "b444983a8dfd6aea9b79c41d8d1db930ff00224b8c93ecaf4412b9c8a11fa6fb",
+      "cue": {
+        "text": "O, she says nothing, sir, but weeps and weeps.",
+        "start": 0
+      }
+    },
+    "42f6f862": {
+      "role": "nurse",
+      "text": "My lord, I’ll tell my lady you will come.",
+      "src": "audio/speeches/a03_s03_018_nurse_42f6f862_e0b454980d.mp3",
+      "fingerprint": "e0b454980d50290764b98f501761eeb04f058322f5d721c28337de20e7f0d31e",
+      "cue": {
+        "text": "My lord, I’ll tell my lady you will come.",
+        "start": 0
+      }
+    },
+    "650b4c0d": {
+      "role": "friar-lawrence",
+      "text": "Go hence, good night— Either be gone before the watch be set Or by the break of day disguised from hence. Farewell. Goodnight.",
+      "src": "audio/speeches/a03_s03_019_friar-lawrence_650b4c0d_e3331786e0.mp3",
+      "fingerprint": "e3331786e012b7f223fce9b0978f68e64a19cf7c346d3b061dae2f26087ebc05",
+      "cue": {
+        "text": "Or by the break of day disguised from hence. Farewell. Goodnight.",
+        "start": 4.947
+      }
+    },
+    "1f50c4a3": {
+      "role": "romeo",
+      "text": "But that a joy past joy calls out on me, It were a grief so brief to part with thee. Farewell.",
+      "src": "audio/speeches/a03_s03_020_romeo_1f50c4a3_8f16dbbec2.mp3",
+      "fingerprint": "8f16dbbec23ee39cde50fc495f49fdb5de7ae9aec24ff919b4ae19bbe893e43e",
+      "cue": {
+        "text": "It were a grief so brief to part with thee. Farewell.",
+        "start": 3.053
+      }
+    },
+    "bc89e03b": {
+      "role": "paris",
+      "text": "These times of woe afford no times to woo.— Madam, good night. Commend me to your daughter.",
+      "src": "audio/speeches/a03_s04_002_paris_bc89e03b_0401b00d8b.mp3",
+      "fingerprint": "0401b00d8b57b29f557a4fe4856a3ebb3c2a3c8ba8cb0a0513c7ac20157999af",
+      "cue": {
+        "text": "These times of woe afford no times to woo.— Madam, good night. Commend me to your daughter.",
+        "start": 0
+      }
+    },
+    "882304b4": {
+      "role": "lord-capulet",
+      "text": "Things have fallen out, sir, so unluckily, That we have had no time to move our daughter. Look you, she loved her kinsman Tybalt dearly. ’Tis very late. She’ll not come down tonight.",
+      "src": "audio/speeches/a03_s04_001_lord-capulet_882304b4_2b5fa19d6b.mp3",
+      "fingerprint": "2b5fa19d6ba090d47e7b41e87f43aad63f01fa2152c10f6671de312ee71c1b35",
+      "cue": {
+        "text": "Look you, she loved her kinsman Tybalt dearly. ’Tis very late. She’ll not come down tonight.",
+        "start": 5.4959999999999996
+      }
+    },
+    "eb29279e": {
+      "role": "lady-capulet",
+      "text": "I will, and know her mind early tomorrow. Tonight she’s mewed up to her heaviness.",
+      "src": "audio/speeches/a03_s04_003_lady-capulet_eb29279e_014355265f.mp3",
+      "fingerprint": "014355265f68c2a745312f4ae5ce242766e1957fa3c28e08de9857feb4dd426f",
+      "cue": {
+        "text": "I will, and know her mind early tomorrow. Tonight she’s mewed up to her heaviness.",
+        "start": 0
+      }
+    },
+    "1f083ccf": {
+      "role": "paris",
+      "text": "My lord, I wish that Thursday were tomorrow.",
+      "src": "audio/speeches/a03_s04_005_paris_1f083ccf_073de80334.mp3",
+      "fingerprint": "073de80334aff0d5892ca02b5dfed92a4712407585d595772cdff58b64104a86",
+      "cue": {
+        "text": "My lord, I wish that Thursday were tomorrow.",
+        "start": 0
+      }
+    },
+    "d5350eb5": {
+      "role": "lord-capulet",
+      "text": "Sir Paris, I will make a desperate tender Of my child’s love. I think she will be ruled In all respects by me. Wife, go you to her ere you go to bed. Acquaint her here of my son Paris’ love. O’ Thursday, tell her, She shall be married to this noble earl.— What say you to Thursday?",
+      "src": "audio/speeches/a03_s04_004_lord-capulet_d5350eb5_1d376992c4.mp3",
+      "fingerprint": "1d376992c47cb700a03e6d7a9e08bdd761d46a09f503ab212183bb39eb03984c",
+      "cue": {
+        "text": "She shall be married to this noble earl.— What say you to Thursday?",
+        "start": 15.16
+      }
+    },
+    "0fc178a4": {
+      "role": "lord-capulet",
+      "text": "Well, get you gone. O’ Thursday be it then. Go you to Juliet ere you go to bed. Prepare her, wife, against this wedding day.— Farewell my lord.",
+      "src": "audio/speeches/a03_s04_006_lord-capulet_0fc178a4_25e778d3c9.mp3",
+      "fingerprint": "25e778d3c93e6c73ce62e6e5b74a6767ca5682309c87e9f8bde73b1ef3421c4e",
+      "cue": {
+        "text": "Prepare her, wife, against this wedding day.— Farewell my lord.",
+        "start": 5.74
+      }
+    },
+    "64f574f0": {
+      "role": "lady-capulet",
+      "text": "Ho, daughter, are you up?",
+      "src": "audio/speeches/a03_s05_001_lady-capulet_64f574f0_a42a610838.mp3",
+      "fingerprint": "a42a610838259235ef5f045807df89f68a57181e930acbf310dba97c4d1b7840",
+      "cue": {
+        "text": "Ho, daughter, are you up?",
+        "start": 0
+      }
+    },
+    "b0722302": {
+      "role": "juliet",
+      "text": "Who is’t that calls?",
+      "src": "audio/speeches/a03_s05_002_juliet_b0722302_41cd6f1220.mp3",
+      "fingerprint": "41cd6f12201cb41b870792b1dec41e1f1ce5451eb84e147de9360a074e19b56b",
+      "cue": {
+        "text": "Who is’t that calls?",
+        "start": 0
+      }
+    },
+    "8ad2fcfe": {
+      "role": "lady-capulet",
+      "text": "Why, how now, Juliet?",
+      "src": "audio/speeches/a03_s05_003_lady-capulet_8ad2fcfe_81258c5587.mp3",
+      "fingerprint": "81258c558775c7b279172daa8f9b96c3d04f39d0ad2732b6c0c282cb473f826c",
+      "cue": {
+        "text": "Why, how now, Juliet?",
+        "start": 0
+      }
+    },
+    "4c0b589a": {
+      "role": "juliet",
+      "text": "Madam, I am not well.",
+      "src": "audio/speeches/a03_s05_004_juliet_4c0b589a_2d15e74ad9.mp3",
+      "fingerprint": "2d15e74ad9dc93eb6ab2d9bf98a0966b85d83493267e896d9953ea5e51197e27",
+      "cue": {
+        "text": "Madam, I am not well.",
+        "start": 0
+      }
+    },
+    "9dcbf9fb": {
+      "role": "juliet",
+      "text": "Yet let me weep for such a feeling loss.",
+      "src": "audio/speeches/a03_s05_006_juliet_9dcbf9fb_6d41c0e22d.mp3",
+      "fingerprint": "6d41c0e22d6fbc22cbf7ff78ea42dfe7f4164faec608f67f211b90f2c37edaca",
+      "cue": {
+        "text": "Yet let me weep for such a feeling loss.",
+        "start": 0
+      }
+    },
+    "0d112818": {
+      "role": "lady-capulet",
+      "text": "Evermore weeping for your cousin’s death? What, wilt thou wash him from his grave with tears?",
+      "src": "audio/speeches/a03_s05_005_lady-capulet_0d112818_7fb7fc6aa5.mp3",
+      "fingerprint": "7fb7fc6aa52f02f57b7479be29702224cc0566332c0601bec6a2f9da6048efd2",
+      "cue": {
+        "text": "Evermore weeping for your cousin’s death? What, wilt thou wash him from his grave with tears?",
+        "start": 0
+      }
+    },
+    "d2ba6820": {
+      "role": "juliet",
+      "text": "What villain, madam.",
+      "src": "audio/speeches/a03_s05_008_juliet_d2ba6820_64f21c9219.mp3",
+      "fingerprint": "64f21c92191177c6e6a4fdb64a000590842ce565a0b155def3d2011668076b66",
+      "cue": {
+        "text": "What villain, madam.",
+        "start": 0
+      }
+    },
+    "7ee38032": {
+      "role": "lady-capulet",
+      "text": "Well, girl, thou weep’st not so much for his death As that the villain lives which slaughtered him.",
+      "src": "audio/speeches/a03_s05_007_lady-capulet_7ee38032_ade74fa068.mp3",
+      "fingerprint": "ade74fa0682ce453cf4a6bc25a87ea33d04622c538e6942f922dac90980e8d78",
+      "cue": {
+        "text": "Well, girl, thou weep’st not so much for his death As that the villain lives which slaughtered him.",
+        "start": 0
+      }
+    },
+    "0a13ef6f": {
+      "role": "juliet",
+      "text": "Madam, in happy time! What day is that?",
+      "src": "audio/speeches/a03_s05_010_juliet_0a13ef6f_eb66ce11dd.mp3",
+      "fingerprint": "eb66ce11dd355d6cc32bd54fb12fad9477c343ca61119f4c691a0815a9493e76",
+      "cue": {
+        "text": "Madam, in happy time! What day is that?",
+        "start": 0
+      }
+    },
+    "e1432f25": {
+      "role": "lady-capulet",
+      "text": "That same villain, Romeo. We will have vengeance for it, fear thou not. But, thou hast a careful father, child, One who, to put thee from thy heaviness, Hath sorted out a sudden day of joy.",
+      "src": "audio/speeches/a03_s05_009_lady-capulet_e1432f25_aa5fddd0a1.mp3",
+      "fingerprint": "aa5fddd0a109682ad5102aad07f3215271f2cb72cb2a3f8ebf7847ac8cc81929",
+      "cue": {
+        "text": "One who, to put thee from thy heaviness, Hath sorted out a sudden day of joy.",
+        "start": 8.040000000000001
+      }
+    },
+    "69a348ee": {
+      "role": "lady-capulet",
+      "text": "Marry, my child, early next Thursday morn The gallant, young, and noble gentleman, The County Paris, at Saint Peter’s Church Shall happily make thee there a joyful bride.",
+      "src": "audio/speeches/a03_s05_011_lady-capulet_69a348ee_dd77e0ee44.mp3",
+      "fingerprint": "dd77e0ee447e19b88cf68495c9a491529531018633a2754bb9286da4009bf300",
+      "cue": {
+        "text": "The County Paris, at Saint Peter’s Church Shall happily make thee there a joyful bride.",
+        "start": 5.44
+      }
+    },
+    "cb27ba6e": {
+      "role": "lady-capulet",
+      "text": "Here comes your father. Tell him so yourself, And see how he will take it at your hands.",
+      "src": "audio/speeches/a03_s05_013_lady-capulet_cb27ba6e_9d76775409.mp3",
+      "fingerprint": "9d767754091c87778fb28187cd53edc9e4b331c1ae076842d197fc2a89a79ef7",
+      "cue": {
+        "text": "Here comes your father. Tell him so yourself, And see how he will take it at your hands.",
+        "start": 0
+      }
+    },
+    "4e59f7e6": {
+      "role": "juliet",
+      "text": "Now, by Saint Peter’s Church, and Peter too, He shall not make me there a joyful bride! I pray you, tell my lord and father, madam, I will not marry yet. These are news indeed!",
+      "src": "audio/speeches/a03_s05_012_juliet_4e59f7e6_89c66c9101.mp3",
+      "fingerprint": "89c66c9101005ed62703581ffa45988a4027c261f8bf24ff5fbea2cf9f8a66b6",
+      "cue": {
+        "text": "I pray you, tell my lord and father, madam, I will not marry yet. These are news indeed!",
+        "start": 7.28
+      }
+    },
+    "c2af29e0": {
+      "role": "lord-capulet",
+      "text": "How now, wife? Have you delivered to her our decree?",
+      "src": "audio/speeches/a03_s05_014_lord-capulet_c2af29e0_f350f5d357.mp3",
+      "fingerprint": "f350f5d357e6a40c3fd895253091c0539f9c758c1524c01414cbafd9d7c78119",
+      "cue": {
+        "text": "How now, wife? Have you delivered to her our decree?",
+        "start": 0
+      }
+    },
+    "c1c10ab2": {
+      "role": "lady-capulet",
+      "text": "Ay, sir, but she will none, she gives you thanks. I would the fool were married to her grave.",
+      "src": "audio/speeches/a03_s05_015_lady-capulet_c1c10ab2_a85d35e467.mp3",
+      "fingerprint": "a85d35e46787c86c8578c2feb7a4f7b04f00928b44a1222dda1c53241d2448a1",
+      "cue": {
+        "text": "Ay, sir, but she will none, she gives you thanks. I would the fool were married to her grave.",
+        "start": 0
+      }
+    },
+    "3216f0ec": {
+      "role": "juliet",
+      "text": "Not proud you have, but thankful that you have.",
+      "src": "audio/speeches/a03_s05_017_juliet_3216f0ec_e81c2fc2bd.mp3",
+      "fingerprint": "e81c2fc2bdd49a63fcae9096f2d3e5877aa8cf8549ce517ec4f9a2b5690d4fb4",
+      "cue": {
+        "text": "Not proud you have, but thankful that you have.",
+        "start": 0
+      }
+    },
+    "dbd69bdc": {
+      "role": "lord-capulet",
+      "text": "Soft, take me with you, take me with you, wife. Is she not proud? Doth she not count her blessed, Unworthy as she is, that we have wrought So worthy a gentleman to be her bride?",
+      "src": "audio/speeches/a03_s05_016_lord-capulet_dbd69bdc_3d87bcf0ae.mp3",
+      "fingerprint": "3d87bcf0ae7a82d80e6c2f36cf711b212465b71c8e215847ece8435ca38910d6",
+      "cue": {
+        "text": "Unworthy as she is, that we have wrought So worthy a gentleman to be her bride?",
+        "start": 7.053
+      }
+    },
+    "64b1377d": {
+      "role": "juliet",
+      "text": "Good father, I beseech you on my knees, Hear me with patience but to speak a word.",
+      "src": "audio/speeches/a03_s05_019_juliet_64b1377d_bca8f17c23.mp3",
+      "fingerprint": "bca8f17c23b64ef8ae7cec830c4507917ef7bb5fc5f50d3f26d5b3c431b685c1",
+      "cue": {
+        "text": "Good father, I beseech you on my knees, Hear me with patience but to speak a word.",
+        "start": 0
+      }
+    },
+    "c08df62f": {
+      "role": "lord-capulet",
+      "text": "Thank me no thankings, nor proud me no prouds, But fettle your fine joints ‘against Thursday next To go with Paris to Saint Peter’s Church, Or I will drag thee on a hurdle thither.",
+      "src": "audio/speeches/a03_s05_018_lord-capulet_c08df62f_2baa4ba0a0.mp3",
+      "fingerprint": "2baa4ba0a0dca34e6b1523e4b4ff5a823efd09fb8868cfe2ec95499b31fc575d",
+      "cue": {
+        "text": "To go with Paris to Saint Peter’s Church, Or I will drag thee on a hurdle thither.",
+        "start": 6.173
+      }
+    },
+    "04570c1e": {
+      "role": "juliet",
+      "text": "O sweet mother, cast me not away. Delay this marriage for a month, a week.",
+      "src": "audio/speeches/a03_s05_021_juliet_04570c1e_76cbf07cd5.mp3",
+      "fingerprint": "76cbf07cd56a806e4a6f3a9e2a42de9bc3af346a3b2a41a90b0f7094d12aa1eb",
+      "cue": {
+        "text": "O sweet mother, cast me not away. Delay this marriage for a month, a week.",
+        "start": 0
+      }
+    },
+    "2f6a6efe": {
+      "role": "lord-capulet",
+      "text": "Get thee to church o’ Thursday, Or never after look me in the face. Speak not; reply not; do not answer me.",
+      "src": "audio/speeches/a03_s05_020_lord-capulet_2f6a6efe_e384634f78.mp3",
+      "fingerprint": "e384634f785fa03e67e478c88fbdcae6e7c7af6326eb6f2e84ead35ea7443b4a",
+      "cue": {
+        "text": "Or never after look me in the face. Speak not; reply not; do not answer me.",
+        "start": 1.853
+      }
+    },
+    "4e21ec44": {
+      "role": "lady-capulet",
+      "text": "Talk not to me, for I’ll not speak a word. Do as thou wilt, for I have done with thee.",
+      "src": "audio/speeches/a03_s05_022_lady-capulet_4e21ec44_6f60111a07.mp3",
+      "fingerprint": "6f60111a072cbce4cea7f66b4bfd33bb2b7c6457024bdab44900bddab061c9ee",
+      "cue": {
+        "text": "Talk not to me, for I’ll not speak a word. Do as thou wilt, for I have done with thee.",
+        "start": 0
+      }
+    },
+    "b56b495e": {
+      "role": "juliet",
+      "text": "O God! Comfort me; counsel me.— What says thou? Hast thou not a word of joy? Some comfort, nurse.",
+      "src": "audio/speeches/a03_s05_023_juliet_b56b495e_17a68fb24c.mp3",
+      "fingerprint": "17a68fb24c2783dc148242b654d1d6abece9801f08f7145b46398c32f0ba0877",
+      "cue": {
+        "text": "What says thou? Hast thou not a word of joy? Some comfort, nurse.",
+        "start": 3.512
+      }
+    },
+    "34f3c1fb": {
+      "role": "nurse",
+      "text": "I think you are happy in this second match, For it excels your first, or, if it did not, Your first is dead, or ‘twere as good he were As living here and you no use of him.",
+      "src": "audio/speeches/a03_s05_024_nurse_34f3c1fb_257876ffb1.mp3",
+      "fingerprint": "257876ffb15bd5e6f02fe6bee7bd32372aa382f62d66d19d4ceeb4f12d30102f",
+      "cue": {
+        "text": "Your first is dead, or ‘twere as good he were As living here and you no use of him.",
+        "start": 5.736
+      }
+    },
+    "8d521954": {
+      "role": "friar-lawrence",
+      "text": "On Thursday, sir? The time is very short.",
+      "src": "audio/speeches/a04_s01_001_friar-lawrence_8d521954_8f9b9e9589.mp3",
+      "fingerprint": "8f9b9e95894c26fdede0d9de1b78f519568cb4de901d33918ac2ea4f3e9b00a9",
+      "cue": {
+        "text": "On Thursday, sir? The time is very short.",
+        "start": 0
+      }
+    },
+    "e1e10c03": {
+      "role": "paris",
+      "text": "My father Capulet will have it so, And I am nothing slow to slack his haste.",
+      "src": "audio/speeches/a04_s01_002_paris_e1e10c03_223f81f06e.mp3",
+      "fingerprint": "223f81f06efc8b041d1734e07ad64ca850a21a3ed5234c5c38c328a6f4e375ee",
+      "cue": {
+        "text": "My father Capulet will have it so, And I am nothing slow to slack his haste.",
+        "start": 0
+      }
+    },
+    "0897c360": {
+      "role": "juliet",
+      "text": "Speak’st thou from thy heart? Well, thou hast comforted me marvelous much. Go in and tell my lady, I am gone, Having displeased my father, to Lawrence’ cell To make confession and to be absolved. I’ll to the Friar to know his remedy. If all else fail, myself have power to die.",
+      "src": "audio/speeches/a03_s05_025_juliet_0897c360_906a3d8cfb.mp3",
+      "fingerprint": "906a3d8cfbf7e750f029771981f9af9aea56592b136a6b80f3c3fc85be4b3ed1",
+      "cue": {
+        "text": "I’ll to the Friar to know his remedy. If all else fail, myself have power to die.",
+        "start": 15.680000000000001
+      }
+    },
+    "e4abf2fe": {
+      "role": "paris",
+      "text": "Happily met, my lady and my wife.",
+      "src": "audio/speeches/a04_s01_004_paris_e4abf2fe_7ef5b7d099.mp3",
+      "fingerprint": "7ef5b7d099121f17121b7077b7d67b0e7d14e0b966be94fac0d4db4faa432514",
+      "cue": {
+        "text": "Happily met, my lady and my wife.",
+        "start": 0
+      }
+    },
+    "78075fe5": {
+      "role": "friar-lawrence",
+      "text": "Uneven in the course. I like it not. Look, sir, here comes the lady toward my cell.",
+      "src": "audio/speeches/a04_s01_003_friar-lawrence_78075fe5_a80d1bfd52.mp3",
+      "fingerprint": "a80d1bfd527133ea5167a093a8e31d47c3fbd6d5a20d1aaeae7c9e60e57eb909",
+      "cue": {
+        "text": "Uneven in the course. I like it not. Look, sir, here comes the lady toward my cell.",
+        "start": 0
+      }
+    },
+    "4dffabf7": {
+      "role": "juliet",
+      "text": "That may be, sir, when I may be a wife.",
+      "src": "audio/speeches/a04_s01_005_juliet_4dffabf7_bb8080e21b.mp3",
+      "fingerprint": "bb8080e21bf74892f925fe4542b8adb895d4f5a5e31ca9ca9183f3d78e5bba6b",
+      "cue": {
+        "text": "That may be, sir, when I may be a wife.",
+        "start": 0
+      }
+    },
+    "d5af1a07": {
+      "role": "paris",
+      "text": "That “may be” must be , love, on Thursday next.",
+      "src": "audio/speeches/a04_s01_006_paris_d5af1a07_e981f97260.mp3",
+      "fingerprint": "e981f972604ab1e1ab58b05ab57f21c9100b5667dd974da701d3e1dcc45f5383",
+      "cue": {
+        "text": "That “may be” must be , love, on Thursday next.",
+        "start": 0
+      }
+    },
+    "775a7cda": {
+      "role": "juliet",
+      "text": "What must be shall be. Are you at leisure, holy father, now, Or shall I come to you at evening Mass?",
+      "src": "audio/speeches/a04_s01_007_juliet_775a7cda_5b514aa849.mp3",
+      "fingerprint": "5b514aa849c21607bd9429735e8fe8bb7accd4ae94d80c283e6c076f70edf0e4",
+      "cue": {
+        "text": "Are you at leisure, holy father, now, Or shall I come to you at evening Mass?",
+        "start": 2.7
+      }
+    },
+    "743ce552": {
+      "role": "friar-lawrence",
+      "text": "My leisure serves me, pensive daughter, now— My lord, we must entreat the time alone.",
+      "src": "audio/speeches/a04_s01_008_friar-lawrence_743ce552_d1414a2d98.mp3",
+      "fingerprint": "d1414a2d98b6e6799819396dc73ff938ca19a02df5d54cf40d6bba3c225533e8",
+      "cue": {
+        "text": "My leisure serves me, pensive daughter, now— My lord, we must entreat the time alone.",
+        "start": 0
+      }
+    },
+    "b04ae416": {
+      "role": "paris",
+      "text": "God shield I should disturb devotion!— Juliet, on Thursday early will I rouse you. Till then, adieu, and keep this holy kiss.",
+      "src": "audio/speeches/a04_s01_009_paris_b04ae416_563c590b4d.mp3",
+      "fingerprint": "563c590b4d768c9d6ef935385a74a0a84fcce70299229949a2ad2dec3391cd8e",
+      "cue": {
+        "text": "Juliet, on Thursday early will I rouse you. Till then, adieu, and keep this holy kiss.",
+        "start": 2.897
+      }
+    },
+    "012db084": {
+      "role": "juliet",
+      "text": "O, shut the door, and when thou hast done so, Come weep with me, past hope, past care, past help.",
+      "src": "audio/speeches/a04_s01_010_juliet_012db084_af175f9f77.mp3",
+      "fingerprint": "af175f9f778bc36546ae098ea930612d4aab89f6adc388e244b078faee811b0c",
+      "cue": {
+        "text": "O, shut the door, and when thou hast done so, Come weep with me, past hope, past care, past help.",
+        "start": 0
+      }
+    },
+    "d6db2eb8": {
+      "role": "friar-lawrence",
+      "text": "O Juliet, I already know thy grief. It strains me pass the compass of my wits.",
+      "src": "audio/speeches/a04_s01_011_friar-lawrence_d6db2eb8_5a7c50ae0c.mp3",
+      "fingerprint": "5a7c50ae0cac131d4777f695642749ce3d4d3b1388a0966c79d752aef7a2f109",
+      "cue": {
+        "text": "O Juliet, I already know thy grief. It strains me pass the compass of my wits.",
+        "start": 0
+      }
+    },
+    "2a662565": {
+      "role": "juliet",
+      "text": "Give me some present counsel, or, behold, ‘Twixt my extremes and me this bloody knife Shall play the umpire. I long to die If what thou speak’st speak not of remedy.",
+      "src": "audio/speeches/a04_s01_012_juliet_2a662565_f52a413de6.mp3",
+      "fingerprint": "f52a413de69c707c83c9e6af05a5562d2d6c15d2f4efdaeac5fb991120665990",
+      "cue": {
+        "text": "Shall play the umpire. I long to die If what thou speak’st speak not of remedy.",
+        "start": 7.96
+      }
+    },
+    "fda481ee": {
+      "role": "juliet",
+      "text": "Farewell, dear father.",
+      "src": "audio/speeches/a04_s01_014_juliet_fda481ee_cf5bb4eec7.mp3",
+      "fingerprint": "cf5bb4eec750c42d4a5e70d279c85cdc43a70d96d16e3c1bb20018bd05412142",
+      "cue": {
+        "text": "Farewell, dear father.",
+        "start": 0
+      }
+    },
+    "ff0df0b0": {
+      "role": "juliet",
+      "text": "Farewell.—God knows when we shall meet again. I have a faint cold fear thrills through my veins That almost freezes up the heat of life. Come, vial. What if this mixture do not work at all? Shall I be married then tomorrow morning? How, if when I am laid into the tomb, I wake before the time that Romeo Come to redeem me? That’s a fearful point. Romeo, Romeo, Romeo! Here’s drink. I drink to thee.",
+      "src": "audio/speeches/a04_s02_001_juliet_ff0df0b0_5b868e02d8.mp3",
+      "fingerprint": "5b868e02d806ba319e9b509f293cbf6e333a24c427f18b5f4a0c51c45e2c6b2e",
+      "cue": {
+        "text": "Come to redeem me? That’s a fearful point. Romeo, Romeo, Romeo! Here’s drink. I drink to thee.",
+        "start": 24.168
+      }
+    },
+    "9deb7887": {
+      "role": "romeo",
+      "text": "News from Verona!—How now, Balthasar? Dost thou not bring me letters from the Friar? How doth my lady? Is my mother well? How doth my Juliet? That I ask again, For nothing can be ill if she be well.",
+      "src": "audio/speeches/a05_s01_001_romeo_9deb7887_95f07b92c8.mp3",
+      "fingerprint": "95f07b92c887db510a8cd18b71f1adee98b4eff36f93b8277f63ee80fdd51c04",
+      "cue": {
+        "text": "How doth my Juliet? That I ask again, For nothing can be ill if she be well.",
+        "start": 9.41
+      }
+    },
+    "01adc3f1": {
+      "role": "friar-lawrence",
+      "text": "Hold, daughter, I do spy a kind of hope. Go home; be merry; give consent To marry Paris. Tomorrow night look that thou lie alone; Take thou this vial, being then in bed, And this distilling liquor drink thou off; When presently through all thy veins shall run A cold and drowsy humor; for no pulse Shall keep his native progress, but surcease No warmth, no breath shall testify thou livest. And in this borrowed likeness of shrunk death Thou shalt continue two and four hours And then awake as from a pleasant sleep. Now, when the bridegroom in the morning comes To rouse thee from thy bed, there art thou dead. Thou shalt be borne to that same ancient vault Where all kindred of the Capulets lie. In the meantime, against thou shalt awake, Shall Romeo by my letters know our drift And hither shall he come. Get you gone. Be strong and prosperous. In this resolve, I’ll send a friar with speed To Mantua with my letters to thy lord.",
+      "src": "audio/speeches/a04_s01_013_friar-lawrence_01adc3f1_acb3fa95c0.mp3",
+      "fingerprint": "acb3fa95c03584937b1b90be7675f7063ef4fc87a336b89b688596dfc3a363df",
+      "cue": {
+        "text": "In this resolve, I’ll send a friar with speed To Mantua with my letters to thy lord.",
+        "start": 73.42999999999999
+      }
+    },
+    "cde60024": {
+      "role": "balthasar",
+      "text": "Then she is well and nothing can be ill. Her body sleeps in Capulets’ monument. I saw her laid low in her kindred’s vault And presently took post to tell it you.",
+      "src": "audio/speeches/a05_s01_002_balthasar_cde60024_a514405aa9.mp3",
+      "fingerprint": "a514405aa98ca5f56d4c3fd3c16df753672f2da2d89a6da586cffea5b4364424",
+      "cue": {
+        "text": "I saw her laid low in her kindred’s vault And presently took post to tell it you.",
+        "start": 5.44
+      }
+    },
+    "e6908934": {
+      "role": "balthasar",
+      "text": "I do beseech you, sir, have patience. Your looks are pale and wild and do import Some misadventure.",
+      "src": "audio/speeches/a05_s01_004_balthasar_e6908934_273cd33390.mp3",
+      "fingerprint": "273cd333902381c80fce54654fbd1f222c17f0eeb38d1c2183795d3b3e8e2277",
+      "cue": {
+        "text": "Your looks are pale and wild and do import Some misadventure.",
+        "start": 2.168
+      }
+    },
+    "5e85fca5": {
+      "role": "romeo",
+      "text": "Is it e’en so?—Then I deny you, stars!— Get me ink and paper, And hire post-horses. I will hence tonight.",
+      "src": "audio/speeches/a05_s01_003_romeo_5e85fca5_0dd2b63056.mp3",
+      "fingerprint": "0dd2b6305617bab348891e0841dd9d0772d16f5a716c7c1cd6fd720695d75a66",
+      "cue": {
+        "text": "Get me ink and paper, And hire post-horses. I will hence tonight.",
+        "start": 3.68
+      }
+    },
+    "494c584f": {
+      "role": "romeo",
+      "text": "Hast thou not letters to me from the Friar?",
+      "src": "audio/speeches/a05_s01_005_romeo_494c584f_44a2626a9e.mp3",
+      "fingerprint": "44a2626a9ed574fbd757ad8e4f68748c614790c4449c1b6a714cfa99d0698c6a",
+      "cue": {
+        "text": "Hast thou not letters to me from the Friar?",
+        "start": 0
+      }
+    },
+    "6dd30a3d": {
+      "role": "balthasar",
+      "text": "No, my good lord.",
+      "src": "audio/speeches/a05_s01_006_balthasar_6dd30a3d_265b77ee6f.mp3",
+      "fingerprint": "265b77ee6f4ae13ad9bdb8b9f461b4593af32ccabd79fb405935f7c1b3d132cc",
+      "cue": {
+        "text": "No, my good lord.",
+        "start": 0
+      }
+    },
+    "1ae81ae6": {
+      "role": "apothecary",
+      "text": "Who calls so loud?",
+      "src": "audio/speeches/a05_s01_008_apothecary_1ae81ae6_ba44f9a9e9.mp3",
+      "fingerprint": "ba44f9a9e9d5d53cfd4ed7416bb337195fcd8ab5593c31b97d24d1dcd19031ac",
+      "cue": {
+        "text": "Who calls so loud?",
+        "start": 0
+      }
+    },
+    "b232a6d0": {
+      "role": "romeo",
+      "text": "Come hither, man. I see that thou art poor. Hold, there is forty ducats. Let me have A dram of poison That the life-weary taker may fall dead.",
+      "src": "audio/speeches/a05_s01_009_romeo_b232a6d0_b549a6080d.mp3",
+      "fingerprint": "b549a6080d1414a7d3b271cb4c1ec4b6a662a3a0429685316260545d1787e928",
+      "cue": {
+        "text": "A dram of poison That the life-weary taker may fall dead.",
+        "start": 6.8
+      }
+    },
+    "099e585d": {
+      "role": "apothecary",
+      "text": "Such mortal drugs I have, but Mantua’s law Is death to any he that utters them.",
+      "src": "audio/speeches/a05_s01_010_apothecary_099e585d_6e4f1fd695.mp3",
+      "fingerprint": "6e4f1fd695a5ac798f4969247f57d5f91b67978b9b9732218e1facfdbdc2d1ea",
+      "cue": {
+        "text": "Such mortal drugs I have, but Mantua’s law Is death to any he that utters them.",
+        "start": 0
+      }
+    },
+    "676ba391": {
+      "role": "romeo",
+      "text": "Be not poor and take this.",
+      "src": "audio/speeches/a05_s01_011_romeo_676ba391_f4daf67ef5.mp3",
+      "fingerprint": "f4daf67ef50ed32977db276a5f0497bab6a14101ff423b2d8c6c5c7c4e884507",
+      "cue": {
+        "text": "Be not poor and take this.",
+        "start": 0
+      }
+    },
+    "70f794de": {
+      "role": "romeo",
+      "text": "No matter. Get thee gone. I’ll be with thee straight. Well, Juliet, I will lie with thee tonight. O mischief, thou art swift To enter in the thoughts of desperate men. I do remember an apothecary: “An if a man did need a poison now, Whose sale is present death in Mantua, Here lives a caitiff wretch would sell it him.” O, this same thought did but forerun my need, And this same needy man must sell it me. What ho, Apothecary!",
+      "src": "audio/speeches/a05_s01_007_romeo_70f794de_c75d87b445.mp3",
+      "fingerprint": "c75d87b4459b5f8002206fe4f8718071991cf2f97bc4f1536abdd549440e643c",
+      "cue": {
+        "text": "And this same needy man must sell it me. What ho, Apothecary!",
+        "start": 27.7
+      }
+    },
+    "9f9718a6": {
+      "role": "apothecary",
+      "text": "Put this in any liquid thing you will And drink it off, and if you had the strength Of twenty men, it would dispatch you straight.",
+      "src": "audio/speeches/a05_s01_012_apothecary_9f9718a6_841afd6bf1.mp3",
+      "fingerprint": "841afd6bf129ae5af66e615026ce42169fa69fac186b676238f73f9cb3141406",
+      "cue": {
+        "text": "And drink it off, and if you had the strength Of twenty men, it would dispatch you straight.",
+        "start": 2.7
+      }
+    },
+    "3f08ad37": {
+      "role": "friar-john",
+      "text": "Holy Franciscan friar, brother, ho!",
+      "src": "audio/speeches/a05_s02_001_friar-john_3f08ad37_eb37c9694b.mp3",
+      "fingerprint": "eb37c9694b064c920a0bc9c94ddc133b43dd9b8ca4ac954fefb71e92605e31eb",
+      "cue": {
+        "text": "Holy Franciscan friar, brother, ho!",
+        "start": 0
+      }
+    },
+    "ec5c75f9": {
+      "role": "romeo",
+      "text": "There is thy gold. Farewell, buy food, and get thyself in flesh. Come, cordial and not poison, go with me To Juliet’s grave, for there must I use thee.",
+      "src": "audio/speeches/a05_s01_013_romeo_ec5c75f9_f16043fa10.mp3",
+      "fingerprint": "f16043fa1048533cc490727003a9da705d8c4a7358f10867d1f85cf20ab5fcc4",
+      "cue": {
+        "text": "Come, cordial and not poison, go with me To Juliet’s grave, for there must I use thee.",
+        "start": 5.912
+      }
+    },
+    "68ddcad4": {
+      "role": "friar-lawrence",
+      "text": "This same should be the voice of Friar John.— Welcome from Mantua. What says Romeo? Or, if his mind be writ, give me his letter.",
+      "src": "audio/speeches/a05_s02_002_friar-lawrence_68ddcad4_ad5af6dd1c.mp3",
+      "fingerprint": "ad5af6dd1c1e1b94ada7f6505ffa591bddbf9ec75857c2c679b292559cec1ab7",
+      "cue": {
+        "text": "Welcome from Mantua. What says Romeo? Or, if his mind be writ, give me his letter.",
+        "start": 3.3
+      }
+    },
+    "2ab809f3": {
+      "role": "friar-lawrence",
+      "text": "Who bare my letter, then, to Romeo?",
+      "src": "audio/speeches/a05_s02_004_friar-lawrence_2ab809f3_deadfff8be.mp3",
+      "fingerprint": "deadfff8be152bdaf1edad29c25e586ebd238ce7cfd535a463c8ee0b61669e39",
+      "cue": {
+        "text": "Who bare my letter, then, to Romeo?",
+        "start": 0
+      }
+    },
+    "177d327b": {
+      "role": "friar-john",
+      "text": "I could not send it—here it is again—.",
+      "src": "audio/speeches/a05_s02_005_friar-john_177d327b_09d36e384c.mp3",
+      "fingerprint": "09d36e384c876cf7ac4e1d458924058c232e3e77c923b329f884d0dd9edb2bcd",
+      "cue": {
+        "text": "I could not send it—here it is again—.",
+        "start": 0
+      }
+    },
+    "1efde44a": {
+      "role": "friar-john",
+      "text": "Going to find a barefoot brother out, One of our order, to associate me, Here in this city visiting the sick, And finding him, the searchers of the town, Suspecting that we both were in a house Where the infectious pestilence did reign, Sealed up the doors and would not let us forth, So that my speed to Mantua there was stayed.",
+      "src": "audio/speeches/a05_s02_003_friar-john_1efde44a_ba9f048373.mp3",
+      "fingerprint": "ba9f048373a4143c0504dd3154395ae088829db69f043cdf38fe4d19272e0ca6",
+      "cue": {
+        "text": "Sealed up the doors and would not let us forth, So that my speed to Mantua there was stayed.",
+        "start": 15
+      }
+    },
+    "656cd373": {
+      "role": "friar-lawrence",
+      "text": "Now must I to the monument alone. Within this three hours will fair Juliet wake. Poor living corse, closed in a dead man’s tomb.",
+      "src": "audio/speeches/a05_s02_006_friar-lawrence_656cd373_0c11aefa9b.mp3",
+      "fingerprint": "0c11aefa9b95afb36ebd2b7b6510e7355430379481bae22c93499580a03f9139",
+      "cue": {
+        "text": "Within this three hours will fair Juliet wake. Poor living corse, closed in a dead man’s tomb.",
+        "start": 3.034
+      }
+    },
+    "bc7e9afa": {
+      "role": "romeo",
+      "text": "Thou detestable maw, thou womb of death, Gorged with the dearest morsel of the earth, Thus I enforce thy rotten jaws to open, And in despite I’ll cram thee with more food.",
+      "src": "audio/speeches/a05_s03_002_romeo_bc7e9afa_9d7bff7115.mp3",
+      "fingerprint": "9d7bff7115558e27e8854e6f8a4e973efbdbc0adf5ca2ff60d063870dfe92425",
+      "cue": {
+        "text": "Thus I enforce thy rotten jaws to open, And in despite I’ll cram thee with more food.",
+        "start": 6.344
+      }
+    },
+    "6ecd9244": {
+      "role": "paris",
+      "text": "Give me thy torch, boy. Hence and stand aloof. Yet put it out, for I would not be seen. Give me those flowers. Do as I bid thee. Go. Sweet flower, with flowers thy bridal bed I strew. Which with sweet water nightly I will dew, Or, wanting that, with tears distilled by moans. The obsequies that I for thee will keep Nightly shall be to strew thy grave and weep. The boy gives warning something doth approach. Muffle me, night, awhile.",
+      "src": "audio/speeches/a05_s03_001_paris_6ecd9244_1fd5778f09.mp3",
+      "fingerprint": "1fd5778f096865c2d18e953b23b8ab63906ccdeaa586a229bbcc78ae5ae245b9",
+      "cue": {
+        "text": "The boy gives warning something doth approach. Muffle me, night, awhile.",
+        "start": 25.04
+      }
+    },
+    "bfbdb5a8": {
+      "role": "paris",
+      "text": "This is that banished haughty Montague That murdered my love’s cousin, with which grief It is suppose’d the fair creature died. Stop thy unhallowed toil, vile Montague. Condemne’d villain, I do apprehend thee. Obey and go with me, for thou must die.",
+      "src": "audio/speeches/a05_s03_003_paris_bfbdb5a8_307b0ed3c6.mp3",
+      "fingerprint": "307b0ed3c62b38c6945f6a67a558bcc104e415dde731415e64d33de6e9d58157",
+      "cue": {
+        "text": "Condemne’d villain, I do apprehend thee. Obey and go with me, for thou must die.",
+        "start": 10.620000000000001
+      }
+    },
+    "71380f5c": {
+      "role": "romeo",
+      "text": "Good gentle youth, tempt not a desp’rate man. Fly hence and leave me. I beseech thee, youth. Put not another sin upon my head By urging me to fury. O, begone!",
+      "src": "audio/speeches/a05_s03_004_romeo_71380f5c_cb8a8ff1b7.mp3",
+      "fingerprint": "cb8a8ff1b7dc86b5038fad5072b7665e66946a78ec0891273563d04475eb32f6",
+      "cue": {
+        "text": "Put not another sin upon my head By urging me to fury. O, begone!",
+        "start": 7.14
+      }
+    },
+    "e4032a26": {
+      "role": "paris",
+      "text": "I do defy thy commination And apprehend thee for a felon here.",
+      "src": "audio/speeches/a05_s03_005_paris_e4032a26_21856cdedc.mp3",
+      "fingerprint": "21856cdedc24dec77ec29feec410883af8d7a3ae1cf03bb8a7175b4c65f89127",
+      "cue": {
+        "text": "I do defy thy commination And apprehend thee for a felon here.",
+        "start": 0
+      }
+    },
+    "3d53ce26": {
+      "role": "romeo",
+      "text": "Wilt thou provoke me? Then have at thee!",
+      "src": "audio/speeches/a05_s03_006_romeo_3d53ce26_faf308a47a.mp3",
+      "fingerprint": "faf308a47af8e4d157022d8a6d115f819af25ae238257f9a86acd273b70d58f4",
+      "cue": {
+        "text": "Wilt thou provoke me? Then have at thee!",
+        "start": 0
+      }
+    },
+    "09f19d70": {
+      "role": "paris",
+      "text": "O, I am slain! If thou be merciful, Open the tomb; lay me with Juliet.",
+      "src": "audio/speeches/a05_s03_007_paris_09f19d70_25acb765f8.mp3",
+      "fingerprint": "25acb765f818e4a2f665645abbc832182cf019b5ed555ccfc16be623c0416e76",
+      "cue": {
+        "text": "O, I am slain! If thou be merciful, Open the tomb; lay me with Juliet.",
+        "start": 0
+      }
+    },
+    "ddfeb6b9": {
+      "role": "friar-lawrence",
+      "text": "Romeo!— Alack, alack, what blood is this which stains The stony entrance of this sepulcher? Romeo! O, pale! Who else? What, Paris too? And steeped in blood? Ah, what an unkind hour Is guilty of this lamentable chance! The lady stirs.",
+      "src": "audio/speeches/a05_s03_009_friar-lawrence_ddfeb6b9_084101b3ec.mp3",
+      "fingerprint": "084101b3ecb59f436a51a5ab2004198ceba1c0a0ae2407e7ad7994f284ec2e6f",
+      "cue": {
+        "text": "Is guilty of this lamentable chance! The lady stirs.",
+        "start": 18.76
+      }
+    },
+    "2c2de90a": {
+      "role": "juliet",
+      "text": "O comfortable friar, where is my lord? I do remember well where I should be, And there I am. Where is my Romeo?",
+      "src": "audio/speeches/a05_s03_010_juliet_2c2de90a_ff81446ac5.mp3",
+      "fingerprint": "ff81446ac516f5cba0989621a3087ad4c8d3132748f8c07f298b3c9f3a47c861",
+      "cue": {
+        "text": "I do remember well where I should be, And there I am. Where is my Romeo?",
+        "start": 2.64
+      }
+    },
+    "d3ff9101": {
+      "role": "romeo",
+      "text": "In faith, I will.—Let me peruse this face. Mercutio’s kinsman, noble County Paris! O, give me thy hand, One writ with me in sour misfortune’s book! I’ll bury thee in a triumphant grave. O my love, my wife, Death, that hath sucked the honey of thy breath, Hath had no power yet upon thy beauty. Ah, dear Juliet, Why art thou yet so fair? Here, here will I remain With worms that are thy chambermaids. O, here Will I set up my everlasting rest And shake the yoke of inauspicious stars From this world-wearied flesh! Eyes, look your last, Arms, take your last embrace. And, lips, O, you The doors of breath, seal with a righteous kiss A dateless bargain to engrossing death. Here’s to my love. O true apothecary, Thy drugs are quick. Thus with a kiss I die.",
+      "src": "audio/speeches/a05_s03_008_romeo_d3ff9101_bb7ef50f6c.mp3",
+      "fingerprint": "bb7ef50f6c795fcadc73e6413d749dddbe8af826e3531aaa68b7ebfd302a47a8",
+      "cue": {
+        "text": "O true apothecary, Thy drugs are quick. Thus with a kiss I die.",
+        "start": 57.660000000000004
+      }
+    },
+    "47047b4e": {
+      "role": "friar-lawrence",
+      "text": "I hear some noise—Lady, come from that nest Of death, contagion, and unnatural sleep. A greater power than we can contradict Hath thwarted our intents. Come, come away. Thy husband in thy bosom there lies dead. And Paris too. Come, go, good Juliet. I dare no longer stay.",
+      "src": "audio/speeches/a05_s03_011_friar-lawrence_47047b4e_a80c1744e2.mp3",
+      "fingerprint": "a80c1744e26514a190bd8414a6a7e19b3f5de2e088bcb4c7fea63aea68193e2e",
+      "cue": {
+        "text": "And Paris too. Come, go, good Juliet. I dare no longer stay.",
+        "start": 17.46
+      }
+    },
+    "6434c0f8": {
+      "role": "servant-1",
+      "text": "Sovereign, here lies the County Paris slain, And Romeo dead, and Juliet, dead before, Warm and new killed.",
+      "src": "audio/speeches/a05_s03_013_servant-1_6434c0f8_78d3d2c393.mp3",
+      "fingerprint": "78d3d2c3931825d8ca901d950cd9ae500c0d8626cb5fc8d5f51f2f2af317b50c",
+      "cue": {
+        "text": "And Romeo dead, and Juliet, dead before, Warm and new killed.",
+        "start": 3.28
+      }
+    },
+    "5553bd21": {
+      "role": "prince",
+      "text": "Search, seek, and know how this foul murder comes.",
+      "src": "audio/speeches/a05_s03_014_prince_5553bd21_1fad279fca.mp3",
+      "fingerprint": "1fad279fcae2706c0e07ede6c53984e1f62a6c7ad5c9dd187b691df2c90679d4",
+      "cue": {
+        "text": "Search, seek, and know how this foul murder comes.",
+        "start": 0
+      }
+    },
+    "0d712bbb": {
+      "role": "lord-capulet",
+      "text": "O heavens! O wife, look how our daughter bleed!",
+      "src": "audio/speeches/a05_s03_015_lord-capulet_0d712bbb_571b5bb0b2.mp3",
+      "fingerprint": "571b5bb0b2aa57511e3a340afa39782baed9ea59a94926368f76a1f8eb42c4ac",
+      "cue": {
+        "text": "O heavens! O wife, look how our daughter bleed!",
+        "start": 0
+      }
+    },
+    "735d8a28": {
+      "role": "lady-capulet",
+      "text": "O me, this sight of death is as a bell That warms my old age to a sepulcher.",
+      "src": "audio/speeches/a05_s03_016_lady-capulet_735d8a28_f4a6ff5089.mp3",
+      "fingerprint": "f4a6ff50895888fd3ccba972210f82114e5b8c5c3620fb15a378991a8f8cead7",
+      "cue": {
+        "text": "O me, this sight of death is as a bell That warms my old age to a sepulcher.",
+        "start": 0
+      }
+    },
+    "f261b199": {
+      "role": "juliet",
+      "text": "Go, get thee hence, for I will not away. What’s here? Poison, I see, hath been his timeless end.— O churl, drunk all, and left no friendly drop To help me after! I will kiss thee. Haply some poison yet doth hang on thee, To make me die with a restorative. Thy body is warm. Yea, noise? Then I’ll be brief. O, happy dagger, This is thy sheath. There rust, and let me die.",
+      "src": "audio/speeches/a05_s03_012_juliet_f261b199_d3c543e5ec.mp3",
+      "fingerprint": "d3c543e5ec7c58a781155bb71202945e4c260ab725278650d138132a8d844578",
+      "cue": {
+        "text": "Yea, noise? Then I’ll be brief. O, happy dagger, This is thy sheath. There rust, and let me die.",
+        "start": 22.8
+      }
+    },
+    "fceb33db": {
+      "role": "prince",
+      "text": "Come, Montague, for thou art early up To see thy son and heir now early down. Look, and thou shalt see.",
+      "src": "audio/speeches/a05_s03_017_prince_fceb33db_fd14cc94ae.mp3",
+      "fingerprint": "fd14cc94ae9d0865f18c6d516befcf5bd595b4416a9fadcbdbbc47d51ed23e4d",
+      "cue": {
+        "text": "To see thy son and heir now early down. Look, and thou shalt see.",
+        "start": 2.413
+      }
+    },
+    "6cf155b5": {
+      "role": "lady-montague",
+      "text": "O thou untaught! What manners is in this, To press before thy mother to a grave?",
+      "src": "audio/speeches/a05_s03_018_lady-montague_6cf155b5_09ec1c4680.mp3",
+      "fingerprint": "09ec1c4680f50b06c87d70f23041c0c850ae52155f56cdf27f723681e5853c5c",
+      "cue": {
+        "text": "O thou untaught! What manners is in this, To press before thy mother to a grave?",
+        "start": 0
+      }
+    },
+    "2c2f7283": {
+      "role": "prince",
+      "text": "Bring forth the parties of suspicion.",
+      "src": "audio/speeches/a05_s03_019_prince_2c2f7283_06332d3aa1.mp3",
+      "fingerprint": "06332d3aa118d5cb299b669c743828c5fdeab7ea91d70122f88f7a6a2fadbf04",
+      "cue": {
+        "text": "Bring forth the parties of suspicion.",
+        "start": 0
+      }
+    },
+    "07d2b19e": {
+      "role": "prince",
+      "text": "Where be these enemies?—Capulet, Montague, See what a scourge is laid upon your hate, That heaven finds mean to kill your joys with love, And I, for winking at your discords too, Have lost a brace of kinsmen. All are punished.",
+      "src": "audio/speeches/a05_s03_021_prince_07d2b19e_dc138d3374.mp3",
+      "fingerprint": "dc138d33748f956bada95f19bb33a20f60dbe709c3094441ea4949baa986e238",
+      "cue": {
+        "text": "And I, for winking at your discords too, Have lost a brace of kinsmen. All are punished.",
+        "start": 11.06
+      }
+    },
+    "68b0b39c": {
+      "role": "lord-capulet",
+      "text": "O sister Montague, give me thy hand. This is my daughter’s jointure, for no more Can I demand.",
+      "src": "audio/speeches/a05_s03_022_lord-capulet_68b0b39c_1661029371.mp3",
+      "fingerprint": "166102937195cc3626ddc1b1db0179ca9f92b2d7fa4889862a6fb99f42df7fb4",
+      "cue": {
+        "text": "This is my daughter’s jointure, for no more Can I demand.",
+        "start": 2.36
+      }
+    },
+    "f07384c5": {
+      "role": "lady-montague",
+      "text": "But I can give thee more, For I will ray her statue in pure gold, That whiles Verona by that name is known, There shall no figure at such rate be set As that of true and faithful Juliet.",
+      "src": "audio/speeches/a05_s03_023_lady-montague_f07384c5_4dde219fbf.mp3",
+      "fingerprint": "4dde219fbfa312aad42e32449ef10d7980cfe034b64c2f119154b1b8fde78982",
+      "cue": {
+        "text": "There shall no figure at such rate be set As that of true and faithful Juliet.",
+        "start": 7.013
+      }
+    },
+    "2aac8016": {
+      "role": "chorus",
+      "text": "A glooming peace this morning with it brings. The sun for sorrow will not show his head. Go hence to have more talk of these sad things. Some shall be pardoned, and some punishe’d. For never was a story of more woe Than this of Juliet and her Romeo.",
+      "src": "audio/speeches/a05_s03_024_chorus_2aac8016_8f6abc8ef9.mp3",
+      "fingerprint": "8f6abc8ef93543346e60f0ba5cf637ed4d765b5ca108951ab2f20cd15d6709d9",
+      "cue": {
+        "text": "For never was a story of more woe Than this of Juliet and her Romeo.",
+        "start": 11.700000000000001
+      }
+    },
+    "64dee849": {
+      "role": "friar-lawrence",
+      "text": "I will be brief, for my short date of breath Is not so long as is a tedious tale. Romeo, there dead, was husband to that Juliet. And she, there dead, that Romeo’s faithful wife. I married them, and their stol’n marriage day Was Tybalt’s doomsday, whose untimely death Banished the new-made bridgegroom from this city. For whom, and not for Tybalt, Juliet pined. You, to remove that siege of grief from her, Betrothed and would have married her perforce To County Paris. Then comes she to me, And with wild looks bid me devise some mean To rid her from this second marriage. Then gave I her (so tutored by my art) A sleeping potion, which so took effect As I intended. Meantime I writ to Romeo, But he which bore my letter, Friar John, Was stayed by accident, and yesternight Returned my letter back. When I came, some minute ere the time Of her awakening, here untimely lay The noble Paris and true Romeo dead. She wakes and as it seems, did violence on herself. All this I know.",
+      "src": "audio/speeches/a05_s03_020_friar-lawrence_64dee849_067b50075a.mp3",
+      "fingerprint": "067b50075a007c7ec41985a4ab3d3d7855cdcac40a3b370e8e716bbdd0ecaf68",
+      "cue": {
+        "text": "She wakes and as it seems, did violence on herself. All this I know.",
+        "start": 79.24
+      }
+    }
+  }
+}

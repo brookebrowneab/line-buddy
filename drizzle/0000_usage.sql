@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS usage_buckets (
+  bucket TEXT PRIMARY KEY,
+  used INTEGER NOT NULL DEFAULT 0,
+  expires_at INTEGER NOT NULL
+);

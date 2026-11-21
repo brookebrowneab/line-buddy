@@ -2,3 +2,12 @@ node_modules
 dist
 dev-dist
 .DS_Store
+
+.env
+.env.*
+!.env.example
+
+# Generation receipts contain large base64 audio; keep locally for recovery.
+.audio-work/
+public/audio/**/*.tmp
+src/data/recordings.json.tmp

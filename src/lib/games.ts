@@ -19,7 +19,7 @@ export const GAMES: Game[] = [
 export const gameById = new Map(GAMES.map((g) => [g.id, g]));
 
 export type StepKind = 'understand' | 'match' | 'why' | 'letters' | 'vanish' | 'scramble' | 'sayit';
-export type Step = { kind: StepKind; item: Item; ids: string[]; cap: number; blankShare?: number; options?: Item[]; again?: boolean; thoughtOnly?: boolean };
+export type Step = { kind: StepKind; item: Item; ids: string[]; cap: number; blankShare?: number; options?: Item[]; again?: boolean; thoughtOnly?: boolean; wholeSpeech?: boolean };
 
 export const BATCH = 8;
 
@@ -40,10 +40,10 @@ export const pickSpeeches = (state: State, roleId: string, sceneId: string, size
 
 const blankShare = (level: number) => (level <= 0 ? 0.3 : level === 1 ? 0.5 : 0.75);
 
-export function buildSteps(state: State, game: GameId, roleId: string, sceneId: string): Step[] {
+export function buildSteps(state: State, game: GameId, roleId: string, sceneId: string, size: 'parts' | 'whole' = 'parts'): Step[] {
   const cap = gameById.get(game)!.cap;
   if (game === 'understand') {
-    const batch = pickSpeeches(state, roleId, sceneId);
+    const batch = speechItems(roleId, sceneId);
     const steps: Step[] = batch.map((item) => ({ kind: 'understand', item, ids: partIds(item), cap }));
     const withPlain = batch.filter((s) => s.plain);
     if (withPlain.length >= 3) {
@@ -58,7 +58,7 @@ export function buildSteps(state: State, game: GameId, roleId: string, sceneId: 
   if (game === 'why') {
     // Match the thought to the line it sets off. With only one or two speeches there is nothing to choose between, so say the line instead.
     const all = speechItems(roleId, sceneId).filter((s) => s.why);
-    const batch = pickSpeeches(state, roleId, sceneId).filter((s) => s.why);
+    const batch = speechItems(roleId, sceneId).filter((s) => s.why);
     const rand = seeded(sceneId + roleId + 'why' + dayNumber());
     return batch.map((item): Step => {
       if (all.length < 3) return { kind: 'sayit', item, ids: partIds(item), cap, thoughtOnly: true };
@@ -66,16 +66,20 @@ export function buildSteps(state: State, game: GameId, roleId: string, sceneId: 
       return { kind: 'why', item, ids: partIds(item), cap, options: shuffle([item, ...others], rand) };
     });
   }
-  const batch = pickBatch(state, items(roleId, sceneId));
+  // Explicit scene practice includes every part so skipping can reach any speech.
+  // Today's practice and trouble practice retain their short batches.
+  const batch = size === 'whole' ? speechItems(roleId, sceneId) : items(roleId, sceneId);
+  const idsFor = (item: Item) => size === 'whole' ? partIds(item) : [item.id];
+  const levelFor = (item: Item) => size === 'whole' ? speechLevel(state, item) : levelOf(state, item.id);
   if (game === 'vanish') {
-    const first: Step[] = batch.map((item) => ({ kind: 'vanish', item, ids: [item.id], cap, blankShare: blankShare(levelOf(state, item.id)) }));
+    const first: Step[] = batch.map((item) => ({ kind: 'vanish', item, ids: idsFor(item), cap, wholeSpeech: size === 'whole', blankShare: blankShare(levelFor(item)) }));
     // Short scenes get a second, harder pass straight away.
     const second: Step[] = batch.length <= 4
-      ? batch.map((item) => ({ kind: 'vanish', item, ids: [item.id], cap, blankShare: Math.min(0.9, blankShare(levelOf(state, item.id)) + 0.25) }))
+      ? batch.map((item) => ({ kind: 'vanish', item, ids: idsFor(item), cap, wholeSpeech: size === 'whole', blankShare: Math.min(0.9, blankShare(levelFor(item)) + 0.25) }))
       : [];
     return [...first, ...second];
   }
-  return batch.map((item) => ({ kind: game as StepKind, item, ids: [item.id], cap }));
+  return batch.map((item) => ({ kind: game as StepKind, item, ids: idsFor(item), cap, wholeSpeech: size === 'whole' }));
 }
 
 /** Pick the right kind of practice for how well a line is known. */

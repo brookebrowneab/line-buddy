@@ -175,3 +175,18 @@ b { font-weight: 800; }
   .page { padding: 0; max-width: none; }
   body { background: #fff; color: #000; }
 }
+
+.listening-choice { margin: 0; padding: 12px 14px; border: 1px solid var(--ink); border-radius: 12px; min-width: 0; }
+.listening-choice legend { font-weight: 700; padding: 0 4px; }
+.listening-choice label { display: inline-flex; align-items: center; gap: 6px; margin: 4px 18px 4px 0; min-height: 36px; }
+.listening-choice input { accent-color: var(--ink); }
+.listening-choice p, .transcript-comparison p { margin: 8px 0; overflow-wrap: anywhere; }
+.transcript-comparison { padding: 12px 0; }
+.transcript-comparison summary { cursor: pointer; font-weight: 700; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.settings-toggle { display: flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 12px; }
+.settings-toggle input { width: 20px; height: 20px; accent-color: var(--accent); flex-shrink: 0; }
+.practice-jump { margin-bottom: 18px; }
+.practice-jump summary { cursor: pointer; font-size: 14px; padding: 8px 0; color: var(--muted); }
+.practice-jump label { display: grid; gap: 8px; font-size: 14px; margin: 8px 0; }
+.practice-jump select { width: 100%; min-width: 0; max-width: 100%; padding: 10px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; font: inherit; }

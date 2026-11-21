@@ -1,7 +1,9 @@
-// Device-only sound: the browser's built-in voice for scene partners, and
-// record-and-play-back. Nothing is uploaded or saved.
+// Recorded character performances first, with device speech as a fallback.
+// Student record-and-play-back stays on this device.
+import { findRecording, hasRecordings, playRecording, stopRecordedAudio } from './recorded-audio';
 
-export const canSpeak = () => typeof window !== 'undefined' && 'speechSynthesis' in window;
+const canSynthesize = () => typeof window !== 'undefined' && 'speechSynthesis' in window;
+export const canSpeak = () => typeof window !== 'undefined' && (hasRecordings() || canSynthesize());
 
 // Devices ship joke and robot voices alongside the natural ones (macOS has
 // "Bells", "Zarvox", "Bad News"...). Only ever use natural-sounding voices.
@@ -10,14 +12,14 @@ const NATURAL = [/daniel/i, /samantha/i, /google uk english/i, /karen/i, /serena
 
 let voices: SpeechSynthesisVoice[] = [];
 function loadVoices() {
-  if (!canSpeak()) return;
+  if (!canSynthesize()) return;
   const english = speechSynthesis.getVoices().filter((v) => v.lang.startsWith('en') && !NOVELTY.test(v.name));
   const rank = (v: SpeechSynthesisVoice) => { const i = NATURAL.findIndex((re) => re.test(v.name)); return i < 0 ? NATURAL.length : i; };
   const good = english.filter((v) => rank(v) < NATURAL.length).sort((a, b) => rank(a) - rank(b));
   // At most three good voices, so characters sound different but never strange.
   voices = good.length ? good.slice(0, 3) : english.filter((v) => v.default).concat(english).slice(0, 1);
 }
-if (canSpeak()) {
+if (canSynthesize()) {
   loadVoices();
   speechSynthesis.addEventListener?.('voiceschanged', loadVoices);
 }
@@ -31,9 +33,19 @@ function voiceFor(who: string): { voice?: SpeechSynthesisVoice; pitch: number } 
 }
 
 /** Speak a line aloud. Resolves when finished (or straight away if the device has no voice). */
-export function speak(text: string, who: string, rate = 1): Promise<void> {
+let playbackSession = 0;
+let finishSynthesis: (() => void) | undefined;
+export async function speak(text: string, who: string, rate = 1, speechId?: string): Promise<void> {
+  stopSpeaking();
+  const session = playbackSession;
+  const recording = findRecording(speechId, text, who);
+  if (recording && await playRecording(recording.src, recording.start, rate)) return;
+  if (session !== playbackSession) return;
+  return synthesize(text, who, rate);
+}
+function synthesize(text: string, who: string, rate: number): Promise<void> {
   return new Promise((resolve) => {
-    if (!canSpeak()) return resolve();
+    if (!canSynthesize()) return resolve();
     const u = new SpeechSynthesisUtterance(text);
     const { voice, pitch } = voiceFor(who);
     if (voice) u.voice = voice;
@@ -41,26 +53,34 @@ export function speak(text: string, who: string, rate = 1): Promise<void> {
     u.rate = rate;
     // Some browsers never fire `onend`; don't let the scene hang.
     const guard = setTimeout(resolve, 4000 + text.length * 110);
-    const done = () => { clearTimeout(guard); resolve(); };
+    const done = () => { clearTimeout(guard); if (finishSynthesis === done) finishSynthesis = undefined; resolve(); };
+    finishSynthesis = done;
     u.onend = done;
     u.onerror = done;
     speechSynthesis.speak(u);
   });
 }
-export function stopSpeaking() { if (canSpeak()) speechSynthesis.cancel(); }
+export function stopSpeaking() {
+  playbackSession++; stopRecordedAudio();
+  if (canSynthesize()) speechSynthesis.cancel();
+  finishSynthesis?.();
+}
 
 export const canRecord = () =>
   typeof navigator !== 'undefined' && !!navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== 'undefined';
 
-export type Recording = { stop: () => Promise<string> };
+export type Recording = { stop: () => Promise<string>; cancel: () => void };
 /** Start recording the microphone. `stop()` gives back a temporary URL to play. */
 export async function startRecording(): Promise<Recording> {
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
   const rec = new MediaRecorder(stream);
   const parts: Blob[] = [];
   rec.ondataavailable = (e) => { if (e.data.size) parts.push(e.data); };
+  const release = () => stream.getTracks().forEach(t => t.stop());
+  rec.onstop = release;
   rec.start();
   return {
+    cancel: () => { if (rec.state !== 'inactive') rec.stop(); release(); },
     stop: () =>
       new Promise((resolve) => {
         rec.onstop = () => {

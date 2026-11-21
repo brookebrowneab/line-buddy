@@ -1,8 +1,7 @@
 // The three games that run through a scene: Cue Catch, Scene Partner, Speed Run.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { partIds, roleName, sceneById, seeded, speechItems, spokenLines, tokens, type Item, type Speech } from './lib/script';
-import { finishGame, gameKey, getState, record, setSettings, useProgress, type Outcome } from './lib/progress';
-import { pickSpeeches } from './lib/games';
+import { finishGame, gameKey, record, setSettings, useProgress, type Outcome } from './lib/progress';
 import { canSpeak, speak, stopSpeaking } from './lib/audio';
 import { Bottom, CueBox, Verse, go } from './ui';
 import { LessonChrome, Summary } from './lesson';
@@ -19,12 +18,12 @@ const clock = (ms: number) => {
 };
 
 // --- Cue Catch ------------------------------------------------------------------
-type Beat = { who: string; text: string; isCue: boolean };
+type Beat = { who: string; role?: string; speechId?: string; text: string; isCue: boolean };
 type Round = { item: Item; beats: Beat[] };
 
 function buildRounds(roleId: string, sceneId: string): Round[] {
   const scene = sceneById.get(sceneId)!;
-  const wanted = new Set(pickSpeeches(getState(), roleId, sceneId).map((s) => s.id));
+  const wanted = new Set(speechItems(roleId, sceneId).map((s) => s.id));
   const mine = new Map(speechItems(roleId, sceneId).map((s) => [s.id, s]));
   const rand = seeded(sceneId + roleId + Date.now());
   const rounds: Round[] = [];
@@ -37,7 +36,7 @@ function buildRounds(roleId: string, sceneId: string): Round[] {
       if (p.k === 's' && p.role === roleId) break;
       if (p.k === 'd') { direction ??= { who: 'Stage', text: p.text, isCue: false }; continue; }
       const sp = spokenLines(p.lines);
-      if (sp.length) before.unshift({ who: roleName(p.role), text: sp.slice(-2).join(' '), isCue: false });
+      if (sp.length) before.unshift({ who: roleName(p.role), role: p.role, speechId: p.id, text: sp.slice(-2).join(' '), isCue: false });
     }
     const want = 1 + Math.floor(rand() * 3);
     const beats = before.length ? before.slice(-want) : direction ? [direction] : [];
@@ -59,6 +58,7 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
   const [revealed, setRevealed] = useState(false);
   const [tally, setTally] = useState({ good: 0, ok: 0, miss: 0 });
   const [finished, setFinished] = useState(false);
+  const [skipped, setSkipped] = useState(0);
   // On stage, cues are heard, not read. "listen" speaks the other lines and hides their words.
   const [sound, setSound] = useState<'watch' | 'listen' | null>(canSpeak() ? null : 'watch');
   const rate = useProgress().settings.rate;
@@ -66,23 +66,23 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
 
   useEffect(() => () => stopSpeaking(), []);
   useEffect(() => {
-    if (!round || phase !== 'watch' || !sound) return;
+    if (finished || !round || phase !== 'watch' || !sound) return;
     const beat = round.beats[b];
     let live = true;
     let timer: ReturnType<typeof setTimeout> | undefined;
     const after = () => { if (!live) return; if (beat.isCue) { setCaught(false); setPhase('say'); } else setB(b + 1); };
     if (sound === 'listen' && beat.who !== 'Stage') {
-      speak(beat.text, beat.who, rate).then(() => { if (live) timer = setTimeout(after, beat.isCue ? 2500 : 350); });
+      speak(beat.text, beat.role ?? beat.who, rate, beat.speechId).then(() => { if (live) timer = setTimeout(after, beat.isCue ? 2500 : 350); });
     } else {
       const read = Math.max(1600, Math.min(5000, 900 + beat.text.length * 55));
       timer = setTimeout(after, beat.isCue ? read + 2500 : read);
     }
     return () => { live = false; if (timer) clearTimeout(timer); if (sound === 'listen') stopSpeaking(); };
-  }, [round, b, phase, sound, rate]);
+  }, [round, b, phase, sound, rate, finished]);
 
   if (!rounds.length) return <Summary title="No cues to catch here" lines={['You start this scene, or you have no lines in it.']} exit={exit} />;
   if (finished) {
-    return <Summary title="Cue Catch done!" exit={exit} lines={[`You caught ${tally.good + tally.ok} of ${rounds.length} cues.`, tally.miss ? `${tally.miss} slipped past. Try again soon.` : 'Not one got past you.']} />;
+    return <Summary title="Cue Catch done!" exit={exit} lines={[`You caught ${tally.good + tally.ok} of ${tally.good + tally.ok + tally.miss} practised cues.`, ...(skipped ? [`${skipped} skipped. Their progress has not changed.`] : []), tally.miss ? `${tally.miss} slipped past. Try again soon.` : skipped ? 'Come back to the skipped cues when you need them.' : 'Not one got past you.']} />;
   }
 
   if (!sound) {
@@ -112,16 +112,19 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
     if (round.beats[b].isCue) { setCaught(true); setPhase('say'); }
     else { setEarly(early + 1); setFlash(flash + 1); }
   };
-  const next = () => {
+  const next = (skipping = false) => {
+    if (skipping) setSkipped(n => n + 1);
     const outcome: Outcome = !caught ? 'miss' : early ? 'ok' : 'good';
-    record(partIds(round.item), outcome, 4);
-    setTally((t) => ({ ...t, [outcome]: t[outcome] + 1 }));
-    if (r + 1 >= rounds.length) { finishGame(gameKey(roleId, sceneId, 'cue')); setFinished(true); return; }
+    if (!skipping) {
+      record(partIds(round.item), outcome, 4);
+      setTally((t) => ({ ...t, [outcome]: t[outcome] + 1 }));
+    }
+    if (r + 1 >= rounds.length) { if (!skipped && !skipping) finishGame(gameKey(roleId, sceneId, 'cue')); setFinished(true); return; }
     setR(r + 1); setB(0); setPhase('watch'); setCaught(false); setEarly(0); setRevealed(false);
   };
 
   return (
-    <LessonChrome progress={(r + (phase === 'say' ? 0.5 : 0)) / rounds.length} exit={exit}>
+    <LessonChrome progress={(r + (phase === 'say' ? 0.5 : 0)) / rounds.length} exit={exit} onSkip={() => next(true)}>
       <h2 style={{ marginBottom: 12 }}>{phase === 'watch' ? (sound === 'listen' ? 'Listen for your cue…' : 'Wait for your cue…') : caught ? 'Caught it! Now say your line.' : 'That was your cue.'}</h2>
       <div style={{ display: 'grid', gap: 10 }}>
         {round.beats.slice(0, b + 1).map((beat, i) => (
@@ -148,7 +151,7 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
         ) : !revealed ? (
           <button className="btn btn-primary btn-wide" onClick={() => setRevealed(true)}>Show my line</button>
         ) : (
-          <button className="btn btn-primary btn-wide" onClick={next}>Continue</button>
+          <button className="btn btn-primary btn-wide" onClick={() => next()}>Continue</button>
         )}
       </Bottom>
     </LessonChrome>
@@ -173,6 +176,7 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
   const [paused, setPaused] = useState(false);
   const [checked, setChecked] = useState<Outcome | null>(null);
   const [tally, setTally] = useState({ good: 0, miss: 0 });
+  const [skipped, setSkipped] = useState(0);
   const endRef = useRef<HTMLDivElement>(null);
   const voice = progress.settings.voice && canSpeak();
   const rate = progress.settings.rate;
@@ -190,7 +194,7 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
     else {
       const text = spokenLines(item.lines).join(' ');
       if (!text) advance();
-      else if (voice) speak(text, item.role, rate).then(() => { timer = setTimeout(advance, 250); });
+      else if (voice) speak(text, item.role, rate, item.id).then(() => { if (live) timer = setTimeout(advance, 250); });
       else timer = setTimeout(advance, Math.min(7000, 900 + text.length * 50) / rate);
     }
     return () => { live = false; if (timer) clearTimeout(timer); stopSpeaking(); };
@@ -235,8 +239,8 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
   }
 
   if (idx >= scene.items.length) {
-    return <Summary title="Scene complete!" exit={exit} again={() => { setIdx(0); setTally({ good: 0, miss: 0 }); setChecked(null); }}
-      lines={[`${tally.good} of ${tally.good + tally.miss} speeches went well.`, mode === 'hidden' && !tally.miss ? 'You are off book for this scene!' : 'Run it again to make it stick.']} />;
+    return <Summary title="Scene complete!" exit={exit} again={() => { setIdx(0); setTally({ good: 0, miss: 0 }); setSkipped(0); setChecked(null); }}
+      lines={[`${tally.good} of ${tally.good + tally.miss} practised speeches went well.`, ...(skipped ? [`${skipped} speeches skipped. Their progress has not changed.`] : []), mode === 'hidden' && !tally.miss && !skipped && tally.good === mine.size ? 'You are off book for this scene!' : 'Run it again to make it stick.']} />;
   }
 
   const rateMine = (o: Outcome) => {
@@ -244,12 +248,14 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
     record(partIds(sp), o, MODES.find((m) => m.id === mode)!.cap);
     setTally((t) => (o === 'miss' ? { ...t, miss: t.miss + 1 } : { ...t, good: t.good + 1 }));
     setChecked(null);
-    if (idx + 1 >= scene.items.length) finishGame(gameKey(roleId, sceneId, 'partner'));
+    if (!skipped && idx + 1 >= scene.items.length) finishGame(gameKey(roleId, sceneId, 'partner'));
     setIdx(idx + 1);
   };
 
   return (
-    <LessonChrome progress={idx / scene.items.length} exit={exit}>
+    <LessonChrome progress={idx / scene.items.length} exit={exit} onSkip={checked ? undefined : () => {
+      stopSpeaking(); setChecked(null); if (isMine) setSkipped(n => n + 1); setIdx(idx + 1);
+    }}>
       <div style={{ display: 'grid', gap: 10 }}>
         {scene.items.slice(Math.max(0, idx - 3), idx + 1).map((it, k, arr) => {
           const current = k === arr.length - 1;
@@ -258,12 +264,12 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
           const lines = spokenLines(it.lines);
           if (!lines.length) return null;
           if (me && current && mode !== 'see') {
-            const portion = checkPortion(lines);
+            const portion = { lines, partial: false };
             return (
               <div key={it.id} style={{ display: 'grid', gap: 8 }}>
                 <div className="eyebrow">{roleName(it.role)} · you{portion.partial ? ' · checking the start of this speech' : ''}</div>
                 {mode === 'letters' && !checked && <div className="verse muted" style={{ fontSize: 16 }}>{portion.lines.map((l, n) => <div key={n}>{firstLetters(l)}</div>)}</div>}
-                <LineCheck lines={portion.lines} partial={portion.partial} onDone={setChecked} />
+                <LineCheck lines={portion.lines} maxRecordingSeconds={300} onDone={setChecked} />
                 {checked && portion.partial && <div className="card-soft"><div className="eyebrow">The whole speech</div><Verse lines={lines} /></div>}
               </div>
             );
@@ -287,10 +293,7 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
             <div className="muted" style={{ fontSize: 14, textAlign: 'center' }}>Your turn. Say your line, then check it above.</div>
           )
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-            <button className="btn" onClick={() => setPaused(!paused)}>{paused ? '▶ Resume' : '⏸ Pause'}</button>
-            <button className="btn" onClick={() => { stopSpeaking(); setIdx(idx + 1); }}>Skip ⏭</button>
-          </div>
+          <button className="btn btn-wide" onClick={() => setPaused(!paused)}>{paused ? '▶ Resume' : '⏸ Pause'}</button>
         )}
       </Bottom>
     </LessonChrome>
@@ -308,6 +311,7 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
   const [i, setI] = useState(0);
   const [checked, setChecked] = useState<Outcome | null>(null);
   const [misses, setMisses] = useState(0);
+  const [skipped, setSkipped] = useState(0);
   const [result, setResult] = useState<{ ms: number; wasBest: boolean } | null>(null);
 
   useEffect(() => {
@@ -319,8 +323,8 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
   if (!list.length) return <Summary title="No lines here" lines={['You have no lines in this scene.']} exit={exit} />;
   if (result) {
     return <Summary title={result.wasBest ? 'New best time!' : 'Speed Run done!'} exit={exit}
-      again={() => { setResult(null); setStarted(null); setI(0); setMisses(0); setChecked(null); }}
-      lines={[`Your time: ${clock(result.ms)}${misses ? ` (includes ${misses * 5}s for ${misses} missed)` : ''}`, best != null ? `Best: ${clock(best)}` : '']} />;
+      again={() => { setResult(null); setStarted(null); setI(0); setMisses(0); setSkipped(0); setChecked(null); }}
+      lines={[`Your time: ${clock(result.ms)}${misses ? ` (includes ${misses * 5}s for ${misses} missed)` : ''}`, ...(skipped ? [`${skipped} skipped. This practice run does not set a best time or change skipped-line progress.`] : []), best != null ? `Best: ${clock(best)}` : '']} />;
   }
   if (started == null) {
     return (
@@ -339,14 +343,15 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
 
   const item = list[i];
   const portion = checkPortion(item.lines);
-  const rateIt = (o: Outcome) => {
-    record(partIds(item), o, 5);
+  const rateIt = (o: Outcome | null) => {
+    if (o) record(partIds(item), o, 5);
+    else setSkipped(n => n + 1);
     const m = misses + (o === 'miss' ? 1 : 0);
     setMisses(m);
     if (i + 1 >= list.length) {
       const ms = Date.now() - started + m * 5000;
-      finishGame(key, ms);
-      setResult({ ms, wasBest: best == null || ms < best });
+      if (!skipped && o) finishGame(key, ms);
+      setResult({ ms, wasBest: !skipped && o != null && (best == null || ms < best) });
       return;
     }
     setI(i + 1);
@@ -354,7 +359,7 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
   };
 
   return (
-    <LessonChrome progress={i / list.length} exit={exit}>
+    <LessonChrome progress={i / list.length} exit={exit} onSkip={checked ? undefined : () => rateIt(null)}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
         <span className="chip">{i + 1} / {list.length}</span>
         <span style={{ fontWeight: 900, fontSize: 22, fontVariantNumeric: 'tabular-nums' }}>{clock(now - started + misses * 5000)}</span>
