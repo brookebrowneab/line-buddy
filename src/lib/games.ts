@@ -2,19 +2,19 @@ import { allItems, items, partIds, seeded, shuffle, speechItems, type Item } fro
 import { dayNumber, isDue, isTrouble, levelOf, type State } from './progress';
 
 export type GameId = 'understand' | 'why' | 'letters' | 'vanish' | 'scramble' | 'cue' | 'sayit' | 'partner' | 'speed';
-export type Game = { id: GameId; name: string; blurb: string; icon: string; cap: number };
+export type Game = { id: GameId; name: string; blurb: string; icon: string; cap: number; stage: string };
 
-/** In path order: easy at the top, off-book at the bottom. `cap` is the highest mastery level a game can prove. */
+/** Suggested learning stages; cap 0 means the game does not score word memory. */
 export const GAMES: Game[] = [
-  { id: 'understand', name: 'Understand', blurb: 'Read your lines next to plain English', icon: '💡', cap: 1 },
-  { id: 'why', name: 'Thought Cues', blurb: 'What makes you say each line?', icon: '💭', cap: 2 },
-  { id: 'letters', name: 'First Letters', blurb: 'Only the first letter of each word', icon: '🔤', cap: 2 },
-  { id: 'vanish', name: 'Vanishing Words', blurb: 'Fill the gaps. More vanish each time', icon: '🫥', cap: 3 },
-  { id: 'scramble', name: 'Scramble', blurb: 'Put the pieces back in order', icon: '🧩', cap: 3 },
-  { id: 'cue', name: 'Cue Catch', blurb: 'Spot the moment it is your turn', icon: '🎯', cap: 4 },
-  { id: 'sayit', name: 'Say It', blurb: 'Hear the cue, say the line, check', icon: '🎤', cap: 5 },
-  { id: 'partner', name: 'Scene Partner', blurb: 'Run the scene with the other voices', icon: '🎭', cap: 5 },
-  { id: 'speed', name: 'Speed Run', blurb: 'Every cue, against the clock', icon: '⚡', cap: 5 },
+  { id: 'understand', name: 'Understand', blurb: 'Read your lines next to plain English', icon: '💡', cap: 0, stage: 'Understand the scene' },
+  { id: 'why', name: 'Thought Cues', blurb: 'What makes you say each line?', icon: '💭', cap: 0, stage: 'Understand the scene' },
+  { id: 'cue', name: 'Cue Catch', blurb: 'Spot your turn · builds cue recognition', icon: '🎯', cap: 0, stage: 'Recognize and arrange' },
+  { id: 'scramble', name: 'Scramble', blurb: 'Put the pieces back in order', icon: '🧩', cap: 1, stage: 'Recognize and arrange' },
+  { id: 'letters', name: 'First Letters', blurb: 'Only the first letter of each word', icon: '🔤', cap: 2, stage: 'Recall the words' },
+  { id: 'vanish', name: 'Vanishing Words', blurb: 'Fill the gaps. More vanish each time', icon: '🫥', cap: 3, stage: 'Recall the words' },
+  { id: 'sayit', name: 'Say It', blurb: 'Hear the cue, say the line, check', icon: '🎤', cap: 5, stage: 'Rehearse the performance' },
+  { id: 'partner', name: 'Scene Partner', blurb: 'Run the scene with the other voices', icon: '🎭', cap: 5, stage: 'Rehearse the performance' },
+  { id: 'speed', name: 'Speed Run', blurb: 'Optional timed whole-speech challenge', icon: '⚡', cap: 5, stage: 'Rehearse the performance' },
 ];
 export const gameById = new Map(GAMES.map((g) => [g.id, g]));
 
@@ -91,19 +91,19 @@ function stepForLevel(state: State, item: Item): Step {
 }
 
 export function troubleItems(state: State, roleId: string): Item[] {
-  return allItems(roleId).filter((it) => isTrouble(state.items[it.id]));
+  return allItems(roleId).filter((it) => isTrouble(state.wordItems[it.id]));
 }
 export function dueItems(state: State, roleId: string): Item[] {
   const today = dayNumber();
-  return allItems(roleId).filter((it) => isDue(state.items[it.id], today) && levelOf(state, it.id) < 5);
+  return allItems(roleId).filter((it) => isDue(state.wordItems[it.id], today) && levelOf(state, it.id) < 5);
 }
 
 /** "Today's practice": a short mix of lines due for review, then new ones. */
 export function todaySteps(state: State, roleId: string, size = BATCH): Step[] {
   const all = allItems(roleId);
-  const trouble = all.filter((it) => isTrouble(state.items[it.id]));
+  const trouble = all.filter((it) => isTrouble(state.wordItems[it.id]));
   const due = dueItems(state, roleId).sort((a, b) => levelOf(state, a.id) - levelOf(state, b.id));
-  const fresh = all.filter((it) => !state.items[it.id]);
+  const fresh = all.filter((it) => !state.wordItems[it.id]);
   const picked: Item[] = [];
   for (const it of [...trouble, ...due, ...fresh]) {
     if (picked.length >= size) break;

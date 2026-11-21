@@ -3,12 +3,16 @@ import { useSyncExternalStore } from 'react';
 
 export type Outcome = 'good' | 'ok' | 'miss';
 export type ItemState = { l: number; due: number; miss: number; seen: number; last: Outcome };
+export type CueState = { seen: number; caught: number; miss: number; last: Outcome; mode: 'read' | 'listen' };
 export type GameState = { done: number; best?: number };
 export type State = {
   v: 1;
   roles: string[];
   active: string | null;
+  /** Earlier mixed scores, preserved as history rather than word evidence. */
   items: Record<string, ItemState>;
+  wordItems: Record<string, ItemState>;
+  cues: Record<string, CueState>;
   games: Record<string, GameState>;
   days: Record<string, number>;
   settings: { microphone: boolean; voice: boolean; rate: number; speechProvider: 'local'; showTranscripts: boolean };
@@ -19,7 +23,7 @@ export const MAX_LEVEL = 5;
 export const REVIEW_GAP = [0, 0, 1, 2, 4, 7];
 
 const KEY = 'line-buddy:v1';
-const fresh = (): State => ({ v: 1, roles: [], active: null, items: {}, games: {}, days: {}, settings: { microphone: false, voice: true, rate: 1, speechProvider: 'local', showTranscripts: false } });
+const fresh = (): State => ({ v: 1, roles: [], active: null, items: {}, wordItems: {}, cues: {}, games: {}, days: {}, settings: { microphone: false, voice: true, rate: 1, speechProvider: 'local', showTranscripts: false } });
 
 export const dayNumber = (d = new Date()) => Math.floor((d.getTime() - d.getTimezoneOffset() * 60000) / 86400000);
 export const dayKey = (n: number) => new Date(n * 86400000).toISOString().slice(0, 10);
@@ -48,13 +52,19 @@ export function streak(days: Record<string, number>, today: number): number {
   return n;
 }
 
+/** Old backups keep their mixed scores intact; only explicit word records count. */
+function hydrate(value: unknown): State | null {
+  if (!value || typeof value !== 'object') return null;
+  const s = value as Partial<State>;
+  const recordLike = (value: unknown) => !!value && typeof value === 'object' && !Array.isArray(value);
+  if (s.v !== 1 || !recordLike(s.items)) return null;
+  if ((s.wordItems !== undefined && !recordLike(s.wordItems)) || (s.cues !== undefined && !recordLike(s.cues))) return null;
+  return { ...fresh(), ...s, wordItems: s.wordItems ?? {}, cues: s.cues ?? {}, settings: { ...fresh().settings, ...s.settings, speechProvider: 'local' } } as State;
+}
 function load(): State {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) {
-      const s = JSON.parse(raw);
-      if (s && s.v === 1) return { ...fresh(), ...s, settings: { ...fresh().settings, ...s.settings, speechProvider: 'local' } };
-    }
+    if (raw) return hydrate(JSON.parse(raw)) ?? fresh();
   } catch { /* private mode or corrupt data: start fresh */ }
   return fresh();
 }
@@ -80,12 +90,32 @@ export function removeRole(id: string) {
   set({ ...state, roles, active: state.active === id ? roles[0] ?? null : state.active });
 }
 
+function withActivity(next: State): State {
+  const day = dayKey(dayNumber());
+  return { ...next, days: { ...next.days, [day]: (next.days[day] ?? 0) + 1 } };
+}
+export function recordStudy() { set(withActivity(state)); }
+/** Only word-checking games write this track. Context-only activity uses cap 0. */
 export function record(ids: string[], outcome: Outcome, cap: number) {
-  const today = dayNumber();
-  const itemsNext = { ...state.items };
-  for (const id of ids) itemsNext[id] = applyOutcome(itemsNext[id], outcome, cap, today);
-  const k = dayKey(today);
-  set({ ...state, items: itemsNext, days: { ...state.days, [k]: (state.days[k] ?? 0) + 1 } });
+  if (cap <= 0) { recordStudy(); return; }
+  const today = dayNumber(), wordItems = { ...state.wordItems };
+  for (const id of ids) wordItems[id] = applyOutcome(wordItems[id], outcome, cap, today);
+  set(withActivity({ ...state, wordItems }));
+}
+export function recordCue(speechId: string, outcome: Outcome, mode: CueState['mode']) {
+  const previous = state.cues[speechId];
+  const result: CueState = {
+    seen: (previous?.seen ?? 0) + 1,
+    caught: (previous?.caught ?? 0) + (outcome === 'miss' ? 0 : 1),
+    miss: (previous?.miss ?? 0) + (outcome === 'miss' ? 1 : 0),
+    last: outcome, mode,
+  };
+  set(withActivity({ ...state, cues: { ...state.cues, [speechId]: result } }));
+}
+export function cueSummary(s: State, speechIds: string[]) {
+  const ids = [...new Set(speechIds)];
+  return { total: ids.length, tried: ids.filter(id => s.cues[id]?.seen).length,
+    caught: ids.filter(id => s.cues[id] && s.cues[id].last !== 'miss').length };
 }
 
 // Full-speech Speed Run records are a different challenge from the old excerpts.
@@ -101,7 +131,7 @@ export function setSettings(patch: Partial<State['settings']>) {
   set({ ...state, settings: { ...state.settings, ...patch } });
 }
 
-export const levelOf = (s: State, id: string) => s.items[id]?.l ?? 0;
+export const levelOf = (s: State, id: string) => s.wordItems[id]?.l ?? 0;
 export function mastery(s: State, ids: string[]): number {
   if (!ids.length) return 0;
   return ids.reduce((sum, id) => sum + levelOf(s, id), 0) / (ids.length * MAX_LEVEL);
@@ -112,9 +142,9 @@ export const isDue = (it: ItemState | undefined, today: number) => !!it && it.l 
 export function exportData(): string { return JSON.stringify(state, null, 2); }
 export function importData(json: string): boolean {
   try {
-    const s = JSON.parse(json);
-    if (!s || s.v !== 1 || typeof s.items !== 'object') return false;
-    set({ ...fresh(), ...s, settings: { ...fresh().settings, ...s.settings, speechProvider: 'local' } });
+    const next = hydrate(JSON.parse(json));
+    if (!next) return false;
+    set(next);
     return true;
   } catch { return false; }
 }

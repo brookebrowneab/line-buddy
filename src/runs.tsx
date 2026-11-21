@@ -1,11 +1,12 @@
 // The three games that run through a scene: Cue Catch, Scene Partner, Speed Run.
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { partIds, roleName, sceneById, seeded, speechItems, spokenLines, tokens, type Item, type Speech } from './lib/script';
-import { finishGame, gameKey, record, setSettings, useProgress, type Outcome } from './lib/progress';
+import { partIds, roleName, sceneById, speechItems, spokenLines, tokens, type Speech } from './lib/script';
+import { finishGame, gameKey, record, recordCue, setSettings, useProgress, type Outcome } from './lib/progress';
 import { canSpeak, speak, stopSpeaking } from './lib/audio';
 import { Bottom, CueBox, Verse, go } from './ui';
 import { LessonChrome, Summary } from './lesson';
 import { LineCheck } from './check';
+import { buildCueRounds } from './lib/cues';
 
 type RunProps = { roleId: string; sceneId: string; exit: string };
 
@@ -18,37 +19,9 @@ const clock = (ms: number) => {
 };
 
 // --- Cue Catch ------------------------------------------------------------------
-type Beat = { who: string; role?: string; speechId?: string; text: string; isCue: boolean };
-type Round = { item: Item; beats: Beat[] };
-
-function buildRounds(roleId: string, sceneId: string): Round[] {
-  const scene = sceneById.get(sceneId)!;
-  const wanted = new Set(speechItems(roleId, sceneId).map((s) => s.id));
-  const mine = new Map(speechItems(roleId, sceneId).map((s) => [s.id, s]));
-  const rand = seeded(sceneId + roleId + Date.now());
-  const rounds: Round[] = [];
-  scene.items.forEach((it, i) => {
-    if (it.k !== 's' || it.role !== roleId || !wanted.has(it.id)) return;
-    const before: Beat[] = [];
-    let direction: Beat | null = null;
-    for (let j = i - 1; j >= 0; j--) {
-      const p = scene.items[j];
-      if (p.k === 's' && p.role === roleId) break;
-      if (p.k === 'd') { direction ??= { who: 'Stage', text: p.text, isCue: false }; continue; }
-      const sp = spokenLines(p.lines);
-      if (sp.length) before.unshift({ who: roleName(p.role), role: p.role, speechId: p.id, text: sp.slice(-2).join(' '), isCue: false });
-    }
-    const want = 1 + Math.floor(rand() * 3);
-    const beats = before.length ? before.slice(-want) : direction ? [direction] : [];
-    if (!beats.length) return;
-    beats[beats.length - 1] = { ...beats[beats.length - 1], isCue: true };
-    rounds.push({ item: mine.get(it.id)!, beats });
-  });
-  return rounds;
-}
 
 export function CueCatch({ roleId, sceneId, exit }: RunProps) {
-  const rounds = useMemo(() => buildRounds(roleId, sceneId), [roleId, sceneId]);
+  const rounds = useMemo(() => buildCueRounds(roleId, sceneId), [roleId, sceneId]);
   const [r, setR] = useState(0);
   const [b, setB] = useState(0);
   const [phase, setPhase] = useState<'watch' | 'say'>('watch');
@@ -94,7 +67,7 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
         <div style={{ display: 'grid', gap: 14 }}>
           <div style={{ fontSize: 48 }} aria-hidden="true">🎯</div>
           <h1>Cue Catch</h1>
-          <div className="muted">The scene plays. Tap the button the moment it is your turn to speak.</div>
+          <div className="muted">The scene plays. Tap the button the moment it is your turn to speak. This builds cue recognition; word memorization is checked in the word games.</div>
           <button className="tile" onClick={() => setSound('watch')}>
             <span className="tile-icon" aria-hidden="true">👀</span>
             <span><b>Read the cues</b><br /><span className="muted" style={{ fontSize: 15 }}>The other lines appear on screen</span></span>
@@ -116,7 +89,7 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
     if (skipping) setSkipped(n => n + 1);
     const outcome: Outcome = !caught ? 'miss' : early ? 'ok' : 'good';
     if (!skipping) {
-      record(partIds(round.item), outcome, 4);
+      recordCue(round.item.speechId, outcome, sound === 'listen' ? 'listen' : 'read');
       setTally((t) => ({ ...t, [outcome]: t[outcome] + 1 }));
     }
     if (r + 1 >= rounds.length) { if (!skipped && !skipping) finishGame(gameKey(roleId, sceneId, 'cue')); setFinished(true); return; }
@@ -161,7 +134,7 @@ export function CueCatch({ roleId, sceneId, exit }: RunProps) {
 // --- Scene Partner -----------------------------------------------------------------
 type Mode = 'see' | 'letters' | 'hidden';
 const MODES: { id: Mode; name: string; blurb: string; cap: number }[] = [
-  { id: 'see', name: 'Script in hand', blurb: 'Your lines are shown', cap: 2 },
+  { id: 'see', name: 'Script in hand', blurb: 'Your lines are shown · rehearsal only', cap: 0 },
   { id: 'letters', name: 'First letters', blurb: 'A hint for each word', cap: 4 },
   { id: 'hidden', name: 'Off book', blurb: 'Your lines are hidden', cap: 5 },
 ];

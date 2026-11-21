@@ -4,10 +4,12 @@ import { buildSteps, todaySteps, BATCH } from '../src/lib/games';
 import { items, script } from '../src/lib/script';
 afterEach(() => resetAll());
 describe('app-wide listening settings', () => {
-  it('loads old progress with local recognition as default, without losing mastery', () => {
+  it('keeps old progress as history and migrates listening settings', () => {
     expect(importData(JSON.stringify({ v: 1, roles: ['mercutio'], active: 'mercutio', items: { example: { l: 3, due: 1, miss: 0, seen: 2, last: 'good' } }, settings: { voice: false, rate: 0.8, speechProvider: 'elevenlabs' } }))).toBe(true);
     expect(getState().settings).toEqual({ microphone: false, voice: false, rate: 0.8, speechProvider: 'local', showTranscripts: false });
     expect(getState().items.example.l).toBe(3);
+    expect(getState().wordItems).toEqual({});
+    expect(getState().cues).toEqual({});
   });
   it('persists provider and comparison preferences without changing learning records', () => {
     const before = getState();

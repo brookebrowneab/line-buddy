@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { Fragment, lazy, Suspense } from 'react';
 import { PrivacyLinks, PrivacyPage } from './privacy';
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { allItems, items, roleById, roleName, sceneById, sceneLabel, script, spokenLines, type Role, type Scene } from './lib/script';
@@ -9,6 +9,7 @@ import {
 import { GAMES, buildSteps, dueItems, gameById, todaySteps, troubleItems, troubleSteps, type GameId } from './lib/games';
 import { Lesson } from './lesson';
 import { LearningIntroduction } from './scene-context';
+import { CueProgress, EarlierProgress } from './skill-progress';
 import { initializeWhisper, subscribeWhisper, whisperState } from './lib/local-whisper';
 import { SpeechPlayback } from './speech-playback';
 import { CueCatch, ScenePartner, SpeedRun } from './runs';
@@ -84,7 +85,7 @@ function Home({ state, role }: { state: State; role: Role }) {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10, marginBottom: 14 }}>
         <button className="card" style={{ textAlign: 'center', padding: 12 }} onClick={() => go('/progress')}>
           <div style={{ fontSize: 26, fontWeight: 900, color: 'var(--good)' }}>{pct(overall)}</div>
-          <div className="eyebrow">Off book</div>
+          <div className="eyebrow">Word memory</div>
         </button>
         <button className="card" style={{ textAlign: 'center', padding: 12 }} onClick={() => go('/progress')}>
           <div style={{ fontSize: 26, fontWeight: 900 }}>🔥 {days}</div>
@@ -96,6 +97,8 @@ function Home({ state, role }: { state: State; role: Role }) {
         </button>
       </div>
 
+      <CueProgress state={state} roleId={role.id} />
+      <EarlierProgress state={state} brief />
       <button className="btn btn-gold btn-wide" onClick={() => go('/play/today')}>
         ▶ Today’s practice{due ? ` · ${due} to review` : ''}
       </button>
@@ -104,7 +107,7 @@ function Home({ state, role }: { state: State; role: Role }) {
         {scenes.map((s, n) => {
           const list = items(role.id, s.id);
           const m = mastery(state, list.map((i) => i.id));
-          const started = list.some((i) => state.items[i.id]);
+          const started = list.some((i) => state.wordItems[i.id]);
           const head = s.act !== lastAct;
           lastAct = s.act;
           return (
@@ -155,16 +158,20 @@ function SceneScreen({ state, role, scene }: { state: State; role: Role; scene: 
         <div>
           <div className="eyebrow">{sceneLabel(scene)}</div>
           <h1 style={{ fontSize: 26 }}>{scene.title}</h1>
-          <div className="muted" style={{ fontSize: 14 }}>{list.length} {list.length === 1 ? 'part' : 'parts'} to learn as {role.name}</div>
+          <div className="muted" style={{ fontSize: 14 }}>Word memorization · {list.length} {list.length === 1 ? 'part' : 'parts'} as {role.name}</div>
         </div>
       </div>
       <SceneBrief scene={scene} role={role} />
+      <CueProgress state={state} roleId={role.id} sceneId={scene.id} />
+      <p className="muted">Follow the suggested stages, or choose any game.</p>
       <button className="btn btn-wide" style={{ marginBottom: 16 }} onClick={() => go(`/read/${scene.id}`)}>📖 Read the whole scene</button>
       {list.length === 0 ? <div className="card-soft">You have no lines in this scene.</div> : (
         <div style={{ display: 'grid', gap: 10 }}>
           {GAMES.map((g, n) => {
             const gs = state.games[gameKey(role.id, scene.id, g.id)];
             return (
+              <Fragment key={g.id}>
+              {(n === 0 || GAMES[n - 1].stage !== g.stage) && <h2 className="game-stage">{g.stage}</h2>}
               <button key={g.id} className="tile" onClick={() => go(`/play/${g.id}/${scene.id}`)} style={g.id === nextGame ? { borderColor: 'var(--accent)' } : undefined}>
                 <span className="tile-icon" aria-hidden="true">{g.icon}</span>
                 <span style={{ flex: 1, minWidth: 0 }}>
@@ -173,6 +180,7 @@ function SceneScreen({ state, role, scene }: { state: State; role: Role; scene: 
                 </span>
                 {gs?.done ? <span className="chip chip-good">✓{gs.done > 1 ? ` ×${gs.done}` : ''}</span> : g.id === nextGame ? <span className="chip chip-accent">Start</span> : null}
               </button>
+              </Fragment>
             );
           })}
         </div>
@@ -243,11 +251,14 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
         <div>
           <div className="eyebrow">Romeo and Juliet</div>
           <h2 style={{ fontSize: 24 }}>{role.name}</h2>
+          <div className="muted">Word memorization</div>
           <div className="muted" style={{ fontSize: 15 }}>{solid} of {all.length} parts solid · 🔥 {streak(state.days, today)} day streak</div>
           <div className="muted" style={{ fontSize: 13 }}>{new Date().toLocaleDateString(undefined, { dateStyle: 'long' })}</div>
         </div>
       </div>
 
+      <CueProgress state={state} roleId={role.id} />
+      <EarlierProgress state={state} />
       <div className="eyebrow" style={{ marginBottom: 6 }}>Last two weeks</div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(14, 1fr)', gap: 4, marginBottom: 18 }}>
         {Array.from({ length: 14 }, (_, k) => today - 13 + k).map((d) => (

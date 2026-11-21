@@ -247,3 +247,13 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 @media (max-width: 440px) {
   .new-exchange { scroll-margin-top: 112px; }
 }
+
+.skill-progress { margin: 18px 0; padding: 16px 0; border-block: 1px solid var(--line); }
+.skill-progress h2 { font-size: 19px; margin-bottom: 8px; }
+.skill-progress p { margin: 6px 0 0; }
+.skill-progress .muted { font-size: 14px; line-height: 1.6; }
+.game-stage { font-size: 20px; margin: 20px 0 4px; }
+.earlier-progress { margin: 18px 0 24px; line-height: 1.6; }
+.earlier-progress summary { cursor: pointer; font-weight: 700; padding: 10px 0; }
+.earlier-progress-note { font-size: 14px; line-height: 1.6; margin: 0 0 18px; }
+.earlier-progress-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }

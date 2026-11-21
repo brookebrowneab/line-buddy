@@ -156,3 +156,24 @@ checks only a short opening. Its microphone limit is five minutes per speech,
 matching whole-speech practice. Full-speech best times use a separate versioned
 record; old excerpt-only records remain stored and are not compared with the
 longer challenge.
+
+## Separate word memory and cue recognition
+
+The suggested scene path is Understand, Thought Cues, Cue Catch, Scramble, First
+Letters, Vanishing Words, Say It, Scene Partner, then optional Speed Run. Screens
+group these into context, recognition/arrangement, word recall and performance.
+
+`wordItems` stores word-check outcomes. Cue Catch writes only per-speech `cues`
+results (latest outcome, attempts, catches/misses and read/listen mode). Home,
+scene and progress screens show cue recognition independently of word memory.
+Cue results do not change word mastery, trouble lines or word-review scheduling.
+Context-only study and script-in-hand rehearsal count as activity without word
+credit. Scramble provides limited supported-word credit; progressively less
+supported word checks can raise the word level further.
+
+Older `items` scores mixed several activities and cannot be separated reliably.
+They remain intact as earlier practice history, together with completed games,
+streaks and settings; they are not treated as verified word-memory evidence.
+New word and cue records start separately. Export/import preserves all three
+sets, and the progress screen explains the earlier history. Progress remains on the device; this change adds no accounts, identifiers
+or uploads.

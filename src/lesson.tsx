@@ -1,7 +1,7 @@
 // Runs a list of practice cards one at a time, Brilliant-style: one task per
 // screen, a progress bar on top, one big button at the bottom.
 import { useId, useState, type ReactNode } from 'react';
-import { record, type Outcome } from './lib/progress';
+import { record, recordStudy, type Outcome } from './lib/progress';
 import type { Step } from './lib/games';
 import { StepCard } from './cards';
 import { CompleteScene, SceneContext, type LearningContext } from './scene-context';
@@ -73,7 +73,8 @@ export function Lesson({ steps, exit, title, onFinish, controls, learningContext
   const quiet = step.kind === 'understand';
   const onOutcome = (o: Outcome) => {
     if (outcome) return;
-    record(step.ids, o, step.cap);
+    if (['understand', 'match', 'why'].includes(step.kind)) recordStudy();
+    else record(step.ids, o, step.cap);
     setOutcome(o);
     setTally((t) => ({ ...t, [o]: t[o] + 1 }));
     if (o === 'miss' && !learningContext?.inOrder && !step.again && step.kind !== 'understand' && step.kind !== 'match') {
