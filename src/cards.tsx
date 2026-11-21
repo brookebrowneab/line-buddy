@@ -334,7 +334,7 @@ export function SayItCard({ step, onOutcome, done }: CardProps) {
         ? <div className="thought-big"><span aria-hidden="true">💭 </span>{item.why}</div>
         : <CueBox cue={item.cue} why={item.part === 0 ? item.why : undefined} />}
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}><h2 style={{ flex: 1 }}>{step.thoughtOnly ? 'Say the line this sets off' : 'Say your line out loud'}</h2><PartLabel item={item} /></div>
-      <LineCheck lines={item.lines} maxRecordingSeconds={step.wholeSpeech ? 300 : 90} onDone={onOutcome} />
+      <LineCheck previousContextLines={item.cue ? [item.cue.text] : []} lines={item.lines} maxRecordingSeconds={step.wholeSpeech ? 300 : 90} onDone={onOutcome} />
       {!done && microphone && canRecord() && (
         <button className="btn btn-small" onClick={toggleRecord}>{rec ? '⏹ Stop recording' : clip ? '🎙 Record again' : '🎙 Record myself to hear it back (optional)'}</button>
       )}

@@ -21,8 +21,25 @@ function editDistance(a: string, b: string): number {
   }
   return row[b.length];
 }
+/** Conservative Soundex plus spelling distance: phonetics alone accepts too much. */
+export function soundex(word: string): string {
+  const text=normalizeSpeechWord(word);if(!text)return '';
+  const groups:Record<string,string>={b:'1',f:'1',p:'1',v:'1',c:'2',g:'2',j:'2',k:'2',q:'2',s:'2',x:'2',z:'2',d:'3',t:'3',l:'4',m:'5',n:'5',r:'6'};
+  let result=text[0],previous=groups[text[0]]||'';
+  for(const c of text.slice(1)){const code=groups[c]||'';if(code&&code!==previous)result+=code;previous=code;}
+  return result.padEnd(4,'0').slice(0,4);
+}
 const close = (want: string, heard: string) => want === heard ||
-  (want.length >= 4 && editDistance(want, heard) <= (want.length >= 7 ? 2 : 1));
+  (Math.min(want.length,heard.length)>=5 && soundex(want.replace(/s$/,''))===soundex(heard.replace(/s$/,'')) &&
+   editDistance(want,heard)<= (Math.max(want.length,heard.length)>=8?2:1) &&
+   1-editDistance(want,heard)/Math.max(want.length,heard.length)>=.75);
+export function normalizeSpeechText(text:string):string {
+ return text.toLowerCase().replace(/[’‘]/g,"'")
+  .replace(/\b'?tis\b/g,'it is').replace(/\b'?twas\b/g,'it was').replace(/\b'?twere\b/g,'it were')
+  .replace(/\bo'er\b/g,'over').replace(/\bne'er\b/g,'never').replace(/\be'er\b/g,'ever')
+  .replace(/[^a-z0-9\s]/g,'').replace(/\s+/g,' ').trim();
+}
+
 
 /** Align in order. Extra attempts, repeated phrases and false starts are unscored.
  * A corrected word still has to occur later in the right order. Recognized
@@ -68,3 +85,10 @@ export function alignHeard(want: string[], heard: string[]): { hit: boolean[]; s
   return { hit, said };
 }
 export const heardWords = (want: string[], heard: string[]) => alignHeard(want, heard).hit;
+
+export function compareSpeech(targetLine:string,transcript:string) {
+ const targetWords=targetLine.split(/\s+/).filter(word=>normalizeSpeechWord(word));
+ const result=alignHeard(targetWords,transcript.split(/\s+/).filter(word=>normalizeSpeechWord(word)));
+ const matched=result.hit.filter(Boolean).length;
+ return {...result,wordMatches:targetWords.map((word,index)=>({word,matched:result.hit[index],heard:result.said[index]})),accuracy:targetWords.length?matched/targetWords.length:0};
+}

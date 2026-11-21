@@ -1,11 +1,19 @@
-import { apiFetch } from './api';
-import { asPcmWave } from './wav';
+import { asFloat32Pcm } from './wav';
+import { transcribePcm } from './local-whisper';
+import { compareSpeech } from './speech-match';
 export type Recording = { stop: () => void; cancel: () => void };
 export const canRecord = () => typeof MediaRecorder !== 'undefined' && !!navigator.mediaDevices?.getUserMedia;
 
-/** Records locally; only transcribeRecording sends the completed clip to the server. */
+/** Microphone clips remain in memory and are processed only on this device. */
 export async function recordSpeech(onComplete: (audio: Blob) => void, onError: (message: string) => void, maxSeconds = 90): Promise<Recording> {
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  let stream: MediaStream;
+  try { stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+  catch (error) {
+    if (error && typeof error === 'object' && 'name' in error && (error.name === 'NotAllowedError' || error.name === 'SecurityError')) {
+      throw new Error('Microphone permission denied. Allow microphone access in your browser to retry, or type instead.');
+    }
+    throw new Error('Could not open the microphone. Check that it is connected, then retry or type instead.');
+  }
   let recorder: MediaRecorder;
   try {
     const mimeType = ['audio/webm;codecs=opus', 'audio/mp4', 'audio/ogg;codecs=opus'].find(t => MediaRecorder.isTypeSupported(t));
@@ -21,7 +29,7 @@ export async function recordSpeech(onComplete: (audio: Blob) => void, onError: (
     if (bytes > 7 * 1024 * 1024) { cancel(); onError('Recording is too large. Try a shorter speech.'); }
     else chunks.push(e.data);
   };
-  recorder.onerror = () => { cancel(); onError('Recording stopped unexpectedly. Try again or use Browser.'); };
+  recorder.onerror = () => { cancel(); onError('Recording stopped unexpectedly. Try again or type your answer.'); };
   recorder.onstop = () => {
     clearTimeout(timer); release();
     if (!cancelled) onComplete(new Blob(chunks, { type: recorder.mimeType || chunks[0]?.type || 'audio/webm' }));
@@ -31,15 +39,10 @@ export async function recordSpeech(onComplete: (audio: Blob) => void, onError: (
   return { stop: () => { if (recorder.state !== 'inactive') recorder.stop(); }, cancel };
 }
 
-export async function transcribeRecording(audio: Blob, signal: AbortSignal, pcm = false): Promise<{ text: string; model: string }> {
-  const file = pcm ? await asPcmWave(audio) : audio;
+export async function transcribeRecording(audio: Blob, signal: AbortSignal, targetLine: string, previousContextLines: string[] = []) {
   if(signal.aborted)throw new Error('Recording was cancelled.');
-  const form = new FormData(); form.append('audio', file, pcm ? 'speech.wav' : 'speech');
-  const response = await apiFetch('/api/transcription', { method: 'POST', body: form, signal });
-  let result;
-  try { result = await response.json(); } catch { throw new Error('The transcription server is unavailable. Start it locally or use Browser.'); }
-  if(response.status === 401 && typeof window !== 'undefined') window.dispatchEvent(new Event('lines-class-unauthorized'));
-  if (!response.ok) throw new Error(result.error || 'Transcription failed. Try Browser.');
-  if (typeof result.text !== 'string') throw new Error('No transcript was returned. Try again.');
-  return result;
+  const samples = await asFloat32Pcm(audio);
+  if(signal.aborted)throw new Error('Recording was cancelled.');
+  const result = await transcribePcm(samples,signal,targetLine,previousContextLines);
+  return {text:result.text as string,model:result.model as string,...compareSpeech(targetLine,result.text)};
 }

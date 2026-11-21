@@ -269,7 +269,7 @@ export function ScenePartner({ roleId, sceneId, exit }: RunProps) {
               <div key={it.id} style={{ display: 'grid', gap: 8 }}>
                 <div className="eyebrow">{roleName(it.role)} · you{portion.partial ? ' · checking the start of this speech' : ''}</div>
                 {mode === 'letters' && !checked && <div className="verse muted" style={{ fontSize: 16 }}>{portion.lines.map((l, n) => <div key={n}>{firstLetters(l)}</div>)}</div>}
-                <LineCheck lines={portion.lines} maxRecordingSeconds={300} onDone={setChecked} />
+                <LineCheck previousContextLines={scene.items.slice(Math.max(0,idx-2),idx).flatMap(previous=>previous.k==='s'?spokenLines(previous.lines):[])} lines={portion.lines} maxRecordingSeconds={300} onDone={setChecked} />
                 {checked && portion.partial && <div className="card-soft"><div className="eyebrow">The whole speech</div><Verse lines={lines} /></div>}
               </div>
             );
@@ -366,7 +366,7 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
       </div>
       <div style={{ display: 'grid', gap: 16 }}>
         <CueBox cue={item.cue} why={item.why} />
-        <LineCheck key={item.id} lines={portion.lines} partial={portion.partial} retry={false} onDone={setChecked} />
+        <LineCheck previousContextLines={item.cue ? [item.cue.text] : []} key={item.id} lines={portion.lines} partial={portion.partial} retry={false} onDone={setChecked} />
       </div>
       {checked && (
         <Bottom tone={checked}>

@@ -5,12 +5,13 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   base: './',
-  server: { proxy: { '/api': 'http://127.0.0.1:8787' } },
+  worker: { format: 'es' },
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: { globIgnores:['**/*.wasm','vendor/ort/**'], runtimeCaching: [{urlPattern: /\/(?:vendor\/ort|assets)\/.*\.(wasm|mjs)$/,handler:'CacheFirst',options:{cacheName:'lines-local-runtime-v1',cacheableResponse:{statuses:[200]}}}] },
       includeAssets: ['icon.svg'],
       manifest: {
         name: 'Line Buddy: Romeo and Juliet',

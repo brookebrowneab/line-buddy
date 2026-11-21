@@ -15,3 +15,6 @@ src/data/recordings.json.tmp
 .wrangler/
 .dev.vars
 .dev.vars.*
+
+# Copied from the installed runtime by predev/build.
+public/vendor/ort/

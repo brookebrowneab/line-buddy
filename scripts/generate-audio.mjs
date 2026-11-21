@@ -31,7 +31,7 @@ export function cueStart(text, cueText, alignment) {
 }
 async function readJson(file, fallback) { try { return JSON.parse(await readFile(file, 'utf8')); } catch (error) { if (error.code === 'ENOENT' && fallback !== undefined) return fallback; throw error; } }
 async function atomicJson(file, data) { const tmp = file + '.tmp'; await writeFile(tmp, JSON.stringify(data, null, 2) + '\n'); await rename(tmp, file); }
-export async function generate({ root, generate = false, limit = undefined, onlyId = undefined, excludeRoles = [], concurrency = 2, fetchImpl = fetch, key = process.env.ELEVENLABS_API_KEY }) {
+export async function generate({ root, generate = false, limit = undefined, onlyId = undefined, excludeRoles = [], concurrency = 2, fetchImpl = fetch, key = process.env.ELEVENLABS_TTS_API_KEY }) {
   const script = await readJson(path.join(root, 'src/data/script.json'));
   const voices = await readJson(path.join(root, 'config/tts-voices.json'), {});
   const plan = buildAudioPlan(script, voices);
@@ -51,7 +51,7 @@ export async function generate({ root, generate = false, limit = undefined, only
   const jobs = limit ? pending.slice(0, limit) : pending;
   console.log(`${plan.length} speeches in play; ${jobs.length} pending selected; ${jobs.reduce((n,j) => n + j.text.length, 0).toLocaleString()} text characters.`);
   if (!generate) { console.log('Plan only: no paid requests. Use --generate to synthesize.'); return { plan, pending: jobs }; }
-  if (!key) throw new Error('ELEVENLABS_API_KEY is missing.');
+  if (!key) throw new Error('ELEVENLABS_TTS_API_KEY is missing.');
   const missing = [...new Set(jobs.filter(j => !j.voice_id).map(j => j.role))];
   if (missing.length) throw new Error('Assign character voices in config/tts-voices.json: ' + missing.join(', '));
   if (jobs.some(j => j.text.length > 5000)) throw new Error('A speech exceeds the v3 5,000-character limit. Split deliberately before generating.');

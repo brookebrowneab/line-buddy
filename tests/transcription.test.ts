@@ -1,22 +1,61 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
-import { transcribeRecording, recordSpeech } from '../src/lib/transcription';
-
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { localBrowser } from './support/local-browser';
+let browser: ReturnType<typeof localBrowser>;
+let transcribeRecording: typeof import('../src/lib/transcription').transcribeRecording;
+let recordSpeech: typeof import('../src/lib/transcription').recordSpeech;
+beforeEach(async () => { vi.resetModules(); browser = localBrowser(); ({ transcribeRecording, recordSpeech } = await import('../src/lib/transcription')); });
 afterEach(() => { vi.unstubAllGlobals(); vi.useRealTimers(); });
-describe('ElevenLabs client', () => {
-  it('uploads audio to the app server without an API key or expected text', async () => {
-    const request = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ text: 'Wherefore art thou Romeo?', model: 'scribe_v3' }) });
-    vi.stubGlobal('fetch', request);
-    const result = await transcribeRecording(new Blob(['audio'], { type: 'audio/webm' }), new AbortController().signal);
+describe('on-device transcription', () => {
+  it('returns matching results and sends 16kHz mono PCM and context only to a local worker', async () => {
+    const result = await transcribeRecording(new Blob(['audio']),new AbortController().signal,'Wherefore art thou Romeo?',['O Romeo']);
     expect(result.text).toBe('Wherefore art thou Romeo?');
-    expect(request.mock.calls[0][0]).toBe('/api/transcription');
-    const init = request.mock.calls[0][1];
-    expect([...init.body.keys()]).toEqual(['audio']); expect(init.headers).toBeUndefined();
+    expect(result.accuracy).toBe(1); expect(result.hit).toEqual([true,true,true,true]);
+    expect(result.wordMatches).toHaveLength(4);
+    expect(browser.contexts).toEqual([[1,1,16000],[1,16000,16000]]);
+    expect(browser.jobs.at(-1)).toMatchObject({type:'transcribe',audio:browser.pcm,targetLine:'Wherefore art thou Romeo?',previousContextLines:['O Romeo']});
+    expect(browser.network).not.toHaveBeenCalled();
   });
-  it('explains missing servers and provider failures', async () => {
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, json: async () => { throw new Error(); } }));
-    await expect(transcribeRecording(new Blob(), new AbortController().signal)).rejects.toThrow('server is unavailable');
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok: false, json: async () => ({ error: 'Usage limit reached' }) }));
-    await expect(transcribeRecording(new Blob(), new AbortController().signal)).rejects.toThrow('Usage limit reached');
+  it('does not decode or start inference for an already cancelled take', async () => {
+    const controller=new AbortController(); controller.abort();
+    await expect(transcribeRecording(new Blob(),controller.signal,'Hello')).rejects.toThrow(/cancelled/);
+    expect(browser.contexts).toHaveLength(0); expect(browser.jobs).toHaveLength(0);
+  });
+  it('cancels a pending model download and can retry without uploading the abandoned take', async () => {
+    browser.hold();
+    const controller = new AbortController();
+    const attempt = transcribeRecording(new Blob(['audio']),controller.signal,'Hello');
+    const rejected = expect(attempt).rejects.toThrow(/cancelled/);
+    await vi.waitFor(() => expect(browser.workers).toHaveLength(1));
+    controller.abort(); await rejected;
+    expect(browser.workers[0].terminated).toBe(true);
+    const retry = transcribeRecording(new Blob(['audio']),new AbortController().signal,'Hello');
+    await vi.waitFor(() => expect(browser.workers).toHaveLength(2));
+    browser.workers[1].reply();
+    await vi.waitFor(() => expect(browser.jobs.at(-1).type).toBe('transcribe'));
+    browser.workers[1].reply({text:'Hello'});
+    expect((await retry).accuracy).toBe(1); expect(browser.network).not.toHaveBeenCalled();
+  });
+  it('rejects an overlong recording before loading a model', async () => {
+    browser.setDuration(301);
+    await expect(transcribeRecording(new Blob(['audio']),new AbortController().signal,'Hello')).rejects.toThrow(/five minutes/);
+    expect(browser.workers).toHaveLength(0);
+  });
+  it('reports a runtime failure, releases the worker and allows a fresh attempt', async () => {
+    browser.hold();
+    const attempt=transcribeRecording(new Blob(['audio']),new AbortController().signal,'Hello');
+    const rejected=expect(attempt).rejects.toThrow(/typing/);
+    await vi.waitFor(()=>expect(browser.workers).toHaveLength(1));
+    browser.workers[0].onerror?.(); await rejected;
+    expect(browser.workers[0].terminated).toBe(true);
+    expect(browser.network).not.toHaveBeenCalled();
+  });
+  it('discards a worker that could not accept a job and retries with a fresh worker', async () => {
+    browser.failPost();
+    await expect(transcribeRecording(new Blob(['audio']),new AbortController().signal,'Hello')).rejects.toThrow();
+    expect(browser.workers[0].terminated).toBe(true);
+    browser.setTranscript('Hello');
+    expect((await transcribeRecording(new Blob(['audio']),new AbortController().signal,'Hello')).accuracy).toBe(1);
+    expect(browser.workers).toHaveLength(2);
   });
   it('releases the microphone and never uploads a cancelled take', async () => {
     vi.useFakeTimers();

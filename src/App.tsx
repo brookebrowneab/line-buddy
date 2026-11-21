@@ -1,6 +1,6 @@
+import { lazy, Suspense } from 'react';
 import { PrivacyLinks, PrivacyPage } from './privacy';
-import { apiFetch } from './lib/api';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { allItems, items, roleById, roleName, sceneById, sceneLabel, script, spokenLines, type Role, type Scene } from './lib/script';
 import {
   chooseRole, dayKey, dayNumber, exportData, finishGame, gameKey, getState, importData, levelOf, mastery, removeRole, resetAll, streak, useProgress,
@@ -8,10 +8,12 @@ import {
 } from './lib/progress';
 import { GAMES, buildSteps, dueItems, gameById, todaySteps, troubleItems, troubleSteps, type GameId } from './lib/games';
 import { Lesson } from './lesson';
-import { ClassAccess } from './class-access';
+import { initializeWhisper, subscribeWhisper, whisperState } from './lib/local-whisper';
 import { SpeechPlayback } from './speech-playback';
 import { CueCatch, ScenePartner, SpeedRun } from './runs';
 import { Bottom, Ring, TopBar, go, pct, useRoute } from './ui';
+
+const LocalSttQa = import.meta.env.DEV ? lazy(()=>import('./local-stt-qa')) : null;
 
 const HOUSE_LABEL = { montague: 'Montague', capulet: 'Capulet', neutral: 'Verona' } as const;
 
@@ -286,7 +288,7 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
         <button className="btn btn-wide" onClick={() => fileRef.current?.click()}>Load progress from a file</button>
         <input ref={fileRef} type="file" accept="application/json,.json" hidden onChange={(e) => load(e.target.files?.[0])} />
         {note && <div className="muted" role="status">{note}</div>}
-        <div className="muted" style={{ fontSize: 13 }}>Saved progress stays in this browser. Optional speech checking sends audio to the selected recognition service.</div>
+        <div className="muted" style={{ fontSize: 13 }}>Saved progress stays in this browser. Speech checking runs locally; microphone audio is never uploaded.</div>
         <button className="btn-plain" style={{ color: 'var(--bad)', justifySelf: 'start' }}
           onClick={() => { if (confirm('Erase all progress on this device? This cannot be undone.')) { resetAll(); go('/'); } }}>Erase all progress</button>
       </div>
@@ -329,31 +331,26 @@ function Play({ role, game, sceneId }: { role: Role; game: string; sceneId?: str
 
 
 function SettingsScreen({ state }: { state: State }) {
-  const [connection, setConnection] = useState('Checking listening connection…');
-  useEffect(() => {
-    const controller = new AbortController();
-    apiFetch('/api/transcription/status', { signal: controller.signal }).then(r => {
-      if (!r.ok) throw new Error(); return r.json();
-    }).then(result => setConnection(result.configured ? `Connected: ${result.model}.` : 'Server is running, but its ElevenLabs API key is not configured.'))
-      .catch(() => { if (!controller.signal.aborted) setConnection('ElevenLabs server is unavailable. Typing remains available.'); });
-    return () => controller.abort();
-  }, []);
+  const local = useSyncExternalStore(subscribeWhisper,whisperState);
+  const controller=useRef<AbortController|null>(null);
+  useEffect(()=>()=>controller.current?.abort(),[]);
+  const prepare=async()=>{controller.current=new AbortController();try{await initializeWhisper(controller.current.signal);}catch{/* state explains failure */}};
   return <div className="page">
     <TopBar back="/" title="App settings" />
     <h1>Listening</h1>
     <p className="muted">Set this once for all practice games on this device. Progress and settings stay in this browser.</p>
     <label className="settings-toggle"><input type="checkbox" checked={state.settings.microphone} onChange={e => setSettings({ microphone: e.target.checked })} /> Allow microphone features</label>
     <p className="muted">Microphone features are off by default. This switch controls both speech checking and recording yourself to hear it back. Reading, typing and prerecorded character voices work with it off. Ask a parent or teacher before turning it on.</p>
-    <fieldset className="listening-choice" disabled={!state.settings.microphone}>
-      <legend>Speech recognition service</legend>
-      <label><input type="radio" name="speech-provider" checked={state.settings.speechProvider === 'elevenlabs'} onChange={() => setSettings({ speechProvider: 'elevenlabs' })} /> ElevenLabs Scribe v3</label>
-      <label><input type="radio" name="speech-provider" checked={state.settings.speechProvider === 'browser'} onChange={() => setSettings({ speechProvider: 'browser' })} /> Browser Web Speech API</label>
-    </fieldset>
-    <p role="status" className="muted">{connection}</p>
-    <p className="muted">ElevenLabs uploads recorded speech when Done is tapped. Browser recognition may send speech to the browser’s provider. The service will not switch automatically.</p>
+    <h2>On-device speech checking</h2>
+    <p className="muted">Whisper base.en runs in this browser using its local CPU. Your audio and script context are never uploaded. First use downloads model files (roughly 80 MB plus its browser runtime) from Hugging Face; the browser caches them for later use. Browsers can clear this cache, so offline use requires a completed download.</p>
+    <p role="status" className="muted">{local.message}</p>
+    {local.phase === 'loading' && <progress max={100} value={local.progress} aria-label="Speech model download progress" style={{width:'100%'}} />}
+    <button className="btn btn-small" disabled={local.phase==='loading'||local.phase==='transcribing'} onClick={()=>void prepare()}>{local.phase==='ready'?'Check model availability':'Prepare speech model'}</button>
+    {local.phase === 'loading' && <button className="btn btn-small" onClick={()=>controller.current?.abort()}>Cancel preparation</button>}
+    <p className="muted">Long speeches can take time on older phones. Cancel or use typing at any time. Recognition uses the script as context, so it may guess words that were not clearly spoken.</p>
     <h2 style={{ marginTop: 28 }}>Comparison tools</h2>
     <label className="settings-toggle"><input type="checkbox" checked={state.settings.showTranscripts} onChange={e => setSettings({ showTranscripts: e.target.checked })} /> Show transcription details during practice</label>
-    <p className="muted">For testing: show the raw transcript and service name. Leave this off for everyday practice. Transcripts are not saved after leaving a question.</p>
+    <p className="muted">For testing: show the raw transcript and model name. Leave this off for everyday practice. Transcripts are not saved after leaving a question.</p>
     <p className="muted">Changes are saved automatically.</p>
   </div>;
 }
@@ -372,6 +369,7 @@ export default function App() {
   const [page, a, b] = useRoute();
   const role = state.active ? roleById.get(state.active) : undefined;
 
+  if (import.meta.env.DEV && page === 'local-audio-test' && LocalSttQa) return <Suspense fallback="Loading test screen…"><LocalSttQa /></Suspense>;
   if (page === 'privacy' || page === 'parents') return <PrivacyPage parents={page === 'parents'} />;
 
   let screen;
@@ -384,6 +382,6 @@ export default function App() {
   else if (page === 'play' && a) screen = <Play key={`${a}-${b}`} role={role} game={a} sceneId={b} />;
   else screen = <NotFound />;
 
-  return <ClassAccess><div data-house={role?.house ?? 'neutral'} style={{ minHeight: '100%' }}>{screen}<PrivacyLinks /></div></ClassAccess>;
+  return <div data-house={role?.house ?? 'neutral'} style={{ minHeight: '100%' }}>{screen}<PrivacyLinks /></div>;
 }
 
