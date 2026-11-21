@@ -231,6 +231,7 @@ not verified parental consent. Server credentials and the protected API remain
 unchanged.
 
 Operator contact: Brooke Brown, parent volunteer working on behalf of ADCA,
-adcatheatreinfo@gmail.com. Program mailing address and telephone have not yet
-been supplied. Provider retention/training settings and required parent/school
+adcatheatreinfo@gmail.com. Mailing contact: ADCA, c/o Alice Deal Middle School, 3815 Fort Dr. NW,
+Washington, DC 20016. School main office: (202) 939-2010, verified against
+https://profiles.dcps.dc.gov/Deal. Provider retention/training settings and required parent/school
 authorization still need review; these pages do not establish legal compliance.

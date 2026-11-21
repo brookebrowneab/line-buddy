@@ -10,9 +10,17 @@ export function PrivacyLinks() {
 }
 
 function Contact() {
-  return <p>Brooke Brown, a parent volunteer working on behalf of ADCA, is the contact for Lines.
+  return <><p>Brooke Brown, a parent volunteer working on behalf of ADCA, is the contact for Lines.
     {' '}For privacy questions, access or deletion requests, or to decline online speech checking, email{' '}
-    <a href={`mailto:${email}`}>{email}</a>. Please do not email a child’s voice recording or sensitive information with an initial request.</p>;
+    <a href={`mailto:${email}`}>{email}</a>. Please do not email a child’s voice recording or sensitive information with an initial request.</p>
+    <address style={{fontStyle:'normal'}}>
+      ADCA, attention: Brooke Brown / Lines privacy<br />
+      c/o Alice Deal Middle School<br />
+      3815 Fort Dr. NW<br />
+      Washington, DC 20016<br />
+      School main office: <a href="tel:+12029392010">(202) 939-2010</a>
+    </address>
+  </>;
 }
 
 export function PrivacyPage({ parents = false }: { parents?: boolean }) {
