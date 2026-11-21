@@ -1,3 +1,4 @@
+import { PrivacyLinks, PrivacyPage } from './privacy';
 import { apiFetch } from './lib/api';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { allItems, items, roleById, roleName, sceneById, sceneLabel, script, spokenLines, type Role, type Scene } from './lib/script';
@@ -285,7 +286,7 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
         <button className="btn btn-wide" onClick={() => fileRef.current?.click()}>Load progress from a file</button>
         <input ref={fileRef} type="file" accept="application/json,.json" hidden onChange={(e) => load(e.target.files?.[0])} />
         {note && <div className="muted" role="status">{note}</div>}
-        <div className="muted" style={{ fontSize: 13 }}>Your progress is stored only on this device. Nothing is sent anywhere.</div>
+        <div className="muted" style={{ fontSize: 13 }}>Saved progress stays in this browser. Optional speech checking sends audio to the selected recognition service.</div>
         <button className="btn-plain" style={{ color: 'var(--bad)', justifySelf: 'start' }}
           onClick={() => { if (confirm('Erase all progress on this device? This cannot be undone.')) { resetAll(); go('/'); } }}>Erase all progress</button>
       </div>
@@ -341,7 +342,9 @@ function SettingsScreen({ state }: { state: State }) {
     <TopBar back="/" title="App settings" />
     <h1>Listening</h1>
     <p className="muted">Set this once for all practice games on this device. Progress and settings stay in this browser.</p>
-    <fieldset className="listening-choice">
+    <label className="settings-toggle"><input type="checkbox" checked={state.settings.microphone} onChange={e => setSettings({ microphone: e.target.checked })} /> Allow microphone features</label>
+    <p className="muted">Microphone features are off by default. This switch controls both speech checking and recording yourself to hear it back. Reading, typing and prerecorded character voices work with it off. Ask a parent or teacher before turning it on.</p>
+    <fieldset className="listening-choice" disabled={!state.settings.microphone}>
       <legend>Speech recognition service</legend>
       <label><input type="radio" name="speech-provider" checked={state.settings.speechProvider === 'elevenlabs'} onChange={() => setSettings({ speechProvider: 'elevenlabs' })} /> ElevenLabs Scribe v3</label>
       <label><input type="radio" name="speech-provider" checked={state.settings.speechProvider === 'browser'} onChange={() => setSettings({ speechProvider: 'browser' })} /> Browser Web Speech API</label>
@@ -369,6 +372,8 @@ export default function App() {
   const [page, a, b] = useRoute();
   const role = state.active ? roleById.get(state.active) : undefined;
 
+  if (page === 'privacy' || page === 'parents') return <PrivacyPage parents={page === 'parents'} />;
+
   let screen;
   if (page === 'settings') screen = <SettingsScreen state={state} />;
   else if (!role || page === 'roles') screen = <RolePicker state={state} />;
@@ -379,6 +384,6 @@ export default function App() {
   else if (page === 'play' && a) screen = <Play key={`${a}-${b}`} role={role} game={a} sceneId={b} />;
   else screen = <NotFound />;
 
-  return <ClassAccess><div data-house={role?.house ?? 'neutral'} style={{ minHeight: '100%' }}>{screen}</div></ClassAccess>;
+  return <ClassAccess><div data-house={role?.house ?? 'neutral'} style={{ minHeight: '100%' }}>{screen}<PrivacyLinks /></div></ClassAccess>;
 }
 

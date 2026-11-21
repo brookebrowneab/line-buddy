@@ -1,3 +1,4 @@
+import { PrivacyLinks } from './privacy';
 import { apiFetch, saveClassSession } from './lib/api';
 import { useEffect, useState, type ReactNode } from 'react';
 export function ClassAccess({ children }: { children: ReactNode }) {
@@ -30,6 +31,7 @@ export function ClassAccess({ children }: { children: ReactNode }) {
       <button className="btn btn-primary" disabled={busy||!code.trim()}>{busy?'Checking…':'Start practising'}</button>
       {note&&<p role="alert">{note}</p>}
     </form>
-    <p className="muted" style={{marginTop:28}}>Your progress stays in this browser. Speech checking sends your recording to ElevenLabs to turn it into words.</p>
+    <p className="muted" style={{marginTop:28}}>Microphone features start off. You can read, type and hear character recordings without recording yourself. Your progress stays in this browser.</p>
+    <PrivacyLinks />
   </main>;
 }

@@ -215,3 +215,22 @@ Deploy with `npx wrangler deploy`; apply schema with
 `npx wrangler d1 execute lines-usage --remote --file drizzle/0000_usage.sql`.
 Use Workers Free initially; check actual CPU limits before increasing tiers.
 The earlier Sites deployment is private and is not used by this production app.
+
+### Privacy and microphone choices
+
+Public hash routes `#/privacy` and `#/parents` are readable without a role or
+class login. They describe the actual speech data flow and distinguish uploaded
+transcription from temporary browser-only hear-it-back recordings. The parent
+notice can be printed from its page. Privacy links appear at the welcome gate,
+throughout the app, and beside recording controls.
+
+`settings.microphone` defaults to false, including when loading old progress. It
+controls both recognition providers and the separate local recorder; prerecorded
+character playback and typing remain available. Turning it on is a preference,
+not verified parental consent. Server credentials and the protected API remain
+unchanged.
+
+Operator contact: Brooke Brown, parent volunteer working on behalf of ADCA,
+adcatheatreinfo@gmail.com. Program mailing address and telephone have not yet
+been supplied. Provider retention/training settings and required parent/school
+authorization still need review; these pages do not establish legal compliance.

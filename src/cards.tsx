@@ -1,7 +1,7 @@
 // One screen of practice each. A card calls onOutcome once, when the kid has finished it.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { seeded, shuffle, tokens, type Item } from './lib/script';
-import type { Outcome } from './lib/progress';
+import { getState, useProgress, type Outcome } from './lib/progress';
 import type { Step } from './lib/games';
 import { canRecord, startRecording, type Recording } from './lib/audio';
 import { CueBox, Verse } from './ui';
@@ -300,6 +300,7 @@ export function ScrambleCard({ step, onOutcome, done }: CardProps) {
 
 // --- Say it ----------------------------------------------------------------------------
 export function SayItCard({ step, onOutcome, done }: CardProps) {
+  const microphone = useProgress().settings.microphone;
   const { item } = step;
   const [rec, setRec] = useState<Recording | null>(null);
   const [clip, setClip] = useState<string | null>(null);
@@ -309,7 +310,12 @@ export function SayItCard({ step, onOutcome, done }: CardProps) {
   useEffect(() => { alive.current = true; return () => { alive.current = false; recordingRef.current?.cancel(); }; }, []);
   useEffect(() => () => { if (clip) URL.revokeObjectURL(clip); }, [clip]);
 
+  useEffect(() => {
+    if (microphone) return;
+    recordingRef.current?.cancel(); recordingRef.current = null; setRec(null); setClip(null);
+  }, [microphone]);
   const toggleRecord = async () => {
+    if (!getState().settings.microphone) return;
     if (rec) {
       const url = await rec.stop(); recordingRef.current = null;
       if (!alive.current) { URL.revokeObjectURL(url); return; }
@@ -317,7 +323,7 @@ export function SayItCard({ step, onOutcome, done }: CardProps) {
     }
     try {
       const recording = await startRecording();
-      if (!alive.current) { recording.cancel(); return; }
+      if (!alive.current || !getState().settings.microphone) { recording.cancel(); return; }
       recordingRef.current = recording; setRec(recording); setMicError(false);
     } catch { if (alive.current) setMicError(true); }
   };
@@ -329,9 +335,10 @@ export function SayItCard({ step, onOutcome, done }: CardProps) {
         : <CueBox cue={item.cue} why={item.part === 0 ? item.why : undefined} />}
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}><h2 style={{ flex: 1 }}>{step.thoughtOnly ? 'Say the line this sets off' : 'Say your line out loud'}</h2><PartLabel item={item} /></div>
       <LineCheck lines={item.lines} maxRecordingSeconds={step.wholeSpeech ? 300 : 90} onDone={onOutcome} />
-      {!done && canRecord() && (
+      {!done && microphone && canRecord() && (
         <button className="btn btn-small" onClick={toggleRecord}>{rec ? '⏹ Stop recording' : clip ? '🎙 Record again' : '🎙 Record myself to hear it back (optional)'}</button>
       )}
+      {!done && microphone && canRecord() && <p className="muted" style={{fontSize:13,margin:0}}>The hear-it-back recording stays in this browser and is not uploaded. <a href="#/parents">Parent notice</a></p>}
       {micError && <div className="muted" style={{ fontSize: 14 }}>The microphone is not available.</div>}
       {clip && <audio controls src={clip} style={{ width: '100%' }} />}
     </div>

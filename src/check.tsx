@@ -60,7 +60,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
   const recordingRef = useRef<Recording | null>(null);
   const uploadRef = useRef<AbortController | null>(null);
   const sessionRef = useRef(0);
-  const { speechProvider: provider, showTranscripts } = useProgress().settings;
+  const { speechProvider: provider, showTranscripts, microphone } = useProgress().settings;
   const [phase, setPhase] = useState<'starting' | 'recording' | 'transcribing'>('recording');
   const [elevenReady, setElevenReady] = useState(false);
   const [requiresPcm,setRequiresPcm]=useState(false);
@@ -78,6 +78,12 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
     }).catch(() => { if (!controller.signal.aborted) setElevenStatus('ElevenLabs server is unavailable. Browser is still available.'); });
     return () => { controller.abort(); sessionRef.current++; recordingRef.current?.cancel(); uploadRef.current?.abort(); };
   }, []);
+  useEffect(() => {
+    if (microphone) return;
+    sessionRef.current++;
+    recRef.current?.cancel(); recordingRef.current?.cancel(); uploadRef.current?.abort();
+    setMode(current => current === 'listening' ? 'type' : current);
+  }, [microphone]);
   const next = flat.find((x) => !marks[x.key]);
   const missed = flat.filter((x) => marks[x.key] === 'missed').length;
 
@@ -119,6 +125,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
   }, []);
 
   const listen = () => {
+    if (!microphone) return;
     if (provider === 'elevenlabs') { void listenEleven(); return; }
     const R = Recognition();
     if (!R) return;
@@ -219,10 +226,11 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10 }}>
             <button className="btn btn-small" onClick={() => next && mark(next.key, 'missed')}>I’m stuck on this word</button>
-            <button className="btn btn-small" disabled={provider === 'browser' ? !canListen() : !canRecord() || !elevenReady} onClick={listen}>Listen to me</button>
+            <button className="btn btn-small" disabled={!microphone || (provider === 'browser' ? !canListen() : !canRecord() || !elevenReady)} onClick={listen}>Listen to me</button>
           </div>
-          {provider === 'browser' && !canListen() && <p className="muted">Listening is unavailable in this browser. You can type the first letters instead.</p>}
-          {provider === 'elevenlabs' && !elevenReady && <p className="muted" role="status">Listening is unavailable right now. You can type the first letters instead.</p>}
+          <p className="muted" style={{fontSize:13,margin:0}}>{!microphone ? 'Microphone features are off in App settings. Prerecorded character voices still work.' : provider === 'elevenlabs' ? 'Listening sends your recording to ElevenLabs when you tap Done or reach the time limit.' : 'Browser listening may send speech to the browser’s recognition provider.'} You can type instead. <a href="#/parents">Parent notice</a></p>
+          {microphone && provider === 'browser' && !canListen() && <p className="muted">Listening is unavailable in this browser. You can type the first letters instead.</p>}
+          {microphone && provider === 'elevenlabs' && !elevenReady && <p className="muted" role="status">Listening is unavailable right now. You can type the first letters instead.</p>}
           {note && <div className="muted" style={{ fontSize: 14 }} role="status">{note}</div>}
         </>
       )}
@@ -236,7 +244,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
       )}
       {mode === 'heard' && (
         <>
-          <button className="btn btn-small" disabled={provider === 'browser' ? !canListen() : !canRecord() || !elevenReady} onClick={listen}>Record again</button>
+          <button className="btn btn-small" disabled={!microphone || (provider === 'browser' ? !canListen() : !canRecord() || !elevenReady)} onClick={listen}>Record again</button>
           <div style={{ fontWeight: 800 }}>{missed === 0 ? 'I heard every word.' : `I did not hear ${missed} of ${flat.length} words (in red).`}</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
             <button className="btn btn-small" onClick={retype}>It misheard. Let me type</button>
