@@ -72,7 +72,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
       if (!r.ok) throw new Error();
       return r.json();
     }).then(result => {
-      setElevenReady(result.configured === true && (!result.requiresClassCode || result.authorized));
+      setElevenReady(result.configured === true && result.cleanupReady !== false && (!result.requiresClassCode || result.authorized));
       setRequiresPcm(result.requiresPcm === true);
       setElevenStatus(result.configured ? `ElevenLabs ready (${result.model}).` : 'ElevenLabs needs a server API key. Browser is still available.');
     }).catch(() => { if (!controller.signal.aborted) setElevenStatus('ElevenLabs server is unavailable. Browser is still available.'); });
@@ -161,7 +161,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
         if (session !== sessionRef.current) return;
         setPhase('transcribing');
         const controller = new AbortController(); uploadRef.current = controller;
-        const timeout = setTimeout(() => controller.abort(), 65_000);
+        const timeout = setTimeout(() => controller.abort(), 95_000);
         try {
           const result = await transcribeRecording(audio, controller.signal, requiresPcm);
           if (session === sessionRef.current) showTranscript(result.text, 'elevenlabs', `ElevenLabs (${result.model})`);

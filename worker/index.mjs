@@ -1,3 +1,4 @@
+import { CleanupError, cleanupQueue, retryCleanup, transcribeWithCleanup } from '../server/elevenlabs-cleanup.mjs';
 const MAX_UPLOAD = 10 * 1024 * 1024;
 const COOKIE = '__Host-lines_class';
 const json = (data, status = 200, extra = {}) => new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...extra } });
@@ -60,6 +61,7 @@ export function createWorker(fetchImpl = fetch) {
     if (url.pathname === '/api/transcription/status' && request.method === 'GET') return json({
       configured: !!env.ELEVENLABS_API_KEY && !!env.CLASS_ACCESS_CODE && !!env.SESSION_SECRET && !!env.DB,
       model: 'scribe_v3', requiresClassCode: true, authorized: !!session, requiresPcm: true,
+      cleanupReady: env.DB ? !await cleanupQueue(env.DB).pending() : false,
     });
     if (request.method !== 'POST') return json({ error: 'Not found.' }, 404);
     if (request.headers.get('Origin') !== (env.APP_ORIGIN || url.origin)) return json({ error: 'This request must come from the Lines app.' }, 403);
@@ -81,6 +83,7 @@ export function createWorker(fetchImpl = fetch) {
       if (url.pathname !== '/api/transcription') return json({ error: 'Not found.' }, 404);
       if (!session) return json({ error: 'Enter the class code to use speech checking.' }, 401);
       if (!env.ELEVENLABS_API_KEY) return json({ error: 'Speech checking is not configured yet.' }, 503);
+      if (await cleanupQueue(env.DB).pending()) return json({ error: 'Speech checking is paused while a previous recording is being cleaned up. You can still practise by typing.' }, 503);
       if (!/^multipart\/form-data; boundary=/.test(request.headers.get('Content-Type') || '')) return json({ error: 'Send a recorded speech.' }, 415);
       const bytes = await boundedBytes(request, MAX_UPLOAD);
       const form = await new Request(request.url, { method: 'POST', headers: { 'Content-Type': request.headers.get('Content-Type') }, body: bytes }).formData();
@@ -98,19 +101,25 @@ export function createWorker(fetchImpl = fetch) {
       ctx?.waitUntil(env.DB.prepare('DELETE FROM usage_buckets WHERE expires_at < ?').bind(Math.floor(Date.now() / 1000)).run());
       const upstream = new FormData(); upstream.set('file', file, 'speech.wav'); upstream.set('model_id','scribe_v3');
       upstream.set('language_code','eng'); upstream.set('tag_audio_events','false'); upstream.set('diarize','false'); upstream.set('no_verbatim','false');
-      const response = await fetchImpl('https://api.elevenlabs.io/v1/speech-to-text', {
-        method:'POST', headers:{'xi-api-key':env.ELEVENLABS_API_KEY}, body:upstream, signal:AbortSignal.timeout(60000),
-      });
-      if (!response.ok) return json({ error: response.status === 429 ? 'Speech checking is busy. Wait a moment and try again.' : 'Speech checking is unavailable. Please try again or type the first letters.' }, response.status === 429 ? 429 : 502);
-      const result = await response.json();
-      if (typeof result.text !== 'string') throw new Error('invalid_transcript');
-      return json({ text:result.text, model:'scribe_v3' });
+      const processing = (async () => {
+        const response = await fetchImpl('https://api.elevenlabs.io/v1/speech-to-text', {
+          method:'POST', headers:{'xi-api-key':env.ELEVENLABS_API_KEY}, body:upstream, signal:AbortSignal.timeout(60000),
+        });
+        if (!response.ok) return json({ error: response.status === 429 ? 'Speech checking is busy. Wait a moment and try again.' : 'Speech checking is unavailable. Please try again or type the first letters.' }, response.status === 429 ? 429 : 502);
+        const text = await transcribeWithCleanup(response, { fetchImpl, apiKey: env.ELEVENLABS_API_KEY, queue: cleanupQueue(env.DB) });
+        return json({ text, model:'scribe_v3' });
+      })();
+      ctx?.waitUntil(processing.then(() => undefined, () => undefined));
+      return await processing;
     } catch (error) {
+      if (error instanceof CleanupError) return json({ error: error.message }, 503);
       if (error.message === 'too_large') return json({ error:'Recording is too large. Try a shorter speech.' },413);
       return json({ error:'Speech checking could not finish. Please try again or type the first letters.' },502);
     }
   } };
-  return { async fetch(request, env, ctx) {
+  return {
+    scheduled(_event, env, ctx) { ctx.waitUntil(retryCleanup(env, fetchImpl)); },
+    async fetch(request, env, ctx) {
     const origin = request.headers.get('Origin');
     const allowed = env.APP_ORIGIN || new URL(request.url).origin;
     if (origin && origin !== allowed) return json({ error: 'This request must come from the Lines app.' }, 403);

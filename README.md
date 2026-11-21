@@ -239,3 +239,19 @@ retroactive deletion. The account is Pay As You Go, and speech-to-text zero
 retention is not enabled. No fixed API recording-retention deadline was found.
 Provider retention terms and required parent/school authorization still need
 review; these pages do not establish legal compliance.
+
+### Automatic provider cleanup
+
+The worker and local server use server/elevenlabs-cleanup.mjs to delete the
+provider transcript ID immediately after successful transcription, before
+returning text. There is no browser-supplied ID or arbitrary deletion route.
+Failures retry three times, then pause new uploads. Production D1 stores only
+provider IDs and timestamps; cron retries every five minutes until deletion
+succeeds. Missing IDs leave a sentinel requiring operator investigation. Local
+retries run every 30 seconds in memory and do not survive a server restart.
+
+Apply drizzle/0001_transcription_cleanup.sql before deploying this version.
+Deletion acknowledges the transcript record; removal of all input audio copies
+is not separately documented. This is not Enterprise zero retention. Timeouts
+before a provider ID is available cannot guarantee cleanup. Historical uploads
+are not purged by this feature. Keep the published retention caveats.

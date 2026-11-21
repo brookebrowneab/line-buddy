@@ -22,8 +22,10 @@ test('missing configuration and untrusted origins never reach ElevenLabs', async
   assert.equal(called, false);
 });
 test('forwards only audio and fixed model options, returns raw text without credentials', async () => {
-  let calls = 0;
+  let calls = 0, removed = false;
   await withServer({ apiKey: 'server-secret', fetchImpl: async (url, init) => {
+    if (init.method === 'GET') return new Response(null,{status:removed?404:200});
+    if (init.method === 'DELETE') { removed = true; assert.match(url,/transcripts\/local-test$/);return new Response(null,{status:200}); }
     calls++;
     assert.equal(url, 'https://api.elevenlabs.io/v1/speech-to-text');
     assert.equal(init.headers['xi-api-key'], 'server-secret');
@@ -31,7 +33,7 @@ test('forwards only audio and fixed model options, returns raw text without cred
     assert.equal(init.body.get('no_verbatim'), 'false');
     assert.equal(init.body.get('keyterms'), null);
     assert.ok(init.body.get('file').size > 0);
-    return Response.json({ text: 'O Romeo, Romeo!', words: [] });
+    return Response.json({ text: 'O Romeo, Romeo!', words: [], transcription_id:'local-test' });
   } }, async url => {
     const form = audio(); form.set('model_id', 'untrusted'); form.set('text', 'do not send');
     const res = await fetch(url + '/api/transcription', { method: 'POST', headers: origin, body: form });
