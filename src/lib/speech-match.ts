@@ -1,8 +1,8 @@
 import { SHAKESPEARE_VOCABULARY } from './whisper-core';
 
-/** Equivalent printed/spoken spellings, not substitutions for different words. */
+/** Printed/spoken spelling variants and explicitly allowed speech homophones. */
 const equivalents: Record<string, string> = {
-  o: 'oh', oer: 'over', eer: 'ever', neer: 'never', een: 'even',
+  our: 'are', o: 'oh', oer: 'over', eer: 'ever', neer: 'never', een: 'even',
   tis: 'itis', twas: 'itwas', twere: 'itwere', twould: 'itwould',
   gainst: 'against', taen: 'taken', th: 'the', curtsies: 'cursies', curtsys: 'cursies', curtsy: 'curtsy',
   goodby: 'goodbye', goodnight: 'goodnight',
@@ -62,10 +62,11 @@ export function alignHeard(want: string[], heard: string[]): { hit: boolean[]; s
   const spans = (i: number, j: number): [number, number][] => {
     const options: [number, number][] = [];
     if (!w[i] || !h[j]) return options;
-    // ASR commonly writes the homophone 'or' for printed o'er. Limit this
-    // tolerance to that elision; ordinary 'or' and 'over' remain distinct.
-    const elidedOver = want[i].toLowerCase().replace(/[^a-z]/g, '') === 'oer' && h[j] === 'or';
-    if (close(w[i], h[j]) || elidedOver) options.push([1, 1]);
+    // ASR may write or/o/oh for printed o'er. Limit this tolerance to that
+    // printed elision; ordinary over still needs its final consonant.
+    const elidedOver = want[i].toLowerCase().replace(/[^a-z]/g, '') === 'oer' && (h[j] === 'or' || h[j] === 'oh');
+    const nayAsMay = w[i] === 'nay' && h[j] === 'may';
+    if (close(w[i], h[j]) || elidedOver || nayAsMay) options.push([1, 1]);
     if (j + 1 < m && joinedSpellings.has(w[i]) && w[i] === h[j] + h[j + 1]) options.push([1, 2]);
     if (i + 1 < n && joinedSpellings.has(h[j]) && w[i] + w[i + 1] === h[j]) options.push([2, 1]);
     return options;

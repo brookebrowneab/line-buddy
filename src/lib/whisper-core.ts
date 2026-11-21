@@ -3,15 +3,18 @@ export const WHISPER_REVISION = '51eefc0af78b103839eda9e7e4f4186acc6517fe';
 export const SAMPLE_RATE = 16000;
 export const SHAKESPEARE_VOCABULARY = [
  'Romeo','Juliet','Mercutio','Benvolio','Tybalt','Capulet','Montague','Friar Lawrence',
- 'Queen Mab','Rosaline','Verona','ho','prithee','wherefore','thou','thee','thy','thine',
+ 'Queen Mab','Rosaline','Verona','ho','oft','nay','prithee','wherefore','thou','thee','thy','thine',
  'hath','doth','dost','art','ere','anon','beseech','alderman','atomies','courtiers',
- 'cur’sies','sweetmeats',"’tis","’twas","o’er","ne’er",
+ "cur'sies",'curtsies','sweetmeats',"’tis","’twas","o’er","ne’er",
 ];
 /** Keep script context short: a full future speech made Whisper skip spoken words
  * in the real Queen Mab acceptance test. Vocabulary gets its own budget. */
 export function promptTokens(encode: (text:string)=>number[], targetLine: string, previous: string[] = []) {
-  const current=[...previous,targetLine].join(' ').toLowerCase();
-  const vocabulary=[...SHAKESPEARE_VOCABULARY.filter(word=>current.includes(word.toLowerCase())),...SHAKESPEARE_VOCABULARY];
+  // Treat typographic/straight apostrophes alike and match complete words:
+  // 'ho' inside 'who' or 'oft' inside 'soft' is not the requested vocabulary.
+  const contextWords=(text:string)=>text.toLowerCase().replace(/[’‘']/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+  const current=' '+contextWords([...previous,targetLine].join(' '))+' ';
+  const vocabulary=[...SHAKESPEARE_VOCABULARY.filter(word=>current.includes(' '+contextWords(word)+' ')),...SHAKESPEARE_VOCABULARY];
   const glossary=[...new Set(vocabulary)].join(', ');
   // Whisper interprets a verbatim future line as already-spoken history and may
   // omit it. Supply the line and prior context as vocabulary lists instead.

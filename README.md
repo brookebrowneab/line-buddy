@@ -92,7 +92,9 @@ is rehearsal feedback, not a formal assessment. Soundex plus a conservative
 edit-distance threshold complements the existing order-aware, self-correction
 and contraction matching. Fuzzy spelling tolerance is limited to Shakespeare
 vocabulary and the existing long-word plural tolerance; ordinary substitutions
-such as these/those and living/loving remain incorrect.
+such as these/those and living/loving remain incorrect. Explicit recognition tolerances
+cover printed o’er heard as o/oh/or, printed Nay heard as May, and our/are.
+The raw transcript is retained; these rules change feedback, not the recording.
 
 Typed practice, skips, whole speeches and prerecorded character playback remain
 available without microphone access. Old browser/ElevenLabs settings migrate to

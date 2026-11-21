@@ -20,4 +20,25 @@ describe('spoken rehearsal feedback',()=>{
   expect(compareSpeech('Queen Mab hath been with you','').accuracy).toBe(0);
   expect(compareSpeech('','').accuracy).toBe(0);
  });
+ it('accepts o or oh for printed o’er without conflating ordinary over or missing words',()=>{
+  for(const printed of ["O’er","O'er",'oer']) for(const heard of ['o','oh','or','over']) {
+   expect(compareSpeech(`${printed} ladies’ lips`,`${heard} ladies lips`).accuracy).toBe(1);
+  }
+  expect(compareSpeech('over the wall','o the wall').hit).toEqual([false,true,true]);
+  expect(compareSpeech('O’er ladies lips','ladies lips').hit).toEqual([false,true,true]);
+ });
+ it('accepts our and are as speech homophones in either direction',()=>{
+  expect(compareSpeech('Our revels now are ended','Are revels now our ended').accuracy).toBe(1);
+  expect(compareSpeech('Our revels now are ended','revels now ended').hit).toEqual([false,true,true,false,true]);
+ });
+ it('accepts straight and curly apostrophes and modern curtsies spelling',()=>{
+  for(const heard of ["cur'sies",'cur’sies','curtsies']) expect(compareSpeech('dream on cur’sies straight',`dream on ${heard} straight`).accuracy).toBe(1);
+ });
+
+ it('accepts May as a recognition error for printed Nay without reversing the rule',()=>{
+  expect(compareSpeech('Nay, gentle Romeo','May gentle Romeo').accuracy).toBe(1);
+  expect(compareSpeech('May I go','Nay I go').hit).toEqual([false,true,true]);
+  expect(compareSpeech('Nay gentle Romeo','gentle Romeo').hit).toEqual([false,true,true]);
+ });
+
 });
