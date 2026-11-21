@@ -150,3 +150,9 @@ unchanged. No additional data collection, microphone or network service is used.
 `tests/scene-learning.test.ts` covers these learning UI behaviors, including
 single-speech roles, hidden future dialogue, chronological progression, expanded
 history, final-scene reading and incorrect-answer handling.
+
+Speed Run checks complete speeches, including every word of Queen Mab; it no longer
+checks only a short opening. Its microphone limit is five minutes per speech,
+matching whole-speech practice. Full-speech best times use a separate versioned
+record; old excerpt-only records remain stored and are not compared with the
+longer challenge.

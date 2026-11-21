@@ -88,7 +88,9 @@ export function record(ids: string[], outcome: Outcome, cap: number) {
   set({ ...state, items: itemsNext, days: { ...state.days, [k]: (state.days[k] ?? 0) + 1 } });
 }
 
-export const gameKey = (role: string, scene: string, game: string) => `${role}|${scene}|${game}`;
+// Full-speech Speed Run records are a different challenge from the old excerpts.
+// Retain legacy records in storage, but do not compare their shorter times.
+export const gameKey = (role: string, scene: string, game: string) => `${role}|${scene}|${game === 'speed' ? 'speed-whole-v1' : game}`;
 export function finishGame(key: string, timeMs?: number) {
   const g = state.games[key] ?? { done: 0 };
   const best = timeMs == null ? g.best : g.best == null ? timeMs : Math.min(g.best, timeMs);

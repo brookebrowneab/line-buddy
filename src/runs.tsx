@@ -5,7 +5,7 @@ import { finishGame, gameKey, record, setSettings, useProgress, type Outcome } f
 import { canSpeak, speak, stopSpeaking } from './lib/audio';
 import { Bottom, CueBox, Verse, go } from './ui';
 import { LessonChrome, Summary } from './lesson';
-import { LineCheck, checkPortion } from './check';
+import { LineCheck } from './check';
 
 type RunProps = { roleId: string; sceneId: string; exit: string };
 
@@ -331,7 +331,8 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
       <div className="page" style={{ display: 'grid', gap: 14, alignContent: 'center', minHeight: '75vh', textAlign: 'center' }}>
         <div style={{ fontSize: 56 }} aria-hidden="true">⚡</div>
         <h1>Speed Run</h1>
-        <div className="muted">{list.length} cues. Say each line, then type its first letters as fast as you can. A missed line adds 5 seconds.</div>
+        <div className="muted">{list.length} cues. Say each complete speech, then type its first letters or use listening. A missed speech adds 5 seconds. Full-speech runs have their own best times.</div>
+        <div className="muted">Listening allows up to five minutes per speech.</div>
         {best != null && <div className="chip chip-accent" style={{ justifySelf: 'center' }}>Best: {clock(best)}</div>}
         <Bottom>
           <button className="btn btn-wide" onClick={() => go(exit)}>Back</button>
@@ -342,7 +343,6 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
   }
 
   const item = list[i];
-  const portion = checkPortion(item.lines);
   const rateIt = (o: Outcome | null) => {
     if (o) record(partIds(item), o, 5);
     else setSkipped(n => n + 1);
@@ -366,7 +366,7 @@ export function SpeedRun({ roleId, sceneId, exit }: RunProps) {
       </div>
       <div style={{ display: 'grid', gap: 16 }}>
         <CueBox cue={item.cue} why={item.why} />
-        <LineCheck previousContextLines={item.cue ? [item.cue.text] : []} key={item.id} lines={portion.lines} partial={portion.partial} retry={false} onDone={setChecked} />
+        <LineCheck previousContextLines={item.cue ? [item.cue.text] : []} key={item.id} lines={item.lines} maxRecordingSeconds={300} retry={false} onDone={setChecked} />
       </div>
       {checked && (
         <Bottom tone={checked}>
