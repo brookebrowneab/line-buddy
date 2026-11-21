@@ -3,7 +3,7 @@ export const WHISPER_REVISION = '51eefc0af78b103839eda9e7e4f4186acc6517fe';
 export const SAMPLE_RATE = 16000;
 export const SHAKESPEARE_VOCABULARY = [
  'Romeo','Juliet','Mercutio','Benvolio','Tybalt','Capulet','Montague','Friar Lawrence',
- 'Queen Mab','Rosaline','Verona','prithee','wherefore','thou','thee','thy','thine',
+ 'Queen Mab','Rosaline','Verona','ho','prithee','wherefore','thou','thee','thy','thine',
  'hath','doth','dost','art','ere','anon','beseech','alderman','atomies','courtiers',
  'cur’sies','sweetmeats',"’tis","’twas","o’er","ne’er",
 ];
