@@ -5,7 +5,7 @@ import {act,cleanup,fireEvent,render,screen,waitFor} from '@testing-library/reac
 import {LineCheck} from '../src/check';
 import {resetAll,setSettings} from '../src/lib/progress';
 import {localBrowser} from './support/local-browser';
-afterEach(()=>{cleanup();resetAll();vi.unstubAllGlobals();});
+afterEach(()=>{cleanup();resetAll();vi.unstubAllGlobals();vi.useRealTimers();});
 it('shows loading, supports cancellation and retries after microphone denial with typing still available',async()=>{
  const browser=localBrowser();browser.hold();setSettings({microphone:true});
  let denied=true;const stop=vi.fn();
@@ -27,9 +27,19 @@ it('shows loading, supports cancellation and retries after microphone denial wit
  await act(async()=>browser.workers[1].reply());
  await waitFor(()=>expect(screen.getByRole('status').textContent).toMatch(/permission denied/i));
  expect(screen.getByLabelText('Type the first letter of each word')).toBeTruthy();
- denied=false;fireEvent.click(screen.getByRole('button',{name:'Listen to me'}));
- await waitFor(()=>expect(screen.getByRole('status').textContent).toContain('Listening…'));
+ vi.useFakeTimers();denied=false;
+ await act(async()=>{fireEvent.click(screen.getByRole('button',{name:'Listen to me'}));});
+ expect(screen.getByRole('status').textContent).toContain('Getting the microphone ready');
+ expect((screen.getByRole('button',{name:'Done'}) as HTMLButtonElement).disabled).toBe(true);
+ fireEvent.click(screen.getByRole('button',{name:'Cancel'}));
+ await act(async()=>{await vi.advanceTimersByTimeAsync(1000);});
+ expect(screen.getByLabelText('Type the first letter of each word')).toBeTruthy();
+ await act(async()=>{fireEvent.click(screen.getByRole('button',{name:'Listen to me'}));});
+ await act(async()=>{await vi.advanceTimersByTimeAsync(1000);});
+ expect(screen.getByRole('status').textContent).toContain('Speak now');
+ expect((screen.getByRole('button',{name:'Done'}) as HTMLButtonElement).disabled).toBe(false);
  fireEvent.click(screen.getByRole('button',{name:'Cancel'}));expect(stop).toHaveBeenCalled();
+ vi.useRealTimers();
  fireEvent.change(screen.getByLabelText('Type the first letter of each word'),{target:{value:'o'}});
  fireEvent.change(screen.getByLabelText('Type the first letter of each word'),{target:{value:'r'}});
  expect(onDone).toHaveBeenCalledWith('good');expect(browser.network).not.toHaveBeenCalled();

@@ -70,7 +70,9 @@ the installed dependency for same-origin hosting. The PWA caches runtime files
 on demand. Model and runtime caches may be evicted: offline use requires a
 completed initial download. WASM uses one thread on GitHub Pages, which does
 not provide cross-origin isolation headers. Slower devices may need more time;
-Cancel terminates the worker and releases the current take.
+Cancel terminates the worker and releases the current take. After the microphone
+opens, a one-second recording lead-in precedes the Speak now cue. This is a
+startup precaution; it does not establish why a recognition word was omitted.
 
 transcribeRecording(audio, signal, targetLine, previousContextLines?) returns
 text, model, hit, said, wordMatches and accuracy (0–1). It never calls fetch,

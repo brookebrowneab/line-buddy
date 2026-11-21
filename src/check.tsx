@@ -49,14 +49,16 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
   const recordingRef = useRef<Recording | null>(null);
   const transcriptionRef = useRef<AbortController | null>(null);
   const sessionRef = useRef(0);
+  const warmupTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const clearWarmup = () => { if (warmupTimer.current !== null) { clearTimeout(warmupTimer.current); warmupTimer.current = null; } };
   const { showTranscripts, microphone } = useProgress().settings;
-  const [phase, setPhase] = useState<'starting' | 'recording' | 'transcribing'>('recording');
+  const [phase, setPhase] = useState<'starting' | 'warming' | 'recording' | 'transcribing'>('recording');
   const localStatus = useSyncExternalStore(subscribeWhisper,whisperState);
   const [comparisons, setComparisons] = useState<{text:string;label:string}|null>(null);
-  useEffect(() => () => { sessionRef.current++; recordingRef.current?.cancel(); transcriptionRef.current?.abort(); }, []);
+  useEffect(() => () => { sessionRef.current++; clearWarmup(); recordingRef.current?.cancel(); transcriptionRef.current?.abort(); }, []);
   useEffect(() => {
     if (microphone) return;
-    sessionRef.current++;
+    sessionRef.current++; clearWarmup();
     recordingRef.current?.cancel(); transcriptionRef.current?.abort();
     setMode(current => current === 'listening' ? 'type' : current);
   }, [microphone]);
@@ -110,7 +112,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
     setMode('heard');
   };
   const listenLocal = async () => {
-    const session = ++sessionRef.current;
+    const session = ++sessionRef.current; clearWarmup();
     setPhase('starting'); setMode('listening'); setNote(''); setMarks({}); setSaid({});
     try {
       const initialization = new AbortController(); transcriptionRef.current = initialization;
@@ -118,7 +120,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
       if (session !== sessionRef.current) return;
       const recording = await recordSpeech(async audio => {
         if (session !== sessionRef.current) return;
-        setPhase('transcribing');
+        clearWarmup(); setPhase('transcribing');
         const controller = new AbortController(); transcriptionRef.current = controller;
         try {
           const result = await transcribeRecording(audio, controller.signal, flat.map(word => word.t.core).join(' '), previousContextLines);
@@ -130,17 +132,24 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
           }
         }
       }, message => {
-        if (session === sessionRef.current) { setNote(message); setMode('type'); }
+        if (session === sessionRef.current) { clearWarmup(); setNote(message); setMode('type'); }
       }, maxRecordingSeconds);
       if (session !== sessionRef.current) { recording.cancel(); return; }
-      recordingRef.current = recording; setPhase('recording');
+      recordingRef.current = recording;
+      // Capture a short lead-in while the microphone settles before inviting
+      // speech. This is a startup precaution, not automatic word completion.
+      setPhase('warming');
+      warmupTimer.current = setTimeout(() => {
+        warmupTimer.current = null;
+        if (session === sessionRef.current) setPhase('recording');
+      }, 1000);
     } catch (error) {
       if (session === sessionRef.current) { setNote(error instanceof Error ? error.message : 'Could not start local listening. You can type instead.'); setMode('type'); }
     }
   };
   const stopListening = () => { recordingRef.current?.stop(); };
   const cancelListening = () => {
-    sessionRef.current++; recordingRef.current?.cancel(); transcriptionRef.current?.abort();
+    sessionRef.current++; clearWarmup(); recordingRef.current?.cancel(); transcriptionRef.current?.abort();
     setMode('type'); setNote('');
   };
   const retype = () => { setMarks({}); setSaid({}); setStrikes(0); setTries(0); setMode('type'); };
@@ -188,7 +197,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
       )}
       {mode === 'listening' && (
         <>
-          <div className="card-soft" role="status" style={{ textAlign: 'center' }}>{phase === 'starting' ? (localStatus.phase === 'loading' ? localStatus.message : 'Waiting for microphone permission…') : phase === 'transcribing' ? localStatus.message : `Listening… say your line, then tap Done.`}</div>
+          <div className="card-soft" role="status" style={{ textAlign: 'center' }}>{phase === 'starting' ? (localStatus.phase === 'loading' ? localStatus.message : 'Waiting for microphone permission…') : phase === 'warming' ? 'Getting the microphone ready… Wait for “Speak now”.' : phase === 'transcribing' ? localStatus.message : 'Listening… Speak now, then tap Done.'}</div>
           {(localStatus.phase === 'loading' || localStatus.phase === 'transcribing') && <progress aria-label="Local speech model progress" max={100} value={localStatus.progress} style={{width:'100%'}} />}
           <button className="btn btn-primary btn-wide" disabled={phase !== 'recording'} onClick={stopListening}>Done</button>
           <button className="btn btn-small" onClick={cancelListening}>Cancel</button>
