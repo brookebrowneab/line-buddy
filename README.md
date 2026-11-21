@@ -6,7 +6,7 @@ their own browser.
 
 ## Everyday commands
 
-    npm install        # once
+    npm install        # once (on Linux, prefix ONNXRUNTIME_NODE_INSTALL_CUDA=skip)
     npm run dev        # run the app locally
     npm run script     # rebuild the script data and print the check report
     npm test           # parser, cue and progress tests
