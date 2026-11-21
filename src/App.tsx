@@ -9,7 +9,7 @@ import {
 import { GAMES, buildSteps, dueItems, gameById, todaySteps, troubleItems, troubleSteps, type GameId } from './lib/games';
 import { Lesson } from './lesson';
 import { LearningIntroduction } from './scene-context';
-import { CueProgress, EarlierProgress } from './skill-progress';
+import { CueProgress } from './skill-progress';
 import { initializeWhisper, subscribeWhisper, whisperState } from './lib/local-whisper';
 import { SpeechPlayback } from './speech-playback';
 import { CueCatch, ScenePartner, SpeedRun } from './runs';
@@ -98,7 +98,6 @@ function Home({ state, role }: { state: State; role: Role }) {
       </div>
 
       <CueProgress state={state} roleId={role.id} />
-      <EarlierProgress state={state} brief />
       <button className="btn btn-gold btn-wide" onClick={() => go('/play/today')}>
         ▶ Today’s practice{due ? ` · ${due} to review` : ''}
       </button>
@@ -240,7 +239,7 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
   };
   const load = async (f?: File) => {
     if (!f) return;
-    setNote(importData(await f.text()) ? 'Progress loaded.' : 'That file is not a Line Buddy progress file.');
+    setNote(importData(await f.text()) ? 'Progress loaded.' : 'Use a progress file saved by the current app.');
   };
 
   return (
@@ -258,7 +257,6 @@ function ProgressScreen({ state, role }: { state: State; role: Role }) {
       </div>
 
       <CueProgress state={state} roleId={role.id} />
-      <EarlierProgress state={state} />
       <div className="eyebrow" style={{ marginBottom: 6 }}>Last two weeks</div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(14, 1fr)', gap: 4, marginBottom: 18 }}>
         {Array.from({ length: 14 }, (_, k) => today - 13 + k).map((d) => (

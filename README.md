@@ -100,7 +100,8 @@ The raw transcript is retained; these rules change feedback, not the recording.
 
 Typed practice, skips, whole speeches and prerecorded character playback remain
 available without microphone access. Old browser/ElevenLabs settings migrate to
-local recognition while retaining the microphone preference and progress.
+local recognition while retaining the microphone preference. This tester rollout
+starts practice progress fresh.
 
 ## Maintainer-only prerecorded character audio
 
@@ -154,8 +155,7 @@ history, final-scene reading and incorrect-answer handling.
 Speed Run checks complete speeches, including every word of Queen Mab; it no longer
 checks only a short opening. Its microphone limit is five minutes per speech,
 matching whole-speech practice. Full-speech best times use a separate versioned
-record; old excerpt-only records remain stored and are not compared with the
-longer challenge.
+record, independent of the old excerpt-only challenge.
 
 ## Separate word memory and cue recognition
 
@@ -171,9 +171,8 @@ Context-only study and script-in-hand rehearsal count as activity without word
 credit. Scramble provides limited supported-word credit; progressively less
 supported word checks can raise the word level further.
 
-Older `items` scores mixed several activities and cannot be separated reliably.
-They remain intact as earlier practice history, together with completed games,
-streaks and settings; they are not treated as verified word-memory evidence.
-New word and cue records start separately. Export/import preserves all three
-sets, and the progress screen explains the earlier history. Progress remains on the device; this change adds no accounts, identifiers
-or uploads.
+The tester rollout starts practice over once, using a new browser storage key.
+Selected roles and app settings are kept; earlier word/cue results, completed
+games and streak counts are cleared. New progress persists normally, independently
+of still-open old tabs. Current progress files use format v2; old testing backups
+are not restored. Progress remains on the device, with no new accounts or uploads.

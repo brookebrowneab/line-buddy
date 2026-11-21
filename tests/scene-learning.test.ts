@@ -37,7 +37,7 @@ describe('scene context for learning games',()=>{
   expect(screen.getByText('To stay with your friends.')).toBeTruthy();
   fireEvent.click(screen.getByRole('button',{name:/Learn this scene in order/}));expect(choose).toHaveBeenCalledWith(true);
   fireEvent.click(screen.getByRole('button',{name:/Focus on my speeches/}));expect(choose).toHaveBeenLastCalledWith(false);
-  expect(getState().items).toEqual({});
+  expect(getState().wordItems).toEqual({});
  });
  it('shows complete preceding turns and stage action, expands backward, and hides future dialogue',()=>{
   render(React.createElement(SceneContext,{context:{scene,roleId:'romeo',inOrder:false},item:item('d'),fromIndex:0,currentId:'question'}));

@@ -6,11 +6,9 @@ export type ItemState = { l: number; due: number; miss: number; seen: number; la
 export type CueState = { seen: number; caught: number; miss: number; last: Outcome; mode: 'read' | 'listen' };
 export type GameState = { done: number; best?: number };
 export type State = {
-  v: 1;
+  v: 2;
   roles: string[];
   active: string | null;
-  /** Earlier mixed scores, preserved as history rather than word evidence. */
-  items: Record<string, ItemState>;
   wordItems: Record<string, ItemState>;
   cues: Record<string, CueState>;
   games: Record<string, GameState>;
@@ -22,8 +20,9 @@ export const MAX_LEVEL = 5;
 /** Days until a line comes back for review, by mastery level. */
 export const REVIEW_GAP = [0, 0, 1, 2, 4, 7];
 
-const KEY = 'line-buddy:v1';
-const fresh = (): State => ({ v: 1, roles: [], active: null, items: {}, wordItems: {}, cues: {}, games: {}, days: {}, settings: { microphone: false, voice: true, rate: 1, speechProvider: 'local', showTranscripts: false } });
+const KEY = 'line-buddy:v2';
+const LEGACY_KEY = 'line-buddy:v1';
+const fresh = (): State => ({ v: 2, roles: [], active: null, wordItems: {}, cues: {}, games: {}, days: {}, settings: { microphone: false, voice: true, rate: 1, speechProvider: 'local', showTranscripts: false } });
 
 export const dayNumber = (d = new Date()) => Math.floor((d.getTime() - d.getTimezoneOffset() * 60000) / 86400000);
 export const dayKey = (n: number) => new Date(n * 86400000).toISOString().slice(0, 10);
@@ -52,21 +51,40 @@ export function streak(days: Record<string, number>, today: number): number {
   return n;
 }
 
-/** Old backups keep their mixed scores intact; only explicit word records count. */
+const recordLike = (value: unknown) => !!value && typeof value === 'object' && !Array.isArray(value);
+function preferences(value: unknown): Pick<State, 'roles' | 'active' | 'settings'> {
+  const s = (recordLike(value) ? value : {}) as Partial<State>;
+  return {
+    roles: Array.isArray(s.roles) ? s.roles.filter(id => typeof id === 'string') : [],
+    active: typeof s.active === 'string' ? s.active : null,
+    settings: { ...fresh().settings, ...(recordLike(s.settings) ? s.settings : {}), speechProvider: 'local' },
+  };
+}
 function hydrate(value: unknown): State | null {
-  if (!value || typeof value !== 'object') return null;
+  if (!recordLike(value)) return null;
   const s = value as Partial<State>;
-  const recordLike = (value: unknown) => !!value && typeof value === 'object' && !Array.isArray(value);
-  if (s.v !== 1 || !recordLike(s.items)) return null;
-  if ((s.wordItems !== undefined && !recordLike(s.wordItems)) || (s.cues !== undefined && !recordLike(s.cues))) return null;
-  return { ...fresh(), ...s, wordItems: s.wordItems ?? {}, cues: s.cues ?? {}, settings: { ...fresh().settings, ...s.settings, speechProvider: 'local' } } as State;
+  if (s.v !== 2 || !recordLike(s.wordItems)) return null;
+  if ([s.cues, s.games, s.days].some(track => track !== undefined && !recordLike(track))) return null;
+  return { ...fresh(), ...preferences(s), wordItems: s.wordItems!, cues: s.cues ?? {}, games: s.games ?? {}, days: s.days ?? {} };
 }
 function load(): State {
   try {
-    const raw = localStorage.getItem(KEY);
-    if (raw) return hydrate(JSON.parse(raw)) ?? fresh();
-  } catch { /* private mode or corrupt data: start fresh */ }
-  return fresh();
+    const current = localStorage.getItem(KEY);
+    if (current) {
+      const saved = hydrate(JSON.parse(current));
+      if (saved) {
+        try { localStorage.removeItem(LEGACY_KEY); } catch { /* storage blocked */ }
+        return saved;
+      }
+    }
+    const legacy = localStorage.getItem(LEGACY_KEY);
+    const previous = legacy ? JSON.parse(legacy) : null;
+    // This rollout starts testers over once. Keep configuration, discard all
+    // old practice results, and isolate new progress from still-open old tabs.
+    const next = previous?.v === 1 ? { ...fresh(), ...preferences(previous) } : fresh();
+    try { localStorage.setItem(KEY, JSON.stringify(next)); localStorage.removeItem(LEGACY_KEY); } catch { /* storage blocked */ }
+    return next;
+  } catch { return fresh(); }
 }
 
 let state: State = typeof localStorage === 'undefined' ? fresh() : load();
@@ -119,7 +137,7 @@ export function cueSummary(s: State, speechIds: string[]) {
 }
 
 // Full-speech Speed Run records are a different challenge from the old excerpts.
-// Retain legacy records in storage, but do not compare their shorter times.
+// Keep the timing key distinct from the old, shorter challenge.
 export const gameKey = (role: string, scene: string, game: string) => `${role}|${scene}|${game === 'speed' ? 'speed-whole-v1' : game}`;
 export function finishGame(key: string, timeMs?: number) {
   const g = state.games[key] ?? { done: 0 };
