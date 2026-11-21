@@ -191,34 +191,27 @@ are not all downloaded in advance by the PWA service worker.
 
 ### Hosted classroom deployment
 
-The live classroom build uses Sites / Cloudflare Workers, with the 361 MP3s as
-static assets and the backend in worker/index.mjs. Hosting identity and the DB
-binding are tracked in .openai/hosting.json; SQL migrations are in drizzle/.
-`npm run build:cloud` produces dist/client and dist/server/index.js.
-The original `npm run build` remains a static build for local/Pages use.
+The frontend and speech recordings stay on GitHub Pages at lines.adcatheatre.com.
+The protected Scribe API runs as Cloudflare Worker `lines-scribe`, using D1 for
+anonymous usage counters only. No recordings or transcripts are stored by the worker.
+ElevenLabs retention follows that service's account configuration.
 
-Production secrets are stored in the hosting service, not in source or the
-client bundle: ELEVENLABS_API_KEY, CLASS_ACCESS_CODE, SESSION_SECRET. Optional
-DAILY_CLASS_SECONDS (default 36000) and DAILY_DEVICE_SECONDS (default 3600)
-set daily transcription caps. Changing the session secret revokes all sessions.
-Do not put the class code in a URL or commit it; share it directly with families.
+Configure the D1 binding DB in wrangler.jsonc and apply drizzle/0000_usage.sql.
+Store ELEVENLABS_API_KEY, CLASS_ACCESS_CODE and SESSION_SECRET as Worker secrets.
+APP_ORIGIN restricts browser access to https://lines.adcatheatre.com. Daily limits
+default to 36000 seconds for the class and 3600 seconds per device session.
+Changing SESSION_SECRET revokes existing sessions.
 
-Children enter one shared class code per browser. An HttpOnly, Secure, SameSite
-cookie authorizes speech checking for seven days. Progress stays in localStorage
-on that browser; this deployment does not introduce individual accounts or cloud
-progress sync. Existing progress on another hostname can be exported from the
-old app's Progress screen and imported into the new app on the same device.
+Set the GitHub repository variable VITE_TRANSCRIPTION_API_URL to the Worker's
+HTTPS address. The Pages workflow embeds this public address during build.
+Local development leaves it unset and uses Vite's existing local API proxy.
 
-The hosted client converts each recording to mono 16-bit PCM WAV at 16kHz. The
-server validates the real sample-byte duration (five minutes maximum) and uses
-D1 to enforce both device-session and whole-class daily limits before calling
-Scribe v3. Requests require same-origin, valid signed sessions and sufficient
-budget; login attempts are also rate-limited. No expected script, optional
-transcript editing or keyterm surcharges are sent. The worker does not store
-recordings or transcripts; only temporary anonymous usage counters are stored.
-ElevenLabs' own retention is controlled by that service/account configuration.
-The class-code gate is application authorization, not an individual student ID.
+Children enter the shared class code once per browser each week. The cross-origin
+API uses a signed seven-day bearer session stored in localStorage, avoiding
+third-party cookies. Progress and settings remain in that browser, with no student
+accounts or cloud sync. The provider API key and class code are never bundled.
 
-Deploy with the Sites skill's source helper and the build:cloud command. Preserve
-its opaque project ID and runtime secrets. The GitHub Pages origin remains a
-static-only deployment; Scribe requires this server-backed production URL.
+Deploy with `npx wrangler deploy`; apply schema with
+`npx wrangler d1 execute lines-usage --remote --file drizzle/0000_usage.sql`.
+Use Workers Free initially; check actual CPU limits before increasing tiers.
+The earlier Sites deployment is private and is not used by this production app.

@@ -1,3 +1,4 @@
+import { apiFetch } from './lib/api';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { allItems, items, roleById, roleName, sceneById, sceneLabel, script, spokenLines, type Role, type Scene } from './lib/script';
 import {
@@ -330,7 +331,7 @@ function SettingsScreen({ state }: { state: State }) {
   const [connection, setConnection] = useState('Checking listening connection…');
   useEffect(() => {
     const controller = new AbortController();
-    fetch('/api/transcription/status', { signal: controller.signal }).then(r => {
+    apiFetch('/api/transcription/status', { signal: controller.signal }).then(r => {
       if (!r.ok) throw new Error(); return r.json();
     }).then(result => setConnection(result.configured ? `Connected: ${result.model}.` : 'Server is running, but its ElevenLabs API key is not configured.'))
       .catch(() => { if (!controller.signal.aborted) setConnection('ElevenLabs server is unavailable. Typing remains available.'); });

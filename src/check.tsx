@@ -1,3 +1,4 @@
+import { apiFetch } from './lib/api';
 // Checks a spoken line for the kid, so they do not have to judge themselves.
 // Default: type the first letter of each word from memory. Optional: let the
 // browser listen (where it can), with typing as the fallback when it mishears.
@@ -67,7 +68,7 @@ export function LineCheck({ lines, onDone, partial, retry = true, maxRecordingSe
   const [comparisons, setComparisons] = useState<Partial<Record<'browser' | 'elevenlabs', { text: string; label: string }>>>({});
   useEffect(() => {
     const controller = new AbortController();
-    fetch('/api/transcription/status', { signal: controller.signal }).then(r => {
+    apiFetch('/api/transcription/status', { signal: controller.signal }).then(r => {
       if (!r.ok) throw new Error();
       return r.json();
     }).then(result => {

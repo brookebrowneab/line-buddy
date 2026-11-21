@@ -12,7 +12,8 @@ async function issueSession(secret) {
 }
 async function sessionFor(request, secret) {
   if (!secret) return null;
-  const cookie = request.headers.get('Cookie')?.split(';').map(s => s.trim()).find(s => s.startsWith(COOKIE + '='))?.slice(COOKIE.length + 1);
+  const bearer = request.headers.get('Authorization')?.match(/^Bearer (.+)$/)?.[1];
+  const cookie = bearer || request.headers.get('Cookie')?.split(';').map(s => s.trim()).find(s => s.startsWith(COOKIE + '='))?.slice(COOKIE.length + 1);
   if (!cookie) return null;
   try {
     const [payload, signature, extra] = cookie.split('.'); if (!payload || !signature || extra) return null;
@@ -52,16 +53,16 @@ async function debit(db, bucket, amount, limit, expiresAt) {
   return !!row;
 }
 export function createWorker(fetchImpl = fetch) {
-  return { async fetch(request, env, ctx) {
+  const handler = { async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    if (!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
+    if (!url.pathname.startsWith('/api/')) return env.ASSETS ? env.ASSETS.fetch(request) : json({ error: 'Not found.' }, 404);
     const session = await sessionFor(request, env.SESSION_SECRET);
     if (url.pathname === '/api/transcription/status' && request.method === 'GET') return json({
       configured: !!env.ELEVENLABS_API_KEY && !!env.CLASS_ACCESS_CODE && !!env.SESSION_SECRET && !!env.DB,
       model: 'scribe_v3', requiresClassCode: true, authorized: !!session, requiresPcm: true,
     });
     if (request.method !== 'POST') return json({ error: 'Not found.' }, 404);
-    if (request.headers.get('Origin') !== url.origin) return json({ error: 'This request must come from the Lines app.' }, 403);
+    if (request.headers.get('Origin') !== (env.APP_ORIGIN || url.origin)) return json({ error: 'This request must come from the Lines app.' }, 403);
     if (!env.DB || !env.SESSION_SECRET || !env.CLASS_ACCESS_CODE) return json({ error: 'Speech checking is not configured yet.' }, 503);
     try {
       if (url.pathname === '/api/class/login') {
@@ -74,7 +75,8 @@ export function createWorker(fetchImpl = fetch) {
         const signature = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(String(body.code || '').trim()));
         const valid = await crypto.subtle.verify('HMAC', key, signature, new TextEncoder().encode(env.CLASS_ACCESS_CODE));
         if (!valid) return json({ error: 'That class code did not match. Ask your teacher for the code.' }, 401);
-        return json({ authorized: true }, 200, { 'Set-Cookie': `${COOKIE}=${await issueSession(env.SESSION_SECRET)}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=604800` });
+        const token = await issueSession(env.SESSION_SECRET);
+        return json({ authorized: true, ...(env.APP_ORIGIN ? { token } : {}) }, 200, { 'Set-Cookie': `${COOKIE}=${token}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=604800` });
       }
       if (url.pathname !== '/api/transcription') return json({ error: 'Not found.' }, 404);
       if (!session) return json({ error: 'Enter the class code to use speech checking.' }, 401);
@@ -107,6 +109,17 @@ export function createWorker(fetchImpl = fetch) {
       if (error.message === 'too_large') return json({ error:'Recording is too large. Try a shorter speech.' },413);
       return json({ error:'Speech checking could not finish. Please try again or type the first letters.' },502);
     }
+  } };
+  return { async fetch(request, env, ctx) {
+    const origin = request.headers.get('Origin');
+    const allowed = env.APP_ORIGIN || new URL(request.url).origin;
+    if (origin && origin !== allowed) return json({ error: 'This request must come from the Lines app.' }, 403);
+    const headers = { 'Access-Control-Allow-Origin': allowed, 'Vary': 'Origin', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization' };
+    if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers });
+    const response = await handler.fetch(request, env, ctx);
+    const result = new Response(response.body, response);
+    for (const [key, value] of Object.entries(headers)) result.headers.set(key, value);
+    return result;
   } };
 }
 export default createWorker();

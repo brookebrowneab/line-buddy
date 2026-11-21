@@ -50,3 +50,20 @@ test('assets remain ordinary static files and failures do not expose provider cr
   const s=setup(async()=>new Response('sensitive provider detail',{status:401}));assert.equal(await(await s.worker.fetch(new Request(origin+'/audio/test.mp3'),s.env,s.ctx)).text(),'asset');
   const r=await s.worker.fetch(upload(await login(s)),s.env,s.ctx);assert.equal(r.status,502);assert.ok(!(await r.text()).includes('sensitive'));
 });
+test('separate Pages origin can preflight, log in and transcribe with a signed bearer session',async()=>{
+  const s=setup();s.env.APP_ORIGIN=origin;
+  const api='https://lines-scribe.example.workers.dev';
+  const preflight=await s.worker.fetch(new Request(api+'/api/class/login',{method:'OPTIONS',headers:{Origin:origin,'Access-Control-Request-Method':'POST','Access-Control-Request-Headers':'content-type,authorization'}}),s.env,s.ctx);
+  assert.equal(preflight.status,204);assert.equal(preflight.headers.get('Access-Control-Allow-Origin'),origin);
+  const logged=await s.worker.fetch(new Request(api+'/api/class/login',{method:'POST',headers:{Origin:origin},body:JSON.stringify({code:'test-class-only'})}),s.env,s.ctx);
+  const {token}=await logged.json();assert.equal(typeof token,'string');
+  const status=await s.worker.fetch(new Request(api+'/api/transcription/status',{headers:{Origin:origin,Authorization:`Bearer ${token}`}}),s.env,s.ctx);
+  assert.equal((await status.json()).authorized,true);
+  const audio=new FormData();audio.set('audio',wav());
+  const result=await s.worker.fetch(new Request(api+'/api/transcription',{method:'POST',headers:{Origin:origin,Authorization:`Bearer ${token}`},body:audio}),s.env,s.ctx);
+  assert.equal(result.status,200);assert.equal(result.headers.get('Access-Control-Allow-Origin'),origin);
+  const denied=await s.worker.fetch(new Request(api+'/api/class/login',{method:'OPTIONS',headers:{Origin:'https://evil.example'}}),s.env,s.ctx);
+  assert.equal(denied.status,403);assert.equal(denied.headers.get('Access-Control-Allow-Origin'),null);
+  const bad=await s.worker.fetch(new Request(api+'/api/transcription/status',{headers:{Origin:origin,Authorization:`Bearer ${token}tampered`}}),s.env,s.ctx);
+  assert.equal((await bad.json()).authorized,false);
+});

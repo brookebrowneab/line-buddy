@@ -11,3 +11,7 @@ dev-dist
 .audio-work/
 public/audio/**/*.tmp
 src/data/recordings.json.tmp
+
+.wrangler/
+.dev.vars
+.dev.vars.*

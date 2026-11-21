@@ -1,3 +1,4 @@
+import { apiFetch } from './api';
 import { asPcmWave } from './wav';
 export type Recording = { stop: () => void; cancel: () => void };
 export const canRecord = () => typeof MediaRecorder !== 'undefined' && !!navigator.mediaDevices?.getUserMedia;
@@ -34,7 +35,7 @@ export async function transcribeRecording(audio: Blob, signal: AbortSignal, pcm 
   const file = pcm ? await asPcmWave(audio) : audio;
   if(signal.aborted)throw new Error('Recording was cancelled.');
   const form = new FormData(); form.append('audio', file, pcm ? 'speech.wav' : 'speech');
-  const response = await fetch('/api/transcription', { method: 'POST', body: form, signal });
+  const response = await apiFetch('/api/transcription', { method: 'POST', body: form, signal });
   let result;
   try { result = await response.json(); } catch { throw new Error('The transcription server is unavailable. Start it locally or use Browser.'); }
   if(response.status === 401 && typeof window !== 'undefined') window.dispatchEvent(new Event('lines-class-unauthorized'));

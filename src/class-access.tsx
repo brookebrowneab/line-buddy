@@ -1,9 +1,10 @@
+import { apiFetch, saveClassSession } from './lib/api';
 import { useEffect, useState, type ReactNode } from 'react';
 export function ClassAccess({ children }: { children: ReactNode }) {
   const [checking,setChecking]=useState(true),[locked,setLocked]=useState(false),[code,setCode]=useState(''),[note,setNote]=useState(''),[busy,setBusy]=useState(false);
   useEffect(()=>{
     const controller=new AbortController();
-    fetch('/api/transcription/status',{signal:controller.signal}).then(r=>r.json()).then(s=>setLocked(s.requiresClassCode && s.configured && !s.authorized))
+    apiFetch('/api/transcription/status',{signal:controller.signal}).then(r=>r.json()).then(s=>setLocked(s.requiresClassCode && s.configured && !s.authorized))
       .catch(()=>{}).finally(()=>{if(!controller.signal.aborted)setChecking(false);});
     const expired=()=>{setLocked(true);setNote('Enter the class code again to continue.');};
     window.addEventListener('lines-class-unauthorized',expired);
@@ -14,8 +15,9 @@ export function ClassAccess({ children }: { children: ReactNode }) {
   const unlock=async(e:React.FormEvent)=>{
     e.preventDefault();if(!code.trim()||busy)return;setBusy(true);setNote('');
     try{
-      const r=await fetch('/api/class/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:code.trim()})});
+      const r=await apiFetch('/api/class/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code:code.trim()})});
       const result=await r.json();if(!r.ok)throw new Error(result.error||'Could not check the code. Try again.');
+      if(typeof result.token==='string')saveClassSession(result.token);
       setCode('');setLocked(false);
     }catch(error){setNote(error instanceof Error?error.message:'Could not check the code. Try again.');}finally{setBusy(false);}
   };
