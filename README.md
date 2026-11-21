@@ -233,5 +233,9 @@ unchanged.
 Operator contact: Brooke Brown, parent volunteer working on behalf of ADCA,
 adcatheatreinfo@gmail.com. Mailing contact: ADCA, c/o Alice Deal Middle School, 3815 Fort Dr. NW,
 Washington, DC 20016. School main office: (202) 939-2010, verified against
-https://profiles.dcps.dc.gov/Deal. Provider retention/training settings and required parent/school
-authorization still need review; these pages do not establish legal compliance.
+https://profiles.dcps.dc.gov/Deal. On November 20, 2026, workspace training use was disabled and verified saved in
+ElevenLabs Data use. Per ElevenLabs, the opt-out covers new submissions, not
+retroactive deletion. The account is Pay As You Go, and speech-to-text zero
+retention is not enabled. No fixed API recording-retention deadline was found.
+Provider retention terms and required parent/school authorization still need
+review; these pages do not establish legal compliance.
